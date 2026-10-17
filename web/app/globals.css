@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* The tool is read in dark rooms next to a game client; it commits to one
+   dark palette rather than following the OS, so screenshots shared between
+   coach and players always look the same. */
+:root {
+  --background: #0b0b0c;
+  --foreground: #e5e5e5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Chart tokens. The app commits to one dark surface, so these are the dark
+   steps of the reference categorical palette, validated against #0b0b0c:
+   all four clear the lightness band, chroma floor, CVD separation (worst
+   adjacent 8.4) and 3:1 contrast. Charts are written against the roles, never
+   the hex, so a palette change happens here only. */
+:root {
+  --series-1: #3987e5;  /* blue   */
+  --series-2: #d95926;  /* orange */
+  --series-3: #199e70;  /* aqua   */
+  --series-4: #c98500;  /* yellow */
+
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+
+  --chart-grid: #2c2c2a;
+  --chart-axis: #383835;
+  --chart-muted: #898781;
+}
