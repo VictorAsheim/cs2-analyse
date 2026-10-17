@@ -32,6 +32,45 @@ Parsingen kjører som en frittstående prosess, ikke i en HTTP-request: en demo
 er 100–600 MB, og web-laget skal ikke holde forbindelsen åpen mens den leses.
 Nettsiden får en jobb-ID og poller.
 
+## Publisere til GitHub Pages
+
+Siden kjører i to moduser fra samme kodebase. Lokalt er den hele verktøyet:
+last opp en demo, workeren parser den, og API-rutene serverer resultatet.
+Publisert er den en statisk side uten server — GitHub Pages har ingenting som
+kan ta imot eller parse en 561 MB demo.
+
+```bash
+node web/scripts/publish.mjs --repo <repo-navn>
+```
+
+Bygger `docs/`, som er det Pages serverer. Uten argumenter publiseres alle
+parsede analyser i `data/facts`; med ID-er bare de.
+
+To ting gjør dette til mer enn `next build`, og begge er dokumentert i
+[publish.mjs](web/scripts/publish.mjs):
+
+- **Analysene iscenesettes** i `web/public/analyses` så sidene kan lese dem
+  under bygget. Ingenting under `data/` havner i `docs/` — bare det som
+  iscenesettes.
+- **API-rutene og `export const instant = false` parkeres** mens bygget kjører.
+  Next har ingen måte å ekskludere en rute fra `output: export`, en
+  POST-handler kan ikke rendres statisk, og `instant` krever
+  `cacheComponents`, som impliserer PPR, som eksportøren avviser. Alt
+  gjenopprettes i `finally`, også når bygget feiler.
+
+**Dev-serveren må være stoppet.** Windows låser `app/api` mens `next dev`
+kjører, og flyttingen feiler med EPERM. Skriptet sier fra.
+
+`--repo` tar et bart repo-navn, ikke en sti: Git Bash skriver om alt som ligner
+en Unix-sti, så `--base /navn` kommer fram som `C:/Program Files/Git/navn`.
+
+### Hva som blir offentlig
+
+`docs/analyses/*.facts.json` serveres som den er, og inneholder **spillernavn
+og steam-ID-er**. Siden er upublisert — `robots.txt` og `noindex` holder den
+ute av søkemotorer — men den som har lenken kommer inn. Det inkluderer
+motstandere du har scoutet.
+
 ## Kjøre
 
 Python-miljøet er i `.venv` og inneholder `demoparser2` og `awpy`.
