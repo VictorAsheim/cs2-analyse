@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { FACTS_DIR } from "./paths";
+import { DATA_DIR, FACTS_DIR } from "./paths";
 
 /**
  * Published analyses.
@@ -54,6 +54,52 @@ export async function readAnalysis(id: string): Promise<any | null> {
   ]) {
     try {
       return JSON.parse(await fs.readFile(file, "utf8"));
+    } catch {
+      // try the next location
+    }
+  }
+  return null;
+}
+
+export type LeagueTeam = {
+  slug: string;
+  name: string;
+  standing: {
+    rank: number; played: number; won: number; drawn: number;
+    lost: number; round_diff: number; points: number;
+  } | null;
+  maps_played: number;
+  best_map: string | null;
+  worst_map: string | null;
+  maps: Record<string, any>;
+  matches: any[];
+  demos_analysed: number;
+};
+
+export type League = {
+  generated_at: string;
+  division: string;
+  format: string;
+  table_updated: string;
+  table_note: string;
+  teams: LeagueTeam[];
+  unmatched_clan_names: string[];
+  matches_analysed: number;
+};
+
+/**
+ * The league view: the division, its teams, and what their demos showed.
+ *
+ * Staged into public/analyses by the publish script, the same as the match
+ * documents, so the published site and the local one read one file.
+ */
+export async function readLeague(): Promise<League | null> {
+  for (const file of [
+    path.join(PUBLIC_DIR, "league.json"),
+    path.join(DATA_DIR, "league.json"),
+  ]) {
+    try {
+      return JSON.parse(await fs.readFile(file, "utf8")) as League;
     } catch {
       // try the next location
     }

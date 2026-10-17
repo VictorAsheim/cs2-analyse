@@ -9,7 +9,9 @@ import PatternChart from "@/components/charts/PatternChart";
 import RoundTimeline from "@/components/charts/RoundTimeline";
 import UtilityChart from "@/components/charts/UtilityChart";
 import { Section } from "@/components/stats";
-import { IS_STATIC, radarUrl, readAnalysis, readManifest } from "@/lib/analyses";
+import {
+  IS_STATIC, radarUrl, readAnalysis, readLeague, readManifest,
+} from "@/lib/analyses";
 import { readJob } from "@/lib/jobs";
 
 // Locally these pages read the job store on every request, so there is nothing
@@ -33,6 +35,12 @@ export default async function MatchPage(
   const job = IS_STATIC ? null : await readJob(id);
   const sourceName = job?.filename ?? facts.source?.filename;
 
+  // Which league teams played this match, so the page links back up.
+  const league = await readLeague();
+  const linked = (league?.teams ?? []).filter((t) =>
+    t.matches.some((m: any) => m.match_id === id),
+  );
+
   const m = facts.match;
   const s = facts.stats;
   const teams: string[] = Object.keys(m.teams);
@@ -41,9 +49,19 @@ export default async function MatchPage(
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-5xl px-6 py-12">
-      <Link href="/" className="text-xs text-neutral-500 hover:text-neutral-300">
-        ← alle kamper
-      </Link>
+      <nav className="flex flex-wrap items-center gap-x-2 text-xs text-neutral-500">
+        <Link href="/" className="hover:text-neutral-300">
+          ← {league?.division ?? "alle kamper"}
+        </Link>
+        {linked.map((t) => (
+          <span key={t.slug} className="flex items-center gap-2">
+            <span className="text-neutral-700">/</span>
+            <Link href={`/team/${t.slug}`} className="hover:text-neutral-300">
+              {t.name}
+            </Link>
+          </span>
+        ))}
+      </nav>
 
       <header className="mt-4 pb-5">
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">

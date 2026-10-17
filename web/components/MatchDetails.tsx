@@ -167,20 +167,20 @@ export default function MatchDetails({
                       <div key={t} className="rounded-lg border border-neutral-800 px-4 py-3">
                         <p className="text-xs text-neutral-400">{t}</p>
                         <p className="mt-1 text-sm text-neutral-200">
-                          {Object.entries(v.mean_players_per_site)
+                          {Object.entries(v.mean_players_per_callout ?? {})
                             .map(([site, n]) => `${site}: ${n}`)
                             .join("  \u00b7  ")}
                         </p>
                         <p className="mt-0.5 text-xs text-neutral-500">
-                          snitt spillere per site over {v.rounds_observed} runder
+                          snitt spillere per callout over {v.rounds_observed} runder
                         </p>
                       </div>
                     ))}
                   </div>
                   <Table
                     head={[
-                      "Spiller", "Lag", "CT-runder", "Fordeling", "Oftest",
-                      "Oppsett inne på site", "Median avstand",
+                      "Spiller", "Lag", "CT-runder", "Holder oftest", "Andel",
+                      "Fordeling", "Ulike posisjoner",
                     ]}
                   >
                     {s.ct_setups.by_player.map((p: any) => (
@@ -190,14 +190,16 @@ export default function MatchDetails({
                           p.name,
                           <span key="t" className="text-xs text-neutral-400">{p.team}</span>,
                           p.ct_rounds_observed,
+                          <span key="c" className="font-medium text-neutral-100">
+                            {p.most_common}
+                          </span>,
+                          <RateValue key="m" rate={p.share_at_most_common} />,
                           <span key="d" className="text-xs text-neutral-400">
-                            {Object.entries(p.setup_position_by_site)
+                            {Object.entries(p.positions ?? {})
                               .map(([k, v]) => `${k}: ${v}`)
                               .join(" \u00b7 ")}
                           </span>,
-                          <RateValue key="m" rate={p.share_at_most_common} />,
-                          <RateValue key="i" rate={p.set_up_inside_a_site} />,
-                          p.median_distance_to_nearest_site,
+                          p.distinct_positions,
                         ]}
                       />
                     ))}
@@ -234,13 +236,11 @@ export default function MatchDetails({
 
               {/* ---------------- presence ---------------- */}
               {s.position_presence?.by_player && (
-                <Section title="Tid tilbrakt på site" subtitle={s.position_presence.definition}>
-                  <Table
-                    head={[
-                      "Spiller", "Lag", "Målepunkter",
-                      ...(s.site_attack.sites as string[]), "Andre steder",
-                    ]}
-                  >
+                <Section
+                  title="Tid tilbrakt per callout"
+                  subtitle={s.position_presence.definition}
+                >
+                  <Table head={["Spiller", "Lag", "Målepunkter", "Hvor de står"]}>
                     {s.position_presence.by_player.map((p: any) => (
                       <Row
                         key={p.steamid}
@@ -248,15 +248,11 @@ export default function MatchDetails({
                           p.name,
                           <span key="t" className="text-xs text-neutral-400">{p.team}</span>,
                           p.samples,
-                          ...(s.site_attack.sites as string[]).map((l) => (
-                            <span key={l} className="tabular-nums">
-                              {p.zone_share[l] ? `${(p.zone_share[l] * 100).toFixed(0)}%` : "\u2013"}
-                            </span>
-                          )),
-                          <span key="e" className="tabular-nums text-neutral-500">
-                            {p.zone_share.elsewhere
-                              ? `${(p.zone_share.elsewhere * 100).toFixed(0)}%`
-                              : "\u2013"}
+                          <span key="s" className="text-xs text-neutral-400">
+                            {Object.entries(p.callout_share ?? {})
+                              .map(([spot, frac]) =>
+                                `${spot} ${((frac as number) * 100).toFixed(0)}%`)
+                              .join("  ·  ")}
                           </span>,
                         ]}
                       />

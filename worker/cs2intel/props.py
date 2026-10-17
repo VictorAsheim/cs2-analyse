@@ -30,6 +30,10 @@ PLAYER_TICK = [
     "is_alive",
     "team_name",
     "team_clan_name",
+    # The nav place the player is standing in - the map's own callout. Carried
+    # per tick by the demo, which is where CS2's place names live now that the
+    # nav file no longer has them.
+    "last_place_name",
 ]
 
 # Per-player props read once per round (at freeze-time end / round end).

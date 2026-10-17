@@ -86,6 +86,17 @@ def main() -> int:
             failures.append(
                 f"round {rec['round']}: arrival {arrival}s precedes freeze-time end")
 
+    # A full buy for five players tops out near $40,000, so a gap in the
+    # hundreds of thousands means the arithmetic wrapped rather than that one
+    # team was rich. This is the check that catches unsigned subtraction.
+    anti = E.anti_eco(match)
+    MAX_PLAUSIBLE_GAP = 100_000
+    for row in anti.get("rounds", []):
+        if row["equip_value_gap"] > MAX_PLAUSIBLE_GAP:
+            failures.append(
+                f"round {row['round']}: equipment gap ${row['equip_value_gap']:,} "
+                "exceeds anything five players can buy; the subtraction wrapped")
+
     for team, buckets in eco["by_team"].items():
         counted = sum(b["rounds"] for b in buckets["buy_types"].values())
         played = swr[team]["overall"]["denominator"]

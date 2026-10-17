@@ -242,7 +242,11 @@ def extract(demo_path: str, position_hz: float = 2.0) -> Match:
     halves = _derive_halves(raw_rounds, gr, sides_by_round, overtimes, warnings)
 
     # --- bomb events -------------------------------------------------------
-    plants = parser.parse_event("bomb_planted", player=["X", "Y", "Z"],
+    # last_place_name is the nav place the planter is standing in, which on a
+    # plant is the bombsite itself ("BombsiteA"/"BombsiteB"). It names the
+    # sites straight from the demo, so no per-map table has to.
+    plants = parser.parse_event("bomb_planted",
+                                player=["X", "Y", "Z", "last_place_name"],
                                 other=["total_rounds_played"])
     defuses = parser.parse_event("bomb_defused", other=["total_rounds_played"])
 
@@ -340,6 +344,14 @@ def extract(demo_path: str, position_hz: float = 2.0) -> Match:
 
     # --- economy ------------------------------------------------------------
     economy = boundary.copy()
+    # The parser returns equipment value as uint32 when no player is missing a
+    # reading, and float64 when NaNs force a widening. Unsigned arithmetic
+    # wraps: a $1,600 deficit becomes 4,294,965,696, which silently inverts
+    # every comparison downstream. Normalising here fixes it for every
+    # consumer rather than at each subtraction.
+    for column in ("current_equip_value", "balance"):
+        if column in economy.columns:
+            economy[column] = pd.to_numeric(economy[column], errors="coerce").astype("float64")
 
     # --- positions ----------------------------------------------------------
     step = max(1, int(round(tickrate / position_hz)))

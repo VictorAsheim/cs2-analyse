@@ -1,7 +1,31 @@
 {
  "analyses": [
   {
-   "id": "ce5f9080-24d9-4198-aa3e-a2e926f654d6",
+   "id": "17791_glassfiber-produkter-kaefer-dd_de_cache",
+   "label": "de_cache",
+   "map": "de_cache",
+   "rounds": 21,
+   "score": {
+    "Glassfiber Produkter": 8,
+    "Kaefer DD": 13
+   },
+   "serverName": "eBot :: Glassfiber Produkter vs Kaefer DD",
+   "publishedAt": "2026-10-17T17:47:00.383Z"
+  },
+  {
+   "id": "17792_glassfiber-produkter-kaefer-dd_de_dust2",
+   "label": "de_dust2",
+   "map": "de_dust2",
+   "rounds": 16,
+   "score": {
+    "Glassfiber Produkter": 3,
+    "Kaefer DD": 13
+   },
+   "serverName": "eBot :: Glassfiber Produkter vs Kaefer DD",
+   "publishedAt": "2026-10-17T17:47:00.385Z"
+  },
+  {
+   "id": "19829_frogn-kommune-cs-sopra-steria-newsync_de_inferno",
    "label": "de_inferno",
    "map": "de_inferno",
    "rounds": 29,
@@ -10,7 +34,19 @@
     "Sopra Steria NewSync": 13
    },
    "serverName": "eBot :: Frogn Kommune CS vs Sopra Steria NewSync",
-   "publishedAt": "2026-10-17T10:25:11.371Z"
+   "publishedAt": "2026-10-17T17:47:00.388Z"
+  },
+  {
+   "id": "17790_glassfiber-produkter-kaefer-dd_de_mirage",
+   "label": "de_mirage",
+   "map": "de_mirage",
+   "rounds": 21,
+   "score": {
+    "Glassfiber Produkter": 13,
+    "Kaefer DD": 8
+   },
+   "serverName": "eBot :: Glassfiber Produkter vs Kaefer DD",
+   "publishedAt": "2026-10-17T17:47:00.379Z"
   }
  ]
 }

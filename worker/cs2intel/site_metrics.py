@@ -92,34 +92,37 @@ SETUP_DELAY_SECONDS = 20.0
 
 
 def ct_setups(match: Match, sites: list[Bombsite]) -> dict:
-    """Where each CT has taken up position, before first contact.
+    """Which callout each defender takes up, before first contact.
 
     Read SETUP_DELAY_SECONDS after freeze-time end, or just before the round's
     first kill when that comes sooner: once someone dies, positions reflect
-    reaction rather than the intended setup. The delay actually used is
-    reported per round, because a round whose first kill lands at four seconds
-    gives a much weaker reading than one measured at the full twenty.
+    reaction rather than the intended setup.
+
+    Reported as the map's own callout rather than a distance to a bombsite.
+    Most defensive positions are deliberately off-site - Jungle, Connector,
+    Apps - so "how far from the site" marks half a normal setup as unusual,
+    while "holds Jungle in 13 of 15 rounds" is the thing an opponent can
+    actually prepare against.
     """
-    if len(match.positions) == 0 or not sites:
-        return {"note": "needs sampled positions and resolved bombsites"}
+    if len(match.positions) == 0:
+        return {"note": "needs sampled positions"}
 
     pos = match.positions
     pos = pos[pos["round"].notna()].copy()
     pos["round"] = pos["round"].astype(int)
+    place_col = next((c for c in pos.columns if c.endswith("last_place_name")), None)
 
     kills = match.kills
     kills = kills[kills["round"].notna()] if len(kills) else kills
     first_kill_tick = (kills.groupby(kills["round"].astype(int))["tick"].min().to_dict()
                        if len(kills) else {})
 
-    rows = []
-    delays = []
+    rows, delays = [], []
     for r in match.rounds:
         begin = r.freeze_end_tick or r.start_tick
         target = begin + int(SETUP_DELAY_SECONDS * match.tickrate)
         contact = first_kill_tick.get(r.number)
         if contact is not None:
-            # Step back one sample so the reading predates the kill itself.
             target = min(target, int(contact) - int(match.tickrate / 2))
         target = max(target, begin)
 
@@ -129,21 +132,17 @@ def ct_setups(match: Match, sites: list[Bombsite]) -> dict:
             continue
         tick = int(in_round["tick"].max())
         delays.append(round((tick - begin) / match.tickrate, 1))
-        snapshot = in_round[in_round["tick"] == tick]
 
-        for row in snapshot.itertuples(index=False):
+        for row in in_round[in_round["tick"] == tick].itertuples(index=False):
             if not bool(row.is_alive):
                 continue
-            label, distance = nearest_site(sites, float(row.X), float(row.Y))
+            place = str(getattr(row, place_col)) if place_col else ""
             rows.append({
                 "round": r.number,
-                "seconds_after_freeze_end": round((tick - begin) / match.tickrate, 1),
                 "steamid": str(row.steamid),
                 "name": str(row.name),
                 "team": str(row.team_clan_name),
-                "nearest_site": label,
-                "distance_to_site": round(distance, 0),
-                "inside_site": site_zone(sites, float(row.X), float(row.Y)) != "elsewhere",
+                "callout": place or "ukjent",
             })
 
     df = pd.DataFrame(rows)
@@ -152,40 +151,39 @@ def ct_setups(match: Match, sites: list[Bombsite]) -> dict:
 
     by_player = []
     for sid, grp in df.groupby("steamid"):
-        counts = grp["nearest_site"].value_counts()
+        counts = grp["callout"].value_counts()
         by_player.append({
             "steamid": sid,
             "name": grp["name"].iloc[0],
             "team": grp["team"].iloc[0],
             "ct_rounds_observed": int(grp["round"].nunique()),
-            "setup_position_by_site": {str(k): int(v) for k, v in counts.items()},
+            "positions": {str(k): int(v) for k, v in counts.items()},
             "most_common": str(counts.index[0]),
             "share_at_most_common": rate(
                 int(counts.iloc[0]), len(grp),
-                "rounds set up nearest this site / CT rounds observed"),
-            "set_up_inside_a_site": rate(
-                int(grp["inside_site"].sum()), len(grp),
-                "rounds set up inside a bombsite / CT rounds observed"),
-            "median_distance_to_nearest_site": int(grp["distance_to_site"].median()),
+                "rounds set up in this callout / CT rounds observed"),
+            "distinct_positions": int(counts.size),
         })
 
-    by_team_split = {}
+    by_team = {}
     for team, grp in df.groupby("team"):
-        per_round = grp.groupby("round")["nearest_site"].value_counts().unstack(fill_value=0)
-        by_team_split[str(team)] = {
-            "mean_players_per_site": {
-                str(c): round(float(per_round[c].mean()), 2) for c in per_round.columns
-            },
-            "rounds_observed": int(per_round.shape[0]),
+        counts = grp["callout"].value_counts()
+        observed = int(grp["round"].nunique())
+        by_team[str(team)] = {
+            "rounds_observed": observed,
+            "mean_players_per_callout": {
+                str(k): round(int(v) / observed, 2)
+                for k, v in counts.head(8).items()
+            } if observed else {},
         }
 
     return {
-        "definition": (f"nearest bombsite to each living CT, read "
-                       f"{SETUP_DELAY_SECONDS:g}s after freeze-time end or just "
+        "definition": (f"the callout each living defender stands in "
+                       f"{SETUP_DELAY_SECONDS:g}s after freeze-time end, or just "
                        "before the round's first kill, whichever came first"),
         "median_seconds_after_freeze_end": sorted(delays)[len(delays) // 2] if delays else None,
         "rounds_measured_before_10s": sum(1 for d in delays if d < 10),
-        "by_team": by_team_split,
+        "by_team": by_team,
         "by_player": sorted(by_player, key=lambda p: (p["team"], p["name"])),
     }
 
@@ -267,26 +265,26 @@ def retake_arrivals(match: Match, sites: list[Bombsite]) -> dict:
 
 
 def position_presence(match: Match, sites: list[Bombsite]) -> dict:
-    """Share of each player's living time spent inside each bombsite.
+    """Share of each player's living time spent in each callout.
 
-    The complement, "elsewhere", is the rest of the map; without callouts it
-    cannot be broken down further, so it is reported as one bucket instead of
-    being split into invented areas.
+    The map's own place names, so this reads as a map does: an entry fragger
+    who spends a fifth of every round in Apartments is visible here, and the
+    bombsites are simply two of the callouts.
     """
-    if len(match.positions) == 0 or not sites:
-        return {"note": "needs sampled positions and resolved bombsites"}
+    if len(match.positions) == 0:
+        return {"note": "needs sampled positions"}
 
     pos = match.positions
     pos = pos[pos["round"].notna() & pos["is_alive"].astype(bool)].copy()
     if pos.empty:
         return {"note": "no living sampled positions"}
-
-    pos["zone"] = [site_zone(sites, float(x), float(y))
-                   for x, y in zip(pos["X"], pos["Y"])]
+    place_col = next((c for c in pos.columns if c.endswith("last_place_name")), None)
+    if place_col is None:
+        return {"note": "this demo carries no place names"}
 
     rows = []
     for sid, grp in pos.groupby("steamid"):
-        counts = grp["zone"].value_counts()
+        counts = grp[place_col].replace("", "ukjent").value_counts()
         total = len(grp)
         rows.append({
             "steamid": str(sid),
@@ -294,12 +292,15 @@ def position_presence(match: Match, sites: list[Bombsite]) -> dict:
             "team": str(grp["team_clan_name"].mode().iloc[0])
                     if grp["team_clan_name"].notna().any() else None,
             "samples": total,
-            "zone_share": {str(z): round(int(c) / total, 3) for z, c in counts.items()},
+            # Capped: the tail is a long list of places crossed in transit, and
+            # it buries the handful a player actually holds.
+            "callout_share": {str(k): round(int(v) / total, 3)
+                              for k, v in counts.head(8).items()},
         })
 
     return {
-        "definition": ("share of 2 Hz position samples, while alive, falling "
-                       "inside each bombsite radius; everything else is "
-                       "'elsewhere'"),
+        "definition": ("share of 2 Hz position samples, while alive, spent in "
+                       "each of the map's callouts; the eight most frequent "
+                       "per player"),
         "by_player": sorted(rows, key=lambda r: (r["team"] or "", r["name"])),
     }

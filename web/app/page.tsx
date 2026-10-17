@@ -1,130 +1,150 @@
 import Link from "next/link";
 
 import Uploader from "@/components/Uploader";
-import { IS_STATIC, readManifest } from "@/lib/analyses";
-import { listJobs, reconcile } from "@/lib/jobs";
-
-function Score({ score }: { score: Record<string, number> }) {
-  const entries = Object.entries(score).sort((a, b) => b[1] - a[1]);
-  if (entries.length === 0) return null;
-  return (
-    <span className="tabular-nums">
-      {entries.map(([team, rounds], i) => (
-        <span key={team}>
-          {i > 0 && <span className="text-neutral-600"> – </span>}
-          <span className="text-neutral-400">{team}</span>{" "}
-          <span className="font-medium text-neutral-200">{rounds}</span>
-        </span>
-      ))}
-    </span>
-  );
-}
+import { IS_STATIC, readLeague } from "@/lib/analyses";
 
 // Locally this page reads the job store from disk on every request, so there
 // is nothing to prerender; this is the Next 16 replacement for force-dynamic.
-// The static build renders it once from the published manifest.
 export const instant = false;
 
-type Row = {
-  id: string;
-  title: string;
-  score: Record<string, number>;
-  rounds: number | null;
-  meta: string | null;
-  href: string | null;
-  error?: string;
-};
-
-async function rows(): Promise<Row[]> {
-  if (IS_STATIC) {
-    const published = await readManifest();
-    return published.map((a) => ({
-      id: a.id,
-      title: a.map,
-      score: a.score,
-      rounds: a.rounds,
-      meta: a.serverName,
-      href: `/match/${a.id}`,
-    }));
-  }
-
-  const jobs = await Promise.all((await listJobs()).map(reconcile));
-  return jobs.map((job) => ({
-    id: job.id,
-    title: job.summary?.map ?? job.filename,
-    score: job.summary?.score ?? {},
-    rounds: job.summary?.rounds ?? null,
-    meta: job.parseSeconds !== undefined ? `${job.parseSeconds} s` : null,
-    href: job.status === "done" ? `/match/${job.id}` : null,
-    error: job.status === "failed"
-      ? job.error?.split("\n").at(-1)
-      : job.status !== "done"
-        ? "parser…"
-        : undefined,
-  }));
-}
+const MAP_LABEL = (m: string) => m.replace(/^de_/, "");
 
 export default async function Home() {
-  const list = await rows();
+  const league = await readLeague();
 
-  return (
-    <main className="mx-auto w-full min-w-0 max-w-3xl px-6 py-16">
-      <header className="mb-10">
+  if (!league) {
+    return (
+      <main className="mx-auto w-full min-w-0 max-w-3xl px-6 py-16">
         <h1 className="text-2xl font-semibold tracking-tight text-neutral-100">
           CS2 demoanalyse
         </h1>
+        <p className="mt-3 text-sm text-neutral-400">
+          Ingen ligadata ennå. Kjør{" "}
+          <code className="text-neutral-300">python worker/build_league.py</code>{" "}
+          etter at minst én demo er parset.
+        </p>
+        {!IS_STATIC && <div className="mt-8"><Uploader /></div>}
+      </main>
+    );
+  }
+
+  const analysed = league.teams.filter((t) => t.demos_analysed > 0);
+
+  return (
+    <main className="mx-auto w-full min-w-0 max-w-4xl px-6 py-14">
+      <header className="mb-8">
+        <h1 className="text-2xl font-semibold tracking-tight text-neutral-100">
+          {league.division}
+        </h1>
         <p className="mt-2 text-sm leading-relaxed text-neutral-400">
-          {IS_STATIC
-            ? "Publiserte kampanalyser. Alle tall er regnet ut fra demoen og oppgis med teller og nevner, slik at ingen prosent står uten utvalgsstørrelsen bak den."
-            : "Last opp en .dem-fil. Alle tall regnes ut fra demoen og oppgis med teller og nevner, slik at ingen prosent står uten utvalgsstørrelsen bak den."}
+          Motstanderanalyse fra parsede demoer. {analysed.length} av{" "}
+          {league.teams.length} lag har demoer analysert
+          {" "}({league.matches_analysed} kamper). Trykk på et lag for å se
+          hvordan de spiller kart for kart.
         </p>
       </header>
 
-      {!IS_STATIC && <Uploader />}
-
-      {list.length > 0 ? (
-        <section className={IS_STATIC ? "" : "mt-12"}>
-          <h2 className="mb-3 text-xs font-medium uppercase tracking-wider text-neutral-500">
-            {IS_STATIC ? "Kamper" : "Analyserte kamper"}
-          </h2>
-          <ul className="divide-y divide-neutral-800 rounded-lg border border-neutral-800">
-            {list.map((row) => {
-              const body = (
-                <div className="flex items-baseline justify-between gap-4 px-4 py-3">
-                  <div className="min-w-0">
-                    <p className="truncate text-sm text-neutral-200">{row.title}</p>
-                    <p className="mt-0.5 truncate text-xs text-neutral-500">
-                      {row.error ? (
-                        <span className="text-red-400">{row.error}</span>
-                      ) : (
-                        <Score score={row.score} />
+      <section>
+        <div className="overflow-x-auto rounded-lg border border-neutral-800">
+          <table className="w-full min-w-max text-sm">
+            <thead>
+              <tr className="border-b border-neutral-800 bg-neutral-900/60 text-left">
+                {["#", "Lag", "K", "V", "T", "+/-", "P", "Demoer", "Kart"].map((h, i) => (
+                  <th
+                    key={h}
+                    className={`px-3 py-2 text-xs font-medium uppercase tracking-wide text-neutral-500 ${
+                      i >= 2 && i <= 6 ? "text-right" : ""
+                    }`}
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-neutral-800/70">
+              {league.teams.map((team) => {
+                const s = team.standing;
+                const hasData = team.demos_analysed > 0;
+                const name = hasData ? (
+                  <Link
+                    href={`/team/${team.slug}`}
+                    className="font-medium text-neutral-100 underline-offset-4 hover:underline"
+                  >
+                    {team.name}
+                  </Link>
+                ) : (
+                  <span className="text-neutral-400">{team.name}</span>
+                );
+                return (
+                  <tr key={team.slug} className="hover:bg-neutral-900/40">
+                    <td className="px-3 py-2.5 tabular-nums text-neutral-500">
+                      {s?.rank ?? "–"}
+                    </td>
+                    <td className="px-3 py-2.5">{name}</td>
+                    <td className="px-3 py-2.5 text-right tabular-nums text-neutral-400">{s?.played ?? "–"}</td>
+                    <td className="px-3 py-2.5 text-right tabular-nums text-neutral-400">{s?.won ?? "–"}</td>
+                    <td className="px-3 py-2.5 text-right tabular-nums text-neutral-400">{s?.lost ?? "–"}</td>
+                    <td className="px-3 py-2.5 text-right tabular-nums text-neutral-400">
+                      {s ? (s.round_diff > 0 ? `+${s.round_diff}` : s.round_diff) : "–"}
+                    </td>
+                    <td className="px-3 py-2.5 text-right font-medium tabular-nums text-neutral-200">
+                      {s?.points ?? "–"}
+                    </td>
+                    <td className="px-3 py-2.5 text-right tabular-nums text-neutral-400">
+                      {hasData ? team.demos_analysed : (
+                        <span className="text-neutral-700">–</span>
                       )}
-                    </p>
-                  </div>
-                  <div className="shrink-0 text-right text-xs tabular-nums text-neutral-500">
-                    {row.rounds !== null && <p>{row.rounds} runder</p>}
-                    {row.meta && <p className="truncate">{row.meta}</p>}
-                  </div>
-                </div>
-              );
-              return (
-                <li key={row.id} className="hover:bg-neutral-900/50">
-                  {row.href ? (
-                    <Link href={row.href} className="block">{body}</Link>
-                  ) : (
-                    body
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      ) : (
-        IS_STATIC && (
-          <p className="rounded-lg border border-neutral-800 px-4 py-6 text-center text-sm text-neutral-500">
-            Ingen analyser er publisert ennå.
+                    </td>
+                    <td className="px-3 py-2.5">
+                      {hasData ? (
+                        <span className="flex flex-wrap gap-1">
+                          {Object.keys(team.maps).map((m) => (
+                            <span
+                              key={m}
+                              className="rounded bg-neutral-800/80 px-1.5 py-0.5 text-[11px] text-neutral-300"
+                            >
+                              {MAP_LABEL(m)}
+                            </span>
+                          ))}
+                        </span>
+                      ) : (
+                        <span className="text-xs text-neutral-700">ingen demoer</span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="mt-2 text-xs leading-relaxed text-neutral-500">
+          Plassering, kamper og poeng er avskrevet fra ligatabellen
+          {league.table_updated && ` (${league.table_updated})`} og oppdateres
+          for hånd. Alt annet på sidene er regnet ut fra demoene.
+        </p>
+      </section>
+
+      {league.unmatched_clan_names.length > 0 && (
+        <p className="mt-4 rounded-lg border border-amber-900/50 bg-amber-950/20 px-4 py-3 text-xs leading-relaxed text-amber-200/80">
+          Klannavn fra demoer som ikke matcher noe lag i oppsettet:{" "}
+          {league.unmatched_clan_names.map((n) => `«${n}»`).join(", ")}. Legg dem
+          inn som alias i <code>league.config.json</code>.
+        </p>
+      )}
+
+      {!IS_STATIC && (
+        <section className="mt-12">
+          <h2 className="mb-3 text-xs font-medium uppercase tracking-wider text-neutral-500">
+            Legg til en kamp
+          </h2>
+          <Uploader />
+          <p className="mt-2 text-xs text-neutral-500">
+            Etter opplasting: kjør{" "}
+            <code className="text-neutral-400">python worker/build_league.py</code>{" "}
+            for å oppdatere lagoversikten.
           </p>
-        )
+        </section>
       )}
     </main>
   );

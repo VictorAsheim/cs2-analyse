@@ -1,18 +1,25 @@
 """Map areas: bombsite resolution and world-to-radar coordinates.
 
-CS2's nav format dropped the place names that CS:GO's `.nav` carried, and no
-public dataset ships authoritative CS2 callouts, so this module deliberately
-does not invent them. What it provides instead is grounded in two sources:
+Bombsites are read from the demo, not guessed. Three sources, in order of
+authority:
 
-  * the demo's own `bomb_planted.site` field, which separates the bombsites
-    authoritatively, and the plant coordinates that reveal where they are;
+  * `last_place_name` on the plant event - the nav place the planter stood in,
+    which on a plant is the bombsite itself ("BombsiteA"/"BombsiteB"). This
+    names the sites directly, on any map, with no curation.
+  * `bomb_planted.site`, the bombsite entity index, which separates the sites
+    even when the place name is missing, and the plant coordinates that reveal
+    where they are.
   * awpy's per-map radar calibration, which places any world coordinate on the
-    official radar image.
+    official radar image. awpy's own transform uses pos_x, pos_y and scale and
+    ignores the rotate/zoom fields some maps carry; this matches it.
 
-The A/B naming is the one curated piece. It is a per-map reference point, kept
-separate from everything measured, and every resolved site reports the observed
-centroid next to the label so the naming can be checked against the radar
-overlay at a glance.
+The curated reference points below are a fallback for demos that carry no
+place name. Every resolved site reports which source named it and its observed
+centroid, so the naming can be checked against the radar overlay at a glance.
+
+(The nav *file* carries no place names, and awpy ships none - which is why
+route-level statistics were previously reported as impossible. The names are
+in the demo instead, per player per tick.)
 """
 from __future__ import annotations
 
@@ -47,7 +54,8 @@ class Bombsite:
     """A bombsite as observed in this demo."""
     site_id: int            # the demo's bomb_planted.site entity index
     label: str              # "A"/"B" where known, else "site at (x, y)"
-    label_source: str       # "curated_reference_point" | "positional_fallback"
+    label_source: str       # "demo_place_name" | "curated_reference_point"
+                            # | "positional_fallback"
     centroid_x: float       # mean of observed plant positions
     centroid_y: float
     plant_count: int
@@ -101,6 +109,24 @@ SITE_RADIUS_MARGIN = 250.0
 MIN_SITE_RADIUS = 400.0
 
 
+def _label_from_place_name(group: pd.DataFrame) -> str | None:
+    """The bombsite letter the demo itself recorded for this cluster.
+
+    Taken by majority across the cluster's plants: a single odd reading - a
+    plant on the very edge of the trigger registering an adjacent place -
+    cannot rename the site.
+    """
+    column = next((c for c in group.columns if c.endswith("last_place_name")), None)
+    if column is None:
+        return None
+    names = [str(v) for v in group[column].dropna() if str(v).startswith("Bombsite")]
+    if not names:
+        return None
+    winner = max(set(names), key=names.count)
+    letter = winner.removeprefix("Bombsite").strip()
+    return letter or None
+
+
 def resolve_bombsites(match: Match, plants: pd.DataFrame) -> list[Bombsite]:
     """Group observed plants by the demo's site field and name the clusters.
 
@@ -125,16 +151,22 @@ def resolve_bombsites(match: Match, plants: pd.DataFrame) -> list[Bombsite]:
         )
 
         label, source = f"site at ({cx:.0f}, {cy:.0f})", "positional_fallback"
-        candidates = [(math.dist((rx, ry), (cx, cy)), name)
-                      for name, rx, ry in refs if name not in used_labels]
-        if candidates:
-            distance, name = min(candidates)
-            # A reference point must actually be near the observed cluster;
-            # otherwise the map layout has changed and the letter would be a
-            # guess dressed up as data.
-            if distance <= 1500.0:
-                label, source = name, "curated_reference_point"
-                used_labels.add(name)
+
+        named = _label_from_place_name(grp)
+        if named and named not in used_labels:
+            label, source = named, "demo_place_name"
+            used_labels.add(named)
+        else:
+            candidates = [(math.dist((rx, ry), (cx, cy)), name)
+                          for name, rx, ry in refs if name not in used_labels]
+            if candidates:
+                distance, name = min(candidates)
+                # A reference point must actually be near the observed cluster;
+                # otherwise the map layout has changed and the letter would be
+                # a guess dressed up as data.
+                if distance <= 1500.0:
+                    label, source = name, "curated_reference_point"
+                    used_labels.add(name)
 
         sites.append(Bombsite(
             site_id=int(site_id),

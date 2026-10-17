@@ -1,0 +1,52 @@
+{
+  "_note": [
+    "The league itself: which teams are in the division and where they stand.",
+    "None of this is derived from demos - it is transcribed from the league",
+    "table and has to be updated by hand when the table changes. Everything",
+    "else in the site is computed from parsed demos.",
+    "",
+    "'aliases' maps the clan name a demo records onto the league name. Server",
+    "configs drop accents, so 'Kaefer DåDå' arrives as 'Kaefer DD'; without",
+    "the alias its matches would be filed under a separate, unknown team."
+  ],
+  "division": "8. Divisjon avd. B",
+  "format": "Seriespill",
+  "table_updated": "2026-10-17",
+  "teams": [
+    {
+      "name": "Frogn Kommune CS",
+      "aliases": [],
+      "standing": { "rank": 1, "played": 2, "won": 2, "drawn": 0, "lost": 0, "round_diff": 4, "points": 6 }
+    },
+    {
+      "name": "NAS - Boarding Group B",
+      "aliases": [],
+      "standing": { "rank": 1, "played": 2, "won": 2, "drawn": 0, "lost": 0, "round_diff": 4, "points": 6 }
+    },
+    {
+      "name": "Glassfiber Produkter",
+      "aliases": [],
+      "standing": { "rank": 3, "played": 2, "won": 1, "drawn": 0, "lost": 1, "round_diff": 0, "points": 3 }
+    },
+    {
+      "name": "Kaefer DåDå",
+      "aliases": ["Kaefer DD"],
+      "standing": { "rank": 4, "played": 2, "won": 1, "drawn": 0, "lost": 1, "round_diff": -1, "points": 3 }
+    },
+    {
+      "name": "Sopra Steria NewSync",
+      "aliases": [],
+      "standing": { "rank": 5, "played": 1, "won": 0, "drawn": 0, "lost": 1, "round_diff": -2, "points": 0 }
+    },
+    {
+      "name": "Velferdskrigerne",
+      "aliases": [],
+      "standing": { "rank": 5, "played": 1, "won": 0, "drawn": 0, "lost": 1, "round_diff": -2, "points": 0 }
+    },
+    {
+      "name": "Accenture Norway",
+      "aliases": [],
+      "standing": { "rank": 7, "played": 2, "won": 0, "drawn": 0, "lost": 2, "round_diff": -3, "points": 0 }
+    }
+  ]
+}

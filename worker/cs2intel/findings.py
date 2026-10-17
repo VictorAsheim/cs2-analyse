@@ -64,6 +64,7 @@ def collect(facts: dict) -> list[Finding]:
     out += _setup_rules(stats)
     out += _attack_pattern_rules(stats)
     out += _economy_rules(stats, teams)
+    out += _strength_rules(stats, teams)
 
     return sorted(out, key=lambda f: -f.score)
 
@@ -235,43 +236,38 @@ def _opening_duel_rules(stats: dict, teams: list[str]) -> list[Finding]:
 
 
 def _setup_rules(stats: dict) -> list[Finding]:
-    """A defender who holds the same forward position every round.
+    """A defender who holds the same callout nearly every round.
 
-    Consistency on its own is not a finding: every CT has a side they take, so
-    a rule that fires on predictability alone returns one row per player and
-    buries everything else. What is exploitable is a player who is both
-    predictable and almost never on the site — a forward position that can be
-    isolated before the rest of the defence can help.
+    Reported by callout rather than by distance to a bombsite. The distance
+    version fired on half of every roster, because holding an off-site
+    position - Jungle, Connector, Apps - is how the side is played, not a
+    tell. Holding *the same named spot* almost every round is a tell.
     """
     found = []
-    setups = stats.get("ct_setups", {})
-    for player in setups.get("by_player", []):
+    for player in stats.get("ct_setups", {}).get("by_player", []):
         share = player.get("share_at_most_common", {})
         value = _rate_value(share)
         rounds = share.get("denominator", 0)
-        if value is None or rounds < 8 or value < 0.8:
+        spot = player.get("most_common", "?")
+        if value is None or rounds < 8 or value < 0.7 or spot == "ukjent":
             continue
         weight, label = _confidence(rounds, 14)
-        inside = player.get("set_up_inside_a_site", {})
-        inside_value = _rate_value(inside)
-        if inside_value is None or inside_value > 0.25:
-            continue
-
         found.append(Finding(
-            rule="forward_anchor",
+            rule="predictable_setup",
             subject=player.get("name", "?"),
-            severity="serious",
-            title=f"{player['name']} holder samme framskutte posisjon",
-            detail=(f"Starter nærmest {player['most_common']} i "
-                    f"{share['numerator']} av {share['denominator']} CT-runder, "
-                    f"men står nesten aldri inne på siten "
-                    f"({inside['numerator']}/{inside['denominator']}, median "
-                    f"{player.get('median_distance_to_nearest_site')} enheter unna). "
-                    "En framskutt posisjon som kan isoleres før resten rekker fram."),
-            evidence={"share_at_most_common": share,
-                      "set_up_inside_a_site": inside,
+            severity="serious" if value >= 0.85 else "warning",
+            title=f"{player['name']} står på {spot} nesten hver runde",
+            detail=(f"{share['numerator']} av {share['denominator']} CT-runder "
+                    f"startet på {spot}"
+                    + (f", og bare {player.get('distinct_positions')} ulike "
+                       "posisjoner totalt." if player.get("distinct_positions")
+                       else ".")
+                    + " En utility-åpning mot dette punktet treffer hver gang."),
+            evidence={"callout": spot,
+                      "share_at_most_common": share,
+                      "positions": player.get("positions"),
                       "team": player.get("team")},
-            score=value * weight * 1.25,
+            score=value * weight,
             confidence=label,
             section="CT-oppsett",
         ))
@@ -293,7 +289,7 @@ def _attack_pattern_rules(stats: dict) -> list[Finding]:
             found.append(Finding(
                 rule="repeated_attack_pattern",
                 subject=team,
-                severity="serious",
+                severity="good",
                 title=f"{team} gjentar «{name}» og vinner på det",
                 detail=(f"{win['numerator']} av {win['denominator']} runder vunnet "
                         f"med dette mønsteret (runde {', '.join(map(str, rounds))}). "
@@ -352,6 +348,104 @@ def _economy_rules(stats: dict, teams: list[str]) -> list[Finding]:
             confidence=label,
             section="Økonomi",
         ))
+    return found
+
+
+def _strength_rules(stats: dict, teams: list[str]) -> list[Finding]:
+    """What a team does well.
+
+    A scouting report that only lists weaknesses reads as if the opponent is
+    bad at everything, which is both wrong and useless for preparation: the
+    things they do well are what you have to plan around.
+    """
+    found = []
+
+    defence = stats.get("site_defence", {}).get("by_team", {})
+    for team in teams:
+        for site, d in (defence.get(team) or {}).get("per_site", {}).items():
+            conceded = d.get("plants_conceded", 0)
+            value = _rate_value(d.get("retake_rate"))
+            if conceded < 3 or value is None or value < 0.5:
+                continue
+            weight, label = _confidence(conceded, 6)
+            found.append(Finding(
+                rule="strong_retake",
+                subject=team, severity="good",
+                title=f"{team} tar tilbake {site} ofte",
+                detail=(f"Vant {d['retake_rate']['numerator']} av {conceded} runder "
+                        f"der motstanderen fikk plantet på {site}."),
+                evidence={"site": site, "retake_rate": d["retake_rate"]},
+                score=value * weight, confidence=label,
+                section="Forsvar per bombesite",
+            ))
+
+    outcomes = stats.get("round_outcomes", {})
+    for team in teams:
+        pp = (outcomes.get(team) or {}).get("post_plant_win_rate_as_t")
+        value = _rate_value(pp)
+        if value is None or pp.get("denominator", 0) < 5 or value < 0.8:
+            continue
+        weight, label = _confidence(pp["denominator"], 10)
+        found.append(Finding(
+            rule="strong_post_plant",
+            subject=team, severity="good",
+            title=f"{team} holder post-plant",
+            detail=(f"Vant {pp['numerator']} av {pp['denominator']} runder de "
+                    "fikk plantet i."),
+            evidence={"post_plant_win_rate": pp},
+            score=value * weight, confidence=label,
+            section="Bombe og rundeavslutninger",
+        ))
+
+    duels = stats.get("opening_duels", {}).get("by_team", {})
+    for team in teams:
+        rate_ = (duels.get(team) or {}).get("opening_duel_win_rate")
+        value = _rate_value(rate_)
+        if value is None or rate_.get("denominator", 0) < 12 or value < 0.58:
+            continue
+        weight, label = _confidence(rate_["denominator"], 20)
+        found.append(Finding(
+            rule="strong_opening_duels",
+            subject=team, severity="good",
+            title=f"{team} vinner åpningsduellene",
+            detail=(f"{rate_['numerator']} av {rate_['denominator']} første-drap "
+                    "i runden gikk deres vei."),
+            evidence={"opening_duel_win_rate": rate_},
+            score=value * weight, confidence=label,
+            section="Åpningsdueller",
+        ))
+
+    usage = stats.get("utility_usage", {}).get("by_team", {})
+    totals = {}
+    for team in teams:
+        entry = usage.get(team)
+        if not entry:
+            continue
+        thrown = rounds = 0
+        for side in entry.get("per_side", {}).values():
+            thrown += side.get("thrown_total", 0)
+            rounds += side.get("rounds_played", 0)
+        if rounds:
+            totals[team] = (thrown / rounds, rounds)
+    if len(totals) == 2:
+        (low, _), (high_team, (high, high_rounds)) = (
+            sorted(totals.items(), key=lambda kv: kv[1][0])[0][1],
+            sorted(totals.items(), key=lambda kv: kv[1][0])[1],
+        )
+        if high > 0 and (high - low) / high >= 0.25:
+            weight, label = _confidence(high_rounds, 20)
+            found.append(Finding(
+                rule="utility_advantage",
+                subject=high_team, severity="good",
+                title=f"{high_team} spiller med mye utility",
+                detail=(f"{high:.1f} granater per runde mot motstanderens "
+                        f"{low:.1f}. Forvent røyk og molotov på hver execute."),
+                evidence={"per_round": round(high, 2),
+                          "opponent_per_round": round(low, 2)},
+                score=((high - low) / high) * weight, confidence=label,
+                section="Granatbruk",
+            ))
+
     return found
 
 

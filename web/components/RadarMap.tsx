@@ -212,7 +212,7 @@ export default function RadarMap({
       <p className="text-xs leading-relaxed text-neutral-500">
         Sirklene er bombesitene slik de ble funnet fra observerte plants, ikke
         kartets faktiske trigger-geometri — radien dekker den målte spredningen.
-        {radar.bombsites.some((s) => s.label_source !== "curated_reference_point") &&
+        {radar.bombsites.some((s) => s.label_source === "positional_fallback") &&
           " Sitene for dette kartet mangler A/B-merking og vises med posisjon."}
       </p>
     </div>

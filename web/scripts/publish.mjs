@@ -85,6 +85,16 @@ async function stage() {
     console.log(`  + ${facts.match?.map ?? id}  (${id})`);
   }
 
+  // The league view is what the site opens on, so it ships alongside the
+  // match documents rather than being rebuilt at publish time.
+  const leagueSrc = path.join(ROOT, "data", "league.json");
+  if (await exists(leagueSrc)) {
+    await fs.copyFile(leagueSrc, path.join(STAGE, "league.json"));
+    console.log("  + league.json");
+  } else {
+    console.warn("  ! no data/league.json - run worker/build_league.py first");
+  }
+
   analyses.sort((a, b) => a.map.localeCompare(b.map));
   await fs.writeFile(
     path.join(STAGE, "index.json"),
@@ -100,10 +110,25 @@ async function stage() {
 // must be a literal, so the line is commented out for the static build and put
 // back afterwards.
 const INSTANT = "export const instant = false;";
-const PAGES_WITH_INSTANT = [
-  path.join(WEB, "app", "page.tsx"),
-  path.join(WEB, "app", "match", "[id]", "page.tsx"),
-];
+
+/** Every page carrying the line, found rather than listed.
+ *
+ * A hardcoded list silently breaks the publish the first time a new page
+ * needs the same route config, which is exactly how this was discovered.
+ */
+async function pagesWithInstant(dir = path.join(WEB, "app")) {
+  const found = [];
+  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      found.push(...await pagesWithInstant(full));
+    } else if (/^(page|layout)\.tsx?$/.test(entry.name)) {
+      const text = await fs.readFile(full, "utf8");
+      if (text.includes(INSTANT)) found.push(full);
+    }
+  }
+  return found;
+}
 
 async function withStaticSources(run) {
   const originals = new Map();
@@ -128,9 +153,8 @@ async function withStaticSources(run) {
   }
 
   try {
-    for (const file of PAGES_WITH_INSTANT) {
+    for (const file of await pagesWithInstant()) {
       const text = await fs.readFile(file, "utf8");
-      if (!text.includes(INSTANT)) continue;
       originals.set(file, text);
       await fs.writeFile(file, text.replace(INSTANT, `// ${INSTANT}`), "utf8");
     }
