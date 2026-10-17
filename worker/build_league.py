@@ -86,6 +86,7 @@ def build(config_path: str, facts_dir: str) -> dict:
     per_team_map: dict[str, dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
     per_team_matches: dict[str, list[dict]] = defaultdict(list)
     unknown_teams: set[str] = set()
+    clan_names: dict[str, set[str]] = defaultdict(set)
 
     for facts in matches:
         match = facts["match"]
@@ -129,6 +130,7 @@ def build(config_path: str, facts_dir: str) -> dict:
             }
             per_team_map[name][map_name].append(record)
             per_team_matches[name].append(record)
+            clan_names[name].add(raw)
 
     teams_out = []
     for team in config["teams"]:
@@ -178,6 +180,9 @@ def build(config_path: str, facts_dir: str) -> dict:
             "matches": sorted(per_team_matches.get(name, []),
                               key=lambda r: (r["map"], r["match_id"])),
             "demos_analysed": len(per_team_matches.get(name, [])),
+            # Every spelling this team's demos used, so a page holding a raw
+            # clan name can find the league team it belongs to.
+            "clan_names": sorted(clan_names.get(name, set())),
         })
 
     return {

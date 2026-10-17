@@ -1,13 +1,12 @@
 import Link from "next/link";
 
+import { MapBadge, TeamBadge } from "@/components/Badges";
 import Uploader from "@/components/Uploader";
 import { IS_STATIC, readLeague } from "@/lib/analyses";
 
 // Locally this page reads the job store from disk on every request, so there
 // is nothing to prerender; this is the Next 16 replacement for force-dynamic.
 export const instant = false;
-
-const MAP_LABEL = (m: string) => m.replace(/^de_/, "");
 
 export default async function Home() {
   const league = await readLeague();
@@ -70,10 +69,15 @@ export default async function Home() {
                     href={`/team/${team.slug}`}
                     className="font-medium text-neutral-100 underline-offset-4 hover:underline"
                   >
-                    {team.name}
+                    <TeamBadge slug={team.slug} name={team.name} size={22} />
                   </Link>
                 ) : (
-                  <span className="text-neutral-400">{team.name}</span>
+                  <TeamBadge
+                    slug={team.slug}
+                    name={team.name}
+                    size={22}
+                    className="text-neutral-400"
+                  />
                 );
                 return (
                   <tr key={team.slug} className="hover:bg-neutral-900/40">
@@ -97,14 +101,14 @@ export default async function Home() {
                     </td>
                     <td className="px-3 py-2.5">
                       {hasData ? (
-                        <span className="flex flex-wrap gap-1">
+                        <span className="flex flex-wrap gap-1.5">
                           {Object.keys(team.maps).map((m) => (
-                            <span
+                            <MapBadge
                               key={m}
-                              className="rounded bg-neutral-800/80 px-1.5 py-0.5 text-[11px] text-neutral-300"
-                            >
-                              {MAP_LABEL(m)}
-                            </span>
+                              map={m}
+                              size={18}
+                              className="rounded bg-neutral-800/80 py-0.5 pl-0.5 pr-1.5 text-[11px] text-neutral-300"
+                            />
                           ))}
                         </span>
                       ) : (

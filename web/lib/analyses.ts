@@ -43,15 +43,17 @@ export async function readManifest(): Promise<Published[]> {
 /**
  * Facts for one analysis.
  *
- * The published copy wins: once an analysis has been published, that is the
- * version teammates are reading, and a local re-parse should not silently
- * change what the page shows until it is published again.
+ * Locally the live copy in data/facts wins; published, only the staged copy
+ * exists. The other order looked tidier - "what teammates see is what you
+ * see" - but it meant a re-parse changed nothing on screen until the next
+ * publish, so local checks silently ran against stale data.
  */
 export async function readAnalysis(id: string): Promise<any | null> {
-  for (const file of [
-    path.join(PUBLIC_DIR, `${id}.facts.json`),
+  const candidates = [
     path.join(FACTS_DIR, `${id}.facts.json`),
-  ]) {
+    path.join(PUBLIC_DIR, `${id}.facts.json`),
+  ];
+  for (const file of IS_STATIC ? candidates.reverse() : candidates) {
     try {
       return JSON.parse(await fs.readFile(file, "utf8"));
     } catch {
@@ -74,6 +76,7 @@ export type LeagueTeam = {
   maps: Record<string, any>;
   matches: any[];
   demos_analysed: number;
+  clan_names: string[];
 };
 
 export type League = {
@@ -94,10 +97,12 @@ export type League = {
  * documents, so the published site and the local one read one file.
  */
 export async function readLeague(): Promise<League | null> {
-  for (const file of [
-    path.join(PUBLIC_DIR, "league.json"),
+  // Same precedence as readAnalysis: live data locally, staged when published.
+  const candidates = [
     path.join(DATA_DIR, "league.json"),
-  ]) {
+    path.join(PUBLIC_DIR, "league.json"),
+  ];
+  for (const file of IS_STATIC ? candidates.reverse() : candidates) {
     try {
       return JSON.parse(await fs.readFile(file, "utf8")) as League;
     } catch {

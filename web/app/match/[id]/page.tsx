@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { MapBadge, TeamBadge } from "@/components/Badges";
 import Findings from "@/components/Findings";
 import MatchDetails from "@/components/MatchDetails";
 import RadarMap from "@/components/RadarMap";
@@ -57,7 +58,7 @@ export default async function MatchPage(
           <span key={t.slug} className="flex items-center gap-2">
             <span className="text-neutral-700">/</span>
             <Link href={`/team/${t.slug}`} className="hover:text-neutral-300">
-              {t.name}
+              <TeamBadge slug={t.slug} name={t.name} size={16} />
             </Link>
           </span>
         ))}
@@ -66,18 +67,27 @@ export default async function MatchPage(
       <header className="mt-4 pb-5">
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
           <h1 className="text-2xl font-semibold tracking-tight text-neutral-100">
-            {m.map}
+            <MapBadge map={m.map} size={40} bold />
           </h1>
-          <p className="text-lg tabular-nums text-neutral-300">
-            {ranked.map((t, i) => (
-              <span key={t}>
-                {i > 0 && <span className="mx-2 text-neutral-600">–</span>}
-                {t}{" "}
-                <span className="font-semibold text-neutral-100">
-                  {score[t] ?? 0}
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-lg tabular-nums text-neutral-300">
+            {ranked.map((t, i) => {
+              // The score is keyed by the clan name the server recorded,
+              // which may differ from the league spelling.
+              const entry = (league?.teams ?? []).find(
+                (x) => x.name === t || x.clan_names?.includes(t),
+              );
+              return (
+                <span key={t} className="flex items-center gap-2">
+                  {i > 0 && <span className="text-neutral-600">–</span>}
+                  {entry
+                    ? <TeamBadge slug={entry.slug} name={entry.name} size={24} />
+                    : <span>{t}</span>}
+                  <span className="font-semibold text-neutral-100">
+                    {score[t] ?? 0}
+                  </span>
                 </span>
-              </span>
-            ))}
+              );
+            })}
           </p>
         </div>
         <p className="mt-2 text-xs text-neutral-500">

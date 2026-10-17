@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T17:42:41.836592+00:00",
+ "generated_at": "2026-10-17T18:12:00.695691+00:00",
  "division": "8. Divisjon avd. B",
  "format": "Seriespill",
  "table_updated": "2026-10-17",
@@ -411,7 +411,10 @@
      ]
     }
    ],
-   "demos_analysed": 1
+   "demos_analysed": 1,
+   "clan_names": [
+    "Frogn Kommune CS"
+   ]
   },
   {
    "slug": "nas-boarding-group-b",
@@ -430,7 +433,8 @@
    "worst_map": null,
    "maps": {},
    "matches": [],
-   "demos_analysed": 0
+   "demos_analysed": 0,
+   "clan_names": []
   },
   {
    "slug": "glassfiber-produkter",
@@ -1178,7 +1182,10 @@
      ]
     }
    ],
-   "demos_analysed": 3
+   "demos_analysed": 3,
+   "clan_names": [
+    "Glassfiber Produkter"
+   ]
   },
   {
    "slug": "kaefer-dada",
@@ -1818,7 +1825,10 @@
      ]
     }
    ],
-   "demos_analysed": 3
+   "demos_analysed": 3,
+   "clan_names": [
+    "Kaefer DD"
+   ]
   },
   {
    "slug": "sopra-steria-newsync",
@@ -2194,7 +2204,10 @@
      ]
     }
    ],
-   "demos_analysed": 1
+   "demos_analysed": 1,
+   "clan_names": [
+    "Sopra Steria NewSync"
+   ]
   },
   {
    "slug": "velferdskrigerne",
@@ -2213,7 +2226,8 @@
    "worst_map": null,
    "maps": {},
    "matches": [],
-   "demos_analysed": 0
+   "demos_analysed": 0,
+   "clan_names": []
   },
   {
    "slug": "accenture-norway",
@@ -2232,7 +2246,8 @@
    "worst_map": null,
    "maps": {},
    "matches": [],
-   "demos_analysed": 0
+   "demos_analysed": 0,
+   "clan_names": []
   }
  ],
  "unmatched_clan_names": [],

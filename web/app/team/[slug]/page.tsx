@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { MapBadge, MapTile, TeamBadge, mapLabel } from "@/components/Badges";
 import { RateValue, Section } from "@/components/stats";
 import { readLeague } from "@/lib/analyses";
 
@@ -13,16 +14,14 @@ export async function generateStaticParams() {
     .map((t) => ({ slug: t.slug }));
 }
 
-const MAP_LABEL = (m: string) => m.replace(/^de_/, "");
-
 function MapCard({ map, data }: { map: string; data: any }) {
   const wr = data.round_win_rate;
   return (
     <div className="rounded-lg border border-neutral-800">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-neutral-800 px-4 py-3">
         <div>
-          <h3 className="text-base font-semibold text-neutral-100">
-            {MAP_LABEL(map)}
+          <h3 className="text-base text-neutral-100">
+            <MapBadge map={map} size={32} bold />
           </h3>
           <p className="mt-0.5 text-xs text-neutral-500">
             {data.match_wins} av {data.matches} kamp
@@ -92,12 +91,12 @@ function MapCard({ map, data }: { map: string; data: any }) {
         </div>
       </div>
 
-      <div className="border-t border-neutral-800 px-4 py-2.5">
+      <div className="border-t border-neutral-800">
         {data.match_ids.map((id: string) => (
           <Link
             key={id}
             href={`/match/${id}`}
-            className="text-xs text-neutral-500 underline-offset-4 hover:text-neutral-200 hover:underline"
+            className="block px-4 py-2.5 text-xs text-neutral-500 transition hover:bg-neutral-900/60 hover:text-neutral-200"
           >
             Full kampanalyse →
           </Link>
@@ -132,7 +131,7 @@ export default async function TeamPage(
 
       <header className="mt-4 pb-5">
         <h1 className="text-2xl font-semibold tracking-tight text-neutral-100">
-          {team.name}
+          <TeamBadge slug={team.slug} name={team.name} size={36} />
         </h1>
         <p className="mt-2 text-xs text-neutral-500">
           {s && (
@@ -147,18 +146,20 @@ export default async function TeamPage(
 
       {team.demos_analysed > 0 && (
         <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-lg border border-neutral-800 px-4 py-3">
-            <p className="text-xs text-neutral-500">Sterkest kart</p>
-            <p className="mt-0.5 text-lg font-medium text-neutral-100">
-              {team.best_map ? MAP_LABEL(team.best_map) : "–"}
-            </p>
-          </div>
-          <div className="rounded-lg border border-neutral-800 px-4 py-3">
-            <p className="text-xs text-neutral-500">Svakest kart</p>
-            <p className="mt-0.5 text-lg font-medium text-neutral-100">
-              {team.worst_map ? MAP_LABEL(team.worst_map) : "–"}
-            </p>
-          </div>
+          {team.best_map ? (
+            <MapTile map={team.best_map} label="Sterkest kart" />
+          ) : (
+            <div className="rounded-lg border border-neutral-800 px-4 py-3 text-sm text-neutral-600">
+              Sterkest kart –
+            </div>
+          )}
+          {team.worst_map ? (
+            <MapTile map={team.worst_map} label="Svakest kart" />
+          ) : (
+            <div className="rounded-lg border border-neutral-800 px-4 py-3 text-sm text-neutral-600">
+              Svakest kart –
+            </div>
+          )}
         </div>
       )}
 
@@ -173,53 +174,55 @@ export default async function TeamPage(
         </div>
       </Section>
 
-      <Section title="Kamper" subtitle="Hver rad går videre til full analyse.">
-        <div className="overflow-x-auto rounded-lg border border-neutral-800">
-          <table className="w-full min-w-max text-sm">
-            <thead>
-              <tr className="border-b border-neutral-800 bg-neutral-900/60 text-left">
-                {["Kart", "Motstander", "Resultat", "Som T", "Som CT", ""].map((h) => (
-                  <th
-                    key={h}
-                    className="px-3 py-2 text-xs font-medium uppercase tracking-wide text-neutral-500"
-                  >
-                    {h}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-neutral-800/70">
-              {team.matches.map((m: any) => (
-                <tr key={m.match_id} className="hover:bg-neutral-900/40">
-                  <td className="px-3 py-2.5 text-neutral-200">{MAP_LABEL(m.map)}</td>
-                  <td className="px-3 py-2.5 text-neutral-400">{m.opponent}</td>
-                  <td className="px-3 py-2.5 tabular-nums">
-                    <span
-                      className={
-                        m.won ? "font-medium text-emerald-400" : "text-neutral-400"
-                      }
-                    >
-                      {m.rounds_for}–{m.rounds_against}
-                    </span>
-                  </td>
-                  <td className="px-3 py-2.5 tabular-nums text-neutral-400">
+      <Section
+        title="Kamper"
+        subtitle="Hele raden er en lenke til full kampanalyse."
+      >
+        <div className="divide-y divide-neutral-800/70 overflow-hidden rounded-lg border border-neutral-800">
+          {team.matches.map((m: any) => {
+            const opponent = league.teams.find((t) => t.name === m.opponent);
+            return (
+              <Link
+                key={m.match_id}
+                href={`/match/${m.match_id}`}
+                className="flex flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3 transition hover:bg-neutral-900/60"
+              >
+                <MapBadge map={m.map} size={40} bold className="min-w-[9rem]" />
+
+                <span className="flex min-w-[11rem] items-center gap-2 text-sm text-neutral-400">
+                  <span className="text-neutral-600">mot</span>
+                  {opponent ? (
+                    <TeamBadge slug={opponent.slug} name={m.opponent} size={20} />
+                  ) : (
+                    m.opponent
+                  )}
+                </span>
+
+                <span
+                  className={`text-base tabular-nums ${
+                    m.won ? "font-semibold text-emerald-400" : "text-neutral-300"
+                  }`}
+                >
+                  {m.rounds_for}–{m.rounds_against}
+                </span>
+
+                <span className="flex gap-3 text-xs tabular-nums text-neutral-500">
+                  <span>
+                    <span className="text-amber-300/70">T </span>
                     {m.sides.won.T}/{m.sides.played.T}
-                  </td>
-                  <td className="px-3 py-2.5 tabular-nums text-neutral-400">
+                  </span>
+                  <span>
+                    <span className="text-sky-300/70">CT </span>
                     {m.sides.won.CT}/{m.sides.played.CT}
-                  </td>
-                  <td className="px-3 py-2.5">
-                    <Link
-                      href={`/match/${m.match_id}`}
-                      className="text-xs text-neutral-500 underline-offset-4 hover:text-neutral-200 hover:underline"
-                    >
-                      analyse →
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  </span>
+                </span>
+
+                <span className="ml-auto text-xs text-neutral-600">
+                  full analyse →
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </Section>
 
