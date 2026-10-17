@@ -1,0 +1,16 @@
+{
+ "analyses": [
+  {
+   "id": "ce5f9080-24d9-4198-aa3e-a2e926f654d6",
+   "label": "de_inferno",
+   "map": "de_inferno",
+   "rounds": 29,
+   "score": {
+    "Frogn Kommune CS": 16,
+    "Sopra Steria NewSync": 13
+   },
+   "serverName": "eBot :: Frogn Kommune CS vs Sopra Steria NewSync",
+   "publishedAt": "2026-10-17T10:25:11.371Z"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+# Python environment and bytecode
+.venv/
+__pycache__/
+
+# Local working data: uploaded demos, job state, parsed output. None of this
+# is published; the publish script copies what it needs into docs/.
+data/
+*.dem
+
+# Staging area the publish script rewrites on every run.
+web/public/analyses/
+
+# Parked by the publish script during a static build; if this is ever left
+# behind, the publish was interrupted and it belongs back at web/app/api.
+web/.api-parked/
+
+# docs/ is deliberately NOT ignored: it is the built site GitHub Pages serves,
+# so its JSON and PNG must be committed even though the same file types are
+# ignored under data/.
