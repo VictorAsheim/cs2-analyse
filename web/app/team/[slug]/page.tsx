@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { MapBadge, MapTile, TeamBadge, mapLabel } from "@/components/Badges";
-import { RateValue, Section } from "@/components/stats";
+import {
+  MapBadge, MapTile, TeamBadge, mapLabel, mapSrc,
+} from "@/components/Badges";
+import MapPlans from "@/components/MapPlans";
+import { Section } from "@/components/stats";
 import { readLeague } from "@/lib/analyses";
 
 export const instant = false;
@@ -12,121 +15,6 @@ export async function generateStaticParams() {
   return (league?.teams ?? [])
     .filter((t) => t.demos_analysed > 0)
     .map((t) => ({ slug: t.slug }));
-}
-
-/**
- * One finding, with how many of the map's matches it appeared in.
- *
- * On a map played once the count says nothing and is hidden. Past that it is
- * the strongest evidence here: a habit seen in every match is a pattern, and
- * one seen once may be a bad night.
- */
-function Finding({ f }: { f: any }) {
-  const recurring = f.matches_on_map > 1;
-  const everyMatch = recurring && f.matches_fired === f.matches_on_map;
-  return (
-    <li>
-      <p className="flex flex-wrap items-baseline gap-x-2 text-xs font-medium text-neutral-200">
-        {f.title}
-        {recurring && (
-          <span
-            className={`rounded px-1.5 py-0.5 text-[10px] font-medium tabular-nums ${
-              everyMatch
-                ? "bg-neutral-100/10 text-neutral-200"
-                : "bg-neutral-800 text-neutral-500"
-            }`}
-            title={`Slo ut i ${f.matches_fired} av ${f.matches_on_map} kamper på dette kartet`}
-          >
-            {f.matches_fired}/{f.matches_on_map} kamper
-          </span>
-        )}
-      </p>
-      <p className="mt-0.5 text-xs leading-relaxed text-neutral-500">{f.detail}</p>
-    </li>
-  );
-}
-
-function MapCard({ map, data }: { map: string; data: any }) {
-  const wr = data.round_win_rate;
-  return (
-    <div className="rounded-lg border border-neutral-800">
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-neutral-800 px-4 py-3">
-        <div>
-          <h3 className="text-base text-neutral-100">
-            <MapBadge map={map} size={32} bold />
-          </h3>
-          <p className="mt-0.5 text-xs text-neutral-500">
-            {data.match_wins} av {data.matches} kamp
-            {data.matches === 1 ? "" : "er"} vunnet · runder{" "}
-            {data.rounds_for}–{data.rounds_against}
-          </p>
-        </div>
-        <div className="flex gap-4 text-xs">
-          <span>
-            <span className="text-neutral-500">Runder </span>
-            <RateValue rate={wr} />
-          </span>
-          <span>
-            <span className="text-amber-300/70">T </span>
-            <RateValue rate={data.t} />
-          </span>
-          <span>
-            <span className="text-sky-300/70">CT </span>
-            <RateValue rate={data.ct} />
-          </span>
-        </div>
-      </div>
-
-      <div className="grid gap-x-5 gap-y-4 px-4 py-4 sm:grid-cols-2">
-        <div>
-          <p className="mb-2 text-xs font-medium uppercase tracking-wider text-emerald-400/80">
-            Styrker — planlegg mot dette
-          </p>
-          {data.strengths.length > 0 ? (
-            <ul className="space-y-2">
-              {data.strengths.map((f: any, i: number) => (
-                <Finding key={i} f={f} />
-              ))}
-            </ul>
-          ) : (
-            <p className="text-xs text-neutral-600">
-              Ingenting over terskel på dette kartet.
-            </p>
-          )}
-        </div>
-
-        <div>
-          <p className="mb-2 text-xs font-medium uppercase tracking-wider text-red-400/80">
-            Svakheter — utnytt dette
-          </p>
-          {data.weaknesses.length > 0 ? (
-            <ul className="space-y-2">
-              {data.weaknesses.map((f: any, i: number) => (
-                <Finding key={i} f={f} />
-              ))}
-            </ul>
-          ) : (
-            <p className="text-xs text-neutral-600">
-              Ingenting over terskel på dette kartet.
-            </p>
-          )}
-        </div>
-      </div>
-
-      <div className="border-t border-neutral-800">
-        {data.match_ids.map((id: string, i: number) => (
-          <Link
-            key={id}
-            href={`/match/${id}`}
-            className="block px-4 py-2.5 text-xs text-neutral-500 transition hover:bg-neutral-900/60 hover:text-neutral-200"
-          >
-            Full kampanalyse
-            {data.match_ids.length > 1 ? ` ${i + 1} av ${data.match_ids.length}` : ""} →
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
 }
 
 export default async function TeamPage(
@@ -144,7 +32,12 @@ export default async function TeamPage(
   const maxPerMap = Math.max(
     0, ...Object.values(team.maps).map((m: any) => m.matches),
   );
-  const maps = Object.entries(team.maps).sort(
+  // The thumbnail is resolved here, on the server, because the lookup reads
+  // the public directory and the card that renders it is a client component.
+  const maps = Object.entries(team.maps)
+    .map(([name, data]: [string, any]) =>
+      [name, { ...data, image_src: mapSrc(name) }] as [string, any])
+    .sort(
     (a, b) =>
       (b[1].round_win_rate.value ?? 0) - (a[1].round_win_rate.value ?? 0),
   );
@@ -159,6 +52,12 @@ export default async function TeamPage(
         <h1 className="text-2xl font-semibold tracking-tight text-neutral-100">
           <TeamBadge slug={team.slug} name={team.name} size={36} />
         </h1>
+        {team.us && (
+          <p className="mt-1 text-xs text-neutral-500">
+            Vårt eget lag — lest for å finne hva som må fikses, ikke hvordan
+            laget slås.
+          </p>
+        )}
         <p className="mt-2 text-xs text-neutral-500">
           {s && (
             <>
@@ -189,19 +88,12 @@ export default async function TeamPage(
         </div>
       )}
 
-      <Section
-        title="Kart for kart"
-        subtitle={
-          maxPerMap > 1
-            ? `Sortert etter rundevinnerrate, summert over alle kamper på kartet (opptil ${maxPerMap} per kart). Merkelappen «x av y kamper» viser hvor mange av kampene et funn slo ut i — det skiller et mønster fra en enkelthendelse.`
-            : "Sortert etter rundevinnerrate. Med én kamp per kart rangerer dette resultater, ikke kartpreferanse — en veto-tendens krever flere kamper enn divisjonen har spilt."
-        }
-      >
-        <div className="space-y-3">
-          {maps.map(([map, data]) => (
-            <MapCard key={map} map={map} data={data} />
-          ))}
-        </div>
+      <Section title={team.us ? "Kart for kart" : "Slik kan dere vinne kartene"}>
+        <MapPlans
+          maps={maps as any}
+          ourTeam={team.us}
+          maxPerMap={maxPerMap}
+        />
       </Section>
 
       <Section

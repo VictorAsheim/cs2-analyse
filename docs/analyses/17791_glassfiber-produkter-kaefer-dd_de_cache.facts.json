@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:54:01.004832+00:00",
+ "generated_at": "2026-10-18T15:39:03.955398+00:00",
  "match": {
   "map": "de_cache",
   "server_name": "eBot :: Glassfiber Produkter vs Kaefer DD",
@@ -6026,6 +6026,7 @@
      "median_arrival_seconds": 62.5,
      "patterns": {
       "slow_default_A": {
+       "label": "sen default mot A",
        "rounds": [
         16,
         21
@@ -6035,9 +6036,11 @@
         "numerator": 1,
         "denominator": 2,
         "definition": "rounds won / rounds labelled slow_default_A"
-       }
+       },
+       "median_arrival_seconds": 66.5
       },
       "slow_default_B": {
+       "label": "sen default mot B",
        "rounds": [
         17,
         19
@@ -6047,9 +6050,11 @@
         "numerator": 1,
         "denominator": 2,
         "definition": "rounds won / rounds labelled slow_default_B"
-       }
+       },
+       "median_arrival_seconds": 63.5
       },
       "stopped_before_any_site": {
+       "label": "stoppet f\u00f8r de n\u00e5dde en site",
        "rounds": [
         13
        ],
@@ -6058,9 +6063,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled stopped_before_any_site"
-       }
+       },
+       "median_arrival_seconds": null
       },
       "rush_A": {
+       "label": "rush mot A",
        "rounds": [
         14
        ],
@@ -6069,9 +6076,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled rush_A"
-       }
+       },
+       "median_arrival_seconds": 20.5
       },
       "light_hit_B": {
+       "label": "lett st\u00f8ttet treff mot B",
        "rounds": [
         15
        ],
@@ -6080,9 +6089,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled light_hit_B"
-       }
+       },
+       "median_arrival_seconds": 37.5
       },
       "dry_hit_A": {
+       "label": "treff mot A uten utility",
        "rounds": [
         18
        ],
@@ -6091,9 +6102,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled dry_hit_A"
-       }
+       },
+       "median_arrival_seconds": 36.0
       },
       "dry_hit_B": {
+       "label": "treff mot B uten utility",
        "rounds": [
         20
        ],
@@ -6102,7 +6115,8 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled dry_hit_B"
-       }
+       },
+       "median_arrival_seconds": 48.0
       }
      }
     },
@@ -6114,6 +6128,7 @@
      "median_arrival_seconds": 46.5,
      "patterns": {
       "dry_hit_A": {
+       "label": "treff mot A uten utility",
        "rounds": [
         2,
         3,
@@ -6126,9 +6141,11 @@
         "numerator": 3,
         "denominator": 5,
         "definition": "rounds won / rounds labelled dry_hit_A"
-       }
+       },
+       "median_arrival_seconds": 46.5
       },
       "rush_B": {
+       "label": "rush mot B",
        "rounds": [
         1,
         9
@@ -6138,9 +6155,11 @@
         "numerator": 1,
         "denominator": 2,
         "definition": "rounds won / rounds labelled rush_B"
-       }
+       },
+       "median_arrival_seconds": 14.5
       },
       "light_hit_B": {
+       "label": "lett st\u00f8ttet treff mot B",
        "rounds": [
         4
        ],
@@ -6149,9 +6168,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled light_hit_B"
-       }
+       },
+       "median_arrival_seconds": 50.5
       },
       "split_A": {
+       "label": "split mot A",
        "rounds": [
         5
        ],
@@ -6160,9 +6181,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled split_A"
-       }
+       },
+       "median_arrival_seconds": 69.5
       },
       "stopped_before_any_site": {
+       "label": "stoppet f\u00f8r de n\u00e5dde en site",
        "rounds": [
         8
        ],
@@ -6171,9 +6194,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled stopped_before_any_site"
-       }
+       },
+       "median_arrival_seconds": null
       },
       "light_hit_A": {
+       "label": "lett st\u00f8ttet treff mot A",
        "rounds": [
         11
        ],
@@ -6182,9 +6207,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled light_hit_A"
-       }
+       },
+       "median_arrival_seconds": 50.0
       },
       "execute_A": {
+       "label": "execute mot A (r\u00f8yk og molotov)",
        "rounds": [
         12
        ],
@@ -6193,7 +6220,8 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled execute_A"
-       }
+       },
+       "median_arrival_seconds": 36.5
       }
      }
     }
@@ -9690,7 +9718,9 @@
    },
    "score": 0.7143,
    "confidence": "high",
-   "section": "\u00c5pningsdueller"
+   "section": "\u00c5pningsdueller",
+   "counter": "Unng\u00e5 f\u00f8rste kontakt. De vinner \u00e5pningsduellen oftere enn dere gj\u00f8r, s\u00e5 spill crossfire og retake i stedet for \u00e5 m\u00f8te dem i duell.",
+   "our_side": null
   },
   {
    "rule": "low_trade_rate",
@@ -9708,7 +9738,9 @@
    },
    "score": 0.6628,
    "confidence": "high",
-   "section": "Trading"
+   "section": "Trading",
+   "counter": "Isoler \u00e9n spiller av gangen og ta duellen. Bare 7 av 83 d\u00f8dsfall ble hevnet, s\u00e5 st\u00f8tten kommer for sent til \u00e5 straffe dere.",
+   "our_side": null
   },
   {
    "rule": "opening_duel_weak_player",
@@ -9728,7 +9760,9 @@
    },
    "score": 0.5833,
    "confidence": "low",
-   "section": "\u00c5pningsdueller"
+   "section": "\u00c5pningsdueller",
+   "counter": "Opps\u00f8k Thegaroh tidlig. Han vant 0 av 7 \u00e5pningsdueller \u2014 det er den billigste duellen p\u00e5 kartet.",
+   "our_side": null
   },
   {
    "rule": "site_retake_weak",
@@ -9748,7 +9782,9 @@
    },
    "score": 0.3333,
    "confidence": "medium",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 A og spill post-plant. De vant bare 1 av 4 runder der bomben l\u00e5 p\u00e5 A, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   },
   {
    "rule": "equipment_advantage_leak",
@@ -9766,7 +9802,9 @@
    },
    "score": 0.3333,
    "confidence": "medium",
-   "section": "\u00d8konomi"
+   "section": "\u00d8konomi",
+   "counter": null,
+   "our_side": null
   },
   {
    "rule": "low_trade_rate",
@@ -9784,7 +9822,9 @@
    },
    "score": 0.2626,
    "confidence": "medium",
-   "section": "Trading"
+   "section": "Trading",
+   "counter": "Isoler \u00e9n spiller av gangen og ta duellen. Bare 11 av 65 d\u00f8dsfall ble hevnet, s\u00e5 st\u00f8tten kommer for sent til \u00e5 straffe dere.",
+   "our_side": null
   },
   {
    "rule": "retake_never_arrives",
@@ -9803,7 +9843,9 @@
    },
    "score": 0.25,
    "confidence": "medium",
-   "section": "Retake-ankomst"
+   "section": "Retake-ankomst",
+   "counter": "Ta siten raskt og hold den. I 2 av 6 runder kom ingen CT seg inn i det hele tatt \u2014 f\u00e5r dere bomben ned, er runden ofte over.",
+   "our_side": "T"
   }
  ],
  "summary": {
@@ -9875,5 +9917,5 @@
   "size_bytes": 248604890,
   "sha256": "bb0f06187849ece0110e0a98d4ffe6d9d293e24146fe20839339dd7d6844b818"
  },
- "parse_seconds": 8.3
+ "parse_seconds": 6.5
 }

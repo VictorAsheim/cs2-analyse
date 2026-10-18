@@ -384,6 +384,32 @@ def classify_attacks(match: Match, sites: list[Bombsite]) -> dict:
     }
 
 
+# The rule names are built from thresholds, not from how anyone talks about
+# the game. These are the readable forms, shipped with the data so the pages
+# and the findings use one vocabulary rather than each keeping a copy.
+PATTERN_LABELS = {
+    "split": "split mot {site}",
+    "rush": "rush mot {site}",
+    "execute": "execute mot {site} (røyk og molotov)",
+    "light_hit": "lett støttet treff mot {site}",
+    "dry_hit": "treff mot {site} uten utility",
+    "slow_default": "sen default mot {site}",
+}
+
+
+def pattern_label(pattern: str) -> str:
+    """A rule name as a phrase: 'split_A' becomes 'split mot A'."""
+    if pattern == "stopped_before_any_site":
+        return "stoppet før de nådde en site"
+    if pattern.startswith("fake_") and "_then_" in pattern:
+        decoy, target = pattern.removeprefix("fake_").split("_then_", 1)
+        return f"fake mot {decoy}, så {target}"
+    for prefix, template in PATTERN_LABELS.items():
+        if pattern.startswith(prefix + "_"):
+            return template.format(site=pattern.removeprefix(prefix + "_"))
+    return pattern
+
+
 def _aggregate(records: list[dict], match: Match) -> dict:
     """Pattern frequency and conversion per attacking team."""
     out: dict = {}
@@ -393,9 +419,12 @@ def _aggregate(records: list[dict], match: Match) -> dict:
             continue
         patterns: dict[str, dict] = {}
         for r in mine:
-            slot = patterns.setdefault(r["pattern"], {"rounds": [], "wins": 0})
+            slot = patterns.setdefault(r["pattern"],
+                                       {"rounds": [], "wins": 0, "arrivals": []})
             slot["rounds"].append(r["round"])
             slot["wins"] += int(r["won"])
+            if r.get("arrival_seconds") is not None:
+                slot["arrivals"].append(r["arrival_seconds"])
 
         timed = [r["arrival_seconds"] for r in mine if r.get("arrival_seconds") is not None]
         times = sorted(timed)
@@ -411,9 +440,16 @@ def _aggregate(records: list[dict], match: Match) -> dict:
             "median_arrival_seconds": times[len(times) // 2] if times else None,
             "patterns": {
                 name: {
+                    "label": pattern_label(name),
                     "rounds": slot["rounds"],
                     "win_rate": rate(slot["wins"], len(slot["rounds"]),
                                      f"rounds won / rounds labelled {name}"),
+                    # The median of this pattern's own arrivals, so a counter
+                    # can say when to expect it rather than only that it comes.
+                    "median_arrival_seconds": (
+                        sorted(slot["arrivals"])[len(slot["arrivals"]) // 2]
+                        if slot["arrivals"] else None
+                    ),
                 }
                 for name, slot in sorted(patterns.items(),
                                          key=lambda kv: -len(kv[1]["rounds"]))

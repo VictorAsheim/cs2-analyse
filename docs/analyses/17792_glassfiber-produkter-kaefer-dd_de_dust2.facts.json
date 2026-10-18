@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:54:09.659804+00:00",
+ "generated_at": "2026-10-18T15:39:10.659629+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: Glassfiber Produkter vs Kaefer DD",
@@ -5211,6 +5211,7 @@
      "median_arrival_seconds": 33.5,
      "patterns": {
       "dry_hit_B": {
+       "label": "treff mot B uten utility",
        "rounds": [
         13
        ],
@@ -5219,9 +5220,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled dry_hit_B"
-       }
+       },
+       "median_arrival_seconds": 56.1
       },
       "rush_B": {
+       "label": "rush mot B",
        "rounds": [
         14
        ],
@@ -5230,9 +5233,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled rush_B"
-       }
+       },
+       "median_arrival_seconds": 17.5
       },
       "stopped_before_any_site": {
+       "label": "stoppet f\u00f8r de n\u00e5dde en site",
        "rounds": [
         15
        ],
@@ -5241,9 +5246,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled stopped_before_any_site"
-       }
+       },
+       "median_arrival_seconds": null
       },
       "split_B": {
+       "label": "split mot B",
        "rounds": [
         16
        ],
@@ -5252,7 +5259,8 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled split_B"
-       }
+       },
+       "median_arrival_seconds": 33.5
       }
      }
     },
@@ -5264,6 +5272,7 @@
      "median_arrival_seconds": 51.0,
      "patterns": {
       "split_A": {
+       "label": "split mot A",
        "rounds": [
         6,
         10,
@@ -5274,9 +5283,11 @@
         "numerator": 3,
         "denominator": 3,
         "definition": "rounds won / rounds labelled split_A"
-       }
+       },
+       "median_arrival_seconds": 57.0
       },
       "rush_B": {
+       "label": "rush mot B",
        "rounds": [
         1,
         4
@@ -5286,9 +5297,11 @@
         "numerator": 1,
         "denominator": 2,
         "definition": "rounds won / rounds labelled rush_B"
-       }
+       },
+       "median_arrival_seconds": 16.0
       },
       "stopped_before_any_site": {
+       "label": "stoppet f\u00f8r de n\u00e5dde en site",
        "rounds": [
         2,
         9
@@ -5298,9 +5311,11 @@
         "numerator": 0,
         "denominator": 2,
         "definition": "rounds won / rounds labelled stopped_before_any_site"
-       }
+       },
+       "median_arrival_seconds": null
       },
       "light_hit_A": {
+       "label": "lett st\u00f8ttet treff mot A",
        "rounds": [
         5,
         8
@@ -5310,9 +5325,11 @@
         "numerator": 2,
         "denominator": 2,
         "definition": "rounds won / rounds labelled light_hit_A"
-       }
+       },
+       "median_arrival_seconds": 59.0
       },
       "split_B": {
+       "label": "split mot B",
        "rounds": [
         3
        ],
@@ -5321,9 +5338,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled split_B"
-       }
+       },
+       "median_arrival_seconds": 84.5
       },
       "execute_A": {
+       "label": "execute mot A (r\u00f8yk og molotov)",
        "rounds": [
         7
        ],
@@ -5332,9 +5351,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled execute_A"
-       }
+       },
+       "median_arrival_seconds": 41.5
       },
       "light_hit_B": {
+       "label": "lett st\u00f8ttet treff mot B",
        "rounds": [
         11
        ],
@@ -5343,7 +5364,8 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled light_hit_B"
-       }
+       },
+       "median_arrival_seconds": 37.0
       }
      }
     }
@@ -8093,7 +8115,9 @@
    },
    "score": 1.0,
    "confidence": "high",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 A og spill post-plant. De vant bare 0 av 6 runder der bomben l\u00e5 p\u00e5 A, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   },
   {
    "rule": "strong_post_plant",
@@ -8111,7 +8135,9 @@
    },
    "score": 0.9,
    "confidence": "high",
-   "section": "Bombe og rundeavslutninger"
+   "section": "Bombe og rundeavslutninger",
+   "counter": "Nekt plantet. De vant 9 av 10 runder de fikk bomben ned, s\u00e5 en retake mot dem er dyr \u2014 stopp dem f\u00f8r siten, ikke etterp\u00e5.",
+   "our_side": "CT"
   },
   {
    "rule": "retake_never_arrives",
@@ -8130,14 +8156,16 @@
    },
    "score": 0.7,
    "confidence": "high",
-   "section": "Retake-ankomst"
+   "section": "Retake-ankomst",
+   "counter": "Ta siten raskt og hold den. I 7 av 10 runder kom ingen CT seg inn i det hele tatt \u2014 f\u00e5r dere bomben ned, er runden ofte over.",
+   "our_side": "T"
   },
   {
    "rule": "repeated_attack_pattern",
    "subject": "Kaefer DD",
    "severity": "good",
-   "title": "Kaefer DD gjentar \u00absplit_A\u00bb og vinner p\u00e5 det",
-   "detail": "3 av 3 runder vunnet med dette m\u00f8nsteret (runde 6, 10, 12). Merk at m\u00f8nstermerkingen er utledet, ikke m\u00e5lt.",
+   "title": "Kaefer DD gjentar \u00absplit mot A\u00bb og vinner p\u00e5 det",
+   "detail": "3 av 3 runder vunnet med dette m\u00f8nsteret (runde 6, 10, 12), median ankomst 57 s. Merk at m\u00f8nstermerkingen er utledet, ikke m\u00e5lt.",
    "evidence": {
     "pattern": "split_A",
     "rounds": [
@@ -8150,11 +8178,15 @@
      "numerator": 3,
      "denominator": 3,
      "definition": "rounds won / rounds labelled split_A"
-    }
+    },
+    "label": "split mot A",
+    "median_arrival_seconds": 57.0
    },
    "score": 0.54,
    "confidence": "medium",
-   "section": "Angrepsm\u00f8nstre"
+   "section": "Angrepsm\u00f8nstre",
+   "counter": "Forvent split mot A rundt 57 sekunder inn i runden. Sett opp mot det, og tving dem til \u00e5 finne en plan B de ikke har vist.",
+   "our_side": "CT"
   },
   {
    "rule": "low_trade_rate",
@@ -8172,7 +8204,9 @@
    },
    "score": 0.5001,
    "confidence": "medium",
-   "section": "Trading"
+   "section": "Trading",
+   "counter": "Isoler \u00e9n spiller av gangen og ta duellen. Bare 7 av 68 d\u00f8dsfall ble hevnet, s\u00e5 st\u00f8tten kommer for sent til \u00e5 straffe dere.",
+   "our_side": null
   },
   {
    "rule": "site_retake_weak",
@@ -8192,7 +8226,9 @@
    },
    "score": 0.3333,
    "confidence": "medium",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 B og spill post-plant. De vant bare 1 av 4 runder der bomben l\u00e5 p\u00e5 B, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   }
  ],
  "summary": {
@@ -8264,5 +8300,5 @@
   "size_bytes": 203712595,
   "sha256": "6af7b40265b3d49948aeacda5c316c11e90596e614f2f62022503b17fa99cd1d"
  },
- "parse_seconds": 6.4
+ "parse_seconds": 5.0
 }

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T10:54:53.441063+00:00",
+ "generated_at": "2026-10-18T15:39:46.475572+00:00",
  "division": "8. Divisjon avd. B",
  "format": "Seriespill",
  "table_updated": "2026-10-17",
@@ -9,6 +9,7 @@
    "slug": "frogn-kommune-cs",
    "name": "Frogn Kommune CS",
    "in_division": true,
+   "us": false,
    "standing": {
     "rank": 1,
     "played": 2,
@@ -63,6 +64,8 @@
        "score": 0.7,
        "confidence": "medium",
        "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 7 av 8 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -70,8 +73,8 @@
        "rule": "repeated_attack_pattern",
        "subject": "Frogn Kommune CS",
        "severity": "good",
-       "title": "Frogn Kommune CS gjentar «fake_A_then_B» og vinner på det",
-       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 7, 8, 9). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Frogn Kommune CS gjentar «fake mot A, så B» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 7, 8, 9), median ankomst 108.3 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "fake_A_then_B",
         "rounds": [
@@ -84,11 +87,15 @@
          "numerator": 3,
          "denominator": 3,
          "definition": "rounds won / rounds labelled fake_A_then_B"
-        }
+        },
+        "label": "fake mot A, så B",
+        "median_arrival_seconds": 108.3
        },
        "score": 0.54,
        "confidence": "medium",
        "section": "Angrepsmønstre",
+       "counter": "Forvent fake mot A, så B rundt 108 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -105,6 +112,8 @@
        "score": 0.3271,
        "confidence": "high",
        "section": "Granatbruk",
+       "counter": "Forvent røyk og molotov på hver execute — 11.1 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -135,6 +144,8 @@
        "score": 0.7333,
        "confidence": "high",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot Apartments hver runde. Feito står der 11 av 15 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -155,6 +166,8 @@
        "score": 0.4284,
        "confidence": "high",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 14 av 98 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -177,6 +190,8 @@
        "score": 0.3334,
        "confidence": "high",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 2 av 6 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -198,6 +213,8 @@
        "score": 0.2222,
        "confidence": "high",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 9 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -220,6 +237,8 @@
        "score": 0.1667,
        "confidence": "low",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -290,7 +309,9 @@
        },
        "score": 0.7333,
        "confidence": "high",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot Apartments hver runde. Feito står der 11 av 15 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "strong_post_plant",
@@ -308,14 +329,16 @@
        },
        "score": 0.7,
        "confidence": "medium",
-       "section": "Bombe og rundeavslutninger"
+       "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 7 av 8 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT"
       },
       {
        "rule": "repeated_attack_pattern",
        "subject": "Frogn Kommune CS",
        "severity": "good",
-       "title": "Frogn Kommune CS gjentar «fake_A_then_B» og vinner på det",
-       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 7, 8, 9). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Frogn Kommune CS gjentar «fake mot A, så B» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 7, 8, 9), median ankomst 108.3 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "fake_A_then_B",
         "rounds": [
@@ -328,11 +351,15 @@
          "numerator": 3,
          "denominator": 3,
          "definition": "rounds won / rounds labelled fake_A_then_B"
-        }
+        },
+        "label": "fake mot A, så B",
+        "median_arrival_seconds": 108.3
        },
        "score": 0.54,
        "confidence": "medium",
-       "section": "Angrepsmønstre"
+       "section": "Angrepsmønstre",
+       "counter": "Forvent fake mot A, så B rundt 108 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT"
       },
       {
        "rule": "low_trade_rate",
@@ -350,7 +377,9 @@
        },
        "score": 0.4284,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 14 av 98 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       },
       {
        "rule": "site_retake_weak",
@@ -370,7 +399,9 @@
        },
        "score": 0.3334,
        "confidence": "high",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 2 av 6 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "utility_advantage",
@@ -384,7 +415,9 @@
        },
        "score": 0.3271,
        "confidence": "high",
-       "section": "Granatbruk"
+       "section": "Granatbruk",
+       "counter": "Forvent røyk og molotov på hver execute — 11.1 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+       "our_side": null
       },
       {
        "rule": "retake_never_arrives",
@@ -403,7 +436,9 @@
        },
        "score": 0.2222,
        "confidence": "high",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 9 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "site_retake_weak",
@@ -423,7 +458,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       }
      ]
     }
@@ -437,6 +474,7 @@
    "slug": "nas-boarding-group-b",
    "name": "NAS - Boarding Group B",
    "in_division": true,
+   "us": false,
    "standing": {
     "rank": 1,
     "played": 2,
@@ -458,6 +496,7 @@
    "slug": "glassfiber-produkter",
    "name": "Glassfiber Produkter",
    "in_division": true,
+   "us": false,
    "standing": {
     "rank": 3,
     "played": 2,
@@ -542,6 +581,8 @@
        "score": 0.6628,
        "confidence": "high",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 7 av 83 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -564,6 +605,8 @@
        "score": 0.5833,
        "confidence": "low",
        "section": "Åpningsdueller",
+       "counter": "Oppsøk Thegaroh tidlig. Han vant 0 av 7 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -586,6 +629,8 @@
        "score": 0.3333,
        "confidence": "medium",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 4 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -607,6 +652,8 @@
        "score": 0.25,
        "confidence": "medium",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -657,6 +704,8 @@
        "score": 0.3333,
        "confidence": "medium",
        "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på A uten tall. De tok tilbake 2 av 4 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T",
        "matches_fired": 2,
        "matches_on_map": 3
       },
@@ -677,6 +726,8 @@
        "score": 0.6667,
        "confidence": "high",
        "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 3
       },
@@ -684,8 +735,8 @@
        "rule": "repeated_attack_pattern",
        "subject": "Glassfiber Produkter",
        "severity": "good",
-       "title": "Glassfiber Produkter gjentar «light_hit_A» og vinner på det",
-       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 2, 5, 11). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Glassfiber Produkter gjentar «lett støttet treff mot A» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 2, 5, 11), median ankomst 43.5 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "light_hit_A",
         "rounds": [
@@ -698,11 +749,15 @@
          "numerator": 3,
          "denominator": 3,
          "definition": "rounds won / rounds labelled light_hit_A"
-        }
+        },
+        "label": "lett støttet treff mot A",
+        "median_arrival_seconds": 43.5
        },
        "score": 0.54,
        "confidence": "medium",
        "section": "Angrepsmønstre",
+       "counter": "Forvent lett støttet treff mot A rundt 44 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT",
        "matches_fired": 1,
        "matches_on_map": 3
       },
@@ -723,6 +778,8 @@
        "score": 0.5,
        "confidence": "medium",
        "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 5 av 6 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT",
        "matches_fired": 1,
        "matches_on_map": 3
       }
@@ -747,6 +804,8 @@
        "score": 0.3333,
        "confidence": "medium",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 3,
        "matches_on_map": 3
       },
@@ -768,6 +827,8 @@
        "score": 0.7,
        "confidence": "high",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 7 av 10 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 2,
        "matches_on_map": 3
       },
@@ -788,6 +849,8 @@
        "score": 0.5001,
        "confidence": "medium",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 7 av 68 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 2,
        "matches_on_map": 3
       },
@@ -810,6 +873,8 @@
        "score": 1.0,
        "confidence": "high",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 0 av 6 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 3
       },
@@ -836,6 +901,8 @@
        "score": 0.7143,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Bobblegeir står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 3
       },
@@ -862,6 +929,8 @@
        "score": 0.7143,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Milomst står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 3
       }
@@ -913,6 +982,8 @@
        "score": 0.7143,
        "confidence": "high",
        "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null,
        "matches_fired": 3,
        "matches_on_map": 3
       }
@@ -941,6 +1012,8 @@
        "score": 0.5714,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Diesel1 står der 8 av 9 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 2,
        "matches_on_map": 3
       },
@@ -961,6 +1034,8 @@
        "score": 0.3626,
        "confidence": "medium",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 8 av 61 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 2,
        "matches_on_map": 3
       },
@@ -987,6 +1062,8 @@
        "score": 0.5,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot SnipersNest hver runde. Lime står der 7 av 9 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 3
       },
@@ -1013,6 +1090,8 @@
        "score": 0.5,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Thegaroh er fortsatt i CTSpawn 20 sekunder inn, 7 av 9 runder. Press tidlig — siten han dekker står tynnere før han er på plass.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 3
       },
@@ -1039,6 +1118,8 @@
        "score": 0.4286,
        "confidence": "low",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Milomst står der 6 av 8 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 3
       },
@@ -1060,6 +1141,8 @@
        "score": 0.25,
        "confidence": "medium",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 3
       }
@@ -1161,7 +1244,9 @@
        },
        "score": 0.6628,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 7 av 83 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       },
       {
        "rule": "opening_duel_weak_player",
@@ -1181,7 +1266,9 @@
        },
        "score": 0.5833,
        "confidence": "low",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Oppsøk Thegaroh tidlig. Han vant 0 av 7 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null
       },
       {
        "rule": "site_retake_weak",
@@ -1201,7 +1288,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 4 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "retake_never_arrives",
@@ -1220,7 +1309,9 @@
        },
        "score": 0.25,
        "confidence": "medium",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       }
      ]
     },
@@ -1282,7 +1373,9 @@
        },
        "score": 0.7143,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Bobblegeir står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "predictable_setup",
@@ -1306,7 +1399,9 @@
        },
        "score": 0.7143,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Milomst står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "site_retake_weak",
@@ -1326,7 +1421,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "strong_retake",
@@ -1345,7 +1442,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på A uten tall. De tok tilbake 2 av 4 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T"
       },
       {
        "rule": "retake_never_arrives",
@@ -1364,7 +1463,9 @@
        },
        "score": 0.25,
        "confidence": "high",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "low_trade_rate",
@@ -1382,7 +1483,9 @@
        },
        "score": 0.2375,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 10 av 59 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       }
      ]
     },
@@ -1440,7 +1543,9 @@
        },
        "score": 1.0,
        "confidence": "high",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 0 av 6 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "retake_never_arrives",
@@ -1459,7 +1564,9 @@
        },
        "score": 0.7,
        "confidence": "high",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 7 av 10 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "low_trade_rate",
@@ -1477,7 +1584,9 @@
        },
        "score": 0.5001,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 7 av 68 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       },
       {
        "rule": "site_retake_weak",
@@ -1497,7 +1606,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       }
      ]
     },
@@ -1553,14 +1664,16 @@
        },
        "score": 0.6667,
        "confidence": "high",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null
       },
       {
        "rule": "repeated_attack_pattern",
        "subject": "Glassfiber Produkter",
        "severity": "good",
-       "title": "Glassfiber Produkter gjentar «light_hit_A» og vinner på det",
-       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 2, 5, 11). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Glassfiber Produkter gjentar «lett støttet treff mot A» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 2, 5, 11), median ankomst 43.5 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "light_hit_A",
         "rounds": [
@@ -1573,11 +1686,15 @@
          "numerator": 3,
          "denominator": 3,
          "definition": "rounds won / rounds labelled light_hit_A"
-        }
+        },
+        "label": "lett støttet treff mot A",
+        "median_arrival_seconds": 43.5
        },
        "score": 0.54,
        "confidence": "medium",
-       "section": "Angrepsmønstre"
+       "section": "Angrepsmønstre",
+       "counter": "Forvent lett støttet treff mot A rundt 44 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT"
       },
       {
        "rule": "strong_post_plant",
@@ -1595,7 +1712,9 @@
        },
        "score": 0.5,
        "confidence": "medium",
-       "section": "Bombe og rundeavslutninger"
+       "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 5 av 6 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT"
       },
       {
        "rule": "strong_retake",
@@ -1614,7 +1733,9 @@
        },
        "score": 0.3333,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på A uten tall. De tok tilbake 2 av 3 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T"
       },
       {
        "rule": "site_retake_weak",
@@ -1634,7 +1755,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       }
      ]
     },
@@ -1690,7 +1813,9 @@
        },
        "score": 0.6,
        "confidence": "high",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null
       },
       {
        "rule": "predictable_setup",
@@ -1715,7 +1840,9 @@
        },
        "score": 0.4286,
        "confidence": "low",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Diesel1 står der 6 av 8 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "predictable_setup",
@@ -1739,7 +1866,9 @@
        },
        "score": 0.4286,
        "confidence": "low",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Milomst står der 6 av 8 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "full_buy_conversion",
@@ -1757,7 +1886,9 @@
        },
        "score": 0.0795,
        "confidence": "medium",
-       "section": "Økonomi"
+       "section": "Økonomi",
+       "counter": null,
+       "our_side": null
       }
      ]
     },
@@ -1813,7 +1944,9 @@
        },
        "score": 0.7143,
        "confidence": "high",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null
       },
       {
        "rule": "predictable_setup",
@@ -1837,7 +1970,9 @@
        },
        "score": 0.5714,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Diesel1 står der 8 av 9 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "predictable_setup",
@@ -1861,7 +1996,9 @@
        },
        "score": 0.5,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot SnipersNest hver runde. Lime står der 7 av 9 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "predictable_setup",
@@ -1885,7 +2022,9 @@
        },
        "score": 0.5,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Thegaroh er fortsatt i CTSpawn 20 sekunder inn, 7 av 9 runder. Press tidlig — siten han dekker står tynnere før han er på plass.",
+       "our_side": "T"
       },
       {
        "rule": "low_trade_rate",
@@ -1903,7 +2042,9 @@
        },
        "score": 0.3626,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 8 av 61 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       }
      ]
     },
@@ -1959,7 +2100,9 @@
        },
        "score": 0.7083,
        "confidence": "high",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null
       },
       {
        "rule": "low_trade_rate",
@@ -1977,7 +2120,9 @@
        },
        "score": 0.3373,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 13 av 79 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       },
       {
        "rule": "retake_never_arrives",
@@ -1996,7 +2141,9 @@
        },
        "score": 0.25,
        "confidence": "medium",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       }
      ]
     }
@@ -2010,6 +2157,7 @@
    "slug": "kaefer-dada",
    "name": "Kaefer DåDå",
    "in_division": true,
+   "us": false,
    "standing": {
     "rank": 4,
     "played": 2,
@@ -2064,6 +2212,8 @@
        "score": 0.7143,
        "confidence": "high",
        "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -2086,6 +2236,8 @@
        "score": 0.2626,
        "confidence": "medium",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 11 av 65 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -2135,6 +2287,8 @@
        "score": 0.9,
        "confidence": "high",
        "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 9 av 10 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2142,8 +2296,8 @@
        "rule": "repeated_attack_pattern",
        "subject": "Kaefer DåDå",
        "severity": "good",
-       "title": "Kaefer DåDå gjentar «split_A» og vinner på det",
-       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 6, 10, 12). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Kaefer DåDå gjentar «split mot A» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 6, 10, 12), median ankomst 57 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "split_A",
         "rounds": [
@@ -2156,11 +2310,15 @@
          "numerator": 3,
          "denominator": 3,
          "definition": "rounds won / rounds labelled split_A"
-        }
+        },
+        "label": "split mot A",
+        "median_arrival_seconds": 57.0
        },
        "score": 0.54,
        "confidence": "medium",
        "section": "Angrepsmønstre",
+       "counter": "Forvent split mot A rundt 57 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -2218,6 +2376,8 @@
        "score": 0.6429,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Håkon Ivesdal står der 9 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2238,6 +2398,8 @@
        "score": 0.35,
        "confidence": "high",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 13 av 80 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2260,6 +2422,8 @@
        "score": 0.3333,
        "confidence": "medium",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 4 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2282,6 +2446,8 @@
        "score": 0.3333,
        "confidence": "low",
        "section": "Åpningsdueller",
+       "counter": "Oppsøk Shady. tidlig. Han vant 1 av 6 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2303,6 +2469,8 @@
        "score": 0.25,
        "confidence": "medium",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 7 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2325,6 +2493,8 @@
        "score": 0.1667,
        "confidence": "low",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -2387,7 +2557,9 @@
        },
        "score": 0.7143,
        "confidence": "high",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null
       },
       {
        "rule": "low_trade_rate",
@@ -2405,7 +2577,9 @@
        },
        "score": 0.2626,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 11 av 65 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       }
      ]
     },
@@ -2461,14 +2635,16 @@
        },
        "score": 0.9,
        "confidence": "high",
-       "section": "Bombe og rundeavslutninger"
+       "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 9 av 10 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT"
       },
       {
        "rule": "repeated_attack_pattern",
        "subject": "Kaefer DåDå",
        "severity": "good",
-       "title": "Kaefer DåDå gjentar «split_A» og vinner på det",
-       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 6, 10, 12). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Kaefer DåDå gjentar «split mot A» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 6, 10, 12), median ankomst 57 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "split_A",
         "rounds": [
@@ -2481,11 +2657,15 @@
          "numerator": 3,
          "denominator": 3,
          "definition": "rounds won / rounds labelled split_A"
-        }
+        },
+        "label": "split mot A",
+        "median_arrival_seconds": 57.0
        },
        "score": 0.54,
        "confidence": "medium",
-       "section": "Angrepsmønstre"
+       "section": "Angrepsmønstre",
+       "counter": "Forvent split mot A rundt 57 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT"
       }
      ]
     },
@@ -2547,7 +2727,9 @@
        },
        "score": 0.6429,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Håkon Ivesdal står der 9 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "low_trade_rate",
@@ -2565,7 +2747,9 @@
        },
        "score": 0.35,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 13 av 80 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       },
       {
        "rule": "site_retake_weak",
@@ -2585,7 +2769,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 4 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "opening_duel_weak_player",
@@ -2605,7 +2791,9 @@
        },
        "score": 0.3333,
        "confidence": "low",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Oppsøk Shady. tidlig. Han vant 1 av 6 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null
       },
       {
        "rule": "retake_never_arrives",
@@ -2624,7 +2812,9 @@
        },
        "score": 0.25,
        "confidence": "medium",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 7 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "site_retake_weak",
@@ -2644,7 +2834,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "full_buy_conversion",
@@ -2662,7 +2854,9 @@
        },
        "score": 0.1194,
        "confidence": "medium",
-       "section": "Økonomi"
+       "section": "Økonomi",
+       "counter": null,
+       "our_side": null
       }
      ]
     }
@@ -2676,6 +2870,7 @@
    "slug": "sopra-steria-newsync",
    "name": "Sopra Steria NewSync",
    "in_division": true,
+   "us": true,
    "standing": {
     "rank": 5,
     "played": 1,
@@ -2717,8 +2912,8 @@
        "rule": "repeated_attack_pattern",
        "subject": "Sopra Steria NewSync",
        "severity": "good",
-       "title": "Sopra Steria NewSync gjentar «light_hit_A» og vinner på det",
-       "detail": "3 av 4 runder vunnet med dette mønsteret (runde 17, 19, 20, 26). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Sopra Steria NewSync gjentar «lett støttet treff mot A» og vinner på det",
+       "detail": "3 av 4 runder vunnet med dette mønsteret (runde 17, 19, 20, 26), median ankomst 47.5 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "light_hit_A",
         "rounds": [
@@ -2732,11 +2927,15 @@
          "numerator": 3,
          "denominator": 4,
          "definition": "rounds won / rounds labelled light_hit_A"
-        }
+        },
+        "label": "lett støttet treff mot A",
+        "median_arrival_seconds": 47.5
        },
        "score": 0.54,
        "confidence": "medium",
        "section": "Angrepsmønstre",
+       "counter": "Forvent lett støttet treff mot A rundt 48 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -2766,6 +2965,8 @@
        "score": 0.7143,
        "confidence": "high",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Jamie Jamie står der 10 av 14 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2788,6 +2989,8 @@
        "score": 0.6667,
        "confidence": "medium",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 0 av 4 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2809,6 +3012,8 @@
        "score": 0.375,
        "confidence": "high",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2831,6 +3036,8 @@
        "score": 0.3333,
        "confidence": "medium",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2848,6 +3055,8 @@
        "score": 0.3271,
        "confidence": "high",
        "section": "Granatbruk",
+       "counter": "Hold vinkler. Med 7.4 granater per runde er executene deres tynne på røyk og flash, så posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -2870,6 +3079,8 @@
        "score": 0.25,
        "confidence": "medium",
        "section": "Åpningsdueller",
+       "counter": "Oppsøk Jamie Jamie tidlig. Han vant 3 av 9 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -2939,7 +3150,9 @@
        },
        "score": 0.7143,
        "confidence": "high",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteB hver runde. Jamie Jamie står der 10 av 14 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "site_retake_weak",
@@ -2959,14 +3172,16 @@
        },
        "score": 0.6667,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 0 av 4 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "repeated_attack_pattern",
        "subject": "Sopra Steria NewSync",
        "severity": "good",
-       "title": "Sopra Steria NewSync gjentar «light_hit_A» og vinner på det",
-       "detail": "3 av 4 runder vunnet med dette mønsteret (runde 17, 19, 20, 26). Merk at mønstermerkingen er utledet, ikke målt.",
+       "title": "Sopra Steria NewSync gjentar «lett støttet treff mot A» og vinner på det",
+       "detail": "3 av 4 runder vunnet med dette mønsteret (runde 17, 19, 20, 26), median ankomst 47.5 s. Merk at mønstermerkingen er utledet, ikke målt.",
        "evidence": {
         "pattern": "light_hit_A",
         "rounds": [
@@ -2980,11 +3195,15 @@
          "numerator": 3,
          "denominator": 4,
          "definition": "rounds won / rounds labelled light_hit_A"
-        }
+        },
+        "label": "lett støttet treff mot A",
+        "median_arrival_seconds": 47.5
        },
        "score": 0.54,
        "confidence": "medium",
-       "section": "Angrepsmønstre"
+       "section": "Angrepsmønstre",
+       "counter": "Forvent lett støttet treff mot A rundt 48 sekunder inn i runden. Sett opp mot det, og tving dem til å finne en plan B de ikke har vist.",
+       "our_side": "CT"
       },
       {
        "rule": "retake_never_arrives",
@@ -3003,7 +3222,9 @@
        },
        "score": 0.375,
        "confidence": "high",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "site_retake_weak",
@@ -3023,7 +3244,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "utility_deficit",
@@ -3038,7 +3261,9 @@
        },
        "score": 0.3271,
        "confidence": "high",
-       "section": "Granatbruk"
+       "section": "Granatbruk",
+       "counter": "Hold vinkler. Med 7.4 granater per runde er executene deres tynne på røyk og flash, så posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+       "our_side": null
       },
       {
        "rule": "opening_duel_weak_player",
@@ -3058,7 +3283,9 @@
        },
        "score": 0.25,
        "confidence": "medium",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Oppsøk Jamie Jamie tidlig. Han vant 3 av 9 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null
       }
      ]
     }
@@ -3072,6 +3299,7 @@
    "slug": "velferdskrigerne",
    "name": "Velferdskrigerne",
    "in_division": true,
+   "us": false,
    "standing": {
     "rank": 5,
     "played": 1,
@@ -3093,6 +3321,7 @@
    "slug": "accenture-norway",
    "name": "Accenture Norway",
    "in_division": true,
+   "us": false,
    "standing": {
     "rank": 7,
     "played": 2,
@@ -3153,6 +3382,8 @@
        "score": 0.8571,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Signalfahrer står der 12 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3178,6 +3409,8 @@
        "score": 0.8571,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Vådeskudd står der 12 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3200,6 +3433,8 @@
        "score": 0.5,
        "confidence": "medium",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 5 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3220,6 +3455,8 @@
        "score": 0.366,
        "confidence": "high",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 13 av 82 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3241,6 +3478,8 @@
        "score": 0.25,
        "confidence": "high",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3261,6 +3500,8 @@
        "score": 0.1818,
        "confidence": "medium",
        "section": "Økonomi",
+       "counter": null,
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -3313,6 +3554,8 @@
        "score": 0.5,
        "confidence": "low",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 0 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3334,6 +3577,8 @@
        "score": 0.375,
        "confidence": "medium",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3356,6 +3601,8 @@
        "score": 0.25,
        "confidence": "low",
        "section": "Åpningsdueller",
+       "counter": "Oppsøk Svevern tidlig. Han vant 2 av 7 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3378,6 +3625,8 @@
        "score": 0.1667,
        "confidence": "low",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 3 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -3428,6 +3677,8 @@
        "score": 0.3333,
        "confidence": "low",
        "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på A uten tall. De tok tilbake 2 av 3 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -3456,6 +3707,8 @@
        "score": 0.7143,
        "confidence": "medium",
        "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Signalfahrer står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3477,6 +3730,8 @@
        "score": 0.375,
        "confidence": "medium",
        "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3497,6 +3752,8 @@
        "score": 0.3332,
        "confidence": "high",
        "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 14 av 84 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3519,6 +3776,8 @@
        "score": 0.25,
        "confidence": "low",
        "section": "Åpningsdueller",
+       "counter": "Oppsøk KrissField tidlig. Han vant 2 av 7 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null,
        "matches_fired": 1,
        "matches_on_map": 1
       },
@@ -3541,6 +3800,8 @@
        "score": 0.1667,
        "confidence": "low",
        "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
        "matches_fired": 1,
        "matches_on_map": 1
       }
@@ -3608,7 +3869,9 @@
        },
        "score": 0.8571,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Signalfahrer står der 12 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "predictable_setup",
@@ -3631,7 +3894,9 @@
        },
        "score": 0.8571,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Vådeskudd står der 12 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "site_retake_weak",
@@ -3651,7 +3916,9 @@
        },
        "score": 0.5,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 5 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "low_trade_rate",
@@ -3669,7 +3936,9 @@
        },
        "score": 0.366,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 13 av 82 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       },
       {
        "rule": "retake_never_arrives",
@@ -3688,7 +3957,9 @@
        },
        "score": 0.25,
        "confidence": "high",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "full_buy_conversion",
@@ -3706,7 +3977,9 @@
        },
        "score": 0.1818,
        "confidence": "medium",
-       "section": "Økonomi"
+       "section": "Økonomi",
+       "counter": null,
+       "our_side": null
       },
       {
        "rule": "site_retake_weak",
@@ -3726,7 +3999,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       }
      ]
     },
@@ -3784,7 +4059,9 @@
        },
        "score": 0.5,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 0 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       },
       {
        "rule": "retake_never_arrives",
@@ -3803,7 +4080,9 @@
        },
        "score": 0.375,
        "confidence": "medium",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "opening_duel_weak_player",
@@ -3823,7 +4102,9 @@
        },
        "score": 0.25,
        "confidence": "low",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Oppsøk Svevern tidlig. Han vant 2 av 7 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null
       },
       {
        "rule": "site_retake_weak",
@@ -3843,7 +4124,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 3 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       }
      ]
     },
@@ -3905,7 +4188,9 @@
        },
        "score": 0.7143,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Signalfahrer står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
       },
       {
        "rule": "retake_never_arrives",
@@ -3924,7 +4209,9 @@
        },
        "score": 0.375,
        "confidence": "medium",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
       },
       {
        "rule": "strong_retake",
@@ -3943,7 +4230,9 @@
        },
        "score": 0.3333,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på A uten tall. De tok tilbake 2 av 3 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T"
       },
       {
        "rule": "low_trade_rate",
@@ -3961,7 +4250,9 @@
        },
        "score": 0.3332,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 14 av 84 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
       },
       {
        "rule": "opening_duel_weak_player",
@@ -3981,7 +4272,9 @@
        },
        "score": 0.25,
        "confidence": "low",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "counter": "Oppsøk KrissField tidlig. Han vant 2 av 7 åpningsdueller — det er den billigste duellen på kartet.",
+       "our_side": null
       },
       {
        "rule": "site_retake_weak",
@@ -4001,7 +4294,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
       }
      ]
     }

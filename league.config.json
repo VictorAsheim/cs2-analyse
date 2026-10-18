@@ -12,7 +12,10 @@
     "'in_division': false marks a team we have demos of that is not in this",
     "division's table - a cup opponent, or another season. They keep a page",
     "and a crest so their matches read properly, but they are listed apart",
-    "from the standings rather than given an empty row in them."
+    "from the standings rather than given an empty row in them.",
+    "",
+    "'us': true marks our own team. Their page is read for a different",
+    "reason - what to fix, not how to beat them - so it is phrased that way."
   ],
   "division": "8. Divisjon avd. B",
   "format": "Seriespill",
@@ -88,7 +91,8 @@
         "round_diff": -2,
         "points": 0
       },
-      "in_division": true
+      "in_division": true,
+      "us": true
     },
     {
       "name": "Velferdskrigerne",

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:54:47.516695+00:00",
+ "generated_at": "2026-10-18T15:39:40.984485+00:00",
  "match": {
   "map": "de_inferno",
   "server_name": "eBot :: Frogn Kommune CS vs Sopra Steria NewSync",
@@ -11693,6 +11693,7 @@
      "median_arrival_seconds": 43.0,
      "patterns": {
       "fake_A_then_B": {
+       "label": "fake mot A, s\u00e5 B",
        "rounds": [
         7,
         8,
@@ -11703,9 +11704,11 @@
         "numerator": 3,
         "denominator": 3,
         "definition": "rounds won / rounds labelled fake_A_then_B"
-       }
+       },
+       "median_arrival_seconds": 108.3
       },
       "rush_A": {
+       "label": "rush mot A",
        "rounds": [
         1,
         6
@@ -11715,9 +11718,11 @@
         "numerator": 1,
         "denominator": 2,
         "definition": "rounds won / rounds labelled rush_A"
-       }
+       },
+       "median_arrival_seconds": 14.5
       },
       "fake_B_then_A": {
+       "label": "fake mot B, s\u00e5 A",
        "rounds": [
         2,
         10
@@ -11727,9 +11732,11 @@
         "numerator": 1,
         "denominator": 2,
         "definition": "rounds won / rounds labelled fake_B_then_A"
-       }
+       },
+       "median_arrival_seconds": 60.5
       },
       "light_hit_A": {
+       "label": "lett st\u00f8ttet treff mot A",
        "rounds": [
         11,
         29
@@ -11739,9 +11746,11 @@
         "numerator": 2,
         "denominator": 2,
         "definition": "rounds won / rounds labelled light_hit_A"
-       }
+       },
+       "median_arrival_seconds": 43.0
       },
       "rush_B": {
+       "label": "rush mot B",
        "rounds": [
         3
        ],
@@ -11750,9 +11759,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled rush_B"
-       }
+       },
+       "median_arrival_seconds": 25.0
       },
       "dry_hit_A": {
+       "label": "treff mot A uten utility",
        "rounds": [
         4
        ],
@@ -11761,9 +11772,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled dry_hit_A"
-       }
+       },
+       "median_arrival_seconds": 35.5
       },
       "dry_hit_B": {
+       "label": "treff mot B uten utility",
        "rounds": [
         5
        ],
@@ -11772,9 +11785,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled dry_hit_B"
-       }
+       },
+       "median_arrival_seconds": 40.0
       },
       "execute_B": {
+       "label": "execute mot B (r\u00f8yk og molotov)",
        "rounds": [
         12
        ],
@@ -11783,9 +11798,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled execute_B"
-       }
+       },
+       "median_arrival_seconds": 48.0
       },
       "slow_default_A": {
+       "label": "sen default mot A",
        "rounds": [
         28
        ],
@@ -11794,7 +11811,8 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled slow_default_A"
-       }
+       },
+       "median_arrival_seconds": 62.0
       }
      }
     },
@@ -11806,6 +11824,7 @@
      "median_arrival_seconds": 35.0,
      "patterns": {
       "light_hit_B": {
+       "label": "lett st\u00f8ttet treff mot B",
        "rounds": [
         16,
         18,
@@ -11817,9 +11836,11 @@
         "numerator": 1,
         "denominator": 4,
         "definition": "rounds won / rounds labelled light_hit_B"
-       }
+       },
+       "median_arrival_seconds": 36.5
       },
       "light_hit_A": {
+       "label": "lett st\u00f8ttet treff mot A",
        "rounds": [
         17,
         19,
@@ -11831,9 +11852,11 @@
         "numerator": 3,
         "denominator": 4,
         "definition": "rounds won / rounds labelled light_hit_A"
-       }
+       },
+       "median_arrival_seconds": 47.5
       },
       "rush_A": {
+       "label": "rush mot A",
        "rounds": [
         15,
         23,
@@ -11844,9 +11867,11 @@
         "numerator": 2,
         "denominator": 3,
         "definition": "rounds won / rounds labelled rush_A"
-       }
+       },
+       "median_arrival_seconds": 22.0
       },
       "dry_hit_A": {
+       "label": "treff mot A uten utility",
        "rounds": [
         13,
         22
@@ -11856,9 +11881,11 @@
         "numerator": 0,
         "denominator": 2,
         "definition": "rounds won / rounds labelled dry_hit_A"
-       }
+       },
+       "median_arrival_seconds": 45.5
       },
       "slow_default_B": {
+       "label": "sen default mot B",
        "rounds": [
         14
        ],
@@ -11867,9 +11894,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled slow_default_B"
-       }
+       },
+       "median_arrival_seconds": 90.5
       },
       "dry_hit_B": {
+       "label": "treff mot B uten utility",
        "rounds": [
         27
        ],
@@ -11878,7 +11907,8 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled dry_hit_B"
-       }
+       },
+       "median_arrival_seconds": 31.0
       }
      }
     }
@@ -19124,7 +19154,9 @@
    },
    "score": 0.7333,
    "confidence": "high",
-   "section": "CT-oppsett"
+   "section": "CT-oppsett",
+   "counter": "\u00c5pne med utility mot Apartments hver runde. Feito st\u00e5r der 11 av 15 ganger, s\u00e5 den treffer like ofte. Alternativt: g\u00e5 den andre siten og regn med at han blir st\u00e5ende.",
+   "our_side": "T"
   },
   {
    "rule": "predictable_setup",
@@ -19149,7 +19181,9 @@
    },
    "score": 0.7143,
    "confidence": "high",
-   "section": "CT-oppsett"
+   "section": "CT-oppsett",
+   "counter": "\u00c5pne med utility mot BombsiteB hver runde. Jamie Jamie st\u00e5r der 10 av 14 ganger, s\u00e5 den treffer like ofte. Alternativt: g\u00e5 den andre siten og regn med at han blir st\u00e5ende.",
+   "our_side": "T"
   },
   {
    "rule": "strong_post_plant",
@@ -19167,7 +19201,9 @@
    },
    "score": 0.7,
    "confidence": "medium",
-   "section": "Bombe og rundeavslutninger"
+   "section": "Bombe og rundeavslutninger",
+   "counter": "Nekt plantet. De vant 7 av 8 runder de fikk bomben ned, s\u00e5 en retake mot dem er dyr \u2014 stopp dem f\u00f8r siten, ikke etterp\u00e5.",
+   "our_side": "CT"
   },
   {
    "rule": "site_retake_weak",
@@ -19187,14 +19223,16 @@
    },
    "score": 0.6667,
    "confidence": "medium",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 A og spill post-plant. De vant bare 0 av 4 runder der bomben l\u00e5 p\u00e5 A, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   },
   {
    "rule": "repeated_attack_pattern",
    "subject": "Sopra Steria NewSync",
    "severity": "good",
-   "title": "Sopra Steria NewSync gjentar \u00ablight_hit_A\u00bb og vinner p\u00e5 det",
-   "detail": "3 av 4 runder vunnet med dette m\u00f8nsteret (runde 17, 19, 20, 26). Merk at m\u00f8nstermerkingen er utledet, ikke m\u00e5lt.",
+   "title": "Sopra Steria NewSync gjentar \u00ablett st\u00f8ttet treff mot A\u00bb og vinner p\u00e5 det",
+   "detail": "3 av 4 runder vunnet med dette m\u00f8nsteret (runde 17, 19, 20, 26), median ankomst 47.5 s. Merk at m\u00f8nstermerkingen er utledet, ikke m\u00e5lt.",
    "evidence": {
     "pattern": "light_hit_A",
     "rounds": [
@@ -19208,18 +19246,22 @@
      "numerator": 3,
      "denominator": 4,
      "definition": "rounds won / rounds labelled light_hit_A"
-    }
+    },
+    "label": "lett st\u00f8ttet treff mot A",
+    "median_arrival_seconds": 47.5
    },
    "score": 0.54,
    "confidence": "medium",
-   "section": "Angrepsm\u00f8nstre"
+   "section": "Angrepsm\u00f8nstre",
+   "counter": "Forvent lett st\u00f8ttet treff mot A rundt 48 sekunder inn i runden. Sett opp mot det, og tving dem til \u00e5 finne en plan B de ikke har vist.",
+   "our_side": "CT"
   },
   {
    "rule": "repeated_attack_pattern",
    "subject": "Frogn Kommune CS",
    "severity": "good",
-   "title": "Frogn Kommune CS gjentar \u00abfake_A_then_B\u00bb og vinner p\u00e5 det",
-   "detail": "3 av 3 runder vunnet med dette m\u00f8nsteret (runde 7, 8, 9). Merk at m\u00f8nstermerkingen er utledet, ikke m\u00e5lt.",
+   "title": "Frogn Kommune CS gjentar \u00abfake mot A, s\u00e5 B\u00bb og vinner p\u00e5 det",
+   "detail": "3 av 3 runder vunnet med dette m\u00f8nsteret (runde 7, 8, 9), median ankomst 108.3 s. Merk at m\u00f8nstermerkingen er utledet, ikke m\u00e5lt.",
    "evidence": {
     "pattern": "fake_A_then_B",
     "rounds": [
@@ -19232,11 +19274,15 @@
      "numerator": 3,
      "denominator": 3,
      "definition": "rounds won / rounds labelled fake_A_then_B"
-    }
+    },
+    "label": "fake mot A, s\u00e5 B",
+    "median_arrival_seconds": 108.3
    },
    "score": 0.54,
    "confidence": "medium",
-   "section": "Angrepsm\u00f8nstre"
+   "section": "Angrepsm\u00f8nstre",
+   "counter": "Forvent fake mot A, s\u00e5 B rundt 108 sekunder inn i runden. Sett opp mot det, og tving dem til \u00e5 finne en plan B de ikke har vist.",
+   "our_side": "CT"
   },
   {
    "rule": "low_trade_rate",
@@ -19254,7 +19300,9 @@
    },
    "score": 0.4284,
    "confidence": "high",
-   "section": "Trading"
+   "section": "Trading",
+   "counter": "Isoler \u00e9n spiller av gangen og ta duellen. Bare 14 av 98 d\u00f8dsfall ble hevnet, s\u00e5 st\u00f8tten kommer for sent til \u00e5 straffe dere.",
+   "our_side": null
   },
   {
    "rule": "retake_never_arrives",
@@ -19273,7 +19321,9 @@
    },
    "score": 0.375,
    "confidence": "high",
-   "section": "Retake-ankomst"
+   "section": "Retake-ankomst",
+   "counter": "Ta siten raskt og hold den. I 3 av 8 runder kom ingen CT seg inn i det hele tatt \u2014 f\u00e5r dere bomben ned, er runden ofte over.",
+   "our_side": "T"
   },
   {
    "rule": "site_retake_weak",
@@ -19293,7 +19343,9 @@
    },
    "score": 0.3334,
    "confidence": "high",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 A og spill post-plant. De vant bare 2 av 6 runder der bomben l\u00e5 p\u00e5 A, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   },
   {
    "rule": "site_retake_weak",
@@ -19313,7 +19365,9 @@
    },
    "score": 0.3333,
    "confidence": "medium",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 B og spill post-plant. De vant bare 1 av 4 runder der bomben l\u00e5 p\u00e5 B, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   },
   {
    "rule": "utility_deficit",
@@ -19328,7 +19382,9 @@
    },
    "score": 0.3271,
    "confidence": "high",
-   "section": "Granatbruk"
+   "section": "Granatbruk",
+   "counter": "Hold vinkler. Med 7.4 granater per runde er executene deres tynne p\u00e5 r\u00f8yk og flash, s\u00e5 posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+   "our_side": null
   },
   {
    "rule": "utility_advantage",
@@ -19342,7 +19398,9 @@
    },
    "score": 0.3271,
    "confidence": "high",
-   "section": "Granatbruk"
+   "section": "Granatbruk",
+   "counter": "Forvent r\u00f8yk og molotov p\u00e5 hver execute \u2014 11.1 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+   "our_side": null
   },
   {
    "rule": "opening_duel_weak_player",
@@ -19362,7 +19420,9 @@
    },
    "score": 0.25,
    "confidence": "medium",
-   "section": "\u00c5pningsdueller"
+   "section": "\u00c5pningsdueller",
+   "counter": "Opps\u00f8k Jamie Jamie tidlig. Han vant 3 av 9 \u00e5pningsdueller \u2014 det er den billigste duellen p\u00e5 kartet.",
+   "our_side": null
   },
   {
    "rule": "retake_never_arrives",
@@ -19381,7 +19441,9 @@
    },
    "score": 0.2222,
    "confidence": "high",
-   "section": "Retake-ankomst"
+   "section": "Retake-ankomst",
+   "counter": "Ta siten raskt og hold den. I 2 av 9 runder kom ingen CT seg inn i det hele tatt \u2014 f\u00e5r dere bomben ned, er runden ofte over.",
+   "our_side": "T"
   },
   {
    "rule": "equipment_advantage_leak",
@@ -19399,7 +19461,9 @@
    },
    "score": 0.2,
    "confidence": "high",
-   "section": "\u00d8konomi"
+   "section": "\u00d8konomi",
+   "counter": null,
+   "our_side": null
   },
   {
    "rule": "site_retake_weak",
@@ -19419,7 +19483,9 @@
    },
    "score": 0.1667,
    "confidence": "low",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 B og spill post-plant. De vant bare 1 av 3 runder der bomben l\u00e5 p\u00e5 B, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   }
  ],
  "summary": {
@@ -19491,5 +19557,5 @@
   "size_bytes": 560635286,
   "sha256": "d9d7be92576fdedcabd71e93e7988a095dbd6481bc88abda00fa9ad68de3b90c"
  },
- "parse_seconds": 15.4
+ "parse_seconds": 12.1
 }

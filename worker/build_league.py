@@ -181,6 +181,9 @@ def build(config_path: str, facts_dir: str) -> dict:
             # Teams outside the division keep a page but stay out of the
             # standings, where every column would be blank.
             "in_division": team.get("in_division", True),
+            # Our own team: the page is read to find what to fix, not how to
+            # beat them, so the pages phrase it differently.
+            "us": bool(team.get("us", False)),
             "standing": team.get("standing"),
             "maps_played": len(maps_out),
             "best_map": played_maps[0][0] if played_maps else None,

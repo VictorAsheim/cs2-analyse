@@ -31,6 +31,17 @@ class Finding:
     confidence: str = "low"
     section: str | None = None   # where in the page to verify it
 
+    # What to do about it, and which side you are on when it applies.
+    #
+    # Everything above is measured or follows arithmetically from a
+    # measurement. A counter is neither: it is a fixed sentence attached to
+    # the rule, written once, the same for every team it fires on. It is kept
+    # in its own field, and shown behind a toggle, so a reader always knows
+    # which half they are looking at. Two rules carry no counter - the two
+    # economy ones - because no defensible action follows from them.
+    counter: str | None = None
+    our_side: str | None = None  # "T" | "CT" | None when it applies to both
+
 
 def _confidence(denominator: int, full_at: int) -> tuple[float, str]:
     """Sample weight in 0-1, and the word for it.
@@ -107,6 +118,10 @@ def _site_defence_rules(stats: dict, teams: list[str]) -> list[Finding]:
                            else f"bare {won} runde{'r' if won != 1 else ''} vunnet.")),
                 evidence={"site": site, "retake_rate": d["retake_rate"],
                           "defuses": d.get("defuses")},
+                counter=(f"Plant på {site} og spill post-plant. De vant bare "
+                         f"{won} av {conceded} runder der bomben lå på {site}, "
+                         "så retaken er den svakeste delen av forsvaret deres."),
+                our_side="T",
                 score=effect * weight,
                 confidence=label,
                 section="Forsvar per bombesite",
@@ -141,6 +156,10 @@ def _retake_arrival_rules(stats: dict, teams: list[str]) -> list[Finding]:
                     f"{entry.get('median_seconds_to_site')} s."),
             evidence={"site_reached": reached,
                       "median_seconds": entry.get("median_seconds_to_site")},
+            counter=(f"Ta siten raskt og hold den. I {missed} av "
+                     f"{reached['denominator']} runder kom ingen CT seg inn i "
+                     "det hele tatt — får dere bomben ned, er runden ofte over."),
+            our_side="T",
             score=effect * weight,
             confidence=label,
             section="Retake-ankomst",
@@ -181,6 +200,9 @@ def _utility_rules(stats: dict, teams: list[str]) -> list[Finding]:
                 f"{low_rounds} runder."),
         evidence={"per_round": round(low, 2), "opponent_per_round": round(high, 2),
                   "rounds": low_rounds},
+        counter=(f"Hold vinkler. Med {low:.1f} granater per runde er executene "
+                 "deres tynne på røyk og flash, så posisjoner dere kan holdes "
+                 "lenger enn mot et lag som brenner utility."),
         score=((high - low) / high) * weight,
         confidence=label,
         section="Granatbruk",
@@ -210,6 +232,10 @@ def _trade_rules(stats: dict, teams: list[str]) -> list[Finding]:
                     f"{stats['trades'].get('window_seconds')} sekunder. Spillere "
                     "dør alene og motstanderen får duellene gratis."),
             evidence={"traded_death_rate": traded},
+            counter=("Isoler én spiller av gangen og ta duellen. Bare "
+                     f"{traded['numerator']} av {traded['denominator']} "
+                     "dødsfall ble hevnet, så støtten kommer for sent til å "
+                     "straffe dere."),
             score=((0.25 - value) / 0.25) * weight,
             confidence=label,
             section="Trading",
@@ -240,6 +266,9 @@ def _opening_duel_rules(stats: dict, teams: list[str]) -> list[Finding]:
             evidence={"opening_duel_win_rate": duels,
                       "opening_deaths": player.get("opening_deaths"),
                       "team": team},
+            counter=(f"Oppsøk {player['name']} tidlig. Han vant "
+                     f"{duels['numerator']} av {duels['denominator']} "
+                     "åpningsdueller — det er den billigste duellen på kartet."),
             score=((0.5 - value) / 0.5) * weight,
             confidence=label,
             section="Åpningsdueller",
@@ -281,6 +310,22 @@ def _setup_rules(stats: dict) -> list[Finding]:
                       "share_at_most_common": share,
                       "positions": player.get("positions"),
                       "team": player.get("team")},
+            counter=(
+                # Standing in spawn at the setup moment does not mean a held
+                # angle - it means he has not reached one. Telling anyone to
+                # throw utility at the enemy spawn would be nonsense; the
+                # reading is that the site is a player short until he arrives.
+                (f"{player['name']} er fortsatt i {spot} 20 sekunder inn, "
+                 f"{share['numerator']} av {share['denominator']} runder. "
+                 "Press tidlig — siten han dekker står tynnere før han er "
+                 "på plass.")
+                if "spawn" in spot.lower() else
+                (f"Åpne med utility mot {spot} hver runde. {player['name']} "
+                 f"står der {share['numerator']} av {share['denominator']} "
+                 "ganger, så den treffer like ofte. Alternativt: gå den "
+                 "andre siten og regn med at han blir stående.")
+            ),
+            our_side="T",
             score=value * weight,
             confidence=label,
             section="CT-oppsett",
@@ -299,16 +344,29 @@ def _attack_pattern_rules(stats: dict) -> list[Finding]:
             value = _rate_value(win)
             if len(rounds) < 3 or value is None or value < 0.7:
                 continue
+            phrase = data.get("label", name)
+            arrival = data.get("median_arrival_seconds")
             weight, label = _confidence(len(rounds), 5)
             found.append(Finding(
                 rule="repeated_attack_pattern",
                 subject=team,
                 severity="good",
-                title=f"{team} gjentar «{name}» og vinner på det",
+                title=f"{team} gjentar «{phrase}» og vinner på det",
                 detail=(f"{win['numerator']} av {win['denominator']} runder vunnet "
-                        f"med dette mønsteret (runde {', '.join(map(str, rounds))}). "
-                        "Merk at mønstermerkingen er utledet, ikke målt."),
-                evidence={"pattern": name, "rounds": rounds, "win_rate": win},
+                        f"med dette mønsteret (runde {', '.join(map(str, rounds))})"
+                        + (f", median ankomst {arrival:g} s" if arrival is not None else "")
+                        + ". Merk at mønstermerkingen er utledet, ikke målt."),
+                evidence={"pattern": name, "rounds": rounds,
+                          "win_rate": win, "label": phrase,
+                          "median_arrival_seconds": arrival},
+                counter=(f"Forvent {phrase}"
+                         # Whole seconds: the sample is 2 Hz and this is a
+                         # heads-up, not a stopwatch.
+                         + (f" rundt {round(arrival)} sekunder inn i runden"
+                            if arrival is not None else "")
+                         + ". Sett opp mot det, og tving dem til å finne en "
+                           "plan B de ikke har vist."),
+                our_side="CT",
                 score=value * weight * 0.9,   # inferred layer ranks below measured
                 confidence=label,
                 section="Angrepsmønstre",
@@ -389,6 +447,11 @@ def _strength_rules(stats: dict, teams: list[str]) -> list[Finding]:
                 detail=(f"Vant {d['retake_rate']['numerator']} av {conceded} runder "
                         f"der motstanderen fikk plantet på {site}."),
                 evidence={"site": site, "retake_rate": d["retake_rate"]},
+                counter=(f"Ikke plant på {site} uten tall. De tok tilbake "
+                         f"{d['retake_rate']['numerator']} av {conceded} — "
+                         "velg heller den andre siten, eller sett opp for "
+                         "post-plant-crossfire før dere planter."),
+                our_side="T",
                 score=value * weight, confidence=label,
                 section="Forsvar per bombesite",
             ))
@@ -407,6 +470,11 @@ def _strength_rules(stats: dict, teams: list[str]) -> list[Finding]:
             detail=(f"Vant {pp['numerator']} av {pp['denominator']} runder de "
                     "fikk plantet i."),
             evidence={"post_plant_win_rate": pp},
+            counter=("Nekt plantet. De vant "
+                     f"{pp['numerator']} av {pp['denominator']} runder de fikk "
+                     "bomben ned, så en retake mot dem er dyr — stopp dem før "
+                     "siten, ikke etterpå."),
+            our_side="CT",
             score=value * weight, confidence=label,
             section="Bombe og rundeavslutninger",
         ))
@@ -425,6 +493,9 @@ def _strength_rules(stats: dict, teams: list[str]) -> list[Finding]:
             detail=(f"{rate_['numerator']} av {rate_['denominator']} første-drap "
                     "i runden gikk deres vei."),
             evidence={"opening_duel_win_rate": rate_},
+            counter=("Unngå første kontakt. De vinner åpningsduellen oftere "
+                     "enn dere gjør, så spill crossfire og retake i stedet for "
+                     "å møte dem i duell."),
             score=value * weight, confidence=label,
             section="Åpningsdueller",
         ))
@@ -456,6 +527,9 @@ def _strength_rules(stats: dict, teams: list[str]) -> list[Finding]:
                         f"{low:.1f}. Forvent røyk og molotov på hver execute."),
                 evidence={"per_round": round(high, 2),
                           "opponent_per_round": round(low, 2)},
+                counter=(f"Forvent røyk og molotov på hver execute — {high:.1f} "
+                         "granater per runde. Still dere utenfor der standard-"
+                         "utilityen lander, og ha counter-flash klar."),
                 score=((high - low) / high) * weight, confidence=label,
                 section="Granatbruk",
             ))
@@ -502,7 +576,7 @@ def to_dict(findings: list[Finding]) -> list[dict]:
             "rule": f.rule, "subject": f.subject, "severity": f.severity,
             "title": f.title, "detail": f.detail, "evidence": f.evidence,
             "score": round(f.score, 4), "confidence": f.confidence,
-            "section": f.section,
+            "section": f.section, "counter": f.counter, "our_side": f.our_side,
         }
         for f in findings
     ]

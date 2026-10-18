@@ -1,4 +1,4 @@
-:HL["/cs2-analyse/_next/static/chunks/1z2z_ru9hrijp.css","style"]
+:HL["/cs2-analyse/_next/static/chunks/3-edsaguvxaz6.css","style"]
 :HL["/cs2-analyse/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/cs2-analyse/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/cs2-analyse/logos/frogn-kommune-cs.png","image"]
@@ -6,4 +6,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"id","t":"d","k":"19829_frogn-kommune-cs-sopra-steria-newsync_de_inferno","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"match","h":96,"c":"$Q2"}]]
-0:{"b":"UMmB962GJc7XiixJefruF","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"-a_nTjDfKFxJDkjGM2gL8","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

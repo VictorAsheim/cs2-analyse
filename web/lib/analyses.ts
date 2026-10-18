@@ -71,6 +71,7 @@ export type LeagueTeam = {
     lost: number; round_diff: number; points: number;
   } | null;
   in_division: boolean;
+  us: boolean;
   maps_played: number;
   best_map: string | null;
   worst_map: string | null;

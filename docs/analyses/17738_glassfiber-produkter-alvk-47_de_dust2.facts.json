@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:53:43.775493+00:00",
+ "generated_at": "2026-10-18T15:38:50.414644+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: Glassfiber Produkter vs AlvK-47",
@@ -6651,6 +6651,7 @@
      "median_arrival_seconds": 66.5,
      "patterns": {
       "slow_default_B": {
+       "label": "sen default mot B",
        "rounds": [
         3,
         6,
@@ -6661,9 +6662,11 @@
         "numerator": 2,
         "denominator": 3,
         "definition": "rounds won / rounds labelled slow_default_B"
-       }
+       },
+       "median_arrival_seconds": 69.5
       },
       "stopped_before_any_site": {
+       "label": "stoppet f\u00f8r de n\u00e5dde en site",
        "rounds": [
         7,
         8,
@@ -6674,9 +6677,11 @@
         "numerator": 0,
         "denominator": 3,
         "definition": "rounds won / rounds labelled stopped_before_any_site"
-       }
+       },
+       "median_arrival_seconds": null
       },
       "execute_A": {
+       "label": "execute mot A (r\u00f8yk og molotov)",
        "rounds": [
         5,
         10
@@ -6686,9 +6691,11 @@
         "numerator": 2,
         "denominator": 2,
         "definition": "rounds won / rounds labelled execute_A"
-       }
+       },
+       "median_arrival_seconds": 38.0
       },
       "rush_A": {
+       "label": "rush mot A",
        "rounds": [
         1
        ],
@@ -6697,9 +6704,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled rush_A"
-       }
+       },
+       "median_arrival_seconds": 24.0
       },
       "slow_default_A": {
+       "label": "sen default mot A",
        "rounds": [
         2
        ],
@@ -6708,9 +6717,11 @@
         "numerator": 0,
         "denominator": 1,
         "definition": "rounds won / rounds labelled slow_default_A"
-       }
+       },
+       "median_arrival_seconds": 68.2
       },
       "split_B": {
+       "label": "split mot B",
        "rounds": [
         4
        ],
@@ -6719,9 +6730,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled split_B"
-       }
+       },
+       "median_arrival_seconds": 67.5
       },
       "split_A": {
+       "label": "split mot A",
        "rounds": [
         12
        ],
@@ -6730,7 +6743,8 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled split_A"
-       }
+       },
+       "median_arrival_seconds": 40.5
       }
      }
     },
@@ -6742,6 +6756,7 @@
      "median_arrival_seconds": 25.5,
      "patterns": {
       "rush_B": {
+       "label": "rush mot B",
        "rounds": [
         13,
         14
@@ -6751,9 +6766,11 @@
         "numerator": 2,
         "denominator": 2,
         "definition": "rounds won / rounds labelled rush_B"
-       }
+       },
+       "median_arrival_seconds": 17.0
       },
       "stopped_before_any_site": {
+       "label": "stoppet f\u00f8r de n\u00e5dde en site",
        "rounds": [
         16,
         19
@@ -6763,9 +6780,11 @@
         "numerator": 1,
         "denominator": 2,
         "definition": "rounds won / rounds labelled stopped_before_any_site"
-       }
+       },
+       "median_arrival_seconds": null
       },
       "slow_default_B": {
+       "label": "sen default mot B",
        "rounds": [
         15
        ],
@@ -6774,9 +6793,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled slow_default_B"
-       }
+       },
+       "median_arrival_seconds": 101.9
       },
       "rush_A": {
+       "label": "rush mot A",
        "rounds": [
         17
        ],
@@ -6785,9 +6806,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled rush_A"
-       }
+       },
+       "median_arrival_seconds": 24.0
       },
       "execute_A": {
+       "label": "execute mot A (r\u00f8yk og molotov)",
        "rounds": [
         18
        ],
@@ -6796,9 +6819,11 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled execute_A"
-       }
+       },
+       "median_arrival_seconds": 25.5
       },
       "split_A": {
+       "label": "split mot A",
        "rounds": [
         20
        ],
@@ -6807,7 +6832,8 @@
         "numerator": 1,
         "denominator": 1,
         "definition": "rounds won / rounds labelled split_A"
-       }
+       },
+       "median_arrival_seconds": 45.5
       }
      }
     }
@@ -10641,7 +10667,9 @@
    },
    "score": 0.7143,
    "confidence": "medium",
-   "section": "CT-oppsett"
+   "section": "CT-oppsett",
+   "counter": "\u00c5pne med utility mot BombsiteA hver runde. Bobblegeir st\u00e5r der 10 av 12 ganger, s\u00e5 den treffer like ofte. Alternativt: g\u00e5 den andre siten og regn med at han blir st\u00e5ende.",
+   "our_side": "T"
   },
   {
    "rule": "predictable_setup",
@@ -10665,7 +10693,9 @@
    },
    "score": 0.7143,
    "confidence": "medium",
-   "section": "CT-oppsett"
+   "section": "CT-oppsett",
+   "counter": "\u00c5pne med utility mot BombsiteB hver runde. Milomst st\u00e5r der 10 av 12 ganger, s\u00e5 den treffer like ofte. Alternativt: g\u00e5 den andre siten og regn med at han blir st\u00e5ende.",
+   "our_side": "T"
   },
   {
    "rule": "site_retake_weak",
@@ -10685,7 +10715,9 @@
    },
    "score": 0.5,
    "confidence": "low",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 B og spill post-plant. De vant bare 0 av 3 runder der bomben l\u00e5 p\u00e5 B, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   },
   {
    "rule": "predictable_setup",
@@ -10709,7 +10741,9 @@
    },
    "score": 0.5,
    "confidence": "low",
-   "section": "CT-oppsett"
+   "section": "CT-oppsett",
+   "counter": "\u00c5pne med utility mot BombsiteB hver runde. Elvegris st\u00e5r der 7 av 8 ganger, s\u00e5 den treffer like ofte. Alternativt: g\u00e5 den andre siten og regn med at han blir st\u00e5ende.",
+   "our_side": "T"
   },
   {
    "rule": "low_trade_rate",
@@ -10727,7 +10761,9 @@
    },
    "score": 0.45,
    "confidence": "high",
-   "section": "Trading"
+   "section": "Trading",
+   "counter": "Isoler \u00e9n spiller av gangen og ta duellen. Bare 11 av 80 d\u00f8dsfall ble hevnet, s\u00e5 st\u00f8tten kommer for sent til \u00e5 straffe dere.",
+   "our_side": null
   },
   {
    "rule": "site_retake_weak",
@@ -10747,7 +10783,9 @@
    },
    "score": 0.3333,
    "confidence": "medium",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Plant p\u00e5 B og spill post-plant. De vant bare 1 av 4 runder der bomben l\u00e5 p\u00e5 B, s\u00e5 retaken er den svakeste delen av forsvaret deres.",
+   "our_side": "T"
   },
   {
    "rule": "strong_retake",
@@ -10766,7 +10804,9 @@
    },
    "score": 0.3333,
    "confidence": "medium",
-   "section": "Forsvar per bombesite"
+   "section": "Forsvar per bombesite",
+   "counter": "Ikke plant p\u00e5 A uten tall. De tok tilbake 2 av 4 \u2014 velg heller den andre siten, eller sett opp for post-plant-crossfire f\u00f8r dere planter.",
+   "our_side": "T"
   },
   {
    "rule": "retake_never_arrives",
@@ -10785,7 +10825,9 @@
    },
    "score": 0.25,
    "confidence": "high",
-   "section": "Retake-ankomst"
+   "section": "Retake-ankomst",
+   "counter": "Ta siten raskt og hold den. I 2 av 8 runder kom ingen CT seg inn i det hele tatt \u2014 f\u00e5r dere bomben ned, er runden ofte over.",
+   "our_side": "T"
   },
   {
    "rule": "low_trade_rate",
@@ -10803,7 +10845,9 @@
    },
    "score": 0.2375,
    "confidence": "medium",
-   "section": "Trading"
+   "section": "Trading",
+   "counter": "Isoler \u00e9n spiller av gangen og ta duellen. Bare 10 av 59 d\u00f8dsfall ble hevnet, s\u00e5 st\u00f8tten kommer for sent til \u00e5 straffe dere.",
+   "our_side": null
   },
   {
    "rule": "retake_never_arrives",
@@ -10822,7 +10866,9 @@
    },
    "score": 0.125,
    "confidence": "low",
-   "section": "Retake-ankomst"
+   "section": "Retake-ankomst",
+   "counter": "Ta siten raskt og hold den. I 1 av 4 runder kom ingen CT seg inn i det hele tatt \u2014 f\u00e5r dere bomben ned, er runden ofte over.",
+   "our_side": "T"
   }
  ],
  "summary": {
@@ -10894,5 +10940,5 @@
   "size_bytes": 234363230,
   "sha256": "c320dc6f9a8ed013c9c0d7ce09331ca45fa5444b1ad066020311f3c2753aa0eb"
  },
- "parse_seconds": 7.3
+ "parse_seconds": 6.0
 }
