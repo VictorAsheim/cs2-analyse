@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:42:10.227982+00:00",
+ "generated_at": "2026-10-18T10:53:43.775493+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: Glassfiber Produkter vs AlvK-47",
@@ -10623,7 +10623,7 @@
    "rule": "predictable_setup",
    "subject": "Bobblegeir",
    "severity": "warning",
-   "title": "Bobblegeir st\u00e5r p\u00e5 BombsiteA nesten hver runde",
+   "title": "Bobblegeir (Glassfiber Produkter) st\u00e5r p\u00e5 BombsiteA nesten hver runde",
    "detail": "10 av 12 CT-runder startet p\u00e5 BombsiteA, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteA",
@@ -10647,7 +10647,7 @@
    "rule": "predictable_setup",
    "subject": "Milomst",
    "severity": "warning",
-   "title": "Milomst st\u00e5r p\u00e5 BombsiteB nesten hver runde",
+   "title": "Milomst (Glassfiber Produkter) st\u00e5r p\u00e5 BombsiteB nesten hver runde",
    "detail": "10 av 12 CT-runder startet p\u00e5 BombsiteB, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteB",
@@ -10691,7 +10691,7 @@
    "rule": "predictable_setup",
    "subject": "Elvegris",
    "severity": "serious",
-   "title": "Elvegris st\u00e5r p\u00e5 BombsiteB nesten hver runde",
+   "title": "Elvegris (AlvK-47) st\u00e5r p\u00e5 BombsiteB nesten hver runde",
    "detail": "7 av 8 CT-runder startet p\u00e5 BombsiteB, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteB",
@@ -10894,5 +10894,5 @@
   "size_bytes": 234363230,
   "sha256": "c320dc6f9a8ed013c9c0d7ce09331ca45fa5444b1ad066020311f3c2753aa0eb"
  },
- "parse_seconds": 6.6
+ "parse_seconds": 7.3
 }

@@ -87,6 +87,7 @@ export type League = {
   table_updated: string;
   table_note: string;
   teams: LeagueTeam[];
+  non_division_opponents: { name: string; slug: string }[];
   unmatched_clan_names: string[];
   matches_analysed: number;
 };
@@ -111,6 +112,54 @@ export async function readLeague(): Promise<League | null> {
     }
   }
   return null;
+}
+
+/**
+ * Rewrite demo clan names in finding text to the league's spelling.
+ *
+ * A match document is written when the demo is parsed, with no knowledge of
+ * the league, so it carries the clan name the server recorded - "Kaefer DD"
+ * where the division says "Kaefer DåDå". The league view fixes this when it
+ * aggregates; a match page reads the document directly and has to do the same.
+ */
+export function canonicaliseFindings(findings: any[], league: League | null) {
+  if (!league) return findings;
+  const pairs: [string, string][] = [];
+  for (const team of league.teams) {
+    for (const raw of team.clan_names ?? []) {
+      if (raw !== team.name) pairs.push([raw, team.name]);
+    }
+  }
+  if (pairs.length === 0) return findings;
+
+  return findings.map((f) => {
+    const out = { ...f };
+    for (const field of ["title", "detail", "subject"]) {
+      let text = out[field];
+      if (typeof text !== "string") continue;
+      for (const [raw, proper] of pairs) text = text.split(raw).join(proper);
+      out[field] = text;
+    }
+    return out;
+  });
+}
+
+/**
+ * Map a demo's clan name to the league's spelling, for display only.
+ *
+ * The clan name stays the key everywhere - it is what the stats objects are
+ * indexed by - so this is applied at the point of rendering rather than by
+ * renaming the data.
+ */
+export function teamDisplay(league: League | null): (raw: string) => string {
+  const byRaw = new Map<string, string>();
+  for (const team of league?.teams ?? []) {
+    for (const raw of team.clan_names ?? []) byRaw.set(raw, team.name);
+  }
+  for (const team of league?.non_division_opponents ?? []) {
+    byRaw.set(team.name, team.name);
+  }
+  return (raw: string) => byRaw.get(raw) ?? raw;
 }
 
 /** Where the radar image lives, which differs between the two modes. */

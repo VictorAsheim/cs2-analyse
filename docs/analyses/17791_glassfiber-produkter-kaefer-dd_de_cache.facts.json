@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-17T17:42:22.045219+00:00",
+ "generated_at": "2026-10-18T10:54:01.004832+00:00",
  "match": {
   "map": "de_cache",
   "server_name": "eBot :: Glassfiber Produkter vs Kaefer DD",
@@ -9714,7 +9714,7 @@
    "rule": "opening_duel_weak_player",
    "subject": "Thegaroh",
    "severity": "warning",
-   "title": "Thegaroh taper \u00e5pningsduellene",
+   "title": "Thegaroh (Glassfiber Produkter) taper \u00e5pningsduellene",
    "detail": "0 av 7 \u00e5pningsdueller vunnet. \u00c5 opps\u00f8ke denne spilleren tidlig i runden er den billigste duellen p\u00e5 kartet.",
    "evidence": {
     "opening_duel_win_rate": {
@@ -9723,7 +9723,8 @@
      "denominator": 7,
      "definition": "opening kills / opening duels this player was involved in"
     },
-    "opening_deaths": 7
+    "opening_deaths": 7,
+    "team": "Glassfiber Produkter"
    },
    "score": 0.5833,
    "confidence": "low",
@@ -9874,5 +9875,5 @@
   "size_bytes": 248604890,
   "sha256": "bb0f06187849ece0110e0a98d4ffe6d9d293e24146fe20839339dd7d6844b818"
  },
- "parse_seconds": 5.8
+ "parse_seconds": 8.3
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-17T17:42:15.876842+00:00",
+ "generated_at": "2026-10-18T10:53:52.222354+00:00",
  "match": {
   "map": "de_mirage",
   "server_name": "eBot :: Glassfiber Produkter vs Kaefer DD",
@@ -9959,7 +9959,7 @@
    "rule": "predictable_setup",
    "subject": "H\u00e5kon Ivesdal",
    "severity": "warning",
-   "title": "H\u00e5kon Ivesdal st\u00e5r p\u00e5 BombsiteB nesten hver runde",
+   "title": "H\u00e5kon Ivesdal (Kaefer DD) st\u00e5r p\u00e5 BombsiteB nesten hver runde",
    "detail": "9 av 12 CT-runder startet p\u00e5 BombsiteB, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteB",
@@ -9983,7 +9983,7 @@
    "rule": "predictable_setup",
    "subject": "Diesel1",
    "severity": "serious",
-   "title": "Diesel1 st\u00e5r p\u00e5 BombsiteA nesten hver runde",
+   "title": "Diesel1 (Glassfiber Produkter) st\u00e5r p\u00e5 BombsiteA nesten hver runde",
    "detail": "8 av 9 CT-runder startet p\u00e5 BombsiteA, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteA",
@@ -10007,7 +10007,7 @@
    "rule": "predictable_setup",
    "subject": "Lime",
    "severity": "warning",
-   "title": "Lime st\u00e5r p\u00e5 SnipersNest nesten hver runde",
+   "title": "Lime (Glassfiber Produkter) st\u00e5r p\u00e5 SnipersNest nesten hver runde",
    "detail": "7 av 9 CT-runder startet p\u00e5 SnipersNest, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "SnipersNest",
@@ -10031,7 +10031,7 @@
    "rule": "predictable_setup",
    "subject": "Thegaroh",
    "severity": "warning",
-   "title": "Thegaroh st\u00e5r p\u00e5 CTSpawn nesten hver runde",
+   "title": "Thegaroh (Glassfiber Produkter) st\u00e5r p\u00e5 CTSpawn nesten hver runde",
    "detail": "7 av 9 CT-runder startet p\u00e5 CTSpawn, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "CTSpawn",
@@ -10111,7 +10111,7 @@
    "rule": "opening_duel_weak_player",
    "subject": "Shady.",
    "severity": "warning",
-   "title": "Shady. taper \u00e5pningsduellene",
+   "title": "Shady. (Kaefer DD) taper \u00e5pningsduellene",
    "detail": "1 av 6 \u00e5pningsdueller vunnet. \u00c5 opps\u00f8ke denne spilleren tidlig i runden er den billigste duellen p\u00e5 kartet.",
    "evidence": {
     "opening_duel_win_rate": {
@@ -10120,7 +10120,8 @@
      "denominator": 6,
      "definition": "opening kills / opening duels this player was involved in"
     },
-    "opening_deaths": 5
+    "opening_deaths": 5,
+    "team": "Kaefer DD"
    },
    "score": 0.3333,
    "confidence": "low",
@@ -10253,5 +10254,5 @@
   "size_bytes": 240506881,
   "sha256": "81cc9b33c45475981d54f61b06fc3ea9c97a29b77f4de8a1f7824142beeb849f"
  },
- "parse_seconds": 5.5
+ "parse_seconds": 7.8
 }

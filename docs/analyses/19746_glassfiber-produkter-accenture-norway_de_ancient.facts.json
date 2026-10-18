@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:41:38.955749+00:00",
+ "generated_at": "2026-10-18T10:54:33.894288+00:00",
  "match": {
   "map": "de_ancient",
   "server_name": "eBot :: Glassfiber Produkter vs Accenture Norway",
@@ -9846,7 +9846,7 @@
    "rule": "predictable_setup",
    "subject": "Signalfahrer",
    "severity": "serious",
-   "title": "Signalfahrer st\u00e5r p\u00e5 BombsiteA nesten hver runde",
+   "title": "Signalfahrer (Accenture Norway) st\u00e5r p\u00e5 BombsiteA nesten hver runde",
    "detail": "12 av 12 CT-runder startet p\u00e5 BombsiteA, og bare 1 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteA",
@@ -9869,7 +9869,7 @@
    "rule": "predictable_setup",
    "subject": "V\u00e5deskudd",
    "severity": "serious",
-   "title": "V\u00e5deskudd st\u00e5r p\u00e5 BombsiteA nesten hver runde",
+   "title": "V\u00e5deskudd (Accenture Norway) st\u00e5r p\u00e5 BombsiteA nesten hver runde",
    "detail": "12 av 12 CT-runder startet p\u00e5 BombsiteA, og bare 1 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteA",
@@ -10048,5 +10048,5 @@
   "size_bytes": 210109977,
   "sha256": "9fc3c702cdba6fdcb9f0c19d3860f189eb1219e0b5b77291ca4a7481d3a5ed34"
  },
- "parse_seconds": 6.5
+ "parse_seconds": 6.3
 }

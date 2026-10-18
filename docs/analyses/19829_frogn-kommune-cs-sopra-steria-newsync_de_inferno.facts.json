@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-17T17:42:37.377624+00:00",
+ "generated_at": "2026-10-18T10:54:47.516695+00:00",
  "match": {
   "map": "de_inferno",
   "server_name": "eBot :: Frogn Kommune CS vs Sopra Steria NewSync",
@@ -19104,7 +19104,7 @@
    "rule": "predictable_setup",
    "subject": "Feito",
    "severity": "warning",
-   "title": "Feito st\u00e5r p\u00e5 Apartments nesten hver runde",
+   "title": "Feito (Frogn Kommune CS) st\u00e5r p\u00e5 Apartments nesten hver runde",
    "detail": "11 av 15 CT-runder startet p\u00e5 Apartments, og bare 4 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "Apartments",
@@ -19130,7 +19130,7 @@
    "rule": "predictable_setup",
    "subject": "Jamie Jamie",
    "severity": "warning",
-   "title": "Jamie Jamie st\u00e5r p\u00e5 BombsiteB nesten hver runde",
+   "title": "Jamie Jamie (Sopra Steria NewSync) st\u00e5r p\u00e5 BombsiteB nesten hver runde",
    "detail": "10 av 14 CT-runder startet p\u00e5 BombsiteB, og bare 3 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteB",
@@ -19348,7 +19348,7 @@
    "rule": "opening_duel_weak_player",
    "subject": "Jamie Jamie",
    "severity": "warning",
-   "title": "Jamie Jamie taper \u00e5pningsduellene",
+   "title": "Jamie Jamie (Sopra Steria NewSync) taper \u00e5pningsduellene",
    "detail": "3 av 9 \u00e5pningsdueller vunnet. \u00c5 opps\u00f8ke denne spilleren tidlig i runden er den billigste duellen p\u00e5 kartet.",
    "evidence": {
     "opening_duel_win_rate": {
@@ -19357,7 +19357,8 @@
      "denominator": 9,
      "definition": "opening kills / opening duels this player was involved in"
     },
-    "opening_deaths": 6
+    "opening_deaths": 6,
+    "team": "Sopra Steria NewSync"
    },
    "score": 0.25,
    "confidence": "medium",
@@ -19490,5 +19491,5 @@
   "size_bytes": 560635286,
   "sha256": "d9d7be92576fdedcabd71e93e7988a095dbd6481bc88abda00fa9ad68de3b90c"
  },
- "parse_seconds": 10.9
+ "parse_seconds": 15.4
 }

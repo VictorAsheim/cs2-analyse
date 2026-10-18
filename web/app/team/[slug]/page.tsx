@@ -210,7 +210,12 @@ export default async function TeamPage(
       >
         <div className="divide-y divide-neutral-800/70 overflow-hidden rounded-lg border border-neutral-800">
           {team.matches.map((m: any) => {
+            // An opponent outside the division has no page, but still has a
+            // name and possibly a crest.
             const opponent = league.teams.find((t) => t.name === m.opponent);
+            const outside = opponent
+              ? null
+              : league.non_division_opponents?.find((t) => t.name === m.opponent);
             return (
               <Link
                 key={m.match_id}
@@ -221,8 +226,12 @@ export default async function TeamPage(
 
                 <span className="flex min-w-[11rem] items-center gap-2 text-sm text-neutral-400">
                   <span className="text-neutral-600">mot</span>
-                  {opponent ? (
-                    <TeamBadge slug={opponent.slug} name={m.opponent} size={20} />
+                  {opponent || outside ? (
+                    <TeamBadge
+                      slug={(opponent ?? outside)!.slug}
+                      name={m.opponent}
+                      size={20}
+                    />
                   ) : (
                     m.opponent
                   )}

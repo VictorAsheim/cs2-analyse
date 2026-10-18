@@ -134,6 +134,12 @@ def build(config_path: str, facts_dir: str) -> dict:
 
     teams_out = []
     for team in config["teams"]:
+        # Only the division's own teams are analysed. A team marked
+        # in_division: false exists in the config so its matches file under
+        # the right opponent and its name and crest resolve - not so it gets
+        # a scouting page of its own.
+        if not team.get("in_division", True):
+            continue
         name = team["name"]
         maps_out = {}
         for map_name, records in sorted(per_team_map.get(name, {}).items()):
@@ -197,10 +203,15 @@ def build(config_path: str, facts_dir: str) -> dict:
                        "ut fra demoene"),
         "teams": sorted(
             teams_out,
-            key=lambda t: (not t["in_division"],
-                           (t["standing"] or {}).get("rank", 99),
-                           t["name"]),
+            key=lambda t: ((t["standing"] or {}).get("rank", 99), t["name"]),
         ),
+        # Opponents met in a parsed match that are not in this division. They
+        # are named and crested where they appear, but not analysed.
+        "non_division_opponents": [
+            {"name": t["name"], "slug": slugify(t["name"])}
+            for t in sorted(config["teams"], key=lambda x: x["name"])
+            if not t.get("in_division", True)
+        ],
         "unmatched_clan_names": sorted(unknown_teams),
         "matches_analysed": len(matches),
     }

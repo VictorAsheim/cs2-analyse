@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:41:46.416233+00:00",
+ "generated_at": "2026-10-18T10:54:16.927113+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: Glassfiber Produkter vs Accenture Norway",
@@ -9825,7 +9825,7 @@
    "rule": "opening_duel_weak_player",
    "subject": "Svevern",
    "severity": "warning",
-   "title": "Svevern taper \u00e5pningsduellene",
+   "title": "Svevern (Accenture Norway) taper \u00e5pningsduellene",
    "detail": "2 av 7 \u00e5pningsdueller vunnet. \u00c5 opps\u00f8ke denne spilleren tidlig i runden er den billigste duellen p\u00e5 kartet.",
    "evidence": {
     "opening_duel_win_rate": {
@@ -9834,7 +9834,8 @@
      "denominator": 7,
      "definition": "opening kills / opening duels this player was involved in"
     },
-    "opening_deaths": 5
+    "opening_deaths": 5,
+    "team": "Accenture Norway"
    },
    "score": 0.25,
    "confidence": "low",
@@ -9950,5 +9951,5 @@
   "size_bytes": 242937059,
   "sha256": "15f22e93932483de8f3903c4e644b2ba0f0afe01eab8bceab03b938a53a2e057"
  },
- "parse_seconds": 6.8
+ "parse_seconds": 7.1
 }

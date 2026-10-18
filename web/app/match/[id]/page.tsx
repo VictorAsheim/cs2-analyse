@@ -11,7 +11,8 @@ import RoundTimeline from "@/components/charts/RoundTimeline";
 import UtilityChart from "@/components/charts/UtilityChart";
 import { Section } from "@/components/stats";
 import {
-  IS_STATIC, radarUrl, readAnalysis, readLeague, readManifest,
+  IS_STATIC, canonicaliseFindings, radarUrl, readAnalysis, readLeague,
+  readManifest, teamDisplay,
 } from "@/lib/analyses";
 import { readJob } from "@/lib/jobs";
 
@@ -41,6 +42,7 @@ export default async function MatchPage(
   const linked = (league?.teams ?? []).filter((t) =>
     t.matches.some((m: any) => m.match_id === id),
   );
+  const display = teamDisplay(league);
 
   const m = facts.match;
   const s = facts.stats;
@@ -81,7 +83,7 @@ export default async function MatchPage(
                   {i > 0 && <span className="text-neutral-600">–</span>}
                   {entry
                     ? <TeamBadge slug={entry.slug} name={entry.name} size={24} />
-                    : <span>{t}</span>}
+                    : <span>{display(t)}</span>}
                   <span className="font-semibold text-neutral-100">
                     {score[t] ?? 0}
                   </span>
@@ -111,7 +113,7 @@ export default async function MatchPage(
         title="Prioriterte funn"
         subtitle="Rangert etter effekt ganget med utvalgsstørrelse, så en 100 %-rate over to runder ikke kan slå en 25 %-rate over tolv. Hvert funn er en omskriving av tall fra detaljseksjonen, ikke en ny måling."
       >
-        <Findings findings={facts.findings ?? []} />
+        <Findings findings={canonicaliseFindings(facts.findings ?? [], league)} />
       </Section>
 
       {/* ---------------- where ---------------- */}
@@ -151,7 +153,7 @@ export default async function MatchPage(
         </Section>
       )}
 
-      <MatchDetails facts={facts} teams={teams} />
+      <MatchDetails facts={facts} teams={teams} display={display} />
     </main>
   );
 }

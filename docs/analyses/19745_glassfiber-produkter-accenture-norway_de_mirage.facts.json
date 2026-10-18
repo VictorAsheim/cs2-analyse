@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:41:54.641102+00:00",
+ "generated_at": "2026-10-18T10:54:25.737804+00:00",
  "match": {
   "map": "de_mirage",
   "server_name": "eBot :: Glassfiber Produkter vs Accenture Norway",
@@ -11138,7 +11138,7 @@
    "rule": "predictable_setup",
    "subject": "Signalfahrer",
    "severity": "warning",
-   "title": "Signalfahrer st\u00e5r p\u00e5 BombsiteA nesten hver runde",
+   "title": "Signalfahrer (Accenture Norway) st\u00e5r p\u00e5 BombsiteA nesten hver runde",
    "detail": "10 av 12 CT-runder startet p\u00e5 BombsiteA, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteA",
@@ -11254,7 +11254,7 @@
    "rule": "opening_duel_weak_player",
    "subject": "KrissField",
    "severity": "warning",
-   "title": "KrissField taper \u00e5pningsduellene",
+   "title": "KrissField (Accenture Norway) taper \u00e5pningsduellene",
    "detail": "2 av 7 \u00e5pningsdueller vunnet. \u00c5 opps\u00f8ke denne spilleren tidlig i runden er den billigste duellen p\u00e5 kartet.",
    "evidence": {
     "opening_duel_win_rate": {
@@ -11263,7 +11263,8 @@
      "denominator": 7,
      "definition": "opening kills / opening duels this player was involved in"
     },
-    "opening_deaths": 5
+    "opening_deaths": 5,
+    "team": "Accenture Norway"
    },
    "score": 0.25,
    "confidence": "low",
@@ -11396,5 +11397,5 @@
   "size_bytes": 304639342,
   "sha256": "bda25585d8aecd484694f62bcd94be25f3a65b9eea04e3abeb4c15b298b29f11"
  },
- "parse_seconds": 8.2
+ "parse_seconds": 8.7
 }

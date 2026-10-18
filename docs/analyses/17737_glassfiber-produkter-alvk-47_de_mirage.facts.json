@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T10:42:02.915745+00:00",
+ "generated_at": "2026-10-18T10:53:35.638691+00:00",
  "match": {
   "map": "de_mirage",
   "server_name": "eBot :: Glassfiber Produkter vs AlvK-47",
@@ -10752,7 +10752,7 @@
    "rule": "predictable_setup",
    "subject": "Geitesm\u00f8r",
    "severity": "warning",
-   "title": "Geitesm\u00f8r st\u00e5r p\u00e5 BombsiteA nesten hver runde",
+   "title": "Geitesm\u00f8r (AlvK-47) st\u00e5r p\u00e5 BombsiteA nesten hver runde",
    "detail": "9 av 12 CT-runder startet p\u00e5 BombsiteA, og bare 4 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteA",
@@ -10815,7 +10815,7 @@
    "rule": "predictable_setup",
    "subject": "Diesel1",
    "severity": "warning",
-   "title": "Diesel1 st\u00e5r p\u00e5 BombsiteA nesten hver runde",
+   "title": "Diesel1 (Glassfiber Produkter) st\u00e5r p\u00e5 BombsiteA nesten hver runde",
    "detail": "6 av 8 CT-runder startet p\u00e5 BombsiteA, og bare 3 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteA",
@@ -10840,7 +10840,7 @@
    "rule": "predictable_setup",
    "subject": "Milomst",
    "severity": "warning",
-   "title": "Milomst st\u00e5r p\u00e5 BombsiteB nesten hver runde",
+   "title": "Milomst (Glassfiber Produkter) st\u00e5r p\u00e5 BombsiteB nesten hver runde",
    "detail": "6 av 8 CT-runder startet p\u00e5 BombsiteB, og bare 2 ulike posisjoner totalt. En utility-\u00e5pning mot dette punktet treffer hver gang.",
    "evidence": {
     "callout": "BombsiteB",
@@ -11003,5 +11003,5 @@
   "size_bytes": 241699274,
   "sha256": "0ed22c480007a9084910784e414cc455053c8a3ea2bb4fb74291c15bae60b2b4"
  },
- "parse_seconds": 6.8
+ "parse_seconds": 7.4
 }

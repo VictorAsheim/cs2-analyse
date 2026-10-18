@@ -44,6 +44,15 @@ def _confidence(denominator: int, full_at: int) -> tuple[float, str]:
     return weight, label
 
 
+def _player_team(stats: dict, name: str) -> str | None:
+    """The clan a named player belongs to, from whichever roster lists them."""
+    for section, key in (("players", "players"), ("ct_setups", "by_player")):
+        for player in (stats.get(section) or {}).get(key, []) or []:
+            if player.get("name") == name and player.get("team"):
+                return str(player["team"])
+    return None
+
+
 def _rate_value(rate: dict | None) -> float | None:
     if not rate or rate.get("denominator", 0) == 0:
         return None
@@ -218,16 +227,19 @@ def _opening_duel_rules(stats: dict, teams: list[str]) -> list[Finding]:
         if value is None or total < 6 or value > 0.35:
             continue
         weight, label = _confidence(total, 12)
+        team = _player_team(stats, player.get("name", ""))
         found.append(Finding(
             rule="opening_duel_weak_player",
             subject=player.get("name", "?"),
             severity="warning",
-            title=f"{player['name']} taper åpningsduellene",
+            title=(f"{player['name']} ({team}) taper åpningsduellene" if team
+                   else f"{player['name']} taper åpningsduellene"),
             detail=(f"{duels['numerator']} av {duels['denominator']} åpningsdueller "
                     f"vunnet. Å oppsøke denne spilleren tidlig i runden er den "
                     "billigste duellen på kartet."),
             evidence={"opening_duel_win_rate": duels,
-                      "opening_deaths": player.get("opening_deaths")},
+                      "opening_deaths": player.get("opening_deaths"),
+                      "team": team},
             score=((0.5 - value) / 0.5) * weight,
             confidence=label,
             section="Åpningsdueller",
@@ -252,11 +264,13 @@ def _setup_rules(stats: dict) -> list[Finding]:
         if value is None or rounds < 8 or value < 0.7 or spot == "ukjent":
             continue
         weight, label = _confidence(rounds, 14)
+        team = player.get("team")
         found.append(Finding(
             rule="predictable_setup",
             subject=player.get("name", "?"),
             severity="serious" if value >= 0.85 else "warning",
-            title=f"{player['name']} står på {spot} nesten hver runde",
+            title=(f"{player['name']} ({team}) står på {spot} nesten hver runde"
+                   if team else f"{player['name']} står på {spot} nesten hver runde"),
             detail=(f"{share['numerator']} av {share['denominator']} CT-runder "
                     f"startet på {spot}"
                     + (f", og bare {player.get('distinct_positions')} ulike "

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-17T17:42:28.064240+00:00",
+ "generated_at": "2026-10-18T10:54:09.659804+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: Glassfiber Produkter vs Kaefer DD",
@@ -8264,5 +8264,5 @@
   "size_bytes": 203712595,
   "sha256": "6af7b40265b3d49948aeacda5c316c11e90596e614f2f62022503b17fa99cd1d"
  },
- "parse_seconds": 4.6
+ "parse_seconds": 6.4
 }

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T10:45:29.405098+00:00",
+ "generated_at": "2026-10-18T10:54:53.441063+00:00",
  "division": "8. Divisjon avd. B",
  "format": "Seriespill",
  "table_updated": "2026-10-17",
@@ -114,7 +114,7 @@
        "rule": "predictable_setup",
        "subject": "Feito",
        "severity": "warning",
-       "title": "Feito står på Apartments nesten hver runde",
+       "title": "Feito (Frogn Kommune CS) står på Apartments nesten hver runde",
        "detail": "11 av 15 CT-runder startet på Apartments, og bare 4 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "Apartments",
@@ -270,7 +270,7 @@
        "rule": "predictable_setup",
        "subject": "Feito",
        "severity": "warning",
-       "title": "Feito står på Apartments nesten hver runde",
+       "title": "Feito (Frogn Kommune CS) står på Apartments nesten hver runde",
        "detail": "11 av 15 CT-runder startet på Apartments, og bare 4 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "Apartments",
@@ -549,7 +549,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Thegaroh",
        "severity": "warning",
-       "title": "Thegaroh taper åpningsduellene",
+       "title": "Thegaroh (Glassfiber Produkter) taper åpningsduellene",
        "detail": "0 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -558,7 +558,8 @@
          "denominator": 7,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 7
+        "opening_deaths": 7,
+        "team": "Glassfiber Produkter"
        },
        "score": 0.5833,
        "confidence": "low",
@@ -816,7 +817,7 @@
        "rule": "predictable_setup",
        "subject": "Bobblegeir",
        "severity": "warning",
-       "title": "Bobblegeir står på BombsiteA nesten hver runde",
+       "title": "Bobblegeir (Glassfiber Produkter) står på BombsiteA nesten hver runde",
        "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -842,7 +843,7 @@
        "rule": "predictable_setup",
        "subject": "Milomst",
        "severity": "warning",
-       "title": "Milomst står på BombsiteB nesten hver runde",
+       "title": "Milomst (Glassfiber Produkter) står på BombsiteB nesten hver runde",
        "detail": "10 av 12 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -921,7 +922,7 @@
        "rule": "predictable_setup",
        "subject": "Diesel1",
        "severity": "serious",
-       "title": "Diesel1 står på BombsiteA nesten hver runde",
+       "title": "Diesel1 (Glassfiber Produkter) står på BombsiteA nesten hver runde",
        "detail": "8 av 9 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -967,7 +968,7 @@
        "rule": "predictable_setup",
        "subject": "Lime",
        "severity": "warning",
-       "title": "Lime står på SnipersNest nesten hver runde",
+       "title": "Lime (Glassfiber Produkter) står på SnipersNest nesten hver runde",
        "detail": "7 av 9 CT-runder startet på SnipersNest, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "SnipersNest",
@@ -993,7 +994,7 @@
        "rule": "predictable_setup",
        "subject": "Thegaroh",
        "severity": "warning",
-       "title": "Thegaroh står på CTSpawn nesten hver runde",
+       "title": "Thegaroh (Glassfiber Produkter) står på CTSpawn nesten hver runde",
        "detail": "7 av 9 CT-runder startet på CTSpawn, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "CTSpawn",
@@ -1019,7 +1020,7 @@
        "rule": "predictable_setup",
        "subject": "Milomst",
        "severity": "warning",
-       "title": "Milomst står på BombsiteB nesten hver runde",
+       "title": "Milomst (Glassfiber Produkter) står på BombsiteB nesten hver runde",
        "detail": "6 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -1166,7 +1167,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Thegaroh",
        "severity": "warning",
-       "title": "Thegaroh taper åpningsduellene",
+       "title": "Thegaroh (Glassfiber Produkter) taper åpningsduellene",
        "detail": "0 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -1175,7 +1176,8 @@
          "denominator": 7,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 7
+        "opening_deaths": 7,
+        "team": "Glassfiber Produkter"
        },
        "score": 0.5833,
        "confidence": "low",
@@ -1262,7 +1264,7 @@
        "rule": "predictable_setup",
        "subject": "Bobblegeir",
        "severity": "warning",
-       "title": "Bobblegeir står på BombsiteA nesten hver runde",
+       "title": "Bobblegeir (Glassfiber Produkter) står på BombsiteA nesten hver runde",
        "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -1286,7 +1288,7 @@
        "rule": "predictable_setup",
        "subject": "Milomst",
        "severity": "warning",
-       "title": "Milomst står på BombsiteB nesten hver runde",
+       "title": "Milomst (Glassfiber Produkter) står på BombsiteB nesten hver runde",
        "detail": "10 av 12 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -1694,7 +1696,7 @@
        "rule": "predictable_setup",
        "subject": "Diesel1",
        "severity": "warning",
-       "title": "Diesel1 står på BombsiteA nesten hver runde",
+       "title": "Diesel1 (Glassfiber Produkter) står på BombsiteA nesten hver runde",
        "detail": "6 av 8 CT-runder startet på BombsiteA, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -1719,7 +1721,7 @@
        "rule": "predictable_setup",
        "subject": "Milomst",
        "severity": "warning",
-       "title": "Milomst står på BombsiteB nesten hver runde",
+       "title": "Milomst (Glassfiber Produkter) står på BombsiteB nesten hver runde",
        "detail": "6 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -1817,7 +1819,7 @@
        "rule": "predictable_setup",
        "subject": "Diesel1",
        "severity": "serious",
-       "title": "Diesel1 står på BombsiteA nesten hver runde",
+       "title": "Diesel1 (Glassfiber Produkter) står på BombsiteA nesten hver runde",
        "detail": "8 av 9 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -1841,7 +1843,7 @@
        "rule": "predictable_setup",
        "subject": "Lime",
        "severity": "warning",
-       "title": "Lime står på SnipersNest nesten hver runde",
+       "title": "Lime (Glassfiber Produkter) står på SnipersNest nesten hver runde",
        "detail": "7 av 9 CT-runder startet på SnipersNest, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "SnipersNest",
@@ -1865,7 +1867,7 @@
        "rule": "predictable_setup",
        "subject": "Thegaroh",
        "severity": "warning",
-       "title": "Thegaroh står på CTSpawn nesten hver runde",
+       "title": "Thegaroh (Glassfiber Produkter) står på CTSpawn nesten hver runde",
        "detail": "7 av 9 CT-runder startet på CTSpawn, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "CTSpawn",
@@ -2197,7 +2199,7 @@
        "rule": "predictable_setup",
        "subject": "Håkon Ivesdal",
        "severity": "warning",
-       "title": "Håkon Ivesdal står på BombsiteB nesten hver runde",
+       "title": "Håkon Ivesdal (Kaefer DåDå) står på BombsiteB nesten hver runde",
        "detail": "9 av 12 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -2265,7 +2267,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Shady.",
        "severity": "warning",
-       "title": "Shady. taper åpningsduellene",
+       "title": "Shady. (Kaefer DåDå) taper åpningsduellene",
        "detail": "1 av 6 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -2274,7 +2276,8 @@
          "denominator": 6,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 5
+        "opening_deaths": 5,
+        "team": "Kaefer DD"
        },
        "score": 0.3333,
        "confidence": "low",
@@ -2526,7 +2529,7 @@
        "rule": "predictable_setup",
        "subject": "Håkon Ivesdal",
        "severity": "warning",
-       "title": "Håkon Ivesdal står på BombsiteB nesten hver runde",
+       "title": "Håkon Ivesdal (Kaefer DåDå) står på BombsiteB nesten hver runde",
        "detail": "9 av 12 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -2588,7 +2591,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Shady.",
        "severity": "warning",
-       "title": "Shady. taper åpningsduellene",
+       "title": "Shady. (Kaefer DåDå) taper åpningsduellene",
        "detail": "1 av 6 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -2597,7 +2600,8 @@
          "denominator": 6,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 5
+        "opening_deaths": 5,
+        "team": "Kaefer DD"
        },
        "score": 0.3333,
        "confidence": "low",
@@ -2742,7 +2746,7 @@
        "rule": "predictable_setup",
        "subject": "Jamie Jamie",
        "severity": "warning",
-       "title": "Jamie Jamie står på BombsiteB nesten hver runde",
+       "title": "Jamie Jamie (Sopra Steria NewSync) står på BombsiteB nesten hver runde",
        "detail": "10 av 14 CT-runder startet på BombsiteB, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -2851,7 +2855,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Jamie Jamie",
        "severity": "warning",
-       "title": "Jamie Jamie taper åpningsduellene",
+       "title": "Jamie Jamie (Sopra Steria NewSync) taper åpningsduellene",
        "detail": "3 av 9 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -2860,7 +2864,8 @@
          "denominator": 9,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 6
+        "opening_deaths": 6,
+        "team": "Sopra Steria NewSync"
        },
        "score": 0.25,
        "confidence": "medium",
@@ -2915,7 +2920,7 @@
        "rule": "predictable_setup",
        "subject": "Jamie Jamie",
        "severity": "warning",
-       "title": "Jamie Jamie står på BombsiteB nesten hver runde",
+       "title": "Jamie Jamie (Sopra Steria NewSync) står på BombsiteB nesten hver runde",
        "detail": "10 av 14 CT-runder startet på BombsiteB, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteB",
@@ -3039,7 +3044,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Jamie Jamie",
        "severity": "warning",
-       "title": "Jamie Jamie taper åpningsduellene",
+       "title": "Jamie Jamie (Sopra Steria NewSync) taper åpningsduellene",
        "detail": "3 av 9 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -3048,7 +3053,8 @@
          "denominator": 9,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 6
+        "opening_deaths": 6,
+        "team": "Sopra Steria NewSync"
        },
        "score": 0.25,
        "confidence": "medium",
@@ -3129,7 +3135,7 @@
        "rule": "predictable_setup",
        "subject": "Signalfahrer",
        "severity": "serious",
-       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "title": "Signalfahrer (Accenture Norway) står på BombsiteA nesten hver runde",
        "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -3154,7 +3160,7 @@
        "rule": "predictable_setup",
        "subject": "Vådeskudd",
        "severity": "serious",
-       "title": "Vådeskudd står på BombsiteA nesten hver runde",
+       "title": "Vådeskudd (Accenture Norway) står på BombsiteA nesten hver runde",
        "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -3335,7 +3341,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Svevern",
        "severity": "warning",
-       "title": "Svevern taper åpningsduellene",
+       "title": "Svevern (Accenture Norway) taper åpningsduellene",
        "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -3344,7 +3350,8 @@
          "denominator": 7,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 5
+        "opening_deaths": 5,
+        "team": "Accenture Norway"
        },
        "score": 0.25,
        "confidence": "low",
@@ -3430,7 +3437,7 @@
        "rule": "predictable_setup",
        "subject": "Signalfahrer",
        "severity": "warning",
-       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "title": "Signalfahrer (Accenture Norway) står på BombsiteA nesten hver runde",
        "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -3497,7 +3504,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "KrissField",
        "severity": "warning",
-       "title": "KrissField taper åpningsduellene",
+       "title": "KrissField (Accenture Norway) taper åpningsduellene",
        "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -3506,7 +3513,8 @@
          "denominator": 7,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 5
+        "opening_deaths": 5,
+        "team": "Accenture Norway"
        },
        "score": 0.25,
        "confidence": "low",
@@ -3583,7 +3591,7 @@
        "rule": "predictable_setup",
        "subject": "Signalfahrer",
        "severity": "serious",
-       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "title": "Signalfahrer (Accenture Norway) står på BombsiteA nesten hver runde",
        "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -3606,7 +3614,7 @@
        "rule": "predictable_setup",
        "subject": "Vådeskudd",
        "severity": "serious",
-       "title": "Vådeskudd står på BombsiteA nesten hver runde",
+       "title": "Vådeskudd (Accenture Norway) står på BombsiteA nesten hver runde",
        "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -3801,7 +3809,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "Svevern",
        "severity": "warning",
-       "title": "Svevern taper åpningsduellene",
+       "title": "Svevern (Accenture Norway) taper åpningsduellene",
        "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -3810,7 +3818,8 @@
          "denominator": 7,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 5
+        "opening_deaths": 5,
+        "team": "Accenture Norway"
        },
        "score": 0.25,
        "confidence": "low",
@@ -3878,7 +3887,7 @@
        "rule": "predictable_setup",
        "subject": "Signalfahrer",
        "severity": "warning",
-       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "title": "Signalfahrer (Accenture Norway) står på BombsiteA nesten hver runde",
        "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
         "callout": "BombsiteA",
@@ -3958,7 +3967,7 @@
        "rule": "opening_duel_weak_player",
        "subject": "KrissField",
        "severity": "warning",
-       "title": "KrissField taper åpningsduellene",
+       "title": "KrissField (Accenture Norway) taper åpningsduellene",
        "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
        "evidence": {
         "opening_duel_win_rate": {
@@ -3967,7 +3976,8 @@
          "denominator": 7,
          "definition": "opening kills / opening duels this player was involved in"
         },
-        "opening_deaths": 5
+        "opening_deaths": 5,
+        "team": "Accenture Norway"
        },
        "score": 0.25,
        "confidence": "low",
@@ -4000,582 +4010,12 @@
    "clan_names": [
     "Accenture Norway"
    ]
-  },
+  }
+ ],
+ "non_division_opponents": [
   {
-   "slug": "alvk-47",
    "name": "AlvK-47",
-   "in_division": false,
-   "standing": null,
-   "maps_played": 2,
-   "best_map": "de_dust2",
-   "worst_map": "de_mirage",
-   "maps": {
-    "de_dust2": {
-     "matches": 1,
-     "match_wins": 0,
-     "rounds_for": 7,
-     "rounds_against": 13,
-     "round_win_rate": {
-      "value": 0.35,
-      "numerator": 7,
-      "denominator": 20,
-      "definition": "runder vunnet / runder spilt på dette kartet"
-     },
-     "t": {
-      "value": 0.5,
-      "numerator": 6,
-      "denominator": 12,
-      "definition": "runder vunnet som T / runder spilt som T"
-     },
-     "ct": {
-      "value": 0.125,
-      "numerator": 1,
-      "denominator": 8,
-      "definition": "runder vunnet som CT / runder spilt som CT"
-     },
-     "strengths": [],
-     "weaknesses": [
-      {
-       "rule": "site_retake_weak",
-       "subject": "AlvK-47",
-       "severity": "critical",
-       "title": "AlvK-47 vant aldri tilbake B",
-       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
-       "evidence": {
-        "site": "B",
-        "retake_rate": {
-         "value": 0.0,
-         "numerator": 0,
-         "denominator": 3,
-         "definition": "rounds won after conceding a plant at B / plants conceded at B"
-        },
-        "defuses": 0
-       },
-       "score": 0.5,
-       "confidence": "low",
-       "section": "Forsvar per bombesite",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      },
-      {
-       "rule": "predictable_setup",
-       "subject": "Elvegris",
-       "severity": "serious",
-       "title": "Elvegris står på BombsiteB nesten hver runde",
-       "detail": "7 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
-       "evidence": {
-        "callout": "BombsiteB",
-        "share_at_most_common": {
-         "value": 0.875,
-         "numerator": 7,
-         "denominator": 8,
-         "definition": "rounds set up in this callout / CT rounds observed"
-        },
-        "positions": {
-         "BombsiteB": 7,
-         "TSpawn": 1
-        },
-        "team": "AlvK-47"
-       },
-       "score": 0.5,
-       "confidence": "low",
-       "section": "CT-oppsett",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      },
-      {
-       "rule": "low_trade_rate",
-       "subject": "AlvK-47",
-       "severity": "warning",
-       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
-       "detail": "Bare 11 av 80 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
-       "evidence": {
-        "traded_death_rate": {
-         "value": 0.1375,
-         "numerator": 11,
-         "denominator": 80,
-         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
-        }
-       },
-       "score": 0.45,
-       "confidence": "high",
-       "section": "Trading",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      },
-      {
-       "rule": "retake_never_arrives",
-       "subject": "AlvK-47",
-       "severity": "serious",
-       "title": "AlvK-47 når ikke fram til siten etter plant",
-       "detail": "I 1 av 4 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 0.6 s.",
-       "evidence": {
-        "site_reached": {
-         "value": 0.75,
-         "numerator": 3,
-         "denominator": 4,
-         "definition": "plants where a CT reached the site / plants conceded"
-        },
-        "median_seconds": 0.6
-       },
-       "score": 0.125,
-       "confidence": "low",
-       "section": "Retake-ankomst",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      }
-     ],
-     "match_ids": [
-      "17738_glassfiber-produkter-alvk-47_de_dust2"
-     ]
-    },
-    "de_mirage": {
-     "matches": 1,
-     "match_wins": 0,
-     "rounds_for": 7,
-     "rounds_against": 13,
-     "round_win_rate": {
-      "value": 0.35,
-      "numerator": 7,
-      "denominator": 20,
-      "definition": "runder vunnet / runder spilt på dette kartet"
-     },
-     "t": {
-      "value": 0.125,
-      "numerator": 1,
-      "denominator": 8,
-      "definition": "runder vunnet som T / runder spilt som T"
-     },
-     "ct": {
-      "value": 0.5,
-      "numerator": 6,
-      "denominator": 12,
-      "definition": "runder vunnet som CT / runder spilt som CT"
-     },
-     "strengths": [
-      {
-       "rule": "strong_retake",
-       "subject": "AlvK-47",
-       "severity": "good",
-       "title": "AlvK-47 tar tilbake B ofte",
-       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på B.",
-       "evidence": {
-        "site": "B",
-        "retake_rate": {
-         "value": 0.6667,
-         "numerator": 2,
-         "denominator": 3,
-         "definition": "rounds won after conceding a plant at B / plants conceded at B"
-        }
-       },
-       "score": 0.3333,
-       "confidence": "low",
-       "section": "Forsvar per bombesite",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      }
-     ],
-     "weaknesses": [
-      {
-       "rule": "low_trade_rate",
-       "subject": "AlvK-47",
-       "severity": "warning",
-       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
-       "detail": "Bare 5 av 82 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
-       "evidence": {
-        "traded_death_rate": {
-         "value": 0.061,
-         "numerator": 5,
-         "denominator": 82,
-         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
-        }
-       },
-       "score": 0.756,
-       "confidence": "high",
-       "section": "Trading",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      },
-      {
-       "rule": "site_retake_weak",
-       "subject": "AlvK-47",
-       "severity": "critical",
-       "title": "AlvK-47 vant aldri tilbake A",
-       "detail": "Av 4 plants sluppet inn på A ble ingen runder vunnet.",
-       "evidence": {
-        "site": "A",
-        "retake_rate": {
-         "value": 0.0,
-         "numerator": 0,
-         "denominator": 4,
-         "definition": "rounds won after conceding a plant at A / plants conceded at A"
-        },
-        "defuses": 0
-       },
-       "score": 0.6667,
-       "confidence": "medium",
-       "section": "Forsvar per bombesite",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      },
-      {
-       "rule": "predictable_setup",
-       "subject": "Geitesmør",
-       "severity": "warning",
-       "title": "Geitesmør står på BombsiteA nesten hver runde",
-       "detail": "9 av 12 CT-runder startet på BombsiteA, og bare 4 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
-       "evidence": {
-        "callout": "BombsiteA",
-        "share_at_most_common": {
-         "value": 0.75,
-         "numerator": 9,
-         "denominator": 12,
-         "definition": "rounds set up in this callout / CT rounds observed"
-        },
-        "positions": {
-         "BombsiteA": 9,
-         "TopofMid": 1,
-         "Catwalk": 1,
-         "PalaceInterior": 1
-        },
-        "team": "AlvK-47"
-       },
-       "score": 0.6429,
-       "confidence": "medium",
-       "section": "CT-oppsett",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      },
-      {
-       "rule": "retake_never_arrives",
-       "subject": "AlvK-47",
-       "severity": "serious",
-       "title": "AlvK-47 når ikke fram til siten etter plant",
-       "detail": "I 4 av 7 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 5.1 s.",
-       "evidence": {
-        "site_reached": {
-         "value": 0.4286,
-         "numerator": 3,
-         "denominator": 7,
-         "definition": "plants where a CT reached the site / plants conceded"
-        },
-        "median_seconds": 5.1
-       },
-       "score": 0.5,
-       "confidence": "medium",
-       "section": "Retake-ankomst",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      },
-      {
-       "rule": "full_buy_conversion",
-       "subject": "AlvK-47",
-       "severity": "warning",
-       "title": "AlvK-47 omsetter ikke full buy",
-       "detail": "5 av 10 full-buy-runder vunnet. Utstyret er ikke problemet.",
-       "evidence": {
-        "full_buy_win_rate": {
-         "value": 0.5,
-         "numerator": 5,
-         "denominator": 10,
-         "definition": "rounds won / rounds this team played a full_buy"
-        }
-       },
-       "score": 0.0568,
-       "confidence": "medium",
-       "section": "Økonomi",
-       "matches_fired": 1,
-       "matches_on_map": 1
-      }
-     ],
-     "match_ids": [
-      "17737_glassfiber-produkter-alvk-47_de_mirage"
-     ]
-    }
-   },
-   "matches": [
-    {
-     "match_id": "17738_glassfiber-produkter-alvk-47_de_dust2",
-     "map": "de_dust2",
-     "opponent": "Glassfiber Produkter",
-     "rounds_for": 7,
-     "rounds_against": 13,
-     "won": false,
-     "sides": {
-      "won": {
-       "T": 6,
-       "CT": 1
-      },
-      "played": {
-       "T": 12,
-       "CT": 8
-      }
-     },
-     "plant_rate": {
-      "value": 0.6667,
-      "numerator": 8,
-      "denominator": 12,
-      "definition": "rounds with a bomb plant / rounds played as T"
-     },
-     "post_plant": {
-      "value": 0.625,
-      "numerator": 5,
-      "denominator": 8,
-      "definition": "rounds won after planting / rounds where this team planted"
-     },
-     "opening_duels": {
-      "value": 0.45,
-      "numerator": 9,
-      "denominator": 20,
-      "definition": "opening kills / opening duels this team was involved in"
-     },
-     "findings": [
-      {
-       "rule": "site_retake_weak",
-       "subject": "AlvK-47",
-       "severity": "critical",
-       "title": "AlvK-47 vant aldri tilbake B",
-       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
-       "evidence": {
-        "site": "B",
-        "retake_rate": {
-         "value": 0.0,
-         "numerator": 0,
-         "denominator": 3,
-         "definition": "rounds won after conceding a plant at B / plants conceded at B"
-        },
-        "defuses": 0
-       },
-       "score": 0.5,
-       "confidence": "low",
-       "section": "Forsvar per bombesite"
-      },
-      {
-       "rule": "predictable_setup",
-       "subject": "Elvegris",
-       "severity": "serious",
-       "title": "Elvegris står på BombsiteB nesten hver runde",
-       "detail": "7 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
-       "evidence": {
-        "callout": "BombsiteB",
-        "share_at_most_common": {
-         "value": 0.875,
-         "numerator": 7,
-         "denominator": 8,
-         "definition": "rounds set up in this callout / CT rounds observed"
-        },
-        "positions": {
-         "BombsiteB": 7,
-         "TSpawn": 1
-        },
-        "team": "AlvK-47"
-       },
-       "score": 0.5,
-       "confidence": "low",
-       "section": "CT-oppsett"
-      },
-      {
-       "rule": "low_trade_rate",
-       "subject": "AlvK-47",
-       "severity": "warning",
-       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
-       "detail": "Bare 11 av 80 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
-       "evidence": {
-        "traded_death_rate": {
-         "value": 0.1375,
-         "numerator": 11,
-         "denominator": 80,
-         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
-        }
-       },
-       "score": 0.45,
-       "confidence": "high",
-       "section": "Trading"
-      },
-      {
-       "rule": "retake_never_arrives",
-       "subject": "AlvK-47",
-       "severity": "serious",
-       "title": "AlvK-47 når ikke fram til siten etter plant",
-       "detail": "I 1 av 4 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 0.6 s.",
-       "evidence": {
-        "site_reached": {
-         "value": 0.75,
-         "numerator": 3,
-         "denominator": 4,
-         "definition": "plants where a CT reached the site / plants conceded"
-        },
-        "median_seconds": 0.6
-       },
-       "score": 0.125,
-       "confidence": "low",
-       "section": "Retake-ankomst"
-      }
-     ]
-    },
-    {
-     "match_id": "17737_glassfiber-produkter-alvk-47_de_mirage",
-     "map": "de_mirage",
-     "opponent": "Glassfiber Produkter",
-     "rounds_for": 7,
-     "rounds_against": 13,
-     "won": false,
-     "sides": {
-      "won": {
-       "T": 1,
-       "CT": 6
-      },
-      "played": {
-       "T": 8,
-       "CT": 12
-      }
-     },
-     "plant_rate": {
-      "value": 0.25,
-      "numerator": 2,
-      "denominator": 8,
-      "definition": "rounds with a bomb plant / rounds played as T"
-     },
-     "post_plant": {
-      "value": 0.5,
-      "numerator": 1,
-      "denominator": 2,
-      "definition": "rounds won after planting / rounds where this team planted"
-     },
-     "opening_duels": {
-      "value": 0.4,
-      "numerator": 8,
-      "denominator": 20,
-      "definition": "opening kills / opening duels this team was involved in"
-     },
-     "findings": [
-      {
-       "rule": "low_trade_rate",
-       "subject": "AlvK-47",
-       "severity": "warning",
-       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
-       "detail": "Bare 5 av 82 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
-       "evidence": {
-        "traded_death_rate": {
-         "value": 0.061,
-         "numerator": 5,
-         "denominator": 82,
-         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
-        }
-       },
-       "score": 0.756,
-       "confidence": "high",
-       "section": "Trading"
-      },
-      {
-       "rule": "site_retake_weak",
-       "subject": "AlvK-47",
-       "severity": "critical",
-       "title": "AlvK-47 vant aldri tilbake A",
-       "detail": "Av 4 plants sluppet inn på A ble ingen runder vunnet.",
-       "evidence": {
-        "site": "A",
-        "retake_rate": {
-         "value": 0.0,
-         "numerator": 0,
-         "denominator": 4,
-         "definition": "rounds won after conceding a plant at A / plants conceded at A"
-        },
-        "defuses": 0
-       },
-       "score": 0.6667,
-       "confidence": "medium",
-       "section": "Forsvar per bombesite"
-      },
-      {
-       "rule": "predictable_setup",
-       "subject": "Geitesmør",
-       "severity": "warning",
-       "title": "Geitesmør står på BombsiteA nesten hver runde",
-       "detail": "9 av 12 CT-runder startet på BombsiteA, og bare 4 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
-       "evidence": {
-        "callout": "BombsiteA",
-        "share_at_most_common": {
-         "value": 0.75,
-         "numerator": 9,
-         "denominator": 12,
-         "definition": "rounds set up in this callout / CT rounds observed"
-        },
-        "positions": {
-         "BombsiteA": 9,
-         "TopofMid": 1,
-         "Catwalk": 1,
-         "PalaceInterior": 1
-        },
-        "team": "AlvK-47"
-       },
-       "score": 0.6429,
-       "confidence": "medium",
-       "section": "CT-oppsett"
-      },
-      {
-       "rule": "retake_never_arrives",
-       "subject": "AlvK-47",
-       "severity": "serious",
-       "title": "AlvK-47 når ikke fram til siten etter plant",
-       "detail": "I 4 av 7 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 5.1 s.",
-       "evidence": {
-        "site_reached": {
-         "value": 0.4286,
-         "numerator": 3,
-         "denominator": 7,
-         "definition": "plants where a CT reached the site / plants conceded"
-        },
-        "median_seconds": 5.1
-       },
-       "score": 0.5,
-       "confidence": "medium",
-       "section": "Retake-ankomst"
-      },
-      {
-       "rule": "strong_retake",
-       "subject": "AlvK-47",
-       "severity": "good",
-       "title": "AlvK-47 tar tilbake B ofte",
-       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på B.",
-       "evidence": {
-        "site": "B",
-        "retake_rate": {
-         "value": 0.6667,
-         "numerator": 2,
-         "denominator": 3,
-         "definition": "rounds won after conceding a plant at B / plants conceded at B"
-        }
-       },
-       "score": 0.3333,
-       "confidence": "low",
-       "section": "Forsvar per bombesite"
-      },
-      {
-       "rule": "full_buy_conversion",
-       "subject": "AlvK-47",
-       "severity": "warning",
-       "title": "AlvK-47 omsetter ikke full buy",
-       "detail": "5 av 10 full-buy-runder vunnet. Utstyret er ikke problemet.",
-       "evidence": {
-        "full_buy_win_rate": {
-         "value": 0.5,
-         "numerator": 5,
-         "denominator": 10,
-         "definition": "rounds won / rounds this team played a full_buy"
-        }
-       },
-       "score": 0.0568,
-       "confidence": "medium",
-       "section": "Økonomi"
-      }
-     ]
-    }
-   ],
-   "demos_analysed": 2,
-   "clan_names": [
-    "AlvK-47"
-   ]
+   "slug": "alvk-47"
   }
  ],
  "unmatched_clan_names": [],
