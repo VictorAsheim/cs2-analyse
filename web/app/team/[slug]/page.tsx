@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import {
   MapBadge, MapTile, TeamBadge, mapLabel, mapSrc,
 } from "@/components/Badges";
+import CrossMap from "@/components/CrossMap";
 import MapPlans from "@/components/MapPlans";
 import { Section } from "@/components/stats";
 import { readLeague } from "@/lib/analyses";
@@ -87,6 +88,12 @@ export default async function TeamPage(
           )}
         </div>
       )}
+
+      <CrossMap
+        findings={(team.cross_map ?? []) as any}
+        ourTeam={team.us}
+        mapsPlayed={team.maps_played}
+      />
 
       <Section title={team.us ? "Kart for kart" : "Slik kan dere vinne kartene"}>
         <MapPlans

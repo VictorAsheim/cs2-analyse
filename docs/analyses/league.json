@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T15:39:46.475572+00:00",
+ "generated_at": "2026-10-18T15:45:15.964515+00:00",
  "division": "8. Divisjon avd. B",
  "format": "Seriespill",
  "table_updated": "2026-10-17",
@@ -19,10 +19,184 @@
     "round_diff": 4,
     "points": 6
    },
-   "maps_played": 1,
-   "best_map": "de_inferno",
+   "maps_played": 2,
+   "best_map": "de_ancient",
    "worst_map": "de_inferno",
    "maps": {
+    "de_ancient": {
+     "matches": 1,
+     "match_wins": 1,
+     "rounds_for": 13,
+     "rounds_against": 10,
+     "round_win_rate": {
+      "value": 0.5652,
+      "numerator": 13,
+      "denominator": 23,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.4545,
+      "numerator": 5,
+      "denominator": 11,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.6667,
+      "numerator": 8,
+      "denominator": 12,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [
+      {
+       "rule": "strong_retake",
+       "subject": "Frogn Kommune CS",
+       "severity": "good",
+       "title": "Frogn Kommune CS tar tilbake B ofte",
+       "detail": "Vant 4 av 5 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.8,
+         "numerator": 4,
+         "denominator": 5,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.6667,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på B uten tall. De tok tilbake 4 av 5 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "utility_advantage",
+       "subject": "Frogn Kommune CS",
+       "severity": "good",
+       "title": "Frogn Kommune CS spiller med mye utility",
+       "detail": "2.2 granater per runde mot motstanderens 1.4. Forvent røyk og molotov på hver execute.",
+       "evidence": {
+        "per_round": 2.17,
+        "opponent_per_round": 1.39
+       },
+       "score": 0.36,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Forvent røyk og molotov på hver execute — 2.2 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Frogn Kommune CS",
+       "severity": "good",
+       "title": "Frogn Kommune CS tar tilbake A ofte",
+       "detail": "Vant 2 av 4 runder der motstanderen fikk plantet på A.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.5,
+         "numerator": 2,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på A uten tall. De tok tilbake 2 av 4 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "weaknesses": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Hanzee",
+       "severity": "warning",
+       "title": "Hanzee (Frogn Kommune CS) står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "BombsiteB": 1,
+         "SideHall": 1
+        },
+        "team": "Frogn Kommune CS"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Hanzee står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "zetfrila",
+       "severity": "warning",
+       "title": "zetfrila (Frogn Kommune CS) står på Middle nesten hver runde",
+       "detail": "9 av 12 CT-runder startet på Middle, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "Middle",
+        "share_at_most_common": {
+         "value": 0.75,
+         "numerator": 9,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "Middle": 9,
+         "SideHall": 3
+        },
+        "team": "Frogn Kommune CS"
+       },
+       "score": 0.6429,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot Middle hver runde. zetfrila står der 9 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Frogn Kommune CS",
+       "severity": "warning",
+       "title": "Frogn Kommune CS blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 14 av 80 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.175,
+         "numerator": 14,
+         "denominator": 80,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3,
+       "confidence": "high",
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 14 av 80 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "19830_frogn-kommune-cs-sopra-steria-newsync_de_ancient"
+     ]
+    },
     "de_inferno": {
      "matches": 1,
      "match_wins": 1,
@@ -250,6 +424,175 @@
    },
    "matches": [
     {
+     "match_id": "19830_frogn-kommune-cs-sopra-steria-newsync_de_ancient",
+     "map": "de_ancient",
+     "opponent": "Sopra Steria NewSync",
+     "rounds_for": 13,
+     "rounds_against": 10,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 5,
+       "CT": 8
+      },
+      "played": {
+       "T": 11,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.7273,
+      "numerator": 8,
+      "denominator": 11,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.625,
+      "numerator": 5,
+      "denominator": 8,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.5217,
+      "numerator": 12,
+      "denominator": 23,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Hanzee",
+       "severity": "warning",
+       "title": "Hanzee (Frogn Kommune CS) står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "BombsiteB": 1,
+         "SideHall": 1
+        },
+        "team": "Frogn Kommune CS"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Hanzee står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Frogn Kommune CS",
+       "severity": "good",
+       "title": "Frogn Kommune CS tar tilbake B ofte",
+       "detail": "Vant 4 av 5 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.8,
+         "numerator": 4,
+         "denominator": 5,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.6667,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på B uten tall. De tok tilbake 4 av 5 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "zetfrila",
+       "severity": "warning",
+       "title": "zetfrila (Frogn Kommune CS) står på Middle nesten hver runde",
+       "detail": "9 av 12 CT-runder startet på Middle, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "Middle",
+        "share_at_most_common": {
+         "value": 0.75,
+         "numerator": 9,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "Middle": 9,
+         "SideHall": 3
+        },
+        "team": "Frogn Kommune CS"
+       },
+       "score": 0.6429,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot Middle hver runde. zetfrila står der 9 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
+      },
+      {
+       "rule": "utility_advantage",
+       "subject": "Frogn Kommune CS",
+       "severity": "good",
+       "title": "Frogn Kommune CS spiller med mye utility",
+       "detail": "2.2 granater per runde mot motstanderens 1.4. Forvent røyk og molotov på hver execute.",
+       "evidence": {
+        "per_round": 2.17,
+        "opponent_per_round": 1.39
+       },
+       "score": 0.36,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Forvent røyk og molotov på hver execute — 2.2 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+       "our_side": null
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Frogn Kommune CS",
+       "severity": "good",
+       "title": "Frogn Kommune CS tar tilbake A ofte",
+       "detail": "Vant 2 av 4 runder der motstanderen fikk plantet på A.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.5,
+         "numerator": 2,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på A uten tall. De tok tilbake 2 av 4 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T"
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Frogn Kommune CS",
+       "severity": "warning",
+       "title": "Frogn Kommune CS blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 14 av 80 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.175,
+         "numerator": 14,
+         "denominator": 80,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3,
+       "confidence": "high",
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 14 av 80 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
+      }
+     ]
+    },
+    {
      "match_id": "19829_frogn-kommune-cs-sopra-steria-newsync_de_inferno",
      "map": "de_inferno",
      "opponent": "Sopra Steria NewSync",
@@ -465,7 +808,59 @@
      ]
     }
    ],
-   "demos_analysed": 1,
+   "demos_analysed": 2,
+   "cross_map": [
+    {
+     "rule": "low_trade_rate",
+     "subject": "Frogn Kommune CS",
+     "severity": "warning",
+     "title": "Frogn Kommune CS blir sjelden byttet opp etter et dødsfall",
+     "detail": "Bare 14 av 98 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+     "evidence": {
+      "traded_death_rate": {
+       "value": 0.1429,
+       "numerator": 14,
+       "denominator": 98,
+       "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+      }
+     },
+     "score": 0.4284,
+     "confidence": "high",
+     "section": "Trading",
+     "counter": "Isoler én spiller av gangen og ta duellen. Bare 14 av 98 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+     "our_side": null,
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_inferno"
+     ],
+     "matches_total": 2
+    },
+    {
+     "rule": "utility_advantage",
+     "subject": "Frogn Kommune CS",
+     "severity": "good",
+     "title": "Frogn Kommune CS spiller med mye utility",
+     "detail": "2.2 granater per runde mot motstanderens 1.4. Forvent røyk og molotov på hver execute.",
+     "evidence": {
+      "per_round": 2.17,
+      "opponent_per_round": 1.39
+     },
+     "score": 0.36,
+     "confidence": "high",
+     "section": "Granatbruk",
+     "counter": "Forvent røyk og molotov på hver execute — 2.2 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+     "our_side": null,
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_inferno"
+     ],
+     "matches_total": 2
+    }
+   ],
    "clan_names": [
     "Frogn Kommune CS"
    ]
@@ -484,13 +879,255 @@
     "round_diff": 4,
     "points": 6
    },
-   "maps_played": 0,
-   "best_map": null,
-   "worst_map": null,
-   "maps": {},
-   "matches": [],
-   "demos_analysed": 0,
-   "clan_names": []
+   "maps_played": 1,
+   "best_map": "de_dust2",
+   "worst_map": "de_dust2",
+   "maps": {
+    "de_dust2": {
+     "matches": 1,
+     "match_wins": 1,
+     "rounds_for": 13,
+     "rounds_against": 11,
+     "round_win_rate": {
+      "value": 0.5417,
+      "numerator": 13,
+      "denominator": 24,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.5833,
+      "numerator": 7,
+      "denominator": 12,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [
+      {
+       "rule": "strong_opening_duels",
+       "subject": "NAS - Boarding Group B",
+       "severity": "good",
+       "title": "NAS - Boarding Group B vinner åpningsduellene",
+       "detail": "14 av 24 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.5833,
+         "numerator": 14,
+         "denominator": 24,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.5833,
+       "confidence": "high",
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "weaknesses": [
+      {
+       "rule": "retake_never_arrives",
+       "subject": "NAS - Boarding Group B",
+       "severity": "serious",
+       "title": "NAS - Boarding Group B når ikke fram til siten etter plant",
+       "detail": "I 5 av 8 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 11.0 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.375,
+         "numerator": 3,
+         "denominator": 8,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 11.0
+       },
+       "score": 0.625,
+       "confidence": "high",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 5 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "NAS - Boarding Group B",
+       "severity": "critical",
+       "title": "NAS - Boarding Group B vant aldri tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 0 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "utility_deficit",
+       "subject": "NAS - Boarding Group B",
+       "severity": "warning",
+       "title": "NAS - Boarding Group B kaster langt mindre utility",
+       "detail": "0.5 granater per runde mot Sopra Steria NewSync sine 0.7 — 31 % mindre. Målt over 24 runder.",
+       "evidence": {
+        "per_round": 0.46,
+        "opponent_per_round": 0.67,
+        "rounds": 24
+       },
+       "score": 0.3125,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Hold vinkler. Med 0.5 granater per runde er executene deres tynne på røyk og flash, så posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "17728_nas-boarding-group-b-sopra-steria-newsync_de_dust2"
+     ]
+    }
+   },
+   "matches": [
+    {
+     "match_id": "17728_nas-boarding-group-b-sopra-steria-newsync_de_dust2",
+     "map": "de_dust2",
+     "opponent": "Sopra Steria NewSync",
+     "rounds_for": 13,
+     "rounds_against": 11,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 7,
+       "CT": 6
+      },
+      "played": {
+       "T": 12,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.4167,
+      "numerator": 5,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.6,
+      "numerator": 3,
+      "denominator": 5,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.5833,
+      "numerator": 14,
+      "denominator": 24,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "retake_never_arrives",
+       "subject": "NAS - Boarding Group B",
+       "severity": "serious",
+       "title": "NAS - Boarding Group B når ikke fram til siten etter plant",
+       "detail": "I 5 av 8 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 11.0 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.375,
+         "numerator": 3,
+         "denominator": 8,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 11.0
+       },
+       "score": 0.625,
+       "confidence": "high",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 5 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
+      },
+      {
+       "rule": "strong_opening_duels",
+       "subject": "NAS - Boarding Group B",
+       "severity": "good",
+       "title": "NAS - Boarding Group B vinner åpningsduellene",
+       "detail": "14 av 24 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.5833,
+         "numerator": 14,
+         "denominator": 24,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.5833,
+       "confidence": "high",
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "NAS - Boarding Group B",
+       "severity": "critical",
+       "title": "NAS - Boarding Group B vant aldri tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 0 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
+      },
+      {
+       "rule": "utility_deficit",
+       "subject": "NAS - Boarding Group B",
+       "severity": "warning",
+       "title": "NAS - Boarding Group B kaster langt mindre utility",
+       "detail": "0.5 granater per runde mot Sopra Steria NewSync sine 0.7 — 31 % mindre. Målt over 24 runder.",
+       "evidence": {
+        "per_round": 0.46,
+        "opponent_per_round": 0.67,
+        "rounds": 24
+       },
+       "score": 0.3125,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Hold vinkler. Med 0.5 granater per runde er executene deres tynne på røyk og flash, så posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+       "our_side": null
+      }
+     ]
+    }
+   ],
+   "demos_analysed": 1,
+   "cross_map": [],
+   "clan_names": [
+    "NAS - Boarding Group B"
+   ]
   },
   {
    "slug": "glassfiber-produkter",
@@ -2149,6 +2786,154 @@
     }
    ],
    "demos_analysed": 8,
+   "cross_map": [
+    {
+     "rule": "low_trade_rate",
+     "subject": "Glassfiber Produkter",
+     "severity": "warning",
+     "title": "Glassfiber Produkter blir sjelden byttet opp etter et dødsfall",
+     "detail": "Bare 7 av 83 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+     "evidence": {
+      "traded_death_rate": {
+       "value": 0.0843,
+       "numerator": 7,
+       "denominator": 83,
+       "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+      }
+     },
+     "score": 0.6628,
+     "confidence": "high",
+     "section": "Trading",
+     "counter": "Isoler én spiller av gangen og ta duellen. Bare 7 av 83 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+     "our_side": null,
+     "matches_fired": 5,
+     "matches_on_map": 1,
+     "maps": [
+      "de_cache",
+      "de_dust2",
+      "de_mirage"
+     ],
+     "matches_total": 7
+    },
+    {
+     "rule": "retake_never_arrives",
+     "subject": "Glassfiber Produkter",
+     "severity": "serious",
+     "title": "Glassfiber Produkter når ikke fram til siten etter plant",
+     "detail": "I 7 av 10 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 3.8 s.",
+     "evidence": {
+      "site_reached": {
+       "value": 0.3,
+       "numerator": 3,
+       "denominator": 10,
+       "definition": "plants where a CT reached the site / plants conceded"
+      },
+      "median_seconds": 3.8
+     },
+     "score": 0.7,
+     "confidence": "high",
+     "section": "Retake-ankomst",
+     "counter": "Ta siten raskt og hold den. I 7 av 10 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+     "our_side": "T",
+     "matches_fired": 4,
+     "matches_on_map": 3,
+     "maps": [
+      "de_cache",
+      "de_dust2",
+      "de_mirage"
+     ],
+     "matches_total": 7
+    },
+    {
+     "rule": "strong_opening_duels",
+     "subject": "Glassfiber Produkter",
+     "severity": "good",
+     "title": "Glassfiber Produkter vinner åpningsduellene",
+     "detail": "15 av 21 første-drap i runden gikk deres vei.",
+     "evidence": {
+      "opening_duel_win_rate": {
+       "value": 0.7143,
+       "numerator": 15,
+       "denominator": 21,
+       "definition": "opening kills / opening duels this team was involved in"
+      }
+     },
+     "score": 0.7143,
+     "confidence": "high",
+     "section": "Åpningsdueller",
+     "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+     "our_side": null,
+     "matches_fired": 4,
+     "matches_on_map": 3,
+     "maps": [
+      "de_dust2",
+      "de_mirage"
+     ],
+     "matches_total": 6
+    },
+    {
+     "rule": "site_retake_weak",
+     "subject": "Glassfiber Produkter",
+     "severity": "critical",
+     "title": "Glassfiber Produkter vant aldri tilbake A",
+     "detail": "Av 6 plants sluppet inn på A ble ingen runder vunnet.",
+     "evidence": {
+      "site": "A",
+      "retake_rate": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 6,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "defuses": 0
+     },
+     "score": 1.0,
+     "confidence": "high",
+     "section": "Forsvar per bombesite",
+     "counter": "Plant på A og spill post-plant. De vant bare 0 av 6 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+     "our_side": "T",
+     "matches_fired": 2,
+     "matches_on_map": 3,
+     "maps": [
+      "de_cache",
+      "de_dust2"
+     ],
+     "matches_total": 4
+    },
+    {
+     "rule": "predictable_setup",
+     "subject": "Milomst",
+     "severity": "warning",
+     "title": "Milomst (Glassfiber Produkter) står på BombsiteB nesten hver runde",
+     "detail": "10 av 12 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+     "evidence": {
+      "callout": "BombsiteB",
+      "share_at_most_common": {
+       "value": 0.8333,
+       "numerator": 10,
+       "denominator": 12,
+       "definition": "rounds set up in this callout / CT rounds observed"
+      },
+      "positions": {
+       "BombsiteB": 10,
+       "BDoors": 2
+      },
+      "team": "Glassfiber Produkter"
+     },
+     "score": 0.7143,
+     "confidence": "medium",
+     "section": "CT-oppsett",
+     "counter": "Åpne med utility mot BombsiteB hver runde. Milomst står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+     "our_side": "T",
+     "matches_fired": 2,
+     "matches_on_map": 3,
+     "maps": [
+      "de_dust2",
+      "de_mirage"
+     ],
+     "matches_total": 6
+    }
+   ],
    "clan_names": [
     "Glassfiber Produkter"
    ]
@@ -2862,6 +3647,35 @@
     }
    ],
    "demos_analysed": 3,
+   "cross_map": [
+    {
+     "rule": "low_trade_rate",
+     "subject": "Kaefer DåDå",
+     "severity": "warning",
+     "title": "Kaefer DåDå blir sjelden byttet opp etter et dødsfall",
+     "detail": "Bare 13 av 80 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+     "evidence": {
+      "traded_death_rate": {
+       "value": 0.1625,
+       "numerator": 13,
+       "denominator": 80,
+       "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+      }
+     },
+     "score": 0.35,
+     "confidence": "high",
+     "section": "Trading",
+     "counter": "Isoler én spiller av gangen og ta duellen. Bare 13 av 80 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+     "our_side": null,
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_cache",
+      "de_mirage"
+     ],
+     "matches_total": 2
+    }
+   ],
    "clan_names": [
     "Kaefer DD"
    ]
@@ -2880,10 +3694,396 @@
     "round_diff": -2,
     "points": 0
    },
-   "maps_played": 1,
-   "best_map": "de_inferno",
-   "worst_map": "de_inferno",
+   "maps_played": 4,
+   "best_map": "de_ancient",
+   "worst_map": "de_mirage",
    "maps": {
+    "de_ancient": {
+     "matches": 2,
+     "match_wins": 1,
+     "rounds_for": 23,
+     "rounds_against": 14,
+     "round_win_rate": {
+      "value": 0.6216,
+      "numerator": 23,
+      "denominator": 37,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.4286,
+      "numerator": 6,
+      "denominator": 14,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.7391,
+      "numerator": 17,
+      "denominator": 23,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [
+      {
+       "rule": "strong_retake",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync tar tilbake B ofte",
+       "detail": "Vant 3 av 4 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.75,
+         "numerator": 3,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på B uten tall. De tok tilbake 3 av 4 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 2
+      }
+     ],
+     "weaknesses": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Juiced1",
+       "severity": "serious",
+       "title": "Juiced1 (Sopra Steria NewSync) står på BombsiteA nesten hver runde",
+       "detail": "11 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.9167,
+         "numerator": 11,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 11,
+         "CTSpawn": 1
+        },
+        "team": "Sopra Steria NewSync"
+       },
+       "score": 0.7857,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Juiced1 står der 11 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
+       "matches_fired": 2,
+       "matches_on_map": 2
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 3 av 8 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 7.7 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.625,
+         "numerator": 5,
+         "denominator": 8,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 7.7
+       },
+       "score": 0.375,
+       "confidence": "high",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
+       "matches_fired": 2,
+       "matches_on_map": 2
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Roach",
+       "severity": "serious",
+       "title": "Roach (Sopra Steria NewSync) står på Middle nesten hver runde",
+       "detail": "11 av 12 CT-runder startet på Middle, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "Middle",
+        "share_at_most_common": {
+         "value": 0.9167,
+         "numerator": 11,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "Middle": 11,
+         "Alley": 1
+        },
+        "team": "Sopra Steria NewSync"
+       },
+       "score": 0.7857,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot Middle hver runde. Roach står der 11 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 2
+      },
+      {
+       "rule": "utility_deficit",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync kaster langt mindre utility",
+       "detail": "1.4 granater per runde mot Frogn Kommune CS sine 2.2 — 36 % mindre. Målt over 23 runder.",
+       "evidence": {
+        "per_round": 1.39,
+        "opponent_per_round": 2.17,
+        "rounds": 23
+       },
+       "score": 0.36,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Hold vinkler. Med 1.4 granater per runde er executene deres tynne på røyk og flash, så posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 2
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync vinner sjelden tilbake A",
+       "detail": "Av 3 plants sluppet inn på A ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 3 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 2
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync omsetter ikke full buy",
+       "detail": "7 av 14 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.5,
+         "numerator": 7,
+         "denominator": 14,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.0795,
+       "confidence": "medium",
+       "section": "Økonomi",
+       "counter": null,
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 2
+      }
+     ],
+     "match_ids": [
+      "15836_alvk-47-sopra-steria-newsync_de_ancient",
+      "19830_frogn-kommune-cs-sopra-steria-newsync_de_ancient"
+     ]
+    },
+    "de_dust2": {
+     "matches": 3,
+     "match_wins": 1,
+     "rounds_for": 30,
+     "rounds_against": 36,
+     "round_win_rate": {
+      "value": 0.4545,
+      "numerator": 30,
+      "denominator": 66,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.5,
+      "numerator": 18,
+      "denominator": 36,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.4,
+      "numerator": 12,
+      "denominator": 30,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [
+      {
+       "rule": "utility_advantage",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync spiller med mye utility",
+       "detail": "2.0 granater per runde mot motstanderens 1.3. Forvent røyk og molotov på hver execute.",
+       "evidence": {
+        "per_round": 2.0,
+        "opponent_per_round": 1.35
+       },
+       "score": 0.3261,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Forvent røyk og molotov på hver execute — 2.0 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+       "our_side": null,
+       "matches_fired": 2,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "strong_opening_duels",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync vinner åpningsduellene",
+       "detail": "13 av 19 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.6842,
+         "numerator": 13,
+         "denominator": 19,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.65,
+       "confidence": "medium",
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "strong_post_plant",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync holder post-plant",
+       "detail": "Vant 4 av 5 runder de fikk plantet i.",
+       "evidence": {
+        "post_plant_win_rate": {
+         "value": 0.8,
+         "numerator": 4,
+         "denominator": 5,
+         "definition": "rounds won after planting / rounds where this team planted"
+        }
+       },
+       "score": 0.4,
+       "confidence": "low",
+       "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 4 av 5 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync tar tilbake B ofte",
+       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.6667,
+         "numerator": 2,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på B uten tall. De tok tilbake 2 av 3 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      }
+     ],
+     "weaknesses": [
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 2 av 5 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 0.2 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.6,
+         "numerator": 3,
+         "denominator": 5,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 0.2
+       },
+       "score": 0.25,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 5 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
+       "matches_fired": 2,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Sopra Steria NewSync",
+       "severity": "critical",
+       "title": "Sopra Steria NewSync vant aldri tilbake A",
+       "detail": "Av 3 plants sluppet inn på A ble ingen runder vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 0 av 3 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync omsetter ikke full buy",
+       "detail": "6 av 13 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.4615,
+         "numerator": 6,
+         "denominator": 13,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.1307,
+       "confidence": "medium",
+       "section": "Økonomi",
+       "counter": null,
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 3
+      }
+     ],
+     "match_ids": [
+      "15837_alvk-47-sopra-steria-newsync_de_dust2",
+      "17728_nas-boarding-group-b-sopra-steria-newsync_de_dust2",
+      "17731_ekvilibro-sopra-steria-newsync_de_dust2"
+     ]
+    },
     "de_inferno": {
      "matches": 1,
      "match_wins": 0,
@@ -3088,9 +4288,703 @@
      "match_ids": [
       "19829_frogn-kommune-cs-sopra-steria-newsync_de_inferno"
      ]
+    },
+    "de_mirage": {
+     "matches": 1,
+     "match_wins": 0,
+     "rounds_for": 5,
+     "rounds_against": 13,
+     "round_win_rate": {
+      "value": 0.2778,
+      "numerator": 5,
+      "denominator": 18,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.3333,
+      "numerator": 2,
+      "denominator": 6,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.25,
+      "numerator": 3,
+      "denominator": 12,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [],
+     "weaknesses": [
+      {
+       "rule": "predictable_setup",
+       "subject": "cygnusx",
+       "severity": "warning",
+       "title": "cygnusx (Sopra Steria NewSync) står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "Middle": 1,
+         "CTSpawn": 1
+        },
+        "team": "Sopra Steria NewSync"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. cygnusx står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 4 av 5 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 19.4 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.2,
+         "numerator": 1,
+         "denominator": 5,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 19.4
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 4 av 5 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync vinner sjelden tilbake B",
+       "detail": "Av 4 plants sluppet inn på B ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.25,
+         "numerator": 1,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 1
+       },
+       "score": 0.3333,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 12 av 74 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1622,
+         "numerator": 12,
+         "denominator": 74,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3249,
+       "confidence": "medium",
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 12 av 74 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null,
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "19692_sopra-steria-newsync-onitio-tech-9cians_de_mirage"
+     ]
     }
    },
    "matches": [
+    {
+     "match_id": "15836_alvk-47-sopra-steria-newsync_de_ancient",
+     "map": "de_ancient",
+     "opponent": "AlvK-47",
+     "rounds_for": 13,
+     "rounds_against": 1,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 2,
+       "CT": 11
+      },
+      "played": {
+       "T": 2,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.5714,
+      "numerator": 8,
+      "denominator": 14,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Juiced1",
+       "severity": "serious",
+       "title": "Juiced1 (Sopra Steria NewSync) står på BombsiteA nesten hver runde",
+       "detail": "11 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.9167,
+         "numerator": 11,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 11,
+         "CTSpawn": 1
+        },
+        "team": "Sopra Steria NewSync"
+       },
+       "score": 0.7857,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Juiced1 står der 11 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Roach",
+       "severity": "serious",
+       "title": "Roach (Sopra Steria NewSync) står på Middle nesten hver runde",
+       "detail": "11 av 12 CT-runder startet på Middle, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "Middle",
+        "share_at_most_common": {
+         "value": 0.9167,
+         "numerator": 11,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "Middle": 11,
+         "Alley": 1
+        },
+        "team": "Sopra Steria NewSync"
+       },
+       "score": 0.7857,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot Middle hver runde. Roach står der 11 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync tar tilbake B ofte",
+       "detail": "Vant 3 av 4 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.75,
+         "numerator": 3,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på B uten tall. De tok tilbake 3 av 4 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 1 av 4 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 4.8 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.75,
+         "numerator": 3,
+         "denominator": 4,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 4.8
+       },
+       "score": 0.125,
+       "confidence": "low",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 1 av 4 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
+      }
+     ]
+    },
+    {
+     "match_id": "19830_frogn-kommune-cs-sopra-steria-newsync_de_ancient",
+     "map": "de_ancient",
+     "opponent": "Frogn Kommune CS",
+     "rounds_for": 10,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 4,
+       "CT": 6
+      },
+      "played": {
+       "T": 12,
+       "CT": 11
+      }
+     },
+     "plant_rate": {
+      "value": 0.75,
+      "numerator": 9,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.3333,
+      "numerator": 3,
+      "denominator": 9,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.4783,
+      "numerator": 11,
+      "denominator": 23,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Juiced1",
+       "severity": "serious",
+       "title": "Juiced1 (Sopra Steria NewSync) står på BombsiteA nesten hver runde",
+       "detail": "11 av 11 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 1.0,
+         "numerator": 11,
+         "denominator": 11,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 11
+        },
+        "team": "Sopra Steria NewSync"
+       },
+       "score": 0.7857,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. Juiced1 står der 11 av 11 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 3 av 8 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 7.7 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.625,
+         "numerator": 5,
+         "denominator": 8,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 7.7
+       },
+       "score": 0.375,
+       "confidence": "high",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 3 av 8 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
+      },
+      {
+       "rule": "utility_deficit",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync kaster langt mindre utility",
+       "detail": "1.4 granater per runde mot Frogn Kommune CS sine 2.2 — 36 % mindre. Målt over 23 runder.",
+       "evidence": {
+        "per_round": 1.39,
+        "opponent_per_round": 2.17,
+        "rounds": 23
+       },
+       "score": 0.36,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Hold vinkler. Med 1.4 granater per runde er executene deres tynne på røyk og flash, så posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+       "our_side": null
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync vinner sjelden tilbake A",
+       "detail": "Av 3 plants sluppet inn på A ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 1 av 3 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync omsetter ikke full buy",
+       "detail": "7 av 14 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.5,
+         "numerator": 7,
+         "denominator": 14,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.0795,
+       "confidence": "medium",
+       "section": "Økonomi",
+       "counter": null,
+       "our_side": null
+      }
+     ]
+    },
+    {
+     "match_id": "15837_alvk-47-sopra-steria-newsync_de_dust2",
+     "map": "de_dust2",
+     "opponent": "AlvK-47",
+     "rounds_for": 13,
+     "rounds_against": 10,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 7,
+       "CT": 6
+      },
+      "played": {
+       "T": 12,
+       "CT": 11
+      }
+     },
+     "plant_rate": {
+      "value": 0.4167,
+      "numerator": 5,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.8,
+      "numerator": 4,
+      "denominator": 5,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.5217,
+      "numerator": 12,
+      "denominator": 23,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "strong_post_plant",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync holder post-plant",
+       "detail": "Vant 4 av 5 runder de fikk plantet i.",
+       "evidence": {
+        "post_plant_win_rate": {
+         "value": 0.8,
+         "numerator": 4,
+         "denominator": 5,
+         "definition": "rounds won after planting / rounds where this team planted"
+        }
+       },
+       "score": 0.4,
+       "confidence": "low",
+       "section": "Bombe og rundeavslutninger",
+       "counter": "Nekt plantet. De vant 4 av 5 runder de fikk bomben ned, så en retake mot dem er dyr — stopp dem før siten, ikke etterpå.",
+       "our_side": "CT"
+      },
+      {
+       "rule": "utility_advantage",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync spiller med mye utility",
+       "detail": "2.0 granater per runde mot motstanderens 1.3. Forvent røyk og molotov på hver execute.",
+       "evidence": {
+        "per_round": 2.0,
+        "opponent_per_round": 1.35
+       },
+       "score": 0.3261,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Forvent røyk og molotov på hver execute — 2.0 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+       "our_side": null
+      }
+     ]
+    },
+    {
+     "match_id": "17728_nas-boarding-group-b-sopra-steria-newsync_de_dust2",
+     "map": "de_dust2",
+     "opponent": "NAS - Boarding Group B",
+     "rounds_for": 11,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 6,
+       "CT": 5
+      },
+      "played": {
+       "T": 12,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.6667,
+      "numerator": 8,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.75,
+      "numerator": 6,
+      "denominator": 8,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.4167,
+      "numerator": 10,
+      "denominator": 24,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "strong_retake",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync tar tilbake B ofte",
+       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.6667,
+         "numerator": 2,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Ikke plant på B uten tall. De tok tilbake 2 av 3 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+       "our_side": "T"
+      },
+      {
+       "rule": "utility_advantage",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync spiller med mye utility",
+       "detail": "0.7 granater per runde mot motstanderens 0.5. Forvent røyk og molotov på hver execute.",
+       "evidence": {
+        "per_round": 0.67,
+        "opponent_per_round": 0.46
+       },
+       "score": 0.3125,
+       "confidence": "high",
+       "section": "Granatbruk",
+       "counter": "Forvent røyk og molotov på hver execute — 0.7 granater per runde. Still dere utenfor der standard-utilityen lander, og ha counter-flash klar.",
+       "our_side": null
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync omsetter ikke full buy",
+       "detail": "6 av 13 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.4615,
+         "numerator": 6,
+         "denominator": 13,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.1307,
+       "confidence": "medium",
+       "section": "Økonomi",
+       "counter": null,
+       "our_side": null
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 1 av 5 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 4.6 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.8,
+         "numerator": 4,
+         "denominator": 5,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 4.6
+       },
+       "score": 0.125,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 1 av 5 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
+      }
+     ]
+    },
+    {
+     "match_id": "17731_ekvilibro-sopra-steria-newsync_de_dust2",
+     "map": "de_dust2",
+     "opponent": "Ekvilibro",
+     "rounds_for": 6,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 5,
+       "CT": 1
+      },
+      "played": {
+       "T": 12,
+       "CT": 7
+      }
+     },
+     "plant_rate": {
+      "value": 0.6667,
+      "numerator": 8,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.625,
+      "numerator": 5,
+      "denominator": 8,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.6842,
+      "numerator": 13,
+      "denominator": 19,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "strong_opening_duels",
+       "subject": "Sopra Steria NewSync",
+       "severity": "good",
+       "title": "Sopra Steria NewSync vinner åpningsduellene",
+       "detail": "13 av 19 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.6842,
+         "numerator": 13,
+         "denominator": 19,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.65,
+       "confidence": "medium",
+       "section": "Åpningsdueller",
+       "counter": "Unngå første kontakt. De vinner åpningsduellen oftere enn dere gjør, så spill crossfire og retake i stedet for å møte dem i duell.",
+       "our_side": null
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Sopra Steria NewSync",
+       "severity": "critical",
+       "title": "Sopra Steria NewSync vant aldri tilbake A",
+       "detail": "Av 3 plants sluppet inn på A ble ingen runder vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på A og spill post-plant. De vant bare 0 av 3 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 2 av 5 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 0.2 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.6,
+         "numerator": 3,
+         "denominator": 5,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 0.2
+       },
+       "score": 0.25,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 2 av 5 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
+      }
+     ]
+    },
     {
      "match_id": "19829_frogn-kommune-cs-sopra-steria-newsync_de_inferno",
      "map": "de_inferno",
@@ -3288,9 +5182,307 @@
        "our_side": null
       }
      ]
+    },
+    {
+     "match_id": "19692_sopra-steria-newsync-onitio-tech-9cians_de_mirage",
+     "map": "de_mirage",
+     "opponent": "Onitio Tech-9cians",
+     "rounds_for": 5,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 2,
+       "CT": 3
+      },
+      "played": {
+       "T": 6,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.8333,
+      "numerator": 5,
+      "denominator": 6,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.4,
+      "numerator": 2,
+      "denominator": 5,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.4444,
+      "numerator": 8,
+      "denominator": 18,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "predictable_setup",
+       "subject": "cygnusx",
+       "severity": "warning",
+       "title": "cygnusx (Sopra Steria NewSync) står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "Middle": 1,
+         "CTSpawn": 1
+        },
+        "team": "Sopra Steria NewSync"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "counter": "Åpne med utility mot BombsiteA hver runde. cygnusx står der 10 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+       "our_side": "T"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+       "detail": "I 4 av 5 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 19.4 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.2,
+         "numerator": 1,
+         "denominator": 5,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 19.4
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "counter": "Ta siten raskt og hold den. I 4 av 5 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+       "our_side": "T"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Sopra Steria NewSync",
+       "severity": "serious",
+       "title": "Sopra Steria NewSync vinner sjelden tilbake B",
+       "detail": "Av 4 plants sluppet inn på B ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.25,
+         "numerator": 1,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 1
+       },
+       "score": 0.3333,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+       "our_side": "T"
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Sopra Steria NewSync",
+       "severity": "warning",
+       "title": "Sopra Steria NewSync blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 12 av 74 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1622,
+         "numerator": 12,
+         "denominator": 74,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3249,
+       "confidence": "medium",
+       "section": "Trading",
+       "counter": "Isoler én spiller av gangen og ta duellen. Bare 12 av 74 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+       "our_side": null
+      }
+     ]
     }
    ],
-   "demos_analysed": 1,
+   "demos_analysed": 7,
+   "cross_map": [
+    {
+     "rule": "retake_never_arrives",
+     "subject": "Sopra Steria NewSync",
+     "severity": "serious",
+     "title": "Sopra Steria NewSync når ikke fram til siten etter plant",
+     "detail": "I 4 av 5 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 19.4 s.",
+     "evidence": {
+      "site_reached": {
+       "value": 0.2,
+       "numerator": 1,
+       "denominator": 5,
+       "definition": "plants where a CT reached the site / plants conceded"
+      },
+      "median_seconds": 19.4
+     },
+     "score": 0.5,
+     "confidence": "medium",
+     "section": "Retake-ankomst",
+     "counter": "Ta siten raskt og hold den. I 4 av 5 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+     "our_side": "T",
+     "matches_fired": 6,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_dust2",
+      "de_inferno",
+      "de_mirage"
+     ],
+     "matches_total": 7
+    },
+    {
+     "rule": "site_retake_weak",
+     "subject": "Sopra Steria NewSync",
+     "severity": "critical",
+     "title": "Sopra Steria NewSync vant aldri tilbake A",
+     "detail": "Av 4 plants sluppet inn på A ble ingen runder vunnet.",
+     "evidence": {
+      "site": "A",
+      "retake_rate": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "defuses": 0
+     },
+     "score": 0.6667,
+     "confidence": "medium",
+     "section": "Forsvar per bombesite",
+     "counter": "Plant på A og spill post-plant. De vant bare 0 av 4 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+     "our_side": "T",
+     "matches_fired": 3,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_dust2",
+      "de_inferno"
+     ],
+     "matches_total": 6
+    },
+    {
+     "rule": "strong_retake",
+     "subject": "Sopra Steria NewSync",
+     "severity": "good",
+     "title": "Sopra Steria NewSync tar tilbake B ofte",
+     "detail": "Vant 3 av 4 runder der motstanderen fikk plantet på B.",
+     "evidence": {
+      "site": "B",
+      "retake_rate": {
+       "value": 0.75,
+       "numerator": 3,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "score": 0.5,
+     "confidence": "medium",
+     "section": "Forsvar per bombesite",
+     "counter": "Ikke plant på B uten tall. De tok tilbake 3 av 4 — velg heller den andre siten, eller sett opp for post-plant-crossfire før dere planter.",
+     "our_side": "T",
+     "matches_fired": 2,
+     "matches_on_map": 2,
+     "maps": [
+      "de_ancient",
+      "de_dust2"
+     ],
+     "matches_total": 5
+    },
+    {
+     "rule": "utility_deficit",
+     "subject": "Sopra Steria NewSync",
+     "severity": "warning",
+     "title": "Sopra Steria NewSync kaster langt mindre utility",
+     "detail": "1.4 granater per runde mot Frogn Kommune CS sine 2.2 — 36 % mindre. Målt over 23 runder.",
+     "evidence": {
+      "per_round": 1.39,
+      "opponent_per_round": 2.17,
+      "rounds": 23
+     },
+     "score": 0.36,
+     "confidence": "high",
+     "section": "Granatbruk",
+     "counter": "Hold vinkler. Med 1.4 granater per runde er executene deres tynne på røyk og flash, så posisjoner dere kan holdes lenger enn mot et lag som brenner utility.",
+     "our_side": null,
+     "matches_fired": 2,
+     "matches_on_map": 2,
+     "maps": [
+      "de_ancient",
+      "de_inferno"
+     ],
+     "matches_total": 3
+    },
+    {
+     "rule": "site_retake_weak",
+     "subject": "Sopra Steria NewSync",
+     "severity": "serious",
+     "title": "Sopra Steria NewSync vinner sjelden tilbake B",
+     "detail": "Av 4 plants sluppet inn på B ble bare 1 runde vunnet.",
+     "evidence": {
+      "site": "B",
+      "retake_rate": {
+       "value": 0.25,
+       "numerator": 1,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      },
+      "defuses": 1
+     },
+     "score": 0.3333,
+     "confidence": "medium",
+     "section": "Forsvar per bombesite",
+     "counter": "Plant på B og spill post-plant. De vant bare 1 av 4 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+     "our_side": "T",
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_inferno",
+      "de_mirage"
+     ],
+     "matches_total": 2
+    },
+    {
+     "rule": "full_buy_conversion",
+     "subject": "Sopra Steria NewSync",
+     "severity": "warning",
+     "title": "Sopra Steria NewSync omsetter ikke full buy",
+     "detail": "6 av 13 full-buy-runder vunnet. Utstyret er ikke problemet.",
+     "evidence": {
+      "full_buy_win_rate": {
+       "value": 0.4615,
+       "numerator": 6,
+       "denominator": 13,
+       "definition": "rounds won / rounds this team played a full_buy"
+      }
+     },
+     "score": 0.1307,
+     "confidence": "medium",
+     "section": "Økonomi",
+     "counter": null,
+     "our_side": null,
+     "matches_fired": 2,
+     "matches_on_map": 3,
+     "maps": [
+      "de_ancient",
+      "de_dust2"
+     ],
+     "matches_total": 5
+    }
+   ],
    "clan_names": [
     "Sopra Steria NewSync"
    ]
@@ -3315,6 +5507,7 @@
    "maps": {},
    "matches": [],
    "demos_analysed": 0,
+   "cross_map": [],
    "clan_names": []
   },
   {
@@ -4302,6 +6495,154 @@
     }
    ],
    "demos_analysed": 3,
+   "cross_map": [
+    {
+     "rule": "retake_never_arrives",
+     "subject": "Accenture Norway",
+     "severity": "serious",
+     "title": "Accenture Norway når ikke fram til siten etter plant",
+     "detail": "I 3 av 6 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 8.3 s.",
+     "evidence": {
+      "site_reached": {
+       "value": 0.5,
+       "numerator": 3,
+       "denominator": 6,
+       "definition": "plants where a CT reached the site / plants conceded"
+      },
+      "median_seconds": 8.3
+     },
+     "score": 0.375,
+     "confidence": "medium",
+     "section": "Retake-ankomst",
+     "counter": "Ta siten raskt og hold den. I 3 av 6 runder kom ingen CT seg inn i det hele tatt — får dere bomben ned, er runden ofte over.",
+     "our_side": "T",
+     "matches_fired": 3,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_dust2",
+      "de_mirage"
+     ],
+     "matches_total": 3
+    },
+    {
+     "rule": "predictable_setup",
+     "subject": "Signalfahrer",
+     "severity": "serious",
+     "title": "Signalfahrer (Accenture Norway) står på BombsiteA nesten hver runde",
+     "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+     "evidence": {
+      "callout": "BombsiteA",
+      "share_at_most_common": {
+       "value": 1.0,
+       "numerator": 12,
+       "denominator": 12,
+       "definition": "rounds set up in this callout / CT rounds observed"
+      },
+      "positions": {
+       "BombsiteA": 12
+      },
+      "team": "Accenture Norway"
+     },
+     "score": 0.8571,
+     "confidence": "medium",
+     "section": "CT-oppsett",
+     "counter": "Åpne med utility mot BombsiteA hver runde. Signalfahrer står der 12 av 12 ganger, så den treffer like ofte. Alternativt: gå den andre siten og regn med at han blir stående.",
+     "our_side": "T",
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_mirage"
+     ],
+     "matches_total": 2
+    },
+    {
+     "rule": "site_retake_weak",
+     "subject": "Accenture Norway",
+     "severity": "serious",
+     "title": "Accenture Norway vinner sjelden tilbake A",
+     "detail": "Av 5 plants sluppet inn på A ble bare 1 runde vunnet.",
+     "evidence": {
+      "site": "A",
+      "retake_rate": {
+       "value": 0.2,
+       "numerator": 1,
+       "denominator": 5,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "defuses": 1
+     },
+     "score": 0.5,
+     "confidence": "medium",
+     "section": "Forsvar per bombesite",
+     "counter": "Plant på A og spill post-plant. De vant bare 1 av 5 runder der bomben lå på A, så retaken er den svakeste delen av forsvaret deres.",
+     "our_side": "T",
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_dust2"
+     ],
+     "matches_total": 2
+    },
+    {
+     "rule": "site_retake_weak",
+     "subject": "Accenture Norway",
+     "severity": "critical",
+     "title": "Accenture Norway vant aldri tilbake B",
+     "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
+     "evidence": {
+      "site": "B",
+      "retake_rate": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      },
+      "defuses": 0
+     },
+     "score": 0.5,
+     "confidence": "low",
+     "section": "Forsvar per bombesite",
+     "counter": "Plant på B og spill post-plant. De vant bare 0 av 3 runder der bomben lå på B, så retaken er den svakeste delen av forsvaret deres.",
+     "our_side": "T",
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_dust2",
+      "de_mirage"
+     ],
+     "matches_total": 2
+    },
+    {
+     "rule": "low_trade_rate",
+     "subject": "Accenture Norway",
+     "severity": "warning",
+     "title": "Accenture Norway blir sjelden byttet opp etter et dødsfall",
+     "detail": "Bare 13 av 82 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+     "evidence": {
+      "traded_death_rate": {
+       "value": 0.1585,
+       "numerator": 13,
+       "denominator": 82,
+       "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+      }
+     },
+     "score": 0.366,
+     "confidence": "high",
+     "section": "Trading",
+     "counter": "Isoler én spiller av gangen og ta duellen. Bare 13 av 82 dødsfall ble hevnet, så støtten kommer for sent til å straffe dere.",
+     "our_side": null,
+     "matches_fired": 2,
+     "matches_on_map": 1,
+     "maps": [
+      "de_ancient",
+      "de_mirage"
+     ],
+     "matches_total": 2
+    }
+   ],
    "clan_names": [
     "Accenture Norway"
    ]
@@ -4311,8 +6652,16 @@
   {
    "name": "AlvK-47",
    "slug": "alvk-47"
+  },
+  {
+   "name": "Ekvilibro",
+   "slug": "ekvilibro"
+  },
+  {
+   "name": "Onitio Tech-9cians",
+   "slug": "onitio-tech-9cians"
   }
  ],
  "unmatched_clan_names": [],
- "matches_analysed": 9
+ "matches_analysed": 15
 }

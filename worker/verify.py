@@ -62,14 +62,25 @@ def main() -> int:
             failures.append(f"rounds with an unattributed plant: {unlabelled}")
 
     calibration = A.load_calibration(match.map_name)
+    off_map: list[dict] = []
     if calibration:
         layers = A.radar_layers(match, sites, calibration)
-        off_map = [p for key in ("kills", "utility", "plants")
-                   for p in layers.get(key, [])
+        projected = [p for key in ("kills", "utility", "plants")
+                     for p in layers.get(key, [])]
+        off_map = [p for p in projected
                    if not (0.0 <= p["x"] <= 1.0 and 0.0 <= p["y"] <= 1.0)]
-        if off_map:
+
+        # A wrong transform shifts or scales everything, so it pushes most
+        # events out, and far out. A grenade that left the area the radar
+        # image covers is one point, barely outside - real, and no reason to
+        # distrust the rest of the demo.
+        worst = max((max(abs(p["x"] - 0.5), abs(p["y"] - 0.5)) - 0.5
+                     for p in off_map), default=0.0)
+        share = len(off_map) / len(projected) if projected else 0.0
+        if projected and (share > 0.01 or worst > 0.25):
             failures.append(
-                f"{len(off_map)} projected events fall outside the radar image; "
+                f"{len(off_map)} of {len(projected)} projected events fall "
+                f"outside the radar image (worst {worst:.2f} beyond the edge); "
                 "the calibration for this map is wrong")
 
     # Attack labels must agree with the plant, which records the target site
@@ -118,6 +129,10 @@ def main() -> int:
         print("bombsites   not resolved: no plants observed")
     if not calibration:
         print(f"radar       no calibration for {match.map_name}")
+    elif off_map:
+        kinds = ", ".join(sorted({str(p.get("type") or "kill") for p in off_map}))
+        print(f"radar       {len(off_map)} event(s) landed outside the drawn "
+              f"area ({kinds}); within tolerance")
     if attacks.get("rounds"):
         inferred = sum(1 for r in attacks["rounds"]
                        if r.get("target_source") == "inferred_from_arrival")

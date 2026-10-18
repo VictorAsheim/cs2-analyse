@@ -77,6 +77,7 @@ export type LeagueTeam = {
   worst_map: string | null;
   maps: Record<string, any>;
   matches: any[];
+  cross_map: any[];
   demos_analysed: number;
   clan_names: string[];
 };

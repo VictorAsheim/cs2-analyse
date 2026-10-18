@@ -192,6 +192,7 @@ def build(config_path: str, facts_dir: str) -> dict:
             "matches": sorted(per_team_matches.get(name, []),
                               key=lambda r: (r["map"], r["match_id"])),
             "demos_analysed": len(per_team_matches.get(name, [])),
+            "cross_map": _cross_map(maps_out),
             # Every spelling this team's demos used, so a page holding a raw
             # clan name can find the league team it belongs to.
             "clan_names": sorted(clan_names.get(name, set())),
@@ -220,6 +221,55 @@ def build(config_path: str, facts_dir: str) -> dict:
     }
 
 
+def _finding_key(f: dict) -> tuple:
+    """What identifies a finding apart from which match it came from.
+
+    Several rules fire once per site, callout or pattern, so the rule and
+    subject alone do not identify one: grouping on those merged the A-site
+    result with the B-site one.
+    """
+    evidence = f.get("evidence") or {}
+    about = next((evidence[k] for k in ("site", "callout", "pattern")
+                  if evidence.get(k)), None)
+    return (f["rule"], f["subject"], about)
+
+
+def _cross_map(maps: dict) -> list[dict]:
+    """Findings that recur on more than one map.
+
+    A weakness that shows up on every map is a different thing from one that
+    shows up on a single map: it is how the team plays, not how they play that
+    map. The per-map cards cannot show this, because each only sees its own
+    map - so it is collected here and shown above them.
+    """
+    grouped: dict[tuple, dict] = {}
+    for map_name, data in maps.items():
+        for f in data["strengths"] + data["weaknesses"]:
+            slot = grouped.setdefault(_finding_key(f), {
+                "maps": [], "matches_fired": 0, "matches_total": 0,
+                "instances": [],
+            })
+            slot["maps"].append(map_name)
+            slot["matches_fired"] += f["matches_fired"]
+            slot["matches_total"] += f["matches_on_map"]
+            slot["instances"].append(f)
+
+    out = []
+    for slot in grouped.values():
+        if len(set(slot["maps"])) < 2:
+            continue
+        # The strongest instance supplies the wording; its numbers are real,
+        # where a figure summed across maps would need prose to match.
+        best = dict(max(slot["instances"], key=lambda f: f["score"]))
+        best["maps"] = sorted(set(slot["maps"]))
+        best["matches_fired"] = slot["matches_fired"]
+        best["matches_total"] = slot["matches_total"]
+        out.append(best)
+
+    out.sort(key=lambda f: (-len(f["maps"]), -f["matches_fired"], -f["score"]))
+    return out
+
+
 def _merge_findings(findings: list[dict], matches_on_map: int) -> list[dict]:
     """Collapse the same finding fired in several matches into one.
 
@@ -232,14 +282,7 @@ def _merge_findings(findings: list[dict], matches_on_map: int) -> list[dict]:
     """
     groups: dict[tuple, list[dict]] = defaultdict(list)
     for f in findings:
-        # Several rules fire once per site, callout or pattern, so the subject
-        # alone does not identify a finding: grouping on it merged the A-site
-        # result with the B-site one and reported a rule firing in more
-        # matches than the map has.
-        evidence = f.get("evidence") or {}
-        about = next((evidence[k] for k in ("site", "callout", "pattern")
-                      if evidence.get(k)), None)
-        groups[(f["rule"], f["subject"], about)].append(f)
+        groups[_finding_key(f)].append(f)
 
     merged = []
     for group in groups.values():
