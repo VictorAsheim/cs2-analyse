@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:39:23.986440+00:00",
+ "generated_at": "2026-10-18T16:52:37.415843+00:00",
  "match": {
   "map": "de_mirage",
   "server_name": "eBot :: Glassfiber Produkter vs Accenture Norway",
@@ -1628,6 +1628,44 @@
      "advantaged_team_won": false
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "Accenture Norway": {
+     "after_loss": {
+      "rounds": 10,
+      "buys": {
+       "force_buy": 3,
+       "semi_buy": 2,
+       "full_buy": 5
+      }
+     },
+     "after_win": {
+      "rounds": 12,
+      "buys": {
+       "semi_buy": 1,
+       "full_buy": 11
+      }
+     }
+    },
+    "Glassfiber Produkter": {
+     "after_loss": {
+      "rounds": 12,
+      "buys": {
+       "force_buy": 2,
+       "semi_buy": 7,
+       "full_buy": 3
+      }
+     },
+     "after_win": {
+      "rounds": 10,
+      "buys": {
+       "full_buy": 10
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -11447,5 +11485,5 @@
   "size_bytes": 304639342,
   "sha256": "bda25585d8aecd484694f62bcd94be25f3a65b9eea04e3abeb4c15b298b29f11"
  },
- "parse_seconds": 7.1
+ "parse_seconds": 9.1
 }

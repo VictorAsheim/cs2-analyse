@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:42:14.636780+00:00",
+ "generated_at": "2026-10-18T16:51:15.254911+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: AlvK-47 vs Sopra Steria NewSync",
@@ -1589,6 +1589,47 @@
      "advantaged_team_won": true
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "AlvK-47": {
+     "after_loss": {
+      "rounds": 12,
+      "buys": {
+       "eco": 2,
+       "full_buy": 6,
+       "semi_buy": 3,
+       "force_buy": 1
+      }
+     },
+     "after_win": {
+      "rounds": 9,
+      "buys": {
+       "semi_buy": 2,
+       "full_buy": 7
+      }
+     }
+    },
+    "Sopra Steria NewSync": {
+     "after_loss": {
+      "rounds": 9,
+      "buys": {
+       "semi_buy": 1,
+       "force_buy": 1,
+       "full_buy": 5,
+       "eco": 2
+      }
+     },
+     "after_win": {
+      "rounds": 12,
+      "buys": {
+       "semi_buy": 2,
+       "full_buy": 10
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -12087,5 +12128,5 @@
   "size_bytes": 242992181,
   "sha256": "752454163767d9ddcb8d70c06be2e990d99bcd4a2ef3ddf32df51a62e98b843d"
  },
- "parse_seconds": 5.8
+ "parse_seconds": 8.2
 }

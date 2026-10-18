@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:42:20.621119+00:00",
+ "generated_at": "2026-10-18T16:52:19.717507+00:00",
  "match": {
   "map": "de_mirage",
   "server_name": "eBot :: Sopra Steria NewSync vs Onitio Tech-9cians",
@@ -1373,6 +1373,44 @@
      "advantaged_team_won": true
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "Onitio Tech-9cians": {
+     "after_loss": {
+      "rounds": 5,
+      "buys": {
+       "semi_buy": 1,
+       "full_buy": 3,
+       "eco": 1
+      }
+     },
+     "after_win": {
+      "rounds": 11,
+      "buys": {
+       "full_buy": 11
+      }
+     }
+    },
+    "Sopra Steria NewSync": {
+     "after_loss": {
+      "rounds": 11,
+      "buys": {
+       "eco": 4,
+       "full_buy": 1,
+       "semi_buy": 6
+      }
+     },
+     "after_win": {
+      "rounds": 5,
+      "buys": {
+       "full_buy": 3,
+       "semi_buy": 2
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -9690,5 +9728,5 @@
   "size_bytes": 211058843,
   "sha256": "5f8119ec9b01f15f92fbc106009fc0b1b695f9dcacf153748695033612ba6e9f"
  },
- "parse_seconds": 4.8
+ "parse_seconds": 7.0
 }

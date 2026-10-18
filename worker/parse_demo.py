@@ -83,6 +83,7 @@ def build_facts(match: Match) -> dict:
             "trades": M.trades(match),
             "economy": E.team_economy(match),
             "anti_eco": E.anti_eco(match),
+            "reaction_buys": E.reaction_buys(match),
             "utility_usage": U.utility_usage(match),
             "utility_effectiveness": U.utility_effectiveness(match),
             "players": PL.player_stats(match),

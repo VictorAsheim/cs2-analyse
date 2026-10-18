@@ -35,9 +35,17 @@ export default async function Home() {
   return (
     <main className="mx-auto w-full min-w-0 max-w-4xl px-6 py-14">
       <header className="mb-8">
-        <h1 className="text-2xl font-semibold tracking-tight text-neutral-100">
-          {league.division}
-        </h1>
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <h1 className="text-2xl font-semibold tracking-tight text-neutral-100">
+            {league.division}
+          </h1>
+          <Link
+            href="/igl"
+            className="shrink-0 rounded-lg border border-amber-700/60 bg-amber-950/30 px-4 py-2 text-sm font-medium text-amber-300 transition hover:bg-amber-950/60"
+          >
+            IGL-visning →
+          </Link>
+        </div>
         <p className="mt-2 text-sm leading-relaxed text-neutral-400">
           Motstanderanalyse fra parsede demoer. {analysed.length} av{" "}
           {division.length} lag i divisjonen har demoer analysert

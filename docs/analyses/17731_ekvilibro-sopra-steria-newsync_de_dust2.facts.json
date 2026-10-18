@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:42:30.797015+00:00",
+ "generated_at": "2026-10-18T16:51:31.804950+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: Ekvilibro vs Sopra Steria NewSync",
@@ -1414,6 +1414,44 @@
      "advantaged_team_won": true
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "Ekvilibro": {
+     "after_loss": {
+      "rounds": 5,
+      "buys": {
+       "semi_buy": 5
+      }
+     },
+     "after_win": {
+      "rounds": 12,
+      "buys": {
+       "semi_buy": 2,
+       "full_buy": 10
+      }
+     }
+    },
+    "Sopra Steria NewSync": {
+     "after_loss": {
+      "rounds": 12,
+      "buys": {
+       "force_buy": 3,
+       "full_buy": 2,
+       "semi_buy": 6,
+       "eco": 1
+      }
+     },
+     "after_win": {
+      "rounds": 5,
+      "buys": {
+       "full_buy": 4,
+       "semi_buy": 1
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -12127,5 +12165,5 @@
   "size_bytes": 229931652,
   "sha256": "88483da1d4c4b857337e7141a724da9950bd8f68ed2e192c2e8f48cb1a1ba7b4"
  },
- "parse_seconds": 5.3
+ "parse_seconds": 6.4
 }

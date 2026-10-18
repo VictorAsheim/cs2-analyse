@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T15:45:15.964515+00:00",
+ "generated_at": "2026-10-18T16:54:19.200901+00:00",
  "division": "8. Divisjon avd. B",
  "format": "Seriespill",
  "table_updated": "2026-10-17",
@@ -25,6 +25,95 @@
    "maps": {
     "de_ancient": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 3,
+      "B": 5
+     },
+     "median_arrival_seconds": 29.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 2,
+       "denominator": 4
+      },
+      "B": {
+       "numerator": 4,
+       "denominator": 5
+      }
+     },
+     "setups": [
+      {
+       "name": "Hanzee",
+       "spots": {
+        "BombsiteA": 10,
+        "BombsiteB": 1,
+        "SideHall": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 10
+      },
+      {
+       "name": "zetfrila",
+       "spots": {
+        "Middle": 9,
+        "SideHall": 3
+       },
+       "rounds": 12,
+       "most_common": "Middle",
+       "most_common_rounds": 9
+      },
+      {
+       "name": "Finn",
+       "spots": {
+        "BombsiteB": 8,
+        "SideEntrance": 2,
+        "Middle": 1,
+        "TSideUpper": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "Feito",
+       "spots": {
+        "House": 5,
+        "Middle": 4,
+        "BombsiteB": 3
+       },
+       "rounds": 12,
+       "most_common": "House",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "Knaggleif",
+       "spots": {
+        "BombsiteB": 5,
+        "SideEntrance": 5,
+        "Middle": 2
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "full_buy": 4,
+        "eco": 2,
+        "force_buy": 2,
+        "semi_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "full_buy": 11
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 13,
      "rounds_against": 10,
@@ -199,6 +288,104 @@
     },
     "de_inferno": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 4,
+      "B": 4
+     },
+     "median_arrival_seconds": 43.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 2,
+       "denominator": 6
+      },
+      "B": {
+       "numerator": 1,
+       "denominator": 3
+      }
+     },
+     "setups": [
+      {
+       "name": "Feito",
+       "spots": {
+        "Apartments": 11,
+        "BombsiteA": 2,
+        "Banana": 1,
+        "Balcony": 1
+       },
+       "rounds": 15,
+       "most_common": "Apartments",
+       "most_common_rounds": 11
+      },
+      {
+       "name": "Finn",
+       "spots": {
+        "TopofMid": 8,
+        "Arch": 3,
+        "Banana": 2,
+        "BombsiteA": 1,
+        "Middle": 1
+       },
+       "rounds": 15,
+       "most_common": "TopofMid",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "Hanzee",
+       "spots": {
+        "BombsiteB": 7,
+        "Banana": 6,
+        "Middle": 1,
+        "Ruins": 1
+       },
+       "rounds": 15,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "zetfrila",
+       "spots": {
+        "BombsiteB": 7,
+        "Ruins": 4,
+        "Banana": 2,
+        "TopofMid": 2
+       },
+       "rounds": 15,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Knaggleif",
+       "spots": {
+        "BombsiteA": 5,
+        "TopofMid": 3,
+        "Quad": 3,
+        "Apartments": 2,
+        "Banana": 1,
+        "Arch": 1
+       },
+       "rounds": 15,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "force_buy": 2,
+        "eco": 2,
+        "full_buy": 5,
+        "semi_buy": 1
+       }
+      },
+      "after_win": {
+       "rounds": 15,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 14
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 16,
      "rounds_against": 13,
@@ -458,6 +645,151 @@
       "denominator": 23,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 3,
+      "B": 5
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.5,
+       "numerator": 2,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.8,
+       "numerator": 4,
+       "denominator": 5,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      13.5,
+      10.5,
+      46.5,
+      51.0,
+      18.0,
+      23.5,
+      29.0,
+      80.0,
+      10.5,
+      50.5,
+      41.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561197964166918",
+       "name": "Feito",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "House": 5,
+        "Middle": 4,
+        "BombsiteB": 3
+       },
+       "most_common": "House",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561197999320776",
+       "name": "Finn",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 8,
+        "SideEntrance": 2,
+        "Middle": 1,
+        "TSideUpper": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 8,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198033196734",
+       "name": "Hanzee",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 10,
+        "BombsiteB": 1,
+        "SideHall": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.8333,
+        "numerator": 10,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561197963417000",
+       "name": "Knaggleif",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 5,
+        "SideEntrance": 5,
+        "Middle": 2
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198030592664",
+       "name": "zetfrila",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Middle": 9,
+        "SideHall": 3
+       },
+       "most_common": "Middle",
+       "share_at_most_common": {
+        "value": 0.75,
+        "numerator": 9,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "full_buy": 4,
+        "eco": 2,
+        "force_buy": 2,
+        "semi_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "full_buy": 11
+       }
+      }
+     },
      "findings": [
       {
        "rule": "predictable_setup",
@@ -626,6 +958,163 @@
       "numerator": 16,
       "denominator": 29,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 4,
+      "B": 4
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.3333,
+       "numerator": 2,
+       "denominator": 6,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.3333,
+       "numerator": 1,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      14.5,
+      60.5,
+      25.0,
+      35.5,
+      40.0,
+      13.5,
+      79.5,
+      108.3,
+      110.8,
+      37.5,
+      43.0,
+      48.0,
+      62.0,
+      28.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561197964166918",
+       "name": "Feito",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 15,
+       "positions": {
+        "Apartments": 11,
+        "BombsiteA": 2,
+        "Banana": 1,
+        "Balcony": 1
+       },
+       "most_common": "Apartments",
+       "share_at_most_common": {
+        "value": 0.7333,
+        "numerator": 11,
+        "denominator": 15,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561197999320776",
+       "name": "Finn",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 15,
+       "positions": {
+        "TopofMid": 8,
+        "Arch": 3,
+        "Banana": 2,
+        "BombsiteA": 1,
+        "Middle": 1
+       },
+       "most_common": "TopofMid",
+       "share_at_most_common": {
+        "value": 0.5333,
+        "numerator": 8,
+        "denominator": 15,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198033196734",
+       "name": "Hanzee",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 15,
+       "positions": {
+        "BombsiteB": 7,
+        "Banana": 6,
+        "Middle": 1,
+        "Ruins": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4667,
+        "numerator": 7,
+        "denominator": 15,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561197963417000",
+       "name": "Knaggleif",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 15,
+       "positions": {
+        "BombsiteA": 5,
+        "TopofMid": 3,
+        "Quad": 3,
+        "Apartments": 2,
+        "Banana": 1,
+        "Arch": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 5,
+        "denominator": 15,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198030592664",
+       "name": "zetfrila",
+       "team": "Frogn Kommune CS",
+       "ct_rounds_observed": 15,
+       "positions": {
+        "BombsiteB": 7,
+        "Ruins": 4,
+        "Banana": 2,
+        "TopofMid": 2
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4667,
+        "numerator": 7,
+        "denominator": 15,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "force_buy": 2,
+        "eco": 2,
+        "full_buy": 5,
+        "semi_buy": 1
+       }
+      },
+      "after_win": {
+       "rounds": 15,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 14
+       }
+      }
      },
      "findings": [
       {
@@ -885,6 +1374,116 @@
    "maps": {
     "de_dust2": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 2,
+      "B": 3
+     },
+     "median_arrival_seconds": 38.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 2,
+       "denominator": 5
+      },
+      "B": {
+       "numerator": 0,
+       "denominator": 3
+      }
+     },
+     "setups": [
+      {
+       "name": "brenniz",
+       "spots": {
+        "BombsiteB": 5,
+        "UnderA": 2,
+        "Pit": 1,
+        "LongDoors": 1,
+        "LongA": 1,
+        "TopofMid": 1,
+        "BDoors": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "Chris the Clutchgod",
+       "spots": {
+        "LongA": 4,
+        "MidDoors": 2,
+        "BombsiteB": 2,
+        "Catwalk": 1,
+        "TopofMid": 1,
+        "ShortStairs": 1,
+        "Pit": 1
+       },
+       "rounds": 12,
+       "most_common": "LongA",
+       "most_common_rounds": 4
+      },
+      {
+       "name": "Arne Beami",
+       "spots": {
+        "Catwalk": 3,
+        "LongA": 2,
+        "LongDoors": 2,
+        "BombsiteB": 1,
+        "MidDoors": 1,
+        "UnderA": 1,
+        "TopofMid": 1,
+        "ShortStairs": 1
+       },
+       "rounds": 12,
+       "most_common": "Catwalk",
+       "most_common_rounds": 3
+      },
+      {
+       "name": "Høggern",
+       "spots": {
+        "BDoors": 3,
+        "MidDoors": 3,
+        "LongA": 2,
+        "BombsiteB": 2,
+        "ExtendedA": 1,
+        "TopofMid": 1
+       },
+       "rounds": 12,
+       "most_common": "BDoors",
+       "most_common_rounds": 3
+      },
+      {
+       "name": "Geir Money",
+       "spots": {
+        "BombsiteB": 2,
+        "MidDoors": 2,
+        "BombsiteA": 2,
+        "UnderA": 1,
+        "Hole": 1,
+        "TopofMid": 1,
+        "Pit": 1,
+        "Catwalk": 1,
+        "LongA": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "semi_buy": 1,
+        "eco": 2,
+        "full_buy": 7
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "full_buy": 12
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 13,
      "rounds_against": 11,
@@ -1039,6 +1638,170 @@
       "denominator": 24,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 2,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.4,
+       "numerator": 2,
+       "denominator": 5,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      12.5,
+      38.0,
+      68.0,
+      14.0,
+      54.0,
+      94.1,
+      31.0,
+      23.0,
+      104.9
+     ],
+     "setups": [
+      {
+       "steamid": "76561198188272774",
+       "name": "Arne Beami",
+       "team": "NAS - Boarding Group B",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Catwalk": 3,
+        "LongA": 2,
+        "LongDoors": 2,
+        "BombsiteB": 1,
+        "MidDoors": 1,
+        "UnderA": 1,
+        "TopofMid": 1,
+        "ShortStairs": 1
+       },
+       "most_common": "Catwalk",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 8
+      },
+      {
+       "steamid": "76561197995009064",
+       "name": "Chris the Clutchgod",
+       "team": "NAS - Boarding Group B",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "LongA": 4,
+        "MidDoors": 2,
+        "BombsiteB": 2,
+        "Catwalk": 1,
+        "TopofMid": 1,
+        "ShortStairs": 1,
+        "Pit": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 4,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561197997835666",
+       "name": "Geir Money",
+       "team": "NAS - Boarding Group B",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 2,
+        "MidDoors": 2,
+        "BombsiteA": 2,
+        "UnderA": 1,
+        "Hole": 1,
+        "TopofMid": 1,
+        "Pit": 1,
+        "Catwalk": 1,
+        "LongA": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.1667,
+        "numerator": 2,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 9
+      },
+      {
+       "steamid": "76561197993745729",
+       "name": "Høggern",
+       "team": "NAS - Boarding Group B",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BDoors": 3,
+        "MidDoors": 3,
+        "LongA": 2,
+        "BombsiteB": 2,
+        "ExtendedA": 1,
+        "TopofMid": 1
+       },
+       "most_common": "BDoors",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198050917126",
+       "name": "brenniz",
+       "team": "NAS - Boarding Group B",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 5,
+        "UnderA": 2,
+        "Pit": 1,
+        "LongDoors": 1,
+        "LongA": 1,
+        "TopofMid": 1,
+        "BDoors": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "semi_buy": 1,
+        "eco": 2,
+        "full_buy": 7
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "full_buy": 12
+       }
+      }
+     },
      "findings": [
       {
        "rule": "retake_never_arrives",
@@ -1149,6 +1912,88 @@
    "maps": {
     "de_ancient": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 5,
+      "B": 3
+     },
+     "median_arrival_seconds": 31.0,
+     "retake_by_site": {
+      "B": {
+       "numerator": 2,
+       "denominator": 2
+      }
+     },
+     "setups": [
+      {
+       "name": "Bobblegeir",
+       "spots": {
+        "Alley": 7
+       },
+       "rounds": 7,
+       "most_common": "Alley",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Milomst",
+       "spots": {
+        "BombsiteA": 7
+       },
+       "rounds": 7,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Lime",
+       "spots": {
+        "House": 5,
+        "BombsiteA": 1,
+        "SideHall": 1
+       },
+       "rounds": 7,
+       "most_common": "House",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "=Later=",
+       "spots": {
+        "SideEntrance": 4,
+        "BombsiteB": 2,
+        "SideHall": 1
+       },
+       "rounds": 7,
+       "most_common": "SideEntrance",
+       "most_common_rounds": 4
+      },
+      {
+       "name": "Diesel1",
+       "spots": {
+        "BombsiteA": 2,
+        "SideHall": 2,
+        "House": 2,
+        "MainHall": 1
+       },
+       "rounds": 7,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 6,
+       "buys": {
+        "semi_buy": 3,
+        "force_buy": 1,
+        "full_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 10
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 13,
      "rounds_against": 6,
@@ -1178,6 +2023,112 @@
     },
     "de_cache": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 1,
+      "B": 1
+     },
+     "median_arrival_seconds": 62.5,
+     "retake_by_site": {
+      "A": {
+       "numerator": 1,
+       "denominator": 4
+      },
+      "B": {
+       "numerator": 1,
+       "denominator": 2
+      }
+     },
+     "setups": [
+      {
+       "name": "Thegaroh",
+       "spots": {
+        "Connector": 8,
+        "Mid": 3,
+        "Sandbags": 1
+       },
+       "rounds": 12,
+       "most_common": "Connector",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "Lime",
+       "spots": {
+        "BombsiteA": 5,
+        "BombsiteB": 2,
+        "CTLane": 1,
+        "AMain": 1,
+        "Headshot": 1,
+        "TreeRoom": 1,
+        "Heaven": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "=Later=",
+       "spots": {
+        "Heaven": 3,
+        "BombsiteB": 3,
+        "Rafters": 3,
+        "Catwalk": 1,
+        "Quad": 1,
+        "BombsiteA": 1
+       },
+       "rounds": 12,
+       "most_common": "Heaven",
+       "most_common_rounds": 3
+      },
+      {
+       "name": "Milomst",
+       "spots": {
+        "Headshot": 3,
+        "BombsiteB": 2,
+        "Corner": 2,
+        "BombsiteA": 2,
+        "TreeRoom": 1,
+        "Quad": 1,
+        "ForkLift": 1
+       },
+       "rounds": 12,
+       "most_common": "Headshot",
+       "most_common_rounds": 3
+      },
+      {
+       "name": "Diesel1",
+       "spots": {
+        "Highway": 2,
+        "Truck": 2,
+        "AMain": 2,
+        "BombsiteB": 1,
+        "Toxic": 1,
+        "Mid": 1,
+        "BombsiteA": 1,
+        "BMain": 1,
+        "Catwalk": 1
+       },
+       "rounds": 12,
+       "most_common": "Highway",
+       "most_common_rounds": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 9,
+        "full_buy": 2,
+        "eco": 1
+       }
+      },
+      "after_win": {
+       "rounds": 7,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 6
+       }
+      }
+     },
      "match_wins": 0,
      "rounds_for": 8,
      "rounds_against": 13,
@@ -1301,6 +2252,157 @@
     },
     "de_dust2": {
      "matches": 3,
+     "plants_by_site": {
+      "A": 4,
+      "B": 8
+     },
+     "median_arrival_seconds": 36.5,
+     "retake_by_site": {
+      "A": {
+       "numerator": 4,
+       "denominator": 13
+      },
+      "B": {
+       "numerator": 3,
+       "denominator": 11
+      }
+     },
+     "setups": [
+      {
+       "name": "Milomst",
+       "spots": {
+        "BombsiteB": 23,
+        "BDoors": 2,
+        "CTSpawn": 1,
+        "Side": 1,
+        "Pit": 1,
+        "LongA": 1,
+        "BombsiteA": 4
+       },
+       "rounds": 33,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 23
+      },
+      {
+       "name": "Bobblegeir",
+       "spots": {
+        "BombsiteA": 10,
+        "ARamp": 2,
+        "Hole": 6,
+        "BombsiteB": 3
+       },
+       "rounds": 21,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 10
+      },
+      {
+       "name": "Lime",
+       "spots": {
+        "LongA": 7,
+        "LongDoors": 4,
+        "Pit": 1,
+        "BombsiteB": 4,
+        "Catwalk": 3,
+        "MidDoors": 1,
+        "ShortStairs": 3,
+        "UnderA": 1,
+        "TopofMid": 1,
+        "Middle": 1,
+        "BDoors": 1,
+        "LowerTunnel": 2,
+        "ExtendedA": 1,
+        "ARamp": 1,
+        "UpperTunnel": 1
+       },
+       "rounds": 32,
+       "most_common": "LongA",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Diesel1",
+       "spots": {
+        "MidDoors": 4,
+        "CTSpawn": 2,
+        "ShortStairs": 4,
+        "Middle": 1,
+        "LowerTunnel": 1,
+        "BombsiteB": 2,
+        "BombsiteA": 4,
+        "Catwalk": 5,
+        "TunnelStairs": 2,
+        "LongDoors": 2,
+        "BDoors": 1,
+        "LongA": 2,
+        "Pit": 2,
+        "ExtendedA": 1
+       },
+       "rounds": 33,
+       "most_common": "Catwalk",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "=Later=",
+       "spots": {
+        "LongA": 3,
+        "BombsiteB": 5,
+        "MidDoors": 5,
+        "UnderA": 1,
+        "BDoors": 4,
+        "UpperTunnel": 1,
+        "Catwalk": 1,
+        "ExtendedA": 1
+       },
+       "rounds": 21,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "Thegaroh",
+       "spots": {
+        "LongA": 5,
+        "ShortStairs": 3,
+        "ExtendedA": 2,
+        "MidDoors": 1,
+        "ARamp": 1
+       },
+       "rounds": 12,
+       "most_common": "LongA",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "Expend-",
+       "spots": {
+        "ShortStairs": 3,
+        "LongDoors": 2,
+        "LongA": 2,
+        "CTSpawn": 1,
+        "Catwalk": 1,
+        "Pit": 1,
+        "ExtendedA": 1,
+        "UpperTunnel": 1
+       },
+       "rounds": 12,
+       "most_common": "ShortStairs",
+       "most_common_rounds": 3
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 24,
+       "buys": {
+        "semi_buy": 12,
+        "full_buy": 10,
+        "force_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 27,
+       "buys": {
+        "semi_buy": 4,
+        "full_buy": 23
+       }
+      }
+     },
      "match_wins": 2,
      "rounds_for": 29,
      "rounds_against": 28,
@@ -1580,6 +2682,129 @@
     },
     "de_mirage": {
      "matches": 3,
+     "plants_by_site": {
+      "A": 11,
+      "B": 9
+     },
+     "median_arrival_seconds": 41.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 2,
+       "denominator": 6
+      },
+      "B": {
+       "numerator": 2,
+       "denominator": 5
+      }
+     },
+     "setups": [
+      {
+       "name": "Diesel1",
+       "spots": {
+        "BombsiteA": 18,
+        "Connector": 1,
+        "SnipersNest": 6,
+        "CTSpawn": 3,
+        "Scaffolding": 1
+       },
+       "rounds": 29,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 18
+      },
+      {
+       "name": "Milomst",
+       "spots": {
+        "BombsiteB": 17,
+        "Truck": 7,
+        "BombsiteA": 2,
+        "Shop": 2,
+        "CTSpawn": 1
+       },
+       "rounds": 29,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 17
+      },
+      {
+       "name": "Bobblegeir",
+       "spots": {
+        "CTSpawn": 11,
+        "BombsiteA": 8,
+        "PalaceInterior": 1
+       },
+       "rounds": 20,
+       "most_common": "CTSpawn",
+       "most_common_rounds": 11
+      },
+      {
+       "name": "Lime",
+       "spots": {
+        "Catwalk": 11,
+        "BombsiteB": 3,
+        "SnipersNest": 8,
+        "CTSpawn": 4,
+        "BombsiteA": 3
+       },
+       "rounds": 29,
+       "most_common": "Catwalk",
+       "most_common_rounds": 11
+      },
+      {
+       "name": "=Later=",
+       "spots": {
+        "BombsiteB": 11,
+        "Shop": 1,
+        "Truck": 2,
+        "Catwalk": 1,
+        "SnipersNest": 4,
+        "CTSpawn": 2
+       },
+       "rounds": 21,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 11
+      },
+      {
+       "name": "Thegaroh",
+       "spots": {
+        "CTSpawn": 7,
+        "BombsiteA": 2
+       },
+       "rounds": 9,
+       "most_common": "CTSpawn",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Expend-",
+       "spots": {
+        "BombsiteA": 3,
+        "SnipersNest": 1,
+        "Connector": 1,
+        "TRamp": 1,
+        "PalaceInterior": 1,
+        "PalaceAlley": 1
+       },
+       "rounds": 8,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 3
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 26,
+       "buys": {
+        "full_buy": 10,
+        "semi_buy": 12,
+        "eco": 2,
+        "force_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 33,
+       "buys": {
+        "semi_buy": 2,
+        "full_buy": 31
+       }
+      }
+     },
      "match_wins": 2,
      "rounds_for": 37,
      "rounds_against": 28,
@@ -1827,6 +3052,147 @@
       "denominator": 19,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 5,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": null,
+       "numerator": 0,
+       "denominator": 0,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 1.0,
+       "numerator": 2,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      13.0,
+      27.5,
+      29.5,
+      21.0,
+      31.0,
+      28.5,
+      49.0,
+      43.0,
+      32.0,
+      42.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561198000503544",
+       "name": "=Later=",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "SideEntrance": 4,
+        "BombsiteB": 2,
+        "SideHall": 1
+       },
+       "most_common": "SideEntrance",
+       "share_at_most_common": {
+        "value": 0.5714,
+        "numerator": 4,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198187406589",
+       "name": "Bobblegeir",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "Alley": 7
+       },
+       "most_common": "Alley",
+       "share_at_most_common": {
+        "value": 1.0,
+        "numerator": 7,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 1
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "BombsiteA": 2,
+        "SideHall": 2,
+        "House": 2,
+        "MainHall": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.2857,
+        "numerator": 2,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "House": 5,
+        "BombsiteA": 1,
+        "SideHall": 1
+       },
+       "most_common": "House",
+       "share_at_most_common": {
+        "value": 0.7143,
+        "numerator": 5,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "BombsiteA": 7
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 1.0,
+        "numerator": 7,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 1
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 6,
+       "buys": {
+        "semi_buy": 3,
+        "force_buy": 1,
+        "full_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 10
+       }
+      }
+     },
      "findings": []
     },
     {
@@ -1863,6 +3229,165 @@
       "numerator": 6,
       "denominator": 21,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 1,
+      "B": 1
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.25,
+       "numerator": 1,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.5,
+       "numerator": 1,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      20.5,
+      37.5,
+      63.0,
+      63.5,
+      36.0,
+      62.5,
+      48.0,
+      66.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198000503544",
+       "name": "=Later=",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Heaven": 3,
+        "BombsiteB": 3,
+        "Rafters": 3,
+        "Catwalk": 1,
+        "Quad": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "Heaven",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Highway": 2,
+        "Truck": 2,
+        "AMain": 2,
+        "BombsiteB": 1,
+        "Toxic": 1,
+        "Mid": 1,
+        "BombsiteA": 1,
+        "BMain": 1,
+        "Catwalk": 1
+       },
+       "most_common": "Highway",
+       "share_at_most_common": {
+        "value": 0.1667,
+        "numerator": 2,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 9
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 5,
+        "BombsiteB": 2,
+        "CTLane": 1,
+        "AMain": 1,
+        "Headshot": 1,
+        "TreeRoom": 1,
+        "Heaven": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Headshot": 3,
+        "BombsiteB": 2,
+        "Corner": 2,
+        "BombsiteA": 2,
+        "TreeRoom": 1,
+        "Quad": 1,
+        "ForkLift": 1
+       },
+       "most_common": "Headshot",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561198075358437",
+       "name": "Thegaroh",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Connector": 8,
+        "Mid": 3,
+        "Sandbags": 1
+       },
+       "most_common": "Connector",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 8,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 9,
+        "full_buy": 2,
+        "eco": 1
+       }
+      },
+      "after_win": {
+       "rounds": 7,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 6
+       }
+      }
      },
      "findings": [
       {
@@ -1986,6 +3511,154 @@
       "numerator": 11,
       "denominator": 20,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 1,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.5,
+       "numerator": 2,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.25,
+       "numerator": 1,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      17.0,
+      15.5,
+      101.9,
+      24.0,
+      25.5,
+      45.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198187406589",
+       "name": "Bobblegeir",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 10,
+        "ARamp": 2
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.8333,
+        "numerator": 10,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "MidDoors": 3,
+        "CTSpawn": 2,
+        "ShortStairs": 2,
+        "Middle": 1,
+        "LowerTunnel": 1,
+        "BombsiteB": 1,
+        "BombsiteA": 1,
+        "Catwalk": 1
+       },
+       "most_common": "MidDoors",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 8
+      },
+      {
+       "steamid": "76561197961871741",
+       "name": "Expend-",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "ShortStairs": 3,
+        "LongDoors": 2,
+        "LongA": 2,
+        "CTSpawn": 1,
+        "Catwalk": 1,
+        "Pit": 1,
+        "ExtendedA": 1,
+        "UpperTunnel": 1
+       },
+       "most_common": "ShortStairs",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 8
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "LongA": 7,
+        "LongDoors": 3,
+        "Pit": 1,
+        "BombsiteB": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.5833,
+        "numerator": 7,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 10,
+        "BDoors": 2
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.8333,
+        "numerator": 10,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 6,
+       "buys": {
+        "semi_buy": 4,
+        "full_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 2,
+        "full_buy": 10
+       }
+      }
      },
      "findings": [
       {
@@ -2161,6 +3834,164 @@
       "denominator": 16,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 0,
+      "B": 2
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 6,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.25,
+       "numerator": 1,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      56.1,
+      17.5,
+      33.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198000503544",
+       "name": "=Later=",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "LongA": 3,
+        "BombsiteB": 3,
+        "MidDoors": 2,
+        "UnderA": 1,
+        "BDoors": 1,
+        "UpperTunnel": 1,
+        "Catwalk": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "ShortStairs": 2,
+        "Catwalk": 2,
+        "BombsiteA": 2,
+        "TunnelStairs": 2,
+        "BombsiteB": 1,
+        "MidDoors": 1,
+        "LongDoors": 1,
+        "BDoors": 1
+       },
+       "most_common": "ShortStairs",
+       "share_at_most_common": {
+        "value": 0.1667,
+        "numerator": 2,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 8
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "BombsiteB": 2,
+        "Catwalk": 1,
+        "MidDoors": 1,
+        "ShortStairs": 1,
+        "UnderA": 1,
+        "LongDoors": 1,
+        "TopofMid": 1,
+        "Middle": 1,
+        "BDoors": 1,
+        "LowerTunnel": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.1818,
+        "numerator": 2,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 10
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 7,
+        "CTSpawn": 1,
+        "Side": 1,
+        "Pit": 1,
+        "LongA": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.5833,
+        "numerator": 7,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198075358437",
+       "name": "Thegaroh",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "LongA": 5,
+        "ShortStairs": 3,
+        "ExtendedA": 2,
+        "MidDoors": 1,
+        "ARamp": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "force_buy": 2,
+        "full_buy": 5,
+        "semi_buy": 4
+       }
+      },
+      "after_win": {
+       "rounds": 3,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 2
+       }
+      }
+     },
      "findings": [
       {
        "rule": "site_retake_weak",
@@ -2283,6 +4114,155 @@
       "numerator": 14,
       "denominator": 21,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 3,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.6667,
+       "numerator": 2,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.3333,
+       "numerator": 1,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      16.0,
+      32.5,
+      82.5,
+      30.5,
+      45.0,
+      44.5,
+      39.0,
+      61.5,
+      43.5,
+      36.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198000503544",
+       "name": "=Later=",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BDoors": 3,
+        "MidDoors": 3,
+        "BombsiteB": 2,
+        "ExtendedA": 1
+       },
+       "most_common": "BDoors",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 3,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198187406589",
+       "name": "Bobblegeir",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "Hole": 6,
+        "BombsiteB": 3
+       },
+       "most_common": "Hole",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 6,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "LongA": 2,
+        "Pit": 2,
+        "Catwalk": 2,
+        "BombsiteA": 1,
+        "LongDoors": 1,
+        "ExtendedA": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.2222,
+        "numerator": 2,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "ShortStairs": 2,
+        "Catwalk": 2,
+        "ExtendedA": 1,
+        "ARamp": 1,
+        "BombsiteB": 1,
+        "UpperTunnel": 1,
+        "LowerTunnel": 1
+       },
+       "most_common": "ShortStairs",
+       "share_at_most_common": {
+        "value": 0.2222,
+        "numerator": 2,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BombsiteB": 6,
+        "BombsiteA": 3
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 6,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 7,
+       "buys": {
+        "full_buy": 3,
+        "semi_buy": 4
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 11
+       }
+      }
      },
      "findings": [
       {
@@ -2433,6 +4413,151 @@
       "denominator": 20,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 4,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": null,
+       "numerator": 0,
+       "denominator": 0,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.5,
+       "numerator": 1,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      71.8,
+      100.4,
+      83.5,
+      56.0,
+      34.5,
+      59.0,
+      28.0,
+      41.0,
+      51.0,
+      109.0,
+      19.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198187406589",
+       "name": "Bobblegeir",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 8,
+       "positions": {
+        "CTSpawn": 5,
+        "BombsiteA": 3
+       },
+       "most_common": "CTSpawn",
+       "share_at_most_common": {
+        "value": 0.625,
+        "numerator": 5,
+        "denominator": 8,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 8,
+       "positions": {
+        "BombsiteA": 6,
+        "Connector": 1,
+        "SnipersNest": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.75,
+        "numerator": 6,
+        "denominator": 8,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561197961871741",
+       "name": "Expend-",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 8,
+       "positions": {
+        "BombsiteA": 3,
+        "SnipersNest": 1,
+        "Connector": 1,
+        "TRamp": 1,
+        "PalaceInterior": 1,
+        "PalaceAlley": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.375,
+        "numerator": 3,
+        "denominator": 8,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 8,
+       "positions": {
+        "Catwalk": 5,
+        "BombsiteB": 2,
+        "SnipersNest": 1
+       },
+       "most_common": "Catwalk",
+       "share_at_most_common": {
+        "value": 0.625,
+        "numerator": 5,
+        "denominator": 8,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 8,
+       "positions": {
+        "BombsiteB": 6,
+        "Truck": 2
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.75,
+        "numerator": 6,
+        "denominator": 8,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 6,
+       "buys": {
+        "full_buy": 4,
+        "semi_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 2,
+        "full_buy": 10
+       }
+      }
+     },
      "findings": [
       {
        "rule": "strong_opening_duels",
@@ -2563,6 +4688,147 @@
       "numerator": 15,
       "denominator": 21,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 4,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 1,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.5,
+       "numerator": 1,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      56.0,
+      22.0,
+      96.0,
+      36.5,
+      27.5,
+      32.0,
+      28.0,
+      73.0,
+      13.5,
+      13.0,
+      57.6
+     ],
+     "setups": [
+      {
+       "steamid": "76561198000503544",
+       "name": "=Later=",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BombsiteB": 6,
+        "Shop": 1,
+        "Truck": 1,
+        "Catwalk": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 6,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BombsiteA": 8,
+        "CTSpawn": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.8889,
+        "numerator": 8,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "SnipersNest": 7,
+        "CTSpawn": 2
+       },
+       "most_common": "SnipersNest",
+       "share_at_most_common": {
+        "value": 0.7778,
+        "numerator": 7,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BombsiteB": 6,
+        "Truck": 3
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 6,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198075358437",
+       "name": "Thegaroh",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "CTSpawn": 7,
+        "BombsiteA": 2
+       },
+       "most_common": "CTSpawn",
+       "share_at_most_common": {
+        "value": 0.7778,
+        "numerator": 7,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 8,
+       "buys": {
+        "eco": 2,
+        "full_buy": 3,
+        "semi_buy": 3
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "full_buy": 11
+       }
+      }
      },
      "findings": [
       {
@@ -2719,6 +4985,155 @@
       "numerator": 17,
       "denominator": 24,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 3,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.4,
+       "numerator": 2,
+       "denominator": 5,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 1,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      31.8,
+      22.5,
+      39.5,
+      20.0,
+      45.0,
+      105.0,
+      46.5,
+      100.5,
+      23.0,
+      16.0,
+      102.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561198000503544",
+       "name": "=Later=",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 5,
+        "SnipersNest": 4,
+        "CTSpawn": 2,
+        "Truck": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198187406589",
+       "name": "Bobblegeir",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "CTSpawn": 6,
+        "BombsiteA": 5,
+        "PalaceInterior": 1
+       },
+       "most_common": "CTSpawn",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 6,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198277926109",
+       "name": "Diesel1",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "SnipersNest": 5,
+        "BombsiteA": 4,
+        "CTSpawn": 2,
+        "Scaffolding": 1
+       },
+       "most_common": "SnipersNest",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561199041837872",
+       "name": "Lime",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Catwalk": 6,
+        "BombsiteA": 3,
+        "CTSpawn": 2,
+        "BombsiteB": 1
+       },
+       "most_common": "Catwalk",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 6,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198796650215",
+       "name": "Milomst",
+       "team": "Glassfiber Produkter",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 5,
+        "BombsiteA": 2,
+        "Truck": 2,
+        "Shop": 2,
+        "CTSpawn": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "force_buy": 2,
+        "semi_buy": 7,
+        "full_buy": 3
+       }
+      },
+      "after_win": {
+       "rounds": 10,
+       "buys": {
+        "full_buy": 10
+       }
+      }
      },
      "findings": [
       {
@@ -2958,6 +5373,104 @@
    "maps": {
     "de_cache": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 4,
+      "B": 2
+     },
+     "median_arrival_seconds": 46.5,
+     "retake_by_site": {
+      "A": {
+       "numerator": 0,
+       "denominator": 1
+      },
+      "B": {
+       "numerator": 0,
+       "denominator": 1
+      }
+     },
+     "setups": [
+      {
+       "name": "Håkon Ivesdal",
+       "spots": {
+        "BombsiteB": 5,
+        "Rafters": 3,
+        "Heaven": 1
+       },
+       "rounds": 9,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "Midtpunkt",
+       "spots": {
+        "BombsiteB": 5,
+        "Rafters": 2,
+        "CTLane": 1,
+        "TreeRoom": 1
+       },
+       "rounds": 9,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "Shady.",
+       "spots": {
+        "ForkLift": 5,
+        "BombsiteA": 2,
+        "AHalls": 1,
+        "Quad": 1
+       },
+       "rounds": 9,
+       "most_common": "ForkLift",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "Glasoe",
+       "spots": {
+        "BombsiteA": 2,
+        "Sandbags": 2,
+        "Mid": 2,
+        "Truck": 1,
+        "Connector": 1,
+        "CTLane": 1
+       },
+       "rounds": 9,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 2
+      },
+      {
+       "name": "Selnes",
+       "spots": {
+        "Connector": 2,
+        "Ladder": 2,
+        "Catwalk": 2,
+        "Mid": 1,
+        "Toxic": 1,
+        "Corner": 1
+       },
+       "rounds": 9,
+       "most_common": "Connector",
+       "most_common_rounds": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 7,
+       "buys": {
+        "eco": 1,
+        "full_buy": 3,
+        "force_buy": 1,
+        "semi_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "full_buy": 11,
+        "semi_buy": 1
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 13,
      "rounds_against": 8,
@@ -3033,6 +5546,87 @@
     },
     "de_dust2": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 6,
+      "B": 4
+     },
+     "median_arrival_seconds": 51.0,
+     "retake_by_site": {
+      "B": {
+       "numerator": 2,
+       "denominator": 2
+      }
+     },
+     "setups": [
+      {
+       "name": "Glasoe",
+       "spots": {
+        "MidDoors": 3,
+        "ExtendedA": 1
+       },
+       "rounds": 4,
+       "most_common": "MidDoors",
+       "most_common_rounds": 3
+      },
+      {
+       "name": "Shady.",
+       "spots": {
+        "BombsiteB": 3,
+        "Hole": 1
+       },
+       "rounds": 4,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 3
+      },
+      {
+       "name": "Håkon Ivesdal",
+       "spots": {
+        "ExtendedA": 2,
+        "BombsiteB": 1,
+        "BombsiteA": 1
+       },
+       "rounds": 4,
+       "most_common": "ExtendedA",
+       "most_common_rounds": 2
+      },
+      {
+       "name": "Midtpunkt",
+       "spots": {
+        "BombsiteA": 2,
+        "LongA": 2
+       },
+       "rounds": 4,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 2
+      },
+      {
+       "name": "Selnes",
+       "spots": {
+        "CTSpawn": 1,
+        "MidDoors": 1,
+        "BDoors": 1,
+        "BombsiteB": 1
+       },
+       "rounds": 4,
+       "most_common": "CTSpawn",
+       "most_common_rounds": 1
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 3,
+       "buys": {
+        "eco": 1,
+        "full_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "full_buy": 11
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 13,
      "rounds_against": 3,
@@ -3115,6 +5709,97 @@
     },
     "de_mirage": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 1,
+      "B": 2
+     },
+     "median_arrival_seconds": 21.5,
+     "retake_by_site": {
+      "A": {
+       "numerator": 1,
+       "denominator": 4
+      },
+      "B": {
+       "numerator": 1,
+       "denominator": 3
+      }
+     },
+     "setups": [
+      {
+       "name": "Håkon Ivesdal",
+       "spots": {
+        "BombsiteB": 9,
+        "Truck": 3
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 9
+      },
+      {
+       "name": "Midtpunkt",
+       "spots": {
+        "SnipersNest": 8,
+        "BombsiteA": 2,
+        "Jungle": 1,
+        "CTSpawn": 1
+       },
+       "rounds": 12,
+       "most_common": "SnipersNest",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "Selnes",
+       "spots": {
+        "Stairs": 7,
+        "CTSpawn": 3,
+        "BombsiteA": 2
+       },
+       "rounds": 12,
+       "most_common": "Stairs",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Shady.",
+       "spots": {
+        "BombsiteA": 6,
+        "PalaceInterior": 3,
+        "SnipersNest": 2,
+        "Stairs": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 6
+      },
+      {
+       "name": "Glasoe",
+       "spots": {
+        "BombsiteB": 5,
+        "Truck": 3,
+        "Catwalk": 3,
+        "Apartments": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "semi_buy": 3,
+        "eco": 3,
+        "full_buy": 5
+       }
+      },
+      "after_win": {
+       "rounds": 8,
+       "buys": {
+        "full_buy": 6,
+        "semi_buy": 2
+       }
+      }
+     },
      "match_wins": 0,
      "rounds_for": 8,
      "rounds_against": 13,
@@ -3325,6 +6010,160 @@
       "denominator": 21,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 4,
+      "B": 2
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 1,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 1,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      12.0,
+      30.0,
+      53.5,
+      50.5,
+      69.5,
+      46.5,
+      36.5,
+      14.5,
+      52.5,
+      50.0,
+      36.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561197995006449",
+       "name": "Glasoe",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BombsiteA": 2,
+        "Sandbags": 2,
+        "Mid": 2,
+        "Truck": 1,
+        "Connector": 1,
+        "CTLane": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.2222,
+        "numerator": 2,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198018134744",
+       "name": "Håkon Ivesdal",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BombsiteB": 5,
+        "Rafters": 3,
+        "Heaven": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.5556,
+        "numerator": 5,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561197996921483",
+       "name": "Midtpunkt",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "BombsiteB": 5,
+        "Rafters": 2,
+        "CTLane": 1,
+        "TreeRoom": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.5556,
+        "numerator": 5,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198036654919",
+       "name": "Selnes",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "Connector": 2,
+        "Ladder": 2,
+        "Catwalk": 2,
+        "Mid": 1,
+        "Toxic": 1,
+        "Corner": 1
+       },
+       "most_common": "Connector",
+       "share_at_most_common": {
+        "value": 0.2222,
+        "numerator": 2,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198024856478",
+       "name": "Shady.",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 9,
+       "positions": {
+        "ForkLift": 5,
+        "BombsiteA": 2,
+        "AHalls": 1,
+        "Quad": 1
+       },
+       "most_common": "ForkLift",
+       "share_at_most_common": {
+        "value": 0.5556,
+        "numerator": 5,
+        "denominator": 9,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 7,
+       "buys": {
+        "eco": 1,
+        "full_buy": 3,
+        "force_buy": 1,
+        "semi_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "full_buy": 11,
+        "semi_buy": 1
+       }
+      }
+     },
      "findings": [
       {
        "rule": "strong_opening_duels",
@@ -3402,6 +6241,146 @@
       "numerator": 9,
       "denominator": 16,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 6,
+      "B": 4
+     },
+     "retake_by_site": {
+      "A": {
+       "value": null,
+       "numerator": 0,
+       "denominator": 0,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 1.0,
+       "numerator": 2,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      16.0,
+      84.5,
+      14.5,
+      51.0,
+      82.5,
+      41.5,
+      59.0,
+      38.0,
+      37.0,
+      57.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561197995006449",
+       "name": "Glasoe",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 4,
+       "positions": {
+        "MidDoors": 3,
+        "ExtendedA": 1
+       },
+       "most_common": "MidDoors",
+       "share_at_most_common": {
+        "value": 0.75,
+        "numerator": 3,
+        "denominator": 4,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198018134744",
+       "name": "Håkon Ivesdal",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 4,
+       "positions": {
+        "ExtendedA": 2,
+        "BombsiteB": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "ExtendedA",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 2,
+        "denominator": 4,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561197996921483",
+       "name": "Midtpunkt",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 4,
+       "positions": {
+        "BombsiteA": 2,
+        "LongA": 2
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 2,
+        "denominator": 4,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198036654919",
+       "name": "Selnes",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 4,
+       "positions": {
+        "CTSpawn": 1,
+        "MidDoors": 1,
+        "BDoors": 1,
+        "BombsiteB": 1
+       },
+       "most_common": "CTSpawn",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 1,
+        "denominator": 4,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198024856478",
+       "name": "Shady.",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 4,
+       "positions": {
+        "BombsiteB": 3,
+        "Hole": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.75,
+        "numerator": 3,
+        "denominator": 4,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 3,
+       "buys": {
+        "eco": 1,
+        "full_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "full_buy": 11
+       }
+      }
      },
      "findings": [
       {
@@ -3488,6 +6467,149 @@
       "numerator": 6,
       "denominator": 21,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 1,
+      "B": 2
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.25,
+       "numerator": 1,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.3333,
+       "numerator": 1,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      18.5,
+      10.5,
+      43.0,
+      77.5,
+      24.5,
+      21.0,
+      21.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561197995006449",
+       "name": "Glasoe",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 5,
+        "Truck": 3,
+        "Catwalk": 3,
+        "Apartments": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198018134744",
+       "name": "Håkon Ivesdal",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 9,
+        "Truck": 3
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.75,
+        "numerator": 9,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561197996921483",
+       "name": "Midtpunkt",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "SnipersNest": 8,
+        "BombsiteA": 2,
+        "Jungle": 1,
+        "CTSpawn": 1
+       },
+       "most_common": "SnipersNest",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 8,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198036654919",
+       "name": "Selnes",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Stairs": 7,
+        "CTSpawn": 3,
+        "BombsiteA": 2
+       },
+       "most_common": "Stairs",
+       "share_at_most_common": {
+        "value": 0.5833,
+        "numerator": 7,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198024856478",
+       "name": "Shady.",
+       "team": "Kaefer DD",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 6,
+        "PalaceInterior": 3,
+        "SnipersNest": 2,
+        "Stairs": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 6,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "semi_buy": 3,
+        "eco": 3,
+        "full_buy": 5
+       }
+      },
+      "after_win": {
+       "rounds": 8,
+       "buys": {
+        "full_buy": 6,
+        "semi_buy": 2
+       }
+      }
      },
      "findings": [
       {
@@ -3700,6 +6822,115 @@
    "maps": {
     "de_ancient": {
      "matches": 2,
+     "plants_by_site": {
+      "A": 6,
+      "B": 5
+     },
+     "median_arrival_seconds": 33.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 1,
+       "denominator": 3
+      },
+      "B": {
+       "numerator": 5,
+       "denominator": 9
+      }
+     },
+     "setups": [
+      {
+       "name": "Juiced1",
+       "spots": {
+        "BombsiteA": 22,
+        "CTSpawn": 1
+       },
+       "rounds": 23,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 22
+      },
+      {
+       "name": "Roach",
+       "spots": {
+        "Middle": 13,
+        "Alley": 3,
+        "House": 3,
+        "TopofMid": 2,
+        "BombsiteB": 2
+       },
+       "rounds": 23,
+       "most_common": "Middle",
+       "most_common_rounds": 13
+      },
+      {
+       "name": "Karizzly",
+       "spots": {
+        "Middle": 5,
+        "SideHall": 10,
+        "BombsiteA": 7,
+        "Alley": 1
+       },
+       "rounds": 23,
+       "most_common": "SideHall",
+       "most_common_rounds": 10
+      },
+      {
+       "name": "zutte",
+       "spots": {
+        "Middle": 8,
+        "SideEntrance": 3,
+        "Alley": 3,
+        "TSideUpper": 1,
+        "TopofMid": 3,
+        "House": 4,
+        "BombsiteB": 1
+       },
+       "rounds": 23,
+       "most_common": "Middle",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "cygnusx",
+       "spots": {
+        "BombsiteB": 6,
+        "Alley": 5,
+        "SideEntrance": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 6
+      },
+      {
+       "name": "Jamie Jamie",
+       "spots": {
+        "Alley": 4,
+        "BombsiteB": 3,
+        "House": 1,
+        "SideHall": 1,
+        "SideEntrance": 1,
+        "BombsiteA": 1
+       },
+       "rounds": 11,
+       "most_common": "Alley",
+       "most_common_rounds": 4
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "full_buy": 5,
+        "force_buy": 2,
+        "semi_buy": 5
+       }
+      },
+      "after_win": {
+       "rounds": 21,
+       "buys": {
+        "semi_buy": 2,
+        "full_buy": 19
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 23,
      "rounds_against": 14,
@@ -3899,6 +7130,143 @@
     },
     "de_dust2": {
      "matches": 3,
+     "plants_by_site": {
+      "A": 12,
+      "B": 9
+     },
+     "median_arrival_seconds": 44.5,
+     "retake_by_site": {
+      "A": {
+       "numerator": 0,
+       "denominator": 7
+      },
+      "B": {
+       "numerator": 4,
+       "denominator": 6
+      }
+     },
+     "setups": [
+      {
+       "name": "Roach",
+       "spots": {
+        "BDoors": 5,
+        "BombsiteB": 9,
+        "LongA": 2,
+        "Middle": 3,
+        "TopofMid": 1,
+        "LongDoors": 1,
+        "MidDoors": 4,
+        "CTSpawn": 1,
+        "Hole": 2,
+        "ShortStairs": 2
+       },
+       "rounds": 30,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 9
+      },
+      {
+       "name": "cygnusx",
+       "spots": {
+        "LongA": 7,
+        "ARamp": 5,
+        "UnderA": 3,
+        "ExtendedA": 2,
+        "TopofMid": 1,
+        "BombsiteA": 9,
+        "BombsiteB": 2,
+        "Middle": 1
+       },
+       "rounds": 30,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 9
+      },
+      {
+       "name": "Juiced",
+       "spots": {
+        "BombsiteB": 7,
+        "ShortStairs": 6,
+        "Catwalk": 1,
+        "BDoors": 1,
+        "BombsiteA": 1,
+        "LongA": 1,
+        "Middle": 1,
+        "ExtendedA": 1
+       },
+       "rounds": 19,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Karizzly",
+       "spots": {
+        "MidDoors": 5,
+        "BDoors": 4,
+        "CTSpawn": 2,
+        "BombsiteA": 1,
+        "Middle": 2,
+        "LongA": 6,
+        "LongDoors": 1,
+        "BombsiteB": 5,
+        "UnderA": 3,
+        "ExtendedA": 1
+       },
+       "rounds": 30,
+       "most_common": "LongA",
+       "most_common_rounds": 6
+      },
+      {
+       "name": "Juiced1",
+       "spots": {
+        "Catwalk": 5,
+        "ShortStairs": 2,
+        "LowerTunnel": 1,
+        "LongA": 1,
+        "LongDoors": 1,
+        "TopofMid": 1
+       },
+       "rounds": 11,
+       "most_common": "Catwalk",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "zutte",
+       "spots": {
+        "BombsiteB": 5,
+        "BDoors": 2,
+        "Hole": 2,
+        "LongDoors": 2,
+        "UnderA": 4,
+        "MidDoors": 3,
+        "TopofMid": 2,
+        "LongA": 3,
+        "Catwalk": 2,
+        "ShortStairs": 1,
+        "ARamp": 3,
+        "Middle": 1
+       },
+       "rounds": 30,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 33,
+       "buys": {
+        "semi_buy": 13,
+        "force_buy": 7,
+        "full_buy": 10,
+        "eco": 3
+       }
+      },
+      "after_win": {
+       "rounds": 27,
+       "buys": {
+        "semi_buy": 3,
+        "full_buy": 24
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 30,
      "rounds_against": 36,
@@ -4086,6 +7454,105 @@
     },
     "de_inferno": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 6,
+      "B": 3
+     },
+     "median_arrival_seconds": 35.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 0,
+       "denominator": 4
+      },
+      "B": {
+       "numerator": 1,
+       "denominator": 4
+      }
+     },
+     "setups": [
+      {
+       "name": "Jamie Jamie",
+       "spots": {
+        "BombsiteB": 10,
+        "CTSpawn": 3,
+        "TopofMid": 1
+       },
+       "rounds": 14,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 10
+      },
+      {
+       "name": "Karizzly",
+       "spots": {
+        "BombsiteB": 9,
+        "CTSpawn": 2,
+        "Ruins": 2,
+        "TopofMid": 1
+       },
+       "rounds": 14,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 9
+      },
+      {
+       "name": "cygnusx",
+       "spots": {
+        "BombsiteA": 8,
+        "CTSpawn": 2,
+        "Ruins": 1,
+        "Pit": 1,
+        "BombsiteB": 1,
+        "Apartments": 1
+       },
+       "rounds": 14,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "Roach",
+       "spots": {
+        "Arch": 6,
+        "TopofMid": 5,
+        "CTSpawn": 2,
+        "Banana": 1
+       },
+       "rounds": 14,
+       "most_common": "Arch",
+       "most_common_rounds": 6
+      },
+      {
+       "name": "zutte",
+       "spots": {
+        "Apartments": 5,
+        "CTSpawn": 2,
+        "Balcony": 2,
+        "TopofMid": 2,
+        "BombsiteA": 1,
+        "Ruins": 1,
+        "Arch": 1
+       },
+       "rounds": 14,
+       "most_common": "Apartments",
+       "most_common_rounds": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 15,
+       "buys": {
+        "eco": 2,
+        "full_buy": 7,
+        "semi_buy": 5,
+        "force_buy": 1
+       }
+      },
+      "after_win": {
+       "rounds": 10,
+       "buys": {
+        "full_buy": 9,
+        "semi_buy": 1
+       }
+      }
+     },
      "match_wins": 0,
      "rounds_for": 13,
      "rounds_against": 16,
@@ -4291,6 +7758,112 @@
     },
     "de_mirage": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 4,
+      "B": 1
+     },
+     "median_arrival_seconds": 40.5,
+     "retake_by_site": {
+      "A": {
+       "numerator": 0,
+       "denominator": 1
+      },
+      "B": {
+       "numerator": 1,
+       "denominator": 4
+      }
+     },
+     "setups": [
+      {
+       "name": "cygnusx",
+       "spots": {
+        "BombsiteA": 10,
+        "Middle": 1,
+        "CTSpawn": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 10
+      },
+      {
+       "name": "Roach",
+       "spots": {
+        "BombsiteB": 4,
+        "BombsiteA": 3,
+        "CTSpawn": 2,
+        "SideAlley": 1,
+        "Underpass": 1,
+        "Catwalk": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 4
+      },
+      {
+       "name": "Juiced",
+       "spots": {
+        "Stairs": 2,
+        "BombsiteA": 2,
+        "Truck": 2,
+        "CTSpawn": 2,
+        "SnipersNest": 2,
+        "PalaceInterior": 1,
+        "Catwalk": 1
+       },
+       "rounds": 12,
+       "most_common": "Stairs",
+       "most_common_rounds": 2
+      },
+      {
+       "name": "Karizzly",
+       "spots": {
+        "Underpass": 2,
+        "Catwalk": 2,
+        "BombsiteB": 2,
+        "Middle": 2,
+        "Shop": 1,
+        "SnipersNest": 1,
+        "TSpawn": 1,
+        "Truck": 1
+       },
+       "rounds": 12,
+       "most_common": "Underpass",
+       "most_common_rounds": 2
+      },
+      {
+       "name": "zutte",
+       "spots": {
+        "CTSpawn": 2,
+        "SnipersNest": 2,
+        "Connector": 2,
+        "BombsiteA": 2,
+        "Jungle": 1,
+        "Shop": 1,
+        "PalaceAlley": 1,
+        "Scaffolding": 1
+       },
+       "rounds": 12,
+       "most_common": "CTSpawn",
+       "most_common_rounds": 2
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "eco": 4,
+        "full_buy": 1,
+        "semi_buy": 6
+       }
+      },
+      "after_win": {
+       "rounds": 5,
+       "buys": {
+        "full_buy": 3,
+        "semi_buy": 2
+       }
+      }
+     },
      "match_wins": 0,
      "rounds_for": 5,
      "rounds_against": 13,
@@ -4454,6 +8027,140 @@
       "denominator": 14,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 2,
+      "B": 0
+     },
+     "retake_by_site": {
+      "A": {
+       "value": null,
+       "numerator": 0,
+       "denominator": 0,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.75,
+       "numerator": 3,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      14.0,
+      14.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561198273600086",
+       "name": "Juiced1",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 11,
+        "CTSpawn": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.9167,
+        "numerator": 11,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198807296563",
+       "name": "Karizzly",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Middle": 5,
+        "SideHall": 4,
+        "BombsiteA": 3
+       },
+       "most_common": "Middle",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198369767790",
+       "name": "Roach",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Middle": 11,
+        "Alley": 1
+       },
+       "most_common": "Middle",
+       "share_at_most_common": {
+        "value": 0.9167,
+        "numerator": 11,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561197961661988",
+       "name": "cygnusx",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 6,
+        "Alley": 5,
+        "SideEntrance": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 6,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198841158806",
+       "name": "zutte",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Middle": 6,
+        "SideEntrance": 3,
+        "Alley": 1,
+        "TSideUpper": 1,
+        "TopofMid": 1
+       },
+       "most_common": "Middle",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 6,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 1,
+       "buys": {
+        "full_buy": 1
+       }
+      },
+      "after_win": {
+       "rounds": 11,
+       "buys": {
+        "semi_buy": 2,
+        "full_buy": 9
+       }
+      }
+     },
      "findings": [
       {
        "rule": "predictable_setup",
@@ -4585,6 +8292,156 @@
       "numerator": 11,
       "denominator": 23,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 4,
+      "B": 5
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.3333,
+       "numerator": 1,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.4,
+       "numerator": 2,
+       "denominator": 5,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      15.0,
+      37.0,
+      33.0,
+      13.5,
+      20.0,
+      24.0,
+      68.5,
+      50.0,
+      60.5,
+      65.0,
+      64.5,
+      29.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561199081628121",
+       "name": "Jamie Jamie",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "Alley": 4,
+        "BombsiteB": 3,
+        "House": 1,
+        "SideHall": 1,
+        "SideEntrance": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "Alley",
+       "share_at_most_common": {
+        "value": 0.3636,
+        "numerator": 4,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198273600086",
+       "name": "Juiced1",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "BombsiteA": 11
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 1.0,
+        "numerator": 11,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 1
+      },
+      {
+       "steamid": "76561198807296563",
+       "name": "Karizzly",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "SideHall": 6,
+        "BombsiteA": 4,
+        "Alley": 1
+       },
+       "most_common": "SideHall",
+       "share_at_most_common": {
+        "value": 0.5455,
+        "numerator": 6,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198369767790",
+       "name": "Roach",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "House": 3,
+        "TopofMid": 2,
+        "Middle": 2,
+        "BombsiteB": 2,
+        "Alley": 2
+       },
+       "most_common": "House",
+       "share_at_most_common": {
+        "value": 0.2727,
+        "numerator": 3,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198841158806",
+       "name": "zutte",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "House": 4,
+        "Alley": 2,
+        "TopofMid": 2,
+        "Middle": 2,
+        "BombsiteB": 1
+       },
+       "most_common": "House",
+       "share_at_most_common": {
+        "value": 0.3636,
+        "numerator": 4,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "force_buy": 2,
+        "semi_buy": 5,
+        "full_buy": 4
+       }
+      },
+      "after_win": {
+       "rounds": 10,
+       "buys": {
+        "full_buy": 10
+       }
+      }
      },
      "findings": [
       {
@@ -4729,6 +8586,165 @@
       "denominator": 23,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 2,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 1.0,
+       "numerator": 1,
+       "denominator": 1,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      14.0,
+      49.5,
+      29.5,
+      19.0,
+      100.5,
+      50.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561198273600086",
+       "name": "Juiced1",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "Catwalk": 5,
+        "ShortStairs": 2,
+        "LowerTunnel": 1,
+        "LongA": 1,
+        "LongDoors": 1,
+        "TopofMid": 1
+       },
+       "most_common": "Catwalk",
+       "share_at_most_common": {
+        "value": 0.4545,
+        "numerator": 5,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198807296563",
+       "name": "Karizzly",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "MidDoors": 3,
+        "BDoors": 2,
+        "CTSpawn": 2,
+        "BombsiteA": 1,
+        "Middle": 1,
+        "LongA": 1,
+        "LongDoors": 1
+       },
+       "most_common": "MidDoors",
+       "share_at_most_common": {
+        "value": 0.2727,
+        "numerator": 3,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561198369767790",
+       "name": "Roach",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "BDoors": 3,
+        "BombsiteB": 2,
+        "LongA": 2,
+        "Middle": 1,
+        "TopofMid": 1,
+        "LongDoors": 1,
+        "MidDoors": 1
+       },
+       "most_common": "BDoors",
+       "share_at_most_common": {
+        "value": 0.2727,
+        "numerator": 3,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561197961661988",
+       "name": "cygnusx",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "LongA": 4,
+        "ARamp": 2,
+        "UnderA": 2,
+        "ExtendedA": 1,
+        "TopofMid": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.3636,
+        "numerator": 4,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198841158806",
+       "name": "zutte",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 11,
+       "positions": {
+        "BombsiteB": 3,
+        "BDoors": 2,
+        "Hole": 2,
+        "LongDoors": 1,
+        "UnderA": 1,
+        "MidDoors": 1,
+        "TopofMid": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.2727,
+        "numerator": 3,
+        "denominator": 11,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 9,
+       "buys": {
+        "semi_buy": 1,
+        "force_buy": 1,
+        "full_buy": 5,
+        "eco": 2
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 2,
+        "full_buy": 10
+       }
+      }
+     },
      "findings": [
       {
        "rule": "strong_post_plant",
@@ -4802,6 +8818,161 @@
       "numerator": 10,
       "denominator": 24,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 5,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.6667,
+       "numerator": 2,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      24.0,
+      18.0,
+      39.0,
+      40.5,
+      26.5,
+      40.5,
+      64.0,
+      21.5,
+      87.5,
+      47.0,
+      65.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198273600086",
+       "name": "Juiced",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 5,
+        "ShortStairs": 4,
+        "Catwalk": 1,
+        "BDoors": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198807296563",
+       "name": "Karizzly",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "LongA": 4,
+        "BombsiteB": 3,
+        "UnderA": 2,
+        "MidDoors": 2,
+        "ExtendedA": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 4,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198369767790",
+       "name": "Roach",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 7,
+        "MidDoors": 2,
+        "CTSpawn": 1,
+        "Hole": 1,
+        "BDoors": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.5833,
+        "numerator": 7,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561197961661988",
+       "name": "cygnusx",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 7,
+        "ARamp": 2,
+        "LongA": 2,
+        "ExtendedA": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.5833,
+        "numerator": 7,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198841158806",
+       "name": "zutte",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "UnderA": 3,
+        "BombsiteB": 2,
+        "MidDoors": 2,
+        "LongA": 2,
+        "TopofMid": 1,
+        "Catwalk": 1,
+        "ShortStairs": 1
+       },
+       "most_common": "UnderA",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "force_buy": 3,
+        "full_buy": 3,
+        "semi_buy": 6
+       }
+      },
+      "after_win": {
+       "rounds": 10,
+       "buys": {
+        "full_buy": 10
+       }
+      }
      },
      "findings": [
       {
@@ -4919,6 +9090,163 @@
       "denominator": 19,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 5,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.5,
+       "numerator": 1,
+       "denominator": 2,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      13.0,
+      50.5,
+      30.5,
+      76.5,
+      29.0,
+      56.5,
+      47.5,
+      44.5,
+      64.5,
+      51.0,
+      42.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198273600086",
+       "name": "Juiced",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "BombsiteB": 2,
+        "ShortStairs": 2,
+        "LongA": 1,
+        "Middle": 1,
+        "ExtendedA": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.2857,
+        "numerator": 2,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198807296563",
+       "name": "Karizzly",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "BDoors": 2,
+        "BombsiteB": 2,
+        "LongA": 1,
+        "Middle": 1,
+        "UnderA": 1
+       },
+       "most_common": "BDoors",
+       "share_at_most_common": {
+        "value": 0.2857,
+        "numerator": 2,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198369767790",
+       "name": "Roach",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "ShortStairs": 2,
+        "Middle": 2,
+        "MidDoors": 1,
+        "BDoors": 1,
+        "Hole": 1
+       },
+       "most_common": "ShortStairs",
+       "share_at_most_common": {
+        "value": 0.2857,
+        "numerator": 2,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561197961661988",
+       "name": "cygnusx",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "BombsiteB": 2,
+        "ARamp": 1,
+        "Middle": 1,
+        "UnderA": 1,
+        "LongA": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.2857,
+        "numerator": 2,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198841158806",
+       "name": "zutte",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 7,
+       "positions": {
+        "ARamp": 3,
+        "Catwalk": 1,
+        "Middle": 1,
+        "LongA": 1,
+        "LongDoors": 1
+       },
+       "most_common": "ARamp",
+       "share_at_most_common": {
+        "value": 0.4286,
+        "numerator": 3,
+        "denominator": 7,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "force_buy": 3,
+        "full_buy": 2,
+        "semi_buy": 6,
+        "eco": 1
+       }
+      },
+      "after_win": {
+       "rounds": 5,
+       "buys": {
+        "full_buy": 4,
+        "semi_buy": 1
+       }
+      }
+     },
      "findings": [
       {
        "rule": "strong_opening_duels",
@@ -5019,6 +9347,165 @@
       "numerator": 13,
       "denominator": 29,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 6,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.25,
+       "numerator": 1,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      30.5,
+      90.5,
+      23.0,
+      53.0,
+      47.5,
+      36.5,
+      44.5,
+      58.0,
+      32.5,
+      45.5,
+      22.0,
+      20.5,
+      35.0,
+      30.5,
+      31.0
+     ],
+     "setups": [
+      {
+       "steamid": "76561199081628121",
+       "name": "Jamie Jamie",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 14,
+       "positions": {
+        "BombsiteB": 10,
+        "CTSpawn": 3,
+        "TopofMid": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.7143,
+        "numerator": 10,
+        "denominator": 14,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198807296563",
+       "name": "Karizzly",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 14,
+       "positions": {
+        "BombsiteB": 9,
+        "CTSpawn": 2,
+        "Ruins": 2,
+        "TopofMid": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.6429,
+        "numerator": 9,
+        "denominator": 14,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561198369767790",
+       "name": "Roach",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 14,
+       "positions": {
+        "Arch": 6,
+        "TopofMid": 5,
+        "CTSpawn": 2,
+        "Banana": 1
+       },
+       "most_common": "Arch",
+       "share_at_most_common": {
+        "value": 0.4286,
+        "numerator": 6,
+        "denominator": 14,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561197961661988",
+       "name": "cygnusx",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 14,
+       "positions": {
+        "BombsiteA": 8,
+        "CTSpawn": 2,
+        "Ruins": 1,
+        "Pit": 1,
+        "BombsiteB": 1,
+        "Apartments": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.5714,
+        "numerator": 8,
+        "denominator": 14,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561198841158806",
+       "name": "zutte",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 14,
+       "positions": {
+        "Apartments": 5,
+        "CTSpawn": 2,
+        "Balcony": 2,
+        "TopofMid": 2,
+        "BombsiteA": 1,
+        "Ruins": 1,
+        "Arch": 1
+       },
+       "most_common": "Apartments",
+       "share_at_most_common": {
+        "value": 0.3571,
+        "numerator": 5,
+        "denominator": 14,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 15,
+       "buys": {
+        "eco": 2,
+        "full_buy": 7,
+        "semi_buy": 5,
+        "force_buy": 1
+       }
+      },
+      "after_win": {
+       "rounds": 10,
+       "buys": {
+        "full_buy": 9,
+        "semi_buy": 1
+       }
+      }
      },
      "findings": [
       {
@@ -5217,6 +9704,162 @@
       "numerator": 8,
       "denominator": 18,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 4,
+      "B": 1
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 1,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.25,
+       "numerator": 1,
+       "denominator": 4,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      55.5,
+      40.5,
+      40.0,
+      37.0,
+      45.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198273600086",
+       "name": "Juiced",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Stairs": 2,
+        "BombsiteA": 2,
+        "Truck": 2,
+        "CTSpawn": 2,
+        "SnipersNest": 2,
+        "PalaceInterior": 1,
+        "Catwalk": 1
+       },
+       "most_common": "Stairs",
+       "share_at_most_common": {
+        "value": 0.1667,
+        "numerator": 2,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      },
+      {
+       "steamid": "76561198807296563",
+       "name": "Karizzly",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Underpass": 2,
+        "Catwalk": 2,
+        "BombsiteB": 2,
+        "Middle": 2,
+        "Shop": 1,
+        "SnipersNest": 1,
+        "TSpawn": 1,
+        "Truck": 1
+       },
+       "most_common": "Underpass",
+       "share_at_most_common": {
+        "value": 0.1667,
+        "numerator": 2,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 8
+      },
+      {
+       "steamid": "76561198369767790",
+       "name": "Roach",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 4,
+        "BombsiteA": 3,
+        "CTSpawn": 2,
+        "SideAlley": 1,
+        "Underpass": 1,
+        "Catwalk": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 4,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 6
+      },
+      {
+       "steamid": "76561197961661988",
+       "name": "cygnusx",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 10,
+        "Middle": 1,
+        "CTSpawn": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.8333,
+        "numerator": 10,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198841158806",
+       "name": "zutte",
+       "team": "Sopra Steria NewSync",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "CTSpawn": 2,
+        "SnipersNest": 2,
+        "Connector": 2,
+        "BombsiteA": 2,
+        "Jungle": 1,
+        "Shop": 1,
+        "PalaceAlley": 1,
+        "Scaffolding": 1
+       },
+       "most_common": "CTSpawn",
+       "share_at_most_common": {
+        "value": 0.1667,
+        "numerator": 2,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 8
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "eco": 4,
+        "full_buy": 1,
+        "semi_buy": 6
+       }
+      },
+      "after_win": {
+       "rounds": 5,
+       "buys": {
+        "full_buy": 3,
+        "semi_buy": 2
+       }
+      }
      },
      "findings": [
       {
@@ -5530,6 +10173,91 @@
    "maps": {
     "de_ancient": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 0,
+      "B": 2
+     },
+     "median_arrival_seconds": 17.5,
+     "retake_by_site": {
+      "A": {
+       "numerator": 1,
+       "denominator": 5
+      },
+      "B": {
+       "numerator": 1,
+       "denominator": 3
+      }
+     },
+     "setups": [
+      {
+       "name": "Signalfahrer",
+       "spots": {
+        "BombsiteA": 12
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 12
+      },
+      {
+       "name": "Vådeskudd",
+       "spots": {
+        "BombsiteA": 12
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 12
+      },
+      {
+       "name": "KrissField",
+       "spots": {
+        "SideEntrance": 8,
+        "BombsiteB": 3,
+        "Alley": 1
+       },
+       "rounds": 12,
+       "most_common": "SideEntrance",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "certified turtle",
+       "spots": {
+        "BombsiteB": 8,
+        "Ramp": 2,
+        "Alley": 2
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 8
+      },
+      {
+       "name": "Svevern",
+       "spots": {
+        "SideHall": 6,
+        "Middle": 2,
+        "House": 2,
+        "BombsiteA": 2
+       },
+       "rounds": 12,
+       "most_common": "SideHall",
+       "most_common_rounds": 6
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "eco": 2,
+        "full_buy": 6,
+        "semi_buy": 3
+       }
+      },
+      "after_win": {
+       "rounds": 6,
+       "buys": {
+        "full_buy": 6
+       }
+      }
+     },
      "match_wins": 0,
      "rounds_for": 6,
      "rounds_against": 13,
@@ -5705,6 +10433,110 @@
     },
     "de_dust2": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 3,
+      "B": 3
+     },
+     "median_arrival_seconds": 42.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 1,
+       "denominator": 3
+      },
+      "B": {
+       "numerator": 0,
+       "denominator": 3
+      }
+     },
+     "setups": [
+      {
+       "name": "Signalfahrer",
+       "spots": {
+        "MidDoors": 7,
+        "Hole": 2,
+        "BombsiteB": 1,
+        "UpperTunnel": 1,
+        "BDoors": 1
+       },
+       "rounds": 12,
+       "most_common": "MidDoors",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "certified turtle",
+       "spots": {
+        "BombsiteB": 5,
+        "LongA": 2,
+        "ExtendedA": 1,
+        "ARamp": 1,
+        "LongDoors": 1,
+        "BDoors": 1,
+        "BombsiteA": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "KrissField",
+       "spots": {
+        "ShortStairs": 4,
+        "Catwalk": 2,
+        "BombsiteB": 2,
+        "BDoors": 2,
+        "MidDoors": 2
+       },
+       "rounds": 12,
+       "most_common": "ShortStairs",
+       "most_common_rounds": 4
+      },
+      {
+       "name": "Vådeskudd",
+       "spots": {
+        "BombsiteB": 4,
+        "LongA": 4,
+        "LongDoors": 2,
+        "ARamp": 1,
+        "ExtendedA": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteB",
+       "most_common_rounds": 4
+      },
+      {
+       "name": "Svevern",
+       "spots": {
+        "LongA": 3,
+        "MidDoors": 3,
+        "BDoors": 1,
+        "BombsiteB": 1,
+        "UnderA": 1,
+        "CTSpawn": 1,
+        "Catwalk": 1,
+        "LongDoors": 1
+       },
+       "rounds": 12,
+       "most_common": "LongA",
+       "most_common_rounds": 3
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "eco": 2,
+        "full_buy": 6,
+        "force_buy": 2,
+        "semi_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 7,
+       "buys": {
+        "full_buy": 7
+       }
+      }
+     },
      "match_wins": 0,
      "rounds_for": 8,
      "rounds_against": 13,
@@ -5830,6 +10662,99 @@
     },
     "de_mirage": {
      "matches": 1,
+     "plants_by_site": {
+      "A": 5,
+      "B": 1
+     },
+     "median_arrival_seconds": 33.0,
+     "retake_by_site": {
+      "A": {
+       "numerator": 2,
+       "denominator": 3
+      },
+      "B": {
+       "numerator": 1,
+       "denominator": 3
+      }
+     },
+     "setups": [
+      {
+       "name": "Signalfahrer",
+       "spots": {
+        "BombsiteA": 10,
+        "CTSpawn": 2
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 10
+      },
+      {
+       "name": "Vådeskudd",
+       "spots": {
+        "BombsiteA": 7,
+        "Jungle": 4,
+        "Stairs": 1
+       },
+       "rounds": 12,
+       "most_common": "BombsiteA",
+       "most_common_rounds": 7
+      },
+      {
+       "name": "Svevern",
+       "spots": {
+        "Catwalk": 6,
+        "BombsiteB": 5,
+        "Middle": 1
+       },
+       "rounds": 12,
+       "most_common": "Catwalk",
+       "most_common_rounds": 6
+      },
+      {
+       "name": "KrissField",
+       "spots": {
+        "Apartments": 5,
+        "Truck": 5,
+        "BombsiteB": 1,
+        "Shop": 1
+       },
+       "rounds": 12,
+       "most_common": "Apartments",
+       "most_common_rounds": 5
+      },
+      {
+       "name": "certified turtle",
+       "spots": {
+        "Connector": 4,
+        "SnipersNest": 3,
+        "Jungle": 1,
+        "Shop": 1,
+        "PalaceInterior": 1,
+        "TRamp": 1,
+        "BombsiteA": 1
+       },
+       "rounds": 12,
+       "most_common": "Connector",
+       "most_common_rounds": 4
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "force_buy": 3,
+        "semi_buy": 2,
+        "full_buy": 5
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 11
+       }
+      }
+     },
      "match_wins": 1,
      "rounds_for": 13,
      "rounds_against": 11,
@@ -6040,6 +10965,141 @@
       "denominator": 19,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 0,
+      "B": 2
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.2,
+       "numerator": 1,
+       "denominator": 5,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.3333,
+       "numerator": 1,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      12.5,
+      17.5,
+      67.0,
+      15.5,
+      23.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198195412574",
+       "name": "KrissField",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "SideEntrance": 8,
+        "BombsiteB": 3,
+        "Alley": 1
+       },
+       "most_common": "SideEntrance",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 8,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561197990921682",
+       "name": "Signalfahrer",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 12
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 1.0,
+        "numerator": 12,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 1
+      },
+      {
+       "steamid": "76561198028306203",
+       "name": "Svevern",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "SideHall": 6,
+        "Middle": 2,
+        "House": 2,
+        "BombsiteA": 2
+       },
+       "most_common": "SideHall",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 6,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561199177806804",
+       "name": "Vådeskudd",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 12
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 1.0,
+        "numerator": 12,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 1
+      },
+      {
+       "steamid": "76561198641055858",
+       "name": "certified turtle",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 8,
+        "Ramp": 2,
+        "Alley": 2
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.6667,
+        "numerator": 8,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 11,
+       "buys": {
+        "eco": 2,
+        "full_buy": 6,
+        "semi_buy": 3
+       }
+      },
+      "after_win": {
+       "rounds": 6,
+       "buys": {
+        "full_buy": 6
+       }
+      }
+     },
      "findings": [
       {
        "rule": "predictable_setup",
@@ -6233,6 +11293,161 @@
       "denominator": 21,
       "definition": "opening kills / opening duels this team was involved in"
      },
+     "plants_by_site": {
+      "A": 3,
+      "B": 3
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.3333,
+       "numerator": 1,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.0,
+       "numerator": 0,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      19.0,
+      42.0,
+      21.0,
+      59.0,
+      72.5,
+      18.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198195412574",
+       "name": "KrissField",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "ShortStairs": 4,
+        "Catwalk": 2,
+        "BombsiteB": 2,
+        "BDoors": 2,
+        "MidDoors": 2
+       },
+       "most_common": "ShortStairs",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 4,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561197990921682",
+       "name": "Signalfahrer",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "MidDoors": 7,
+        "Hole": 2,
+        "BombsiteB": 1,
+        "UpperTunnel": 1,
+        "BDoors": 1
+       },
+       "most_common": "MidDoors",
+       "share_at_most_common": {
+        "value": 0.5833,
+        "numerator": 7,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198028306203",
+       "name": "Svevern",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "LongA": 3,
+        "MidDoors": 3,
+        "BDoors": 1,
+        "BombsiteB": 1,
+        "UnderA": 1,
+        "CTSpawn": 1,
+        "Catwalk": 1,
+        "LongDoors": 1
+       },
+       "most_common": "LongA",
+       "share_at_most_common": {
+        "value": 0.25,
+        "numerator": 3,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 8
+      },
+      {
+       "steamid": "76561199177806804",
+       "name": "Vådeskudd",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 4,
+        "LongA": 4,
+        "LongDoors": 2,
+        "ARamp": 1,
+        "ExtendedA": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 4,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 5
+      },
+      {
+       "steamid": "76561198641055858",
+       "name": "certified turtle",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteB": 5,
+        "LongA": 2,
+        "ExtendedA": 1,
+        "ARamp": 1,
+        "LongDoors": 1,
+        "BDoors": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "BombsiteB",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 12,
+       "buys": {
+        "eco": 2,
+        "full_buy": 6,
+        "force_buy": 2,
+        "semi_buy": 2
+       }
+      },
+      "after_win": {
+       "rounds": 7,
+       "buys": {
+        "full_buy": 7
+       }
+      }
+     },
      "findings": [
       {
        "rule": "site_retake_weak",
@@ -6357,6 +11572,155 @@
       "numerator": 7,
       "denominator": 24,
       "definition": "opening kills / opening duels this team was involved in"
+     },
+     "plants_by_site": {
+      "A": 5,
+      "B": 1
+     },
+     "retake_by_site": {
+      "A": {
+       "value": 0.6667,
+       "numerator": 2,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at A / plants conceded at A"
+      },
+      "B": {
+       "value": 0.3333,
+       "numerator": 1,
+       "denominator": 3,
+       "definition": "rounds won after conceding a plant at B / plants conceded at B"
+      }
+     },
+     "arrivals": [
+      18.0,
+      33.0,
+      31.5,
+      36.5,
+      77.0,
+      38.0,
+      24.5,
+      15.0,
+      44.5,
+      47.0,
+      28.5
+     ],
+     "setups": [
+      {
+       "steamid": "76561198195412574",
+       "name": "KrissField",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Apartments": 5,
+        "Truck": 5,
+        "BombsiteB": 1,
+        "Shop": 1
+       },
+       "most_common": "Apartments",
+       "share_at_most_common": {
+        "value": 0.4167,
+        "numerator": 5,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 4
+      },
+      {
+       "steamid": "76561197990921682",
+       "name": "Signalfahrer",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 10,
+        "CTSpawn": 2
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.8333,
+        "numerator": 10,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 2
+      },
+      {
+       "steamid": "76561198028306203",
+       "name": "Svevern",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Catwalk": 6,
+        "BombsiteB": 5,
+        "Middle": 1
+       },
+       "most_common": "Catwalk",
+       "share_at_most_common": {
+        "value": 0.5,
+        "numerator": 6,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561199177806804",
+       "name": "Vådeskudd",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "BombsiteA": 7,
+        "Jungle": 4,
+        "Stairs": 1
+       },
+       "most_common": "BombsiteA",
+       "share_at_most_common": {
+        "value": 0.5833,
+        "numerator": 7,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 3
+      },
+      {
+       "steamid": "76561198641055858",
+       "name": "certified turtle",
+       "team": "Accenture Norway",
+       "ct_rounds_observed": 12,
+       "positions": {
+        "Connector": 4,
+        "SnipersNest": 3,
+        "Jungle": 1,
+        "Shop": 1,
+        "PalaceInterior": 1,
+        "TRamp": 1,
+        "BombsiteA": 1
+       },
+       "most_common": "Connector",
+       "share_at_most_common": {
+        "value": 0.3333,
+        "numerator": 4,
+        "denominator": 12,
+        "definition": "rounds set up in this callout / CT rounds observed"
+       },
+       "distinct_positions": 7
+      }
+     ],
+     "reaction_buys": {
+      "after_loss": {
+       "rounds": 10,
+       "buys": {
+        "force_buy": 3,
+        "semi_buy": 2,
+        "full_buy": 5
+       }
+      },
+      "after_win": {
+       "rounds": 12,
+       "buys": {
+        "semi_buy": 1,
+        "full_buy": 11
+       }
+      }
      },
      "findings": [
       {

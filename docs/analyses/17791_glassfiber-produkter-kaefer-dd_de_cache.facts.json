@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:39:03.955398+00:00",
+ "generated_at": "2026-10-18T16:52:03.662206+00:00",
  "match": {
   "map": "de_cache",
   "server_name": "eBot :: Glassfiber Produkter vs Kaefer DD",
@@ -1493,6 +1493,46 @@
      "advantaged_team_won": false
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "Glassfiber Produkter": {
+     "after_loss": {
+      "rounds": 12,
+      "buys": {
+       "semi_buy": 9,
+       "full_buy": 2,
+       "eco": 1
+      }
+     },
+     "after_win": {
+      "rounds": 7,
+      "buys": {
+       "semi_buy": 1,
+       "full_buy": 6
+      }
+     }
+    },
+    "Kaefer DD": {
+     "after_loss": {
+      "rounds": 7,
+      "buys": {
+       "eco": 1,
+       "full_buy": 3,
+       "force_buy": 1,
+       "semi_buy": 2
+      }
+     },
+     "after_win": {
+      "rounds": 12,
+      "buys": {
+       "full_buy": 11,
+       "semi_buy": 1
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -9917,5 +9957,5 @@
   "size_bytes": 248604890,
   "sha256": "bb0f06187849ece0110e0a98d4ffe6d9d293e24146fe20839339dd7d6844b818"
  },
- "parse_seconds": 6.5
+ "parse_seconds": 7.8
 }

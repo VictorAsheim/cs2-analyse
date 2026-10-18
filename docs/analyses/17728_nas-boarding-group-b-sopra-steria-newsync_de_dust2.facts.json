@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:42:07.688904+00:00",
+ "generated_at": "2026-10-18T16:51:23.745732+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: NAS - Boarding Group B vs Sopra Steria NewSync",
@@ -1610,6 +1610,43 @@
      "advantaged_team_won": true
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "NAS - Boarding Group B": {
+     "after_loss": {
+      "rounds": 10,
+      "buys": {
+       "semi_buy": 1,
+       "eco": 2,
+       "full_buy": 7
+      }
+     },
+     "after_win": {
+      "rounds": 12,
+      "buys": {
+       "full_buy": 12
+      }
+     }
+    },
+    "Sopra Steria NewSync": {
+     "after_loss": {
+      "rounds": 12,
+      "buys": {
+       "force_buy": 3,
+       "full_buy": 3,
+       "semi_buy": 6
+      }
+     },
+     "after_win": {
+      "rounds": 10,
+      "buys": {
+       "full_buy": 10
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -12648,5 +12685,5 @@
   "size_bytes": 290009012,
   "sha256": "5b457fef108960787b4ef86d0415bd348c6574ae486070b70e6accf779cceda4"
  },
- "parse_seconds": 6.7
+ "parse_seconds": 8.3
 }

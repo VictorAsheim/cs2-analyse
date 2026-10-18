@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:38:50.414644+00:00",
+ "generated_at": "2026-10-18T16:51:47.600741+00:00",
  "match": {
   "map": "de_dust2",
   "server_name": "eBot :: Glassfiber Produkter vs AlvK-47",
@@ -1424,6 +1424,44 @@
      "advantaged_team_won": true
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "AlvK-47": {
+     "after_loss": {
+      "rounds": 12,
+      "buys": {
+       "semi_buy": 6,
+       "force_buy": 1,
+       "full_buy": 4,
+       "eco": 1
+      }
+     },
+     "after_win": {
+      "rounds": 6,
+      "buys": {
+       "full_buy": 6
+      }
+     }
+    },
+    "Glassfiber Produkter": {
+     "after_loss": {
+      "rounds": 6,
+      "buys": {
+       "semi_buy": 4,
+       "full_buy": 2
+      }
+     },
+     "after_win": {
+      "rounds": 12,
+      "buys": {
+       "semi_buy": 2,
+       "full_buy": 10
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -10940,5 +10978,5 @@
   "size_bytes": 234363230,
   "sha256": "c320dc6f9a8ed013c9c0d7ce09331ca45fa5444b1ad066020311f3c2753aa0eb"
  },
- "parse_seconds": 6.0
+ "parse_seconds": 7.1
 }

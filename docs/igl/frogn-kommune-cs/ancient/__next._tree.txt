@@ -1,0 +1,8 @@
+:HL["/cs2-analyse/_next/static/chunks/1l05hq2dag-xn.css","style"]
+:HL["/cs2-analyse/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/cs2-analyse/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"map","t":"d","k":"ancient","s":[]},"h":96,"c":"$Q4"}]]
+2:[["children",{"s":{"n":"slug","t":"d","k":"frogn-kommune-cs","s":[]},"h":96,"c":"$Q3"}]]
+1:[["children",{"s":"igl","h":96,"c":"$Q2"}]]
+0:{"b":"o1affI4tP--jwRxC2eYTg","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

@@ -121,6 +121,33 @@ def build(config_path: str, facts_dir: str) -> dict:
                               .get("post_plant_win_rate_as_t"),
                 "opening_duels": (stats.get("opening_duels", {}).get("by_team", {})
                                   .get(raw) or {}).get("opening_duel_win_rate"),
+                # The pieces the in-game view reads: where they go, when
+                # contact comes, who holds what, and how they buy after a
+                # result. Collected per match here and summed per map below.
+                "plants_by_site": {
+                    site: d.get("plants", 0)
+                    for site, d in ((stats.get("site_attack", {})
+                                     .get("by_team", {}).get(raw) or {})
+                                    .get("per_site") or {}).items()
+                },
+                "retake_by_site": {
+                    site: d.get("retake_rate")
+                    for site, d in ((stats.get("site_defence", {})
+                                     .get("by_team", {}).get(raw) or {})
+                                    .get("per_site") or {}).items()
+                },
+                "arrivals": [
+                    r["arrival_seconds"]
+                    for r in (stats.get("attack_patterns", {}).get("rounds") or [])
+                    if r.get("attacking_team") == raw
+                    and r.get("arrival_seconds") is not None
+                ],
+                "setups": [
+                    p for p in (stats.get("ct_setups", {}).get("by_player") or [])
+                    if p.get("team") == raw
+                ],
+                "reaction_buys": (stats.get("reaction_buys", {})
+                                  .get("by_team", {}).get(raw)),
                 "findings": [
                     _canonicalise(f, canonical)
                     for f in facts.get("findings", [])
@@ -155,8 +182,61 @@ def build(config_path: str, facts_dir: str) -> dict:
             findings = _merge_findings([f for r in records for f in r["findings"]],
                                        len(records))
 
+            # Arrivals are pooled across the map's matches rather than taking
+            # a median of medians, which would weight a 9-round match the same
+            # as a 24-round one.
+            arrivals = sorted(a for r in records for a in r["arrivals"])
+            plants: dict[str, int] = {}
+            for r in records:
+                for site, n in r["plants_by_site"].items():
+                    plants[site] = plants.get(site, 0) + n
+
+            retakes: dict[str, dict] = {}
+            for r in records:
+                for site, rate_ in (r["retake_by_site"] or {}).items():
+                    if not rate_:
+                        continue
+                    slot = retakes.setdefault(site, {"numerator": 0, "denominator": 0})
+                    slot["numerator"] += rate_["numerator"]
+                    slot["denominator"] += rate_["denominator"]
+
+            setups: dict[str, dict] = {}
+            for r in records:
+                for p in r["setups"]:
+                    slot = setups.setdefault(p["name"], {
+                        "name": p["name"], "spots": {}, "rounds": 0,
+                    })
+                    slot["rounds"] += p["share_at_most_common"]["denominator"]
+                    for spot, n in (p.get("positions") or {}).items():
+                        slot["spots"][spot] = slot["spots"].get(spot, 0) + n
+
+            for slot in setups.values():
+                top = sorted(slot["spots"].items(), key=lambda kv: -kv[1])
+                slot["most_common"] = top[0][0] if top else None
+                slot["most_common_rounds"] = top[0][1] if top else 0
+
+            reactions = {"after_loss": {"rounds": 0, "buys": {}},
+                         "after_win": {"rounds": 0, "buys": {}}}
+            for r in records:
+                rb = r.get("reaction_buys") or {}
+                for key in reactions:
+                    part = rb.get(key) or {}
+                    reactions[key]["rounds"] += part.get("rounds", 0)
+                    for buy, n in (part.get("buys") or {}).items():
+                        reactions[key]["buys"][buy] =                             reactions[key]["buys"].get(buy, 0) + n
+
             maps_out[map_name] = {
                 "matches": len(records),
+                "plants_by_site": plants,
+                "median_arrival_seconds": (
+                    arrivals[len(arrivals) // 2] if arrivals else None),
+                "retake_by_site": {
+                    site: v for site, v in sorted(retakes.items())
+                    if v["denominator"] > 0
+                },
+                "setups": sorted(setups.values(),
+                                 key=lambda p: -p["most_common_rounds"]),
+                "reaction_buys": reactions,
                 "match_wins": wins,
                 "rounds_for": rounds_for,
                 "rounds_against": rounds_against,

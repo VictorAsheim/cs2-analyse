@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-18T15:39:40.984485+00:00",
+ "generated_at": "2026-10-18T16:52:59.302398+00:00",
  "match": {
   "map": "de_inferno",
   "server_name": "eBot :: Frogn Kommune CS vs Sopra Steria NewSync",
@@ -1865,6 +1865,47 @@
      "advantaged_team_won": false
     }
    ]
+  },
+  "reaction_buys": {
+   "definition": "buy type the round after a win and after a loss; rounds opening a half are excluded because the money resets there",
+   "by_team": {
+    "Frogn Kommune CS": {
+     "after_loss": {
+      "rounds": 10,
+      "buys": {
+       "force_buy": 2,
+       "eco": 2,
+       "full_buy": 5,
+       "semi_buy": 1
+      }
+     },
+     "after_win": {
+      "rounds": 15,
+      "buys": {
+       "semi_buy": 1,
+       "full_buy": 14
+      }
+     }
+    },
+    "Sopra Steria NewSync": {
+     "after_loss": {
+      "rounds": 15,
+      "buys": {
+       "eco": 2,
+       "full_buy": 7,
+       "semi_buy": 5,
+       "force_buy": 1
+      }
+     },
+     "after_win": {
+      "rounds": 10,
+      "buys": {
+       "full_buy": 9,
+       "semi_buy": 1
+      }
+     }
+    }
+   }
   },
   "utility_usage": {
    "definitions": {
@@ -19557,5 +19598,5 @@
   "size_bytes": 560635286,
   "sha256": "d9d7be92576fdedcabd71e93e7988a095dbd6481bc88abda00fa9ad68de3b90c"
  },
- "parse_seconds": 12.1
+ "parse_seconds": 15.5
 }

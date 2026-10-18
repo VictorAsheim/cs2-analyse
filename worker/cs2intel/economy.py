@@ -122,3 +122,56 @@ def anti_eco(match: Match) -> dict:
             f"gap of at least ${gap_threshold}"),
         "rounds": rows,
     }
+
+
+def reaction_buys(match: Match) -> dict:
+    """What each team buys the round after a win and the round after a loss.
+
+    This is what an in-game leader reads off the scoreboard during freeze
+    time: a team that force-buys after every loss is punished differently
+    from one that saves.
+
+    Rounds that open a half are excluded. Money resets at the side swap and
+    at the start of overtime, so the buy there says nothing about the round
+    before it.
+    """
+    eco = match.economy.copy()
+    eco = eco[eco["round"].notna() & eco["current_equip_value"].notna()].copy()
+    eco["round"] = eco["round"].astype(int)
+    per_round = (eco.groupby(["round", "team_clan_name"])["current_equip_value"]
+                 .sum().reset_index())
+    buy_by = {(int(r["round"]), str(r["team_clan_name"])): classify_buy(r["current_equip_value"])
+              for _, r in per_round.iterrows()}
+
+    rounds = sorted(match.rounds, key=lambda r: r.number)
+    half_start = {r.number for i, r in enumerate(rounds)
+                  if i == 0 or rounds[i - 1].half != r.half
+                  or rounds[i - 1].overtime != r.overtime}
+
+    out: dict = {
+        "definition": ("buy type the round after a win and after a loss; "
+                       "rounds opening a half are excluded because the money "
+                       "resets there"),
+        "by_team": {},
+    }
+    for team in sorted(match.teams):
+        after = {"win": {}, "loss": {}}
+        counts = {"win": 0, "loss": 0}
+        for previous, current in zip(rounds, rounds[1:]):
+            if current.number in half_start:
+                continue
+            side = previous.sides.get(team)
+            if side is None:
+                continue
+            outcome = "win" if previous.winner == side else "loss"
+            buy = buy_by.get((current.number, team))
+            if buy is None:
+                continue
+            after[outcome][buy] = after[outcome].get(buy, 0) + 1
+            counts[outcome] += 1
+
+        out["by_team"][str(team)] = {
+            "after_loss": {"rounds": counts["loss"], "buys": after["loss"]},
+            "after_win": {"rounds": counts["win"], "buys": after["win"]},
+        }
+    return out
