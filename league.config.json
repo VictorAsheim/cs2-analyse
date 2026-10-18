@@ -6,8 +6,13 @@
     "else in the site is computed from parsed demos.",
     "",
     "'aliases' maps the clan name a demo records onto the league name. Server",
-    "configs drop accents, so 'Kaefer DåDå' arrives as 'Kaefer DD'; without",
-    "the alias its matches would be filed under a separate, unknown team."
+    "configs drop accents, so 'Kaefer DaDa' arrives as 'Kaefer DD'; without",
+    "the alias its matches would be filed under a separate, unknown team.",
+    "",
+    "'in_division': false marks a team we have demos of that is not in this",
+    "division's table - a cup opponent, or another season. They keep a page",
+    "and a crest so their matches read properly, but they are listed apart",
+    "from the standings rather than given an empty row in them."
   ],
   "division": "8. Divisjon avd. B",
   "format": "Seriespill",
@@ -16,37 +21,108 @@
     {
       "name": "Frogn Kommune CS",
       "aliases": [],
-      "standing": { "rank": 1, "played": 2, "won": 2, "drawn": 0, "lost": 0, "round_diff": 4, "points": 6 }
+      "standing": {
+        "rank": 1,
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "round_diff": 4,
+        "points": 6
+      },
+      "in_division": true
     },
     {
       "name": "NAS - Boarding Group B",
       "aliases": [],
-      "standing": { "rank": 1, "played": 2, "won": 2, "drawn": 0, "lost": 0, "round_diff": 4, "points": 6 }
+      "standing": {
+        "rank": 1,
+        "played": 2,
+        "won": 2,
+        "drawn": 0,
+        "lost": 0,
+        "round_diff": 4,
+        "points": 6
+      },
+      "in_division": true
     },
     {
       "name": "Glassfiber Produkter",
       "aliases": [],
-      "standing": { "rank": 3, "played": 2, "won": 1, "drawn": 0, "lost": 1, "round_diff": 0, "points": 3 }
+      "standing": {
+        "rank": 3,
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "round_diff": 0,
+        "points": 3
+      },
+      "in_division": true
     },
     {
       "name": "Kaefer DåDå",
-      "aliases": ["Kaefer DD"],
-      "standing": { "rank": 4, "played": 2, "won": 1, "drawn": 0, "lost": 1, "round_diff": -1, "points": 3 }
+      "aliases": [
+        "Kaefer DD"
+      ],
+      "standing": {
+        "rank": 4,
+        "played": 2,
+        "won": 1,
+        "drawn": 0,
+        "lost": 1,
+        "round_diff": -1,
+        "points": 3
+      },
+      "in_division": true
     },
     {
       "name": "Sopra Steria NewSync",
       "aliases": [],
-      "standing": { "rank": 5, "played": 1, "won": 0, "drawn": 0, "lost": 1, "round_diff": -2, "points": 0 }
+      "standing": {
+        "rank": 5,
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "round_diff": -2,
+        "points": 0
+      },
+      "in_division": true
     },
     {
       "name": "Velferdskrigerne",
       "aliases": [],
-      "standing": { "rank": 5, "played": 1, "won": 0, "drawn": 0, "lost": 1, "round_diff": -2, "points": 0 }
+      "standing": {
+        "rank": 5,
+        "played": 1,
+        "won": 0,
+        "drawn": 0,
+        "lost": 1,
+        "round_diff": -2,
+        "points": 0
+      },
+      "in_division": true
     },
     {
       "name": "Accenture Norway",
       "aliases": [],
-      "standing": { "rank": 7, "played": 2, "won": 0, "drawn": 0, "lost": 2, "round_diff": -3, "points": 0 }
+      "standing": {
+        "rank": 7,
+        "played": 2,
+        "won": 0,
+        "drawn": 0,
+        "lost": 2,
+        "round_diff": -3,
+        "points": 0
+      },
+      "in_division": true
+    },
+    {
+      "name": "AlvK-47",
+      "aliases": [],
+      "in_division": false,
+      "standing": null
     }
   ]
 }

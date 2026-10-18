@@ -28,6 +28,13 @@ export default async function Home() {
   }
 
   const analysed = league.teams.filter((t) => t.demos_analysed > 0);
+  const division = league.teams.filter((t) => t.in_division !== false);
+  // Teams we have demos of that are not in this division's table - a cup
+  // opponent, say. They get a row of their own rather than a standings row
+  // with every column blank.
+  const others = league.teams.filter(
+    (t) => t.in_division === false && t.demos_analysed > 0,
+  );
 
   return (
     <main className="mx-auto w-full min-w-0 max-w-4xl px-6 py-14">
@@ -37,7 +44,7 @@ export default async function Home() {
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-neutral-400">
           Motstanderanalyse fra parsede demoer. {analysed.length} av{" "}
-          {league.teams.length} lag har demoer analysert
+          {division.length} lag i divisjonen har demoer analysert
           {" "}({league.matches_analysed} kamper). Trykk på et lag for å se
           hvordan de spiller kart for kart.
         </p>
@@ -61,7 +68,7 @@ export default async function Home() {
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-800/70">
-              {league.teams.map((team) => {
+              {division.map((team) => {
                 const s = team.standing;
                 const hasData = team.demos_analysed > 0;
                 const name = hasData ? (
@@ -128,6 +135,43 @@ export default async function Home() {
           for hånd. Alt annet på sidene er regnet ut fra demoene.
         </p>
       </section>
+
+      {others.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 text-xs font-medium uppercase tracking-wider text-neutral-500">
+            Andre lag med demoer
+          </h2>
+          <ul className="divide-y divide-neutral-800/70 overflow-hidden rounded-lg border border-neutral-800">
+            {others.map((team) => (
+              <li key={team.slug}>
+                <Link
+                  href={`/team/${team.slug}`}
+                  className="flex flex-wrap items-center gap-x-4 gap-y-1 px-4 py-3 transition hover:bg-neutral-900/60"
+                >
+                  <TeamBadge slug={team.slug} name={team.name} size={22} />
+                  <span className="text-xs text-neutral-500">
+                    {team.demos_analysed} demo
+                    {team.demos_analysed === 1 ? "" : "er"}
+                  </span>
+                  <span className="flex flex-wrap gap-1.5">
+                    {Object.keys(team.maps).map((m) => (
+                      <MapBadge
+                        key={m}
+                        map={m}
+                        size={18}
+                        className="rounded bg-neutral-800/80 py-0.5 pl-0.5 pr-1.5 text-[11px] text-neutral-300"
+                      />
+                    ))}
+                  </span>
+                  <span className="ml-auto text-xs text-neutral-600">
+                    utenfor divisjonstabellen →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {league.unmatched_clan_names.length > 0 && (
         <p className="mt-4 rounded-lg border border-amber-900/50 bg-amber-950/20 px-4 py-3 text-xs leading-relaxed text-amber-200/80">

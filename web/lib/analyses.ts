@@ -70,6 +70,7 @@ export type LeagueTeam = {
     rank: number; played: number; won: number; drawn: number;
     lost: number; round_diff: number; points: number;
   } | null;
+  in_division: boolean;
   maps_played: number;
   best_map: string | null;
   worst_map: string | null;

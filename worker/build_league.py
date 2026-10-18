@@ -146,8 +146,8 @@ def build(config_path: str, facts_dir: str) -> dict:
             ct_won = sum(r["sides"]["won"]["CT"] for r in records)
             ct_played = sum(r["sides"]["played"]["CT"] for r in records)
 
-            findings = [f for r in records for f in r["findings"]]
-            findings.sort(key=lambda f: -f["score"])
+            findings = _merge_findings([f for r in records for f in r["findings"]],
+                                       len(records))
 
             maps_out[map_name] = {
                 "matches": len(records),
@@ -172,6 +172,9 @@ def build(config_path: str, facts_dir: str) -> dict:
         teams_out.append({
             "slug": slugify(name),
             "name": name,
+            # Teams outside the division keep a page but stay out of the
+            # standings, where every column would be blank.
+            "in_division": team.get("in_division", True),
             "standing": team.get("standing"),
             "maps_played": len(maps_out),
             "best_map": played_maps[0][0] if played_maps else None,
@@ -192,11 +195,49 @@ def build(config_path: str, facts_dir: str) -> dict:
         "table_updated": config.get("table_updated"),
         "table_note": ("plasseringen er avskrevet fra ligatabellen, ikke regnet "
                        "ut fra demoene"),
-        "teams": sorted(teams_out,
-                        key=lambda t: (t["standing"] or {}).get("rank", 99)),
+        "teams": sorted(
+            teams_out,
+            key=lambda t: (not t["in_division"],
+                           (t["standing"] or {}).get("rank", 99),
+                           t["name"]),
+        ),
         "unmatched_clan_names": sorted(unknown_teams),
         "matches_analysed": len(matches),
     }
+
+
+def _merge_findings(findings: list[dict], matches_on_map: int) -> list[dict]:
+    """Collapse the same finding fired in several matches into one.
+
+    A rule that fires on every match of a map would otherwise appear once per
+    match, which reads as several findings when it is one. Recurrence is the
+    strongest evidence this project can offer - it is what separates a pattern
+    from a one-off - so the merged entry records how many of the map's matches
+    it fired in, and that count orders the list ahead of a single-match
+    finding with a higher score.
+    """
+    groups: dict[tuple, list[dict]] = defaultdict(list)
+    for f in findings:
+        # Several rules fire once per site, callout or pattern, so the subject
+        # alone does not identify a finding: grouping on it merged the A-site
+        # result with the B-site one and reported a rule firing in more
+        # matches than the map has.
+        evidence = f.get("evidence") or {}
+        about = next((evidence[k] for k in ("site", "callout", "pattern")
+                      if evidence.get(k)), None)
+        groups[(f["rule"], f["subject"], about)].append(f)
+
+    merged = []
+    for group in groups.values():
+        # Keep the strongest instance: its numbers are real, where a summed
+        # rate across matches would need prose this layer cannot rewrite.
+        best = dict(max(group, key=lambda f: f["score"]))
+        best["matches_fired"] = min(len(group), matches_on_map)
+        best["matches_on_map"] = matches_on_map
+        merged.append(best)
+
+    merged.sort(key=lambda f: (-f["matches_fired"], -f["score"]))
+    return merged
 
 
 def _canonicalise(finding: dict, canonical: dict[str, str]) -> dict:

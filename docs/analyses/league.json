@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T18:12:00.695691+00:00",
+ "generated_at": "2026-10-18T10:45:29.405098+00:00",
  "division": "8. Divisjon avd. B",
  "format": "Seriespill",
  "table_updated": "2026-10-17",
@@ -8,6 +8,7 @@
   {
    "slug": "frogn-kommune-cs",
    "name": "Frogn Kommune CS",
+   "in_division": true,
    "standing": {
     "rank": 1,
     "played": 2,
@@ -61,7 +62,9 @@
        },
        "score": 0.7,
        "confidence": "medium",
-       "section": "Bombe og rundeavslutninger"
+       "section": "Bombe og rundeavslutninger",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "repeated_attack_pattern",
@@ -85,7 +88,9 @@
        },
        "score": 0.54,
        "confidence": "medium",
-       "section": "Angrepsmønstre"
+       "section": "Angrepsmønstre",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "utility_advantage",
@@ -99,7 +104,9 @@
        },
        "score": 0.3271,
        "confidence": "high",
-       "section": "Granatbruk"
+       "section": "Granatbruk",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "weaknesses": [
@@ -127,7 +134,9 @@
        },
        "score": 0.7333,
        "confidence": "high",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "low_trade_rate",
@@ -145,7 +154,9 @@
        },
        "score": 0.4284,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "site_retake_weak",
@@ -165,7 +176,9 @@
        },
        "score": 0.3334,
        "confidence": "high",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "retake_never_arrives",
@@ -184,7 +197,9 @@
        },
        "score": 0.2222,
        "confidence": "high",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "site_retake_weak",
@@ -204,7 +219,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "match_ids": [
@@ -419,6 +436,7 @@
   {
    "slug": "nas-boarding-group-b",
    "name": "NAS - Boarding Group B",
+   "in_division": true,
    "standing": {
     "rank": 1,
     "played": 2,
@@ -439,6 +457,7 @@
   {
    "slug": "glassfiber-produkter",
    "name": "Glassfiber Produkter",
+   "in_division": true,
    "standing": {
     "rank": 3,
     "played": 2,
@@ -448,10 +467,39 @@
     "round_diff": 0,
     "points": 3
    },
-   "maps_played": 3,
-   "best_map": "de_mirage",
-   "worst_map": "de_dust2",
+   "maps_played": 4,
+   "best_map": "de_ancient",
+   "worst_map": "de_cache",
    "maps": {
+    "de_ancient": {
+     "matches": 1,
+     "match_wins": 1,
+     "rounds_for": 13,
+     "rounds_against": 6,
+     "round_win_rate": {
+      "value": 0.6842,
+      "numerator": 13,
+      "denominator": 19,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 1.0,
+      "numerator": 7,
+      "denominator": 7,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [],
+     "weaknesses": [],
+     "match_ids": [
+      "19746_glassfiber-produkter-accenture-norway_de_ancient"
+     ]
+    },
     "de_cache": {
      "matches": 1,
      "match_wins": 0,
@@ -493,7 +541,9 @@
        },
        "score": 0.6628,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "opening_duel_weak_player",
@@ -512,7 +562,9 @@
        },
        "score": 0.5833,
        "confidence": "low",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "site_retake_weak",
@@ -532,7 +584,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "retake_never_arrives",
@@ -551,7 +605,9 @@
        },
        "score": 0.25,
        "confidence": "medium",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "match_ids": [
@@ -559,87 +615,118 @@
      ]
     },
     "de_dust2": {
-     "matches": 1,
-     "match_wins": 0,
-     "rounds_for": 3,
-     "rounds_against": 13,
+     "matches": 3,
+     "match_wins": 2,
+     "rounds_for": 29,
+     "rounds_against": 28,
      "round_win_rate": {
-      "value": 0.1875,
-      "numerator": 3,
-      "denominator": 16,
+      "value": 0.5088,
+      "numerator": 29,
+      "denominator": 57,
       "definition": "runder vunnet / runder spilt på dette kartet"
      },
      "t": {
-      "value": 0.0,
-      "numerator": 0,
-      "denominator": 4,
+      "value": 0.5833,
+      "numerator": 14,
+      "denominator": 24,
       "definition": "runder vunnet som T / runder spilt som T"
      },
      "ct": {
-      "value": 0.25,
-      "numerator": 3,
-      "denominator": 12,
+      "value": 0.4545,
+      "numerator": 15,
+      "denominator": 33,
       "definition": "runder vunnet som CT / runder spilt som CT"
      },
-     "strengths": [],
-     "weaknesses": [
+     "strengths": [
       {
-       "rule": "site_retake_weak",
+       "rule": "strong_retake",
        "subject": "Glassfiber Produkter",
-       "severity": "critical",
-       "title": "Glassfiber Produkter vant aldri tilbake A",
-       "detail": "Av 6 plants sluppet inn på A ble ingen runder vunnet.",
+       "severity": "good",
+       "title": "Glassfiber Produkter tar tilbake A ofte",
+       "detail": "Vant 2 av 4 runder der motstanderen fikk plantet på A.",
        "evidence": {
         "site": "A",
         "retake_rate": {
-         "value": 0.0,
-         "numerator": 0,
-         "denominator": 6,
+         "value": 0.5,
+         "numerator": 2,
+         "denominator": 4,
          "definition": "rounds won after conceding a plant at A / plants conceded at A"
-        },
-        "defuses": 0
-       },
-       "score": 1.0,
-       "confidence": "high",
-       "section": "Forsvar per bombesite"
-      },
-      {
-       "rule": "retake_never_arrives",
-       "subject": "Glassfiber Produkter",
-       "severity": "serious",
-       "title": "Glassfiber Produkter når ikke fram til siten etter plant",
-       "detail": "I 7 av 10 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 3.8 s.",
-       "evidence": {
-        "site_reached": {
-         "value": 0.3,
-         "numerator": 3,
-         "denominator": 10,
-         "definition": "plants where a CT reached the site / plants conceded"
-        },
-        "median_seconds": 3.8
-       },
-       "score": 0.7,
-       "confidence": "high",
-       "section": "Retake-ankomst"
-      },
-      {
-       "rule": "low_trade_rate",
-       "subject": "Glassfiber Produkter",
-       "severity": "warning",
-       "title": "Glassfiber Produkter blir sjelden byttet opp etter et dødsfall",
-       "detail": "Bare 7 av 68 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
-       "evidence": {
-        "traded_death_rate": {
-         "value": 0.1029,
-         "numerator": 7,
-         "denominator": 68,
-         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
         }
        },
-       "score": 0.5001,
+       "score": 0.3333,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 2,
+       "matches_on_map": 3
       },
+      {
+       "rule": "strong_opening_duels",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter vinner åpningsduellene",
+       "detail": "14 av 21 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.6667,
+         "numerator": 14,
+         "denominator": 21,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.6667,
+       "confidence": "high",
+       "section": "Åpningsdueller",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "repeated_attack_pattern",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter gjentar «light_hit_A» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 2, 5, 11). Merk at mønstermerkingen er utledet, ikke målt.",
+       "evidence": {
+        "pattern": "light_hit_A",
+        "rounds": [
+         2,
+         5,
+         11
+        ],
+        "win_rate": {
+         "value": 1.0,
+         "numerator": 3,
+         "denominator": 3,
+         "definition": "rounds won / rounds labelled light_hit_A"
+        }
+       },
+       "score": 0.54,
+       "confidence": "medium",
+       "section": "Angrepsmønstre",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "strong_post_plant",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter holder post-plant",
+       "detail": "Vant 5 av 6 runder de fikk plantet i.",
+       "evidence": {
+        "post_plant_win_rate": {
+         "value": 0.8333,
+         "numerator": 5,
+         "denominator": 6,
+         "definition": "rounds won after planting / rounds where this team planted"
+        }
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Bombe og rundeavslutninger",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      }
+     ],
+     "weaknesses": [
       {
        "rule": "site_retake_weak",
        "subject": "Glassfiber Produkter",
@@ -658,34 +745,153 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 3,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Glassfiber Produkter",
+       "severity": "serious",
+       "title": "Glassfiber Produkter når ikke fram til siten etter plant",
+       "detail": "I 7 av 10 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 3.8 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.3,
+         "numerator": 3,
+         "denominator": 10,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 3.8
+       },
+       "score": 0.7,
+       "confidence": "high",
+       "section": "Retake-ankomst",
+       "matches_fired": 2,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Glassfiber Produkter",
+       "severity": "warning",
+       "title": "Glassfiber Produkter blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 7 av 68 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1029,
+         "numerator": 7,
+         "denominator": 68,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.5001,
+       "confidence": "medium",
+       "section": "Trading",
+       "matches_fired": 2,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Glassfiber Produkter",
+       "severity": "critical",
+       "title": "Glassfiber Produkter vant aldri tilbake A",
+       "detail": "Av 6 plants sluppet inn på A ble ingen runder vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 6,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 0
+       },
+       "score": 1.0,
+       "confidence": "high",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Bobblegeir",
+       "severity": "warning",
+       "title": "Bobblegeir står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "ARamp": 2
+        },
+        "team": "Glassfiber Produkter"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Milomst",
+       "severity": "warning",
+       "title": "Milomst står på BombsiteB nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteB",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteB": 10,
+         "BDoors": 2
+        },
+        "team": "Glassfiber Produkter"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 3
       }
      ],
      "match_ids": [
-      "17792_glassfiber-produkter-kaefer-dd_de_dust2"
+      "17738_glassfiber-produkter-alvk-47_de_dust2",
+      "17792_glassfiber-produkter-kaefer-dd_de_dust2",
+      "19744_glassfiber-produkter-accenture-norway_de_dust2"
      ]
     },
     "de_mirage": {
-     "matches": 1,
-     "match_wins": 1,
-     "rounds_for": 13,
-     "rounds_against": 8,
+     "matches": 3,
+     "match_wins": 2,
+     "rounds_for": 37,
+     "rounds_against": 28,
      "round_win_rate": {
-      "value": 0.619,
-      "numerator": 13,
-      "denominator": 21,
+      "value": 0.5692,
+      "numerator": 37,
+      "denominator": 65,
       "definition": "runder vunnet / runder spilt på dette kartet"
      },
      "t": {
-      "value": 0.5,
-      "numerator": 6,
-      "denominator": 12,
+      "value": 0.4444,
+      "numerator": 16,
+      "denominator": 36,
       "definition": "runder vunnet som T / runder spilt som T"
      },
      "ct": {
-      "value": 0.7778,
-      "numerator": 7,
-      "denominator": 9,
+      "value": 0.7241,
+      "numerator": 21,
+      "denominator": 29,
       "definition": "runder vunnet som CT / runder spilt som CT"
      },
      "strengths": [
@@ -705,7 +911,9 @@
        },
        "score": 0.7143,
        "confidence": "high",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "matches_fired": 3,
+       "matches_on_map": 3
       }
      ],
      "weaknesses": [
@@ -731,7 +939,29 @@
        },
        "score": 0.5714,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "matches_fired": 2,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Glassfiber Produkter",
+       "severity": "warning",
+       "title": "Glassfiber Produkter blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 8 av 61 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1311,
+         "numerator": 8,
+         "denominator": 61,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3626,
+       "confidence": "medium",
+       "section": "Trading",
+       "matches_fired": 2,
+       "matches_on_map": 3
       },
       {
        "rule": "predictable_setup",
@@ -755,7 +985,9 @@
        },
        "score": 0.5,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 3
       },
       {
        "rule": "predictable_setup",
@@ -779,33 +1011,103 @@
        },
        "score": 0.5,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 3
       },
       {
-       "rule": "low_trade_rate",
-       "subject": "Glassfiber Produkter",
+       "rule": "predictable_setup",
+       "subject": "Milomst",
        "severity": "warning",
-       "title": "Glassfiber Produkter blir sjelden byttet opp etter et dødsfall",
-       "detail": "Bare 8 av 61 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "title": "Milomst står på BombsiteB nesten hver runde",
+       "detail": "6 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
        "evidence": {
-        "traded_death_rate": {
-         "value": 0.1311,
-         "numerator": 8,
-         "denominator": 61,
-         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
-        }
+        "callout": "BombsiteB",
+        "share_at_most_common": {
+         "value": 0.75,
+         "numerator": 6,
+         "denominator": 8,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteB": 6,
+         "Truck": 2
+        },
+        "team": "Glassfiber Produkter"
        },
-       "score": 0.3626,
+       "score": 0.4286,
+       "confidence": "low",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 3
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Glassfiber Produkter",
+       "severity": "serious",
+       "title": "Glassfiber Produkter når ikke fram til siten etter plant",
+       "detail": "I 2 av 6 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 17.7 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.6667,
+         "numerator": 4,
+         "denominator": 6,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 17.7
+       },
+       "score": 0.25,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 3
       }
      ],
      "match_ids": [
-      "17790_glassfiber-produkter-kaefer-dd_de_mirage"
+      "17737_glassfiber-produkter-alvk-47_de_mirage",
+      "17790_glassfiber-produkter-kaefer-dd_de_mirage",
+      "19745_glassfiber-produkter-accenture-norway_de_mirage"
      ]
     }
    },
    "matches": [
+    {
+     "match_id": "19746_glassfiber-produkter-accenture-norway_de_ancient",
+     "map": "de_ancient",
+     "opponent": "Accenture Norway",
+     "rounds_for": 13,
+     "rounds_against": 6,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 6,
+       "CT": 7
+      },
+      "played": {
+       "T": 12,
+       "CT": 7
+      }
+     },
+     "plant_rate": {
+      "value": 0.6667,
+      "numerator": 8,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.75,
+      "numerator": 6,
+      "denominator": 8,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.5263,
+      "numerator": 10,
+      "denominator": 19,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": []
+    },
     {
      "match_id": "17791_glassfiber-produkter-kaefer-dd_de_cache",
      "map": "de_cache",
@@ -921,6 +1223,168 @@
      ]
     },
     {
+     "match_id": "17738_glassfiber-produkter-alvk-47_de_dust2",
+     "map": "de_dust2",
+     "opponent": "AlvK-47",
+     "rounds_for": 13,
+     "rounds_against": 7,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 7,
+       "CT": 6
+      },
+      "played": {
+       "T": 8,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.5,
+      "numerator": 4,
+      "denominator": 8,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 1.0,
+      "numerator": 4,
+      "denominator": 4,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.55,
+      "numerator": 11,
+      "denominator": 20,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Bobblegeir",
+       "severity": "warning",
+       "title": "Bobblegeir står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "ARamp": 2
+        },
+        "team": "Glassfiber Produkter"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Milomst",
+       "severity": "warning",
+       "title": "Milomst står på BombsiteB nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteB",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteB": 10,
+         "BDoors": 2
+        },
+        "team": "Glassfiber Produkter"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Glassfiber Produkter",
+       "severity": "serious",
+       "title": "Glassfiber Produkter vinner sjelden tilbake B",
+       "detail": "Av 4 plants sluppet inn på B ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.25,
+         "numerator": 1,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 1
+       },
+       "score": 0.3333,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter tar tilbake A ofte",
+       "detail": "Vant 2 av 4 runder der motstanderen fikk plantet på A.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.5,
+         "numerator": 2,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Glassfiber Produkter",
+       "severity": "serious",
+       "title": "Glassfiber Produkter når ikke fram til siten etter plant",
+       "detail": "I 2 av 8 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 7.5 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.75,
+         "numerator": 6,
+         "denominator": 8,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 7.5
+       },
+       "score": 0.25,
+       "confidence": "high",
+       "section": "Retake-ankomst"
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Glassfiber Produkter",
+       "severity": "warning",
+       "title": "Glassfiber Produkter blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 10 av 59 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1695,
+         "numerator": 10,
+         "denominator": 59,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.2375,
+       "confidence": "medium",
+       "section": "Trading"
+      }
+     ]
+    },
+    {
      "match_id": "17792_glassfiber-produkter-kaefer-dd_de_dust2",
      "map": "de_dust2",
      "opponent": "Kaefer DåDå",
@@ -1032,6 +1496,266 @@
        "score": 0.3333,
        "confidence": "medium",
        "section": "Forsvar per bombesite"
+      }
+     ]
+    },
+    {
+     "match_id": "19744_glassfiber-produkter-accenture-norway_de_dust2",
+     "map": "de_dust2",
+     "opponent": "Accenture Norway",
+     "rounds_for": 13,
+     "rounds_against": 8,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 7,
+       "CT": 6
+      },
+      "played": {
+       "T": 12,
+       "CT": 9
+      }
+     },
+     "plant_rate": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.8333,
+      "numerator": 5,
+      "denominator": 6,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.6667,
+      "numerator": 14,
+      "denominator": 21,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "strong_opening_duels",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter vinner åpningsduellene",
+       "detail": "14 av 21 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.6667,
+         "numerator": 14,
+         "denominator": 21,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.6667,
+       "confidence": "high",
+       "section": "Åpningsdueller"
+      },
+      {
+       "rule": "repeated_attack_pattern",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter gjentar «light_hit_A» og vinner på det",
+       "detail": "3 av 3 runder vunnet med dette mønsteret (runde 2, 5, 11). Merk at mønstermerkingen er utledet, ikke målt.",
+       "evidence": {
+        "pattern": "light_hit_A",
+        "rounds": [
+         2,
+         5,
+         11
+        ],
+        "win_rate": {
+         "value": 1.0,
+         "numerator": 3,
+         "denominator": 3,
+         "definition": "rounds won / rounds labelled light_hit_A"
+        }
+       },
+       "score": 0.54,
+       "confidence": "medium",
+       "section": "Angrepsmønstre"
+      },
+      {
+       "rule": "strong_post_plant",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter holder post-plant",
+       "detail": "Vant 5 av 6 runder de fikk plantet i.",
+       "evidence": {
+        "post_plant_win_rate": {
+         "value": 0.8333,
+         "numerator": 5,
+         "denominator": 6,
+         "definition": "rounds won after planting / rounds where this team planted"
+        }
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Bombe og rundeavslutninger"
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter tar tilbake A ofte",
+       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på A.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.6667,
+         "numerator": 2,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Glassfiber Produkter",
+       "severity": "serious",
+       "title": "Glassfiber Produkter vinner sjelden tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      }
+     ]
+    },
+    {
+     "match_id": "17737_glassfiber-produkter-alvk-47_de_mirage",
+     "map": "de_mirage",
+     "opponent": "AlvK-47",
+     "rounds_for": 13,
+     "rounds_against": 7,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 6,
+       "CT": 7
+      },
+      "played": {
+       "T": 12,
+       "CT": 8
+      }
+     },
+     "plant_rate": {
+      "value": 0.5833,
+      "numerator": 7,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.7143,
+      "numerator": 5,
+      "denominator": 7,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.6,
+      "numerator": 12,
+      "denominator": 20,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "strong_opening_duels",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter vinner åpningsduellene",
+       "detail": "12 av 20 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.6,
+         "numerator": 12,
+         "denominator": 20,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.6,
+       "confidence": "high",
+       "section": "Åpningsdueller"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Diesel1",
+       "severity": "warning",
+       "title": "Diesel1 står på BombsiteA nesten hver runde",
+       "detail": "6 av 8 CT-runder startet på BombsiteA, og bare 3 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.75,
+         "numerator": 6,
+         "denominator": 8,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 6,
+         "Connector": 1,
+         "SnipersNest": 1
+        },
+        "team": "Glassfiber Produkter"
+       },
+       "score": 0.4286,
+       "confidence": "low",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Milomst",
+       "severity": "warning",
+       "title": "Milomst står på BombsiteB nesten hver runde",
+       "detail": "6 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteB",
+        "share_at_most_common": {
+         "value": 0.75,
+         "numerator": 6,
+         "denominator": 8,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteB": 6,
+         "Truck": 2
+        },
+        "team": "Glassfiber Produkter"
+       },
+       "score": 0.4286,
+       "confidence": "low",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "Glassfiber Produkter",
+       "severity": "warning",
+       "title": "Glassfiber Produkter omsetter ikke full buy",
+       "detail": "7 av 14 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.5,
+         "numerator": 7,
+         "denominator": 14,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.0795,
+       "confidence": "medium",
+       "section": "Økonomi"
       }
      ]
     },
@@ -1180,9 +1904,102 @@
        "section": "Trading"
       }
      ]
+    },
+    {
+     "match_id": "19745_glassfiber-produkter-accenture-norway_de_mirage",
+     "map": "de_mirage",
+     "opponent": "Accenture Norway",
+     "rounds_for": 11,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 4,
+       "CT": 7
+      },
+      "played": {
+       "T": 12,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.5,
+      "numerator": 3,
+      "denominator": 6,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.7083,
+      "numerator": 17,
+      "denominator": 24,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "strong_opening_duels",
+       "subject": "Glassfiber Produkter",
+       "severity": "good",
+       "title": "Glassfiber Produkter vinner åpningsduellene",
+       "detail": "17 av 24 første-drap i runden gikk deres vei.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.7083,
+         "numerator": 17,
+         "denominator": 24,
+         "definition": "opening kills / opening duels this team was involved in"
+        }
+       },
+       "score": 0.7083,
+       "confidence": "high",
+       "section": "Åpningsdueller"
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Glassfiber Produkter",
+       "severity": "warning",
+       "title": "Glassfiber Produkter blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 13 av 79 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1646,
+         "numerator": 13,
+         "denominator": 79,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3373,
+       "confidence": "medium",
+       "section": "Trading"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Glassfiber Produkter",
+       "severity": "serious",
+       "title": "Glassfiber Produkter når ikke fram til siten etter plant",
+       "detail": "I 2 av 6 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 17.7 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.6667,
+         "numerator": 4,
+         "denominator": 6,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 17.7
+       },
+       "score": 0.25,
+       "confidence": "medium",
+       "section": "Retake-ankomst"
+      }
+     ]
     }
    ],
-   "demos_analysed": 3,
+   "demos_analysed": 8,
    "clan_names": [
     "Glassfiber Produkter"
    ]
@@ -1190,6 +2007,7 @@
   {
    "slug": "kaefer-dada",
    "name": "Kaefer DåDå",
+   "in_division": true,
    "standing": {
     "rank": 4,
     "played": 2,
@@ -1243,7 +2061,9 @@
        },
        "score": 0.7143,
        "confidence": "high",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "weaknesses": [
@@ -1263,7 +2083,9 @@
        },
        "score": 0.2626,
        "confidence": "medium",
-       "section": "Trading"
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "match_ids": [
@@ -1310,7 +2132,9 @@
        },
        "score": 0.9,
        "confidence": "high",
-       "section": "Bombe og rundeavslutninger"
+       "section": "Bombe og rundeavslutninger",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "repeated_attack_pattern",
@@ -1334,7 +2158,9 @@
        },
        "score": 0.54,
        "confidence": "medium",
-       "section": "Angrepsmønstre"
+       "section": "Angrepsmønstre",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "weaknesses": [],
@@ -1389,7 +2215,9 @@
        },
        "score": 0.6429,
        "confidence": "medium",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "low_trade_rate",
@@ -1407,7 +2235,9 @@
        },
        "score": 0.35,
        "confidence": "high",
-       "section": "Trading"
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "site_retake_weak",
@@ -1427,7 +2257,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "opening_duel_weak_player",
@@ -1446,7 +2278,9 @@
        },
        "score": 0.3333,
        "confidence": "low",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "retake_never_arrives",
@@ -1465,7 +2299,9 @@
        },
        "score": 0.25,
        "confidence": "medium",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "site_retake_weak",
@@ -1485,7 +2321,9 @@
        },
        "score": 0.1667,
        "confidence": "low",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "match_ids": [
@@ -1833,6 +2671,7 @@
   {
    "slug": "sopra-steria-newsync",
    "name": "Sopra Steria NewSync",
+   "in_division": true,
    "standing": {
     "rank": 5,
     "played": 1,
@@ -1893,7 +2732,9 @@
        },
        "score": 0.54,
        "confidence": "medium",
-       "section": "Angrepsmønstre"
+       "section": "Angrepsmønstre",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "weaknesses": [
@@ -1920,7 +2761,9 @@
        },
        "score": 0.7143,
        "confidence": "high",
-       "section": "CT-oppsett"
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "site_retake_weak",
@@ -1940,7 +2783,9 @@
        },
        "score": 0.6667,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "retake_never_arrives",
@@ -1959,7 +2804,9 @@
        },
        "score": 0.375,
        "confidence": "high",
-       "section": "Retake-ankomst"
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "site_retake_weak",
@@ -1979,7 +2826,9 @@
        },
        "score": 0.3333,
        "confidence": "medium",
-       "section": "Forsvar per bombesite"
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "utility_deficit",
@@ -1994,7 +2843,9 @@
        },
        "score": 0.3271,
        "confidence": "high",
-       "section": "Granatbruk"
+       "section": "Granatbruk",
+       "matches_fired": 1,
+       "matches_on_map": 1
       },
       {
        "rule": "opening_duel_weak_player",
@@ -2013,7 +2864,9 @@
        },
        "score": 0.25,
        "confidence": "medium",
-       "section": "Åpningsdueller"
+       "section": "Åpningsdueller",
+       "matches_fired": 1,
+       "matches_on_map": 1
       }
      ],
      "match_ids": [
@@ -2212,6 +3065,7 @@
   {
    "slug": "velferdskrigerne",
    "name": "Velferdskrigerne",
+   "in_division": true,
    "standing": {
     "rank": 5,
     "played": 1,
@@ -2232,6 +3086,7 @@
   {
    "slug": "accenture-norway",
    "name": "Accenture Norway",
+   "in_division": true,
    "standing": {
     "rank": 7,
     "played": 2,
@@ -2241,15 +3096,1488 @@
     "round_diff": -3,
     "points": 0
    },
-   "maps_played": 0,
-   "best_map": null,
-   "worst_map": null,
-   "maps": {},
-   "matches": [],
-   "demos_analysed": 0,
-   "clan_names": []
+   "maps_played": 3,
+   "best_map": "de_mirage",
+   "worst_map": "de_ancient",
+   "maps": {
+    "de_ancient": {
+     "matches": 1,
+     "match_wins": 0,
+     "rounds_for": 6,
+     "rounds_against": 13,
+     "round_win_rate": {
+      "value": 0.3158,
+      "numerator": 6,
+      "denominator": 19,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 7,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [],
+     "weaknesses": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Signalfahrer",
+       "severity": "serious",
+       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 1.0,
+         "numerator": 12,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 12
+        },
+        "team": "Accenture Norway"
+       },
+       "score": 0.8571,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Vådeskudd",
+       "severity": "serious",
+       "title": "Vådeskudd står på BombsiteA nesten hver runde",
+       "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 1.0,
+         "numerator": 12,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 12
+        },
+        "team": "Accenture Norway"
+       },
+       "score": 0.8571,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway vinner sjelden tilbake A",
+       "detail": "Av 5 plants sluppet inn på A ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.2,
+         "numerator": 1,
+         "denominator": 5,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 1
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Accenture Norway",
+       "severity": "warning",
+       "title": "Accenture Norway blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 13 av 82 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1585,
+         "numerator": 13,
+         "denominator": 82,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.366,
+       "confidence": "high",
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway når ikke fram til siten etter plant",
+       "detail": "I 2 av 8 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 12.5 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.75,
+         "numerator": 6,
+         "denominator": 8,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 12.5
+       },
+       "score": 0.25,
+       "confidence": "high",
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "Accenture Norway",
+       "severity": "warning",
+       "title": "Accenture Norway omsetter ikke full buy",
+       "detail": "5 av 12 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.4167,
+         "numerator": 5,
+         "denominator": 12,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.1818,
+       "confidence": "medium",
+       "section": "Økonomi",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "19746_glassfiber-produkter-accenture-norway_de_ancient"
+     ]
+    },
+    "de_dust2": {
+     "matches": 1,
+     "match_wins": 0,
+     "rounds_for": 8,
+     "rounds_against": 13,
+     "round_win_rate": {
+      "value": 0.381,
+      "numerator": 8,
+      "denominator": 21,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.3333,
+      "numerator": 3,
+      "denominator": 9,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.4167,
+      "numerator": 5,
+      "denominator": 12,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [],
+     "weaknesses": [
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "critical",
+       "title": "Accenture Norway vant aldri tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway når ikke fram til siten etter plant",
+       "detail": "I 3 av 6 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 8.3 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.5,
+         "numerator": 3,
+         "denominator": 6,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 8.3
+       },
+       "score": 0.375,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "opening_duel_weak_player",
+       "subject": "Svevern",
+       "severity": "warning",
+       "title": "Svevern taper åpningsduellene",
+       "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.2857,
+         "numerator": 2,
+         "denominator": 7,
+         "definition": "opening kills / opening duels this player was involved in"
+        },
+        "opening_deaths": 5
+       },
+       "score": 0.25,
+       "confidence": "low",
+       "section": "Åpningsdueller",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway vinner sjelden tilbake A",
+       "detail": "Av 3 plants sluppet inn på A ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "19744_glassfiber-produkter-accenture-norway_de_dust2"
+     ]
+    },
+    "de_mirage": {
+     "matches": 1,
+     "match_wins": 1,
+     "rounds_for": 13,
+     "rounds_against": 11,
+     "round_win_rate": {
+      "value": 0.5417,
+      "numerator": 13,
+      "denominator": 24,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.4167,
+      "numerator": 5,
+      "denominator": 12,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.6667,
+      "numerator": 8,
+      "denominator": 12,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [
+      {
+       "rule": "strong_retake",
+       "subject": "Accenture Norway",
+       "severity": "good",
+       "title": "Accenture Norway tar tilbake A ofte",
+       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på A.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.6667,
+         "numerator": 2,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "weaknesses": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Signalfahrer",
+       "severity": "warning",
+       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "CTSpawn": 2
+        },
+        "team": "Accenture Norway"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway når ikke fram til siten etter plant",
+       "detail": "I 3 av 6 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 3.7 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.5,
+         "numerator": 3,
+         "denominator": 6,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 3.7
+       },
+       "score": 0.375,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Accenture Norway",
+       "severity": "warning",
+       "title": "Accenture Norway blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 14 av 84 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1667,
+         "numerator": 14,
+         "denominator": 84,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3332,
+       "confidence": "high",
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "opening_duel_weak_player",
+       "subject": "KrissField",
+       "severity": "warning",
+       "title": "KrissField taper åpningsduellene",
+       "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.2857,
+         "numerator": 2,
+         "denominator": 7,
+         "definition": "opening kills / opening duels this player was involved in"
+        },
+        "opening_deaths": 5
+       },
+       "score": 0.25,
+       "confidence": "low",
+       "section": "Åpningsdueller",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway vinner sjelden tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "19745_glassfiber-produkter-accenture-norway_de_mirage"
+     ]
+    }
+   },
+   "matches": [
+    {
+     "match_id": "19746_glassfiber-produkter-accenture-norway_de_ancient",
+     "map": "de_ancient",
+     "opponent": "Glassfiber Produkter",
+     "rounds_for": 6,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 0,
+       "CT": 6
+      },
+      "played": {
+       "T": 7,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.2857,
+      "numerator": 2,
+      "denominator": 7,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 2,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.4737,
+      "numerator": 9,
+      "denominator": 19,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Signalfahrer",
+       "severity": "serious",
+       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 1.0,
+         "numerator": 12,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 12
+        },
+        "team": "Accenture Norway"
+       },
+       "score": 0.8571,
+       "confidence": "medium",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Vådeskudd",
+       "severity": "serious",
+       "title": "Vådeskudd står på BombsiteA nesten hver runde",
+       "detail": "12 av 12 CT-runder startet på BombsiteA, og bare 1 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 1.0,
+         "numerator": 12,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 12
+        },
+        "team": "Accenture Norway"
+       },
+       "score": 0.8571,
+       "confidence": "medium",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway vinner sjelden tilbake A",
+       "detail": "Av 5 plants sluppet inn på A ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.2,
+         "numerator": 1,
+         "denominator": 5,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 1
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Accenture Norway",
+       "severity": "warning",
+       "title": "Accenture Norway blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 13 av 82 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1585,
+         "numerator": 13,
+         "denominator": 82,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.366,
+       "confidence": "high",
+       "section": "Trading"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway når ikke fram til siten etter plant",
+       "detail": "I 2 av 8 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 12.5 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.75,
+         "numerator": 6,
+         "denominator": 8,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 12.5
+       },
+       "score": 0.25,
+       "confidence": "high",
+       "section": "Retake-ankomst"
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "Accenture Norway",
+       "severity": "warning",
+       "title": "Accenture Norway omsetter ikke full buy",
+       "detail": "5 av 12 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.4167,
+         "numerator": 5,
+         "denominator": 12,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.1818,
+       "confidence": "medium",
+       "section": "Økonomi"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway vinner sjelden tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      }
+     ]
+    },
+    {
+     "match_id": "19744_glassfiber-produkter-accenture-norway_de_dust2",
+     "map": "de_dust2",
+     "opponent": "Glassfiber Produkter",
+     "rounds_for": 8,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 3,
+       "CT": 5
+      },
+      "played": {
+       "T": 9,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.6667,
+      "numerator": 6,
+      "denominator": 9,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.5,
+      "numerator": 3,
+      "denominator": 6,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.3333,
+      "numerator": 7,
+      "denominator": 21,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "critical",
+       "title": "Accenture Norway vant aldri tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway når ikke fram til siten etter plant",
+       "detail": "I 3 av 6 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 8.3 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.5,
+         "numerator": 3,
+         "denominator": 6,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 8.3
+       },
+       "score": 0.375,
+       "confidence": "medium",
+       "section": "Retake-ankomst"
+      },
+      {
+       "rule": "opening_duel_weak_player",
+       "subject": "Svevern",
+       "severity": "warning",
+       "title": "Svevern taper åpningsduellene",
+       "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.2857,
+         "numerator": 2,
+         "denominator": 7,
+         "definition": "opening kills / opening duels this player was involved in"
+        },
+        "opening_deaths": 5
+       },
+       "score": 0.25,
+       "confidence": "low",
+       "section": "Åpningsdueller"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway vinner sjelden tilbake A",
+       "detail": "Av 3 plants sluppet inn på A ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      }
+     ]
+    },
+    {
+     "match_id": "19745_glassfiber-produkter-accenture-norway_de_mirage",
+     "map": "de_mirage",
+     "opponent": "Glassfiber Produkter",
+     "rounds_for": 13,
+     "rounds_against": 11,
+     "won": true,
+     "sides": {
+      "won": {
+       "T": 5,
+       "CT": 8
+      },
+      "played": {
+       "T": 12,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.6667,
+      "numerator": 4,
+      "denominator": 6,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.2917,
+      "numerator": 7,
+      "denominator": 24,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "predictable_setup",
+       "subject": "Signalfahrer",
+       "severity": "warning",
+       "title": "Signalfahrer står på BombsiteA nesten hver runde",
+       "detail": "10 av 12 CT-runder startet på BombsiteA, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.8333,
+         "numerator": 10,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 10,
+         "CTSpawn": 2
+        },
+        "team": "Accenture Norway"
+       },
+       "score": 0.7143,
+       "confidence": "medium",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway når ikke fram til siten etter plant",
+       "detail": "I 3 av 6 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 3.7 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.5,
+         "numerator": 3,
+         "denominator": 6,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 3.7
+       },
+       "score": 0.375,
+       "confidence": "medium",
+       "section": "Retake-ankomst"
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "Accenture Norway",
+       "severity": "good",
+       "title": "Accenture Norway tar tilbake A ofte",
+       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på A.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.6667,
+         "numerator": 2,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "Accenture Norway",
+       "severity": "warning",
+       "title": "Accenture Norway blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 14 av 84 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1667,
+         "numerator": 14,
+         "denominator": 84,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.3332,
+       "confidence": "high",
+       "section": "Trading"
+      },
+      {
+       "rule": "opening_duel_weak_player",
+       "subject": "KrissField",
+       "severity": "warning",
+       "title": "KrissField taper åpningsduellene",
+       "detail": "2 av 7 åpningsdueller vunnet. Å oppsøke denne spilleren tidlig i runden er den billigste duellen på kartet.",
+       "evidence": {
+        "opening_duel_win_rate": {
+         "value": 0.2857,
+         "numerator": 2,
+         "denominator": 7,
+         "definition": "opening kills / opening duels this player was involved in"
+        },
+        "opening_deaths": 5
+       },
+       "score": 0.25,
+       "confidence": "low",
+       "section": "Åpningsdueller"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "Accenture Norway",
+       "severity": "serious",
+       "title": "Accenture Norway vinner sjelden tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble bare 1 runde vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.3333,
+         "numerator": 1,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 1
+       },
+       "score": 0.1667,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      }
+     ]
+    }
+   ],
+   "demos_analysed": 3,
+   "clan_names": [
+    "Accenture Norway"
+   ]
+  },
+  {
+   "slug": "alvk-47",
+   "name": "AlvK-47",
+   "in_division": false,
+   "standing": null,
+   "maps_played": 2,
+   "best_map": "de_dust2",
+   "worst_map": "de_mirage",
+   "maps": {
+    "de_dust2": {
+     "matches": 1,
+     "match_wins": 0,
+     "rounds_for": 7,
+     "rounds_against": 13,
+     "round_win_rate": {
+      "value": 0.35,
+      "numerator": 7,
+      "denominator": 20,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.125,
+      "numerator": 1,
+      "denominator": 8,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [],
+     "weaknesses": [
+      {
+       "rule": "site_retake_weak",
+       "subject": "AlvK-47",
+       "severity": "critical",
+       "title": "AlvK-47 vant aldri tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Elvegris",
+       "severity": "serious",
+       "title": "Elvegris står på BombsiteB nesten hver runde",
+       "detail": "7 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteB",
+        "share_at_most_common": {
+         "value": 0.875,
+         "numerator": 7,
+         "denominator": 8,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteB": 7,
+         "TSpawn": 1
+        },
+        "team": "AlvK-47"
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "AlvK-47",
+       "severity": "warning",
+       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 11 av 80 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1375,
+         "numerator": 11,
+         "denominator": 80,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.45,
+       "confidence": "high",
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "AlvK-47",
+       "severity": "serious",
+       "title": "AlvK-47 når ikke fram til siten etter plant",
+       "detail": "I 1 av 4 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 0.6 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.75,
+         "numerator": 3,
+         "denominator": 4,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 0.6
+       },
+       "score": 0.125,
+       "confidence": "low",
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "17738_glassfiber-produkter-alvk-47_de_dust2"
+     ]
+    },
+    "de_mirage": {
+     "matches": 1,
+     "match_wins": 0,
+     "rounds_for": 7,
+     "rounds_against": 13,
+     "round_win_rate": {
+      "value": 0.35,
+      "numerator": 7,
+      "denominator": 20,
+      "definition": "runder vunnet / runder spilt på dette kartet"
+     },
+     "t": {
+      "value": 0.125,
+      "numerator": 1,
+      "denominator": 8,
+      "definition": "runder vunnet som T / runder spilt som T"
+     },
+     "ct": {
+      "value": 0.5,
+      "numerator": 6,
+      "denominator": 12,
+      "definition": "runder vunnet som CT / runder spilt som CT"
+     },
+     "strengths": [
+      {
+       "rule": "strong_retake",
+       "subject": "AlvK-47",
+       "severity": "good",
+       "title": "AlvK-47 tar tilbake B ofte",
+       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.6667,
+         "numerator": 2,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "low",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "weaknesses": [
+      {
+       "rule": "low_trade_rate",
+       "subject": "AlvK-47",
+       "severity": "warning",
+       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 5 av 82 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.061,
+         "numerator": 5,
+         "denominator": 82,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.756,
+       "confidence": "high",
+       "section": "Trading",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "AlvK-47",
+       "severity": "critical",
+       "title": "AlvK-47 vant aldri tilbake A",
+       "detail": "Av 4 plants sluppet inn på A ble ingen runder vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 0
+       },
+       "score": 0.6667,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Geitesmør",
+       "severity": "warning",
+       "title": "Geitesmør står på BombsiteA nesten hver runde",
+       "detail": "9 av 12 CT-runder startet på BombsiteA, og bare 4 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.75,
+         "numerator": 9,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 9,
+         "TopofMid": 1,
+         "Catwalk": 1,
+         "PalaceInterior": 1
+        },
+        "team": "AlvK-47"
+       },
+       "score": 0.6429,
+       "confidence": "medium",
+       "section": "CT-oppsett",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "AlvK-47",
+       "severity": "serious",
+       "title": "AlvK-47 når ikke fram til siten etter plant",
+       "detail": "I 4 av 7 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 5.1 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.4286,
+         "numerator": 3,
+         "denominator": 7,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 5.1
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Retake-ankomst",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "AlvK-47",
+       "severity": "warning",
+       "title": "AlvK-47 omsetter ikke full buy",
+       "detail": "5 av 10 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.5,
+         "numerator": 5,
+         "denominator": 10,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.0568,
+       "confidence": "medium",
+       "section": "Økonomi",
+       "matches_fired": 1,
+       "matches_on_map": 1
+      }
+     ],
+     "match_ids": [
+      "17737_glassfiber-produkter-alvk-47_de_mirage"
+     ]
+    }
+   },
+   "matches": [
+    {
+     "match_id": "17738_glassfiber-produkter-alvk-47_de_dust2",
+     "map": "de_dust2",
+     "opponent": "Glassfiber Produkter",
+     "rounds_for": 7,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 6,
+       "CT": 1
+      },
+      "played": {
+       "T": 12,
+       "CT": 8
+      }
+     },
+     "plant_rate": {
+      "value": 0.6667,
+      "numerator": 8,
+      "denominator": 12,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.625,
+      "numerator": 5,
+      "denominator": 8,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.45,
+      "numerator": 9,
+      "denominator": 20,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "site_retake_weak",
+       "subject": "AlvK-47",
+       "severity": "critical",
+       "title": "AlvK-47 vant aldri tilbake B",
+       "detail": "Av 3 plants sluppet inn på B ble ingen runder vunnet.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        },
+        "defuses": 0
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Elvegris",
+       "severity": "serious",
+       "title": "Elvegris står på BombsiteB nesten hver runde",
+       "detail": "7 av 8 CT-runder startet på BombsiteB, og bare 2 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteB",
+        "share_at_most_common": {
+         "value": 0.875,
+         "numerator": 7,
+         "denominator": 8,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteB": 7,
+         "TSpawn": 1
+        },
+        "team": "AlvK-47"
+       },
+       "score": 0.5,
+       "confidence": "low",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "low_trade_rate",
+       "subject": "AlvK-47",
+       "severity": "warning",
+       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 11 av 80 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.1375,
+         "numerator": 11,
+         "denominator": 80,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.45,
+       "confidence": "high",
+       "section": "Trading"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "AlvK-47",
+       "severity": "serious",
+       "title": "AlvK-47 når ikke fram til siten etter plant",
+       "detail": "I 1 av 4 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 0.6 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.75,
+         "numerator": 3,
+         "denominator": 4,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 0.6
+       },
+       "score": 0.125,
+       "confidence": "low",
+       "section": "Retake-ankomst"
+      }
+     ]
+    },
+    {
+     "match_id": "17737_glassfiber-produkter-alvk-47_de_mirage",
+     "map": "de_mirage",
+     "opponent": "Glassfiber Produkter",
+     "rounds_for": 7,
+     "rounds_against": 13,
+     "won": false,
+     "sides": {
+      "won": {
+       "T": 1,
+       "CT": 6
+      },
+      "played": {
+       "T": 8,
+       "CT": 12
+      }
+     },
+     "plant_rate": {
+      "value": 0.25,
+      "numerator": 2,
+      "denominator": 8,
+      "definition": "rounds with a bomb plant / rounds played as T"
+     },
+     "post_plant": {
+      "value": 0.5,
+      "numerator": 1,
+      "denominator": 2,
+      "definition": "rounds won after planting / rounds where this team planted"
+     },
+     "opening_duels": {
+      "value": 0.4,
+      "numerator": 8,
+      "denominator": 20,
+      "definition": "opening kills / opening duels this team was involved in"
+     },
+     "findings": [
+      {
+       "rule": "low_trade_rate",
+       "subject": "AlvK-47",
+       "severity": "warning",
+       "title": "AlvK-47 blir sjelden byttet opp etter et dødsfall",
+       "detail": "Bare 5 av 82 dødsfall ble hevnet innen 5.0 sekunder. Spillere dør alene og motstanderen får duellene gratis.",
+       "evidence": {
+        "traded_death_rate": {
+         "value": 0.061,
+         "numerator": 5,
+         "denominator": 82,
+         "definition": "deaths avenged by a teammate within 5s / all deaths of this team"
+        }
+       },
+       "score": 0.756,
+       "confidence": "high",
+       "section": "Trading"
+      },
+      {
+       "rule": "site_retake_weak",
+       "subject": "AlvK-47",
+       "severity": "critical",
+       "title": "AlvK-47 vant aldri tilbake A",
+       "detail": "Av 4 plants sluppet inn på A ble ingen runder vunnet.",
+       "evidence": {
+        "site": "A",
+        "retake_rate": {
+         "value": 0.0,
+         "numerator": 0,
+         "denominator": 4,
+         "definition": "rounds won after conceding a plant at A / plants conceded at A"
+        },
+        "defuses": 0
+       },
+       "score": 0.6667,
+       "confidence": "medium",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "predictable_setup",
+       "subject": "Geitesmør",
+       "severity": "warning",
+       "title": "Geitesmør står på BombsiteA nesten hver runde",
+       "detail": "9 av 12 CT-runder startet på BombsiteA, og bare 4 ulike posisjoner totalt. En utility-åpning mot dette punktet treffer hver gang.",
+       "evidence": {
+        "callout": "BombsiteA",
+        "share_at_most_common": {
+         "value": 0.75,
+         "numerator": 9,
+         "denominator": 12,
+         "definition": "rounds set up in this callout / CT rounds observed"
+        },
+        "positions": {
+         "BombsiteA": 9,
+         "TopofMid": 1,
+         "Catwalk": 1,
+         "PalaceInterior": 1
+        },
+        "team": "AlvK-47"
+       },
+       "score": 0.6429,
+       "confidence": "medium",
+       "section": "CT-oppsett"
+      },
+      {
+       "rule": "retake_never_arrives",
+       "subject": "AlvK-47",
+       "severity": "serious",
+       "title": "AlvK-47 når ikke fram til siten etter plant",
+       "detail": "I 4 av 7 runder med plant mot seg kom ingen CT seg inn på siten i det hele tatt. Median ankomsttid for de som kom fram: 5.1 s.",
+       "evidence": {
+        "site_reached": {
+         "value": 0.4286,
+         "numerator": 3,
+         "denominator": 7,
+         "definition": "plants where a CT reached the site / plants conceded"
+        },
+        "median_seconds": 5.1
+       },
+       "score": 0.5,
+       "confidence": "medium",
+       "section": "Retake-ankomst"
+      },
+      {
+       "rule": "strong_retake",
+       "subject": "AlvK-47",
+       "severity": "good",
+       "title": "AlvK-47 tar tilbake B ofte",
+       "detail": "Vant 2 av 3 runder der motstanderen fikk plantet på B.",
+       "evidence": {
+        "site": "B",
+        "retake_rate": {
+         "value": 0.6667,
+         "numerator": 2,
+         "denominator": 3,
+         "definition": "rounds won after conceding a plant at B / plants conceded at B"
+        }
+       },
+       "score": 0.3333,
+       "confidence": "low",
+       "section": "Forsvar per bombesite"
+      },
+      {
+       "rule": "full_buy_conversion",
+       "subject": "AlvK-47",
+       "severity": "warning",
+       "title": "AlvK-47 omsetter ikke full buy",
+       "detail": "5 av 10 full-buy-runder vunnet. Utstyret er ikke problemet.",
+       "evidence": {
+        "full_buy_win_rate": {
+         "value": 0.5,
+         "numerator": 5,
+         "denominator": 10,
+         "definition": "rounds won / rounds this team played a full_buy"
+        }
+       },
+       "score": 0.0568,
+       "confidence": "medium",
+       "section": "Økonomi"
+      }
+     ]
+    }
+   ],
+   "demos_analysed": 2,
+   "clan_names": [
+    "AlvK-47"
+   ]
   }
  ],
  "unmatched_clan_names": [],
- "matches_analysed": 4
+ "matches_analysed": 9
 }
