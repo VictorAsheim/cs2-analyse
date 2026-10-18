@@ -115,51 +115,47 @@ export async function readLeague(): Promise<League | null> {
 }
 
 /**
- * Rewrite demo clan names in finding text to the league's spelling.
+ * Rewrite every demo clan name in a match document to the league's spelling.
  *
  * A match document is written when the demo is parsed, with no knowledge of
- * the league, so it carries the clan name the server recorded - "Kaefer DD"
- * where the division says "Kaefer DåDå". The league view fixes this when it
- * aggregates; a match page reads the document directly and has to do the same.
+ * the league, so it says "Kaefer DD" where the division says "Kaefer DåDå".
+ * Threading a display function through every component that renders a team
+ * name missed six of them - the summary, three charts, the player tables and
+ * the round-by-round headers - so the document is normalised once instead.
+ *
+ * Keys are rewritten as well as values. The stats objects are indexed by team
+ * name and the pages look them up with the same strings, so renaming both
+ * sides keeps every lookup intact; renaming only values would break them.
  */
-export function canonicaliseFindings(findings: any[], league: League | null) {
-  if (!league) return findings;
+export function canonicaliseFacts<T>(facts: T, league: League | null): T {
   const pairs: [string, string][] = [];
-  for (const team of league.teams) {
+  for (const team of league?.teams ?? []) {
     for (const raw of team.clan_names ?? []) {
       if (raw !== team.name) pairs.push([raw, team.name]);
     }
   }
-  if (pairs.length === 0) return findings;
+  if (pairs.length === 0) return facts;
 
-  return findings.map((f) => {
-    const out = { ...f };
-    for (const field of ["title", "detail", "subject"]) {
-      let text = out[field];
-      if (typeof text !== "string") continue;
-      for (const [raw, proper] of pairs) text = text.split(raw).join(proper);
-      out[field] = text;
-    }
+  const rename = (text: string) => {
+    let out = text;
+    for (const [raw, proper] of pairs) out = out.split(raw).join(proper);
     return out;
-  });
-}
+  };
 
-/**
- * Map a demo's clan name to the league's spelling, for display only.
- *
- * The clan name stays the key everywhere - it is what the stats objects are
- * indexed by - so this is applied at the point of rendering rather than by
- * renaming the data.
- */
-export function teamDisplay(league: League | null): (raw: string) => string {
-  const byRaw = new Map<string, string>();
-  for (const team of league?.teams ?? []) {
-    for (const raw of team.clan_names ?? []) byRaw.set(raw, team.name);
-  }
-  for (const team of league?.non_division_opponents ?? []) {
-    byRaw.set(team.name, team.name);
-  }
-  return (raw: string) => byRaw.get(raw) ?? raw;
+  const walk = (node: unknown): unknown => {
+    if (typeof node === "string") return rename(node);
+    if (Array.isArray(node)) return node.map(walk);
+    if (node && typeof node === "object") {
+      const out: Record<string, unknown> = {};
+      for (const [key, value] of Object.entries(node)) {
+        out[rename(key)] = walk(value);
+      }
+      return out;
+    }
+    return node;
+  };
+
+  return walk(facts) as T;
 }
 
 /** Where the radar image lives, which differs between the two modes. */

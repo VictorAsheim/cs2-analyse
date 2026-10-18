@@ -15,13 +15,8 @@ const pct = (v: number | null | undefined) =>
  * not meet them at all.
  */
 export default function MatchDetails({
-  facts, teams, display,
-}: {
-  facts: any;
-  teams: string[];
-  /** Clan name to league spelling. The clan name stays the lookup key. */
-  display: (raw: string) => string;
-}) {
+  facts, teams,
+}: { facts: any; teams: string[] }) {
   const s = facts.stats;
 
   return (
@@ -40,7 +35,7 @@ export default function MatchDetails({
                 <Row
                   key={t}
                   cells={[
-                    display(t),
+                    t,
                     <RateValue key="t" rate={s.side_win_rates[t]?.T} />,
                     <RateValue key="ct" rate={s.side_win_rates[t]?.CT} />,
                     <RateValue key="all" rate={s.side_win_rates[t]?.overall} />,
@@ -60,7 +55,7 @@ export default function MatchDetails({
                 <Row
                   key={t}
                   cells={[
-                    display(t),
+                    t,
                     <RateValue key="p" rate={s.round_outcomes[t]?.plant_rate_as_t} />,
                     <RateValue key="pp" rate={s.round_outcomes[t]?.post_plant_win_rate_as_t} />,
                     <RateValue key="d" rate={s.round_outcomes[t]?.defuse_rate_as_ct} />,
@@ -71,7 +66,7 @@ export default function MatchDetails({
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
               {teams.map((t) => (
                 <div key={t} className="rounded-lg border border-neutral-800 px-4 py-3">
-                  <p className="text-xs text-neutral-400">{display(t)} — seire etter årsak</p>
+                  <p className="text-xs text-neutral-400">{t} — seire etter årsak</p>
                   <ul className="mt-2 space-y-1">
                     {Object.entries(s.round_outcomes[t]?.wins_by_reason ?? {}).map(
                       ([reason, n]) => (
@@ -113,7 +108,7 @@ export default function MatchDetails({
                       <Row
                         key={t}
                         cells={[
-                          display(t),
+                          t,
                           v.rounds_as_t,
                           ...(s.site_attack.sites as string[]).flatMap((l) => [
                             <RateValue key={`${l}p`} rate={v.per_site[l]?.plant_share} />,
@@ -150,7 +145,7 @@ export default function MatchDetails({
                       <Row
                         key={t}
                         cells={[
-                          display(t),
+                          t,
                           v.rounds_as_ct,
                           ...(s.site_defence.sites as string[]).flatMap((l) => [
                             v.per_site[l]?.plants_conceded ?? 0,
@@ -170,7 +165,7 @@ export default function MatchDetails({
                   <div className="mb-3 grid gap-3 sm:grid-cols-2">
                     {Object.entries(s.ct_setups.by_team ?? {}).map(([t, v]: [string, any]) => (
                       <div key={t} className="rounded-lg border border-neutral-800 px-4 py-3">
-                        <p className="text-xs text-neutral-400">{display(t)}</p>
+                        <p className="text-xs text-neutral-400">{t}</p>
                         <p className="mt-1 text-sm text-neutral-200">
                           {Object.entries(v.mean_players_per_callout ?? {})
                             .map(([site, n]) => `${site}: ${n}`)
@@ -226,7 +221,7 @@ export default function MatchDetails({
                         <Row
                           key={t}
                           cells={[
-                            display(t),
+                            t,
                             v.plants_conceded,
                             <RateValue key="r" rate={v.site_reached} />,
                             v.median_seconds_to_site !== null ? `${v.median_seconds_to_site}s` : "\u2013",
@@ -279,7 +274,7 @@ export default function MatchDetails({
               <div className="mb-4 grid gap-3 sm:grid-cols-2">
                 {Object.entries(s.attack_patterns.by_team).map(([t, v]: [string, any]) => (
                   <div key={t} className="rounded-lg border border-neutral-800 px-4 py-3">
-                    <p className="text-xs text-neutral-400">{display(t)}</p>
+                    <p className="text-xs text-neutral-400">{t}</p>
                     <p className="mt-1 text-sm text-neutral-200">
                       median ankomst {v.median_arrival_seconds}s
                     </p>
@@ -299,7 +294,7 @@ export default function MatchDetails({
                         <Row
                           key={`${t}-${name}`}
                           cells={[
-                            i === 0 ? display(t) : "",
+                            i === 0 ? t : "",
                             <span key="n" className="font-medium text-neutral-100">{name}</span>,
                             d.rounds.length,
                             <RateValue key="w" rate={d.win_rate} />,
@@ -404,7 +399,7 @@ export default function MatchDetails({
                   <Row
                     key={t}
                     cells={[
-                      display(t),
+                      t,
                       d?.opening_kills ?? 0,
                       d?.opening_deaths ?? 0,
                       <RateValue key="w" rate={d?.opening_duel_win_rate} />,
@@ -445,7 +440,7 @@ export default function MatchDetails({
                 <Row
                   key={t}
                   cells={[
-                    display(t),
+                    t,
                     <RateValue key="tk" rate={s.trades.by_team[t]?.trade_kill_rate} />,
                     <RateValue key="td" rate={s.trades.by_team[t]?.traded_death_rate} />,
                   ]}
@@ -472,7 +467,7 @@ export default function MatchDetails({
                     <Row
                       key={`${t}-${buyType}`}
                       cells={[
-                        i === 0 ? display(t) : "",
+                        i === 0 ? t : "",
                         buyType,
                         v.rounds,
                         <RateValue key="w" rate={v.win_rate} />,
@@ -509,7 +504,7 @@ export default function MatchDetails({
                     <Row
                       key={`${t}-${side}`}
                       cells={[
-                        side === "T" ? display(t) : "",
+                        side === "T" ? t : "",
                         <SideBadge key="s" side={side} />,
                         u.rounds_played,
                         <span key="tot" className="font-medium text-neutral-100">
@@ -533,7 +528,7 @@ export default function MatchDetails({
                     <Row
                       key={t}
                       cells={[
-                        display(t),
+                        t,
                         e?.kills ?? 0,
                         <RateValue key="s" rate={e?.through_smoke} />,
                         <RateValue key="b" rate={e?.while_blinded} />,
